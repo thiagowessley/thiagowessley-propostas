@@ -1,12 +1,8 @@
 import type { PropostaData } from '../types/proposta'
-
-// Importar cada proposta aqui ao criar nova
-// import { instituto } from './instituto'
-// import { wood } from './wood'
+import { instituto } from './instituto'
 
 export const propostas: Record<string, PropostaData> = {
-  // instituto,
-  // wood,
+  instituto,
 }
 
 export function getPropostaBySlug(slug: string): PropostaData | undefined {
