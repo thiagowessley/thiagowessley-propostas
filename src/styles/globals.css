@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --bg:       #0D0D0D;
+  --bg-card:  #141414;
+  --border:   #1E1E1E;
+  --gold:     #C9A050;
+  --gold-dim: #8A6C32;
+  --ice:      #E8E8E0;
+  --white:    #F5F5EE;
+  --muted:    #8A8A82;
+  --green:    #7EB88A;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ice);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  color: var(--white);
+}
+
+/* Watermark THIAGO WESSLEY em toda pagina */
+.proposta-page::after {
+  content: 'THIAGO WESSLEY';
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: 38px;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  opacity: 0.04;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+/* Barra dourada lateral */
+.gold-bar {
+  width: 3px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  flex-shrink: 0;
+}
+
+/* Secoes */
+.section {
+  padding: 80px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.section-number {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: var(--gold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Bullets dourados */
+ul.gold-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.gold-list li::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Print CSS para PDF on-demand */
+@media print {
+  body { background: #0D0D0D !important; }
+  .side-nav, .popup-saida { display: none !important; }
+  .proposta-page::after { display: none; }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
