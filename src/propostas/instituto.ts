@@ -1,7 +1,7 @@
 import type { PropostaData } from '../types/proposta'
 
 export const instituto: PropostaData = {
-  slug: 'instituto-tec-inovacao-2c8f1a',
+  slug: 'instituto',
   cliente: 'Instituto de Tecnologia, Inovacao e Desenvolvimento',
   segmento: 'Instituto sem fins lucrativos',
   servico: 'Site Institucional',
