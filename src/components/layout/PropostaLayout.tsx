@@ -1,23 +1,20 @@
 import type { ReactNode } from 'react'
 import { SideNav } from './SideNav'
 
-const NAV_ITEMS = [
-  { id: 'capa',        label: 'Inicio' },
-  { id: 'cenario',     label: 'O Cenario' },
-  { id: 'escopo',      label: 'Escopo' },
-  { id: 'financeiro',  label: 'Investimento' },
-  { id: 'referencias', label: 'Referencias' },
-  { id: 'contato',     label: 'Proximo Passo' },
-]
+export interface NavItem {
+  id: string
+  label: string
+}
 
 interface Props {
   children: ReactNode
+  navItems: NavItem[]
 }
 
-export function PropostaLayout({ children }: Props) {
+export function PropostaLayout({ children, navItems }: Props) {
   return (
-    <div className="proposta-page" style={{ maxWidth: '820px', margin: '0 auto', padding: '0 32px' }}>
-      <SideNav items={NAV_ITEMS} />
+    <div className="proposta-page" style={{ maxWidth: 'var(--maxw)', margin: '0 auto', padding: '0 40px' }}>
+      <SideNav items={navItems} />
       {children}
     </div>
   )

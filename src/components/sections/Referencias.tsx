@@ -11,9 +11,10 @@ export function Referencias({ referencias }: Props) {
 
   return (
     <AnimatedSection id="referencias">
-      <p className="section-number">04 — Referencias</p>
-      <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', marginBottom: '12px' }}>
-        O que nos inspirou
+      <p className="eyebrow"><span className="accent">Referencias</span></p>
+      <h2 className="sec-title" style={{ marginBottom: '12px' }}>
+        <span className="thin">O que nos</span>
+        <span className="bold">inspirou</span>
       </h2>
       <p style={{ color: 'var(--muted)', marginBottom: '40px', fontSize: '0.9rem' }}>
         Sites reais estudados para este projeto, com a tecnica que vamos aplicar.

@@ -8,9 +8,10 @@ interface Props {
 export function Cenario({ cenario }: Props) {
   return (
     <AnimatedSection id="cenario">
-      <p className="section-number">01 — O Cenario</p>
-      <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', marginBottom: '40px' }}>
-        O que esta em jogo
+      <p className="eyebrow"><span className="accent">O</span> cenario</p>
+      <h2 className="sec-title" style={{ marginBottom: '44px' }}>
+        <span className="thin">O que esta</span>
+        <span className="bold">em jogo</span>
       </h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '24px' }}>
         {[

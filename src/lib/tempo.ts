@@ -11,7 +11,7 @@ export function calcularTempoLeitura(textos: string[]): number {
 export function calcularDiasRestantes(validadeISO: string): number {
   const hoje = new Date()
   hoje.setHours(0, 0, 0, 0)
-  const validade = new Date(validadeISO)
+  const validade = new Date(`${validadeISO}T00:00:00`)
   validade.setHours(0, 0, 0, 0)
   const diff = validade.getTime() - hoje.getTime()
   return Math.round(diff / (1000 * 60 * 60 * 24))
@@ -19,7 +19,7 @@ export function calcularDiasRestantes(validadeISO: string): number {
 
 /** Formata data ISO para exibicao: "04 de julho de 2026" */
 export function formatarData(iso: string): string {
-  return new Date(iso).toLocaleDateString('pt-BR', {
+  return new Date(`${iso}T00:00:00`).toLocaleDateString('pt-BR', {
     day: '2-digit',
     month: 'long',
     year: 'numeric',

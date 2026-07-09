@@ -24,7 +24,7 @@ export function ValidadeCountdown({ validade }: Props) {
         ? 'Proposta vencida'
         : dias === 0
           ? 'Vence hoje'
-          : `Valida por mais ${dias} dia${dias === 1 ? '' : 's'} — ate ${formatarData(validade)}`
+          : `Valida por mais ${dias} dia${dias === 1 ? '' : 's'}, ate ${formatarData(validade)}`
       }
     </div>
   )

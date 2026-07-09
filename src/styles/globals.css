@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;800;900&family=Inter:wght@300;400;500&display=swap');
 
 :root {
   --bg:       #0D0D0D;
   --bg-card:  #141414;
+  --bg-soft:  #1a1a1a;
   --border:   #1E1E1E;
   --gold:     #C9A050;
   --gold-dim: #8A6C32;
@@ -10,6 +11,7 @@
   --white:    #F5F5EE;
   --muted:    #8A8A82;
   --green:    #7EB88A;
+  --maxw:     1160px;
 }
 
 *, *::before, *::after {
@@ -62,7 +64,7 @@ h1, h2, h3, h4 {
 
 /* Secoes */
 .section {
-  padding: 80px 0;
+  padding: 96px 0;
   position: relative;
   z-index: 1;
 }
@@ -77,12 +79,59 @@ h1, h2, h3, h4 {
   margin-bottom: 8px;
 }
 
+/* ===== Titulo de duas linhas (palavra fina + palavra grossa) ===== */
+.sec-title {
+  line-height: 1.0;
+  margin-bottom: 40px;
+}
+.sec-title .thin {
+  display: block;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 300;
+  color: var(--muted);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: -0.01em;
+}
+.sec-title .bold {
+  display: block;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  color: var(--white);
+  font-size: clamp(2.4rem, 6.5vw, 4.6rem);
+  letter-spacing: -0.02em;
+}
+
+/* eyebrow com barra (ex: / FASES DO PROJETO) */
+.eyebrow {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: var(--gold);
+}
+.eyebrow .accent { color: var(--gold); }
+
 /* Bullets dourados */
 ul.gold-list {
   list-style: none;
   padding: 0;
 }
-
+ul.gold-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
 ul.gold-list li::before {
   content: '';
   display: inline-block;
@@ -90,8 +139,251 @@ ul.gold-list li::before {
   height: 5px;
   border-radius: 50%;
   background: var(--gold);
-  margin-right: 10px;
-  vertical-align: middle;
+  flex-shrink: 0;
+  margin-top: 9px;
+}
+
+/* ===== Layout split (texto + foto) ===== */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.split.foto-direita { grid-template-columns: 1.05fr 0.95fr; }
+.reading { max-width: 560px; }
+
+/* Imagem com canto arredondado (padrao das referencias) */
+.media {
+  width: 100%;
+  border-radius: 4px 4px 4px 64px;
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-card);
+}
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%) contrast(1.05);
+  transition: filter 0.5s ease;
+}
+.media:hover img { filter: grayscale(60%) contrast(1.05); }
+.media.vertical { aspect-ratio: 3 / 4; }
+.media.horizontal { aspect-ratio: 16 / 9; }
+
+/* linhas decorativas diagonais (canto da foto) */
+.deco-lines {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ===== Competencias (barras de progresso) ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 32px;
+  margin-top: 36px;
+}
+.skill-label {
+  font-size: 0.85rem;
+  color: var(--ice);
+  margin-bottom: 8px;
+}
+.progress-track {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+  border-radius: 2px;
+}
+
+/* ===== Portfolio grid ===== */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.portfolio-tile {
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+.portfolio-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.portfolio-tile:hover img { transform: scale(1.06); }
+
+/* ===== Carrossel de fases (signature: glow dourado) ===== */
+.fases-stage {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
+  perspective: 1200px;
+}
+.fase-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.45s, box-shadow 0.45s, border-color 0.45s;
+  cursor: pointer;
+}
+.fase-card.inativo {
+  flex: 0 0 200px;
+  opacity: 0.4;
+  transform: scale(0.9);
+  align-self: center;
+}
+.fase-card.ativo {
+  flex: 1 1 460px;
+  max-width: 520px;
+  opacity: 1;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold), 0 0 32px -4px rgba(201, 160, 80, 0.45);
+  animation: glowPulse 3.2s ease-in-out infinite;
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 1px var(--gold), 0 0 26px -6px rgba(201,160,80,0.35); }
+  50%      { box-shadow: 0 0 0 1px var(--gold), 0 0 40px -2px rgba(201,160,80,0.6); }
+}
+
+/* ===== Pricing cards ===== */
+.planos-grid {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.plano-card {
+  flex: 1 1 280px;
+  max-width: 340px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+}
+.plano-card.destaque {
+  background: var(--ice);
+  color: #0D0D0D;
+  border-color: var(--ice);
+  transform: translateY(-12px);
+  box-shadow: 0 24px 60px -20px rgba(0,0,0,0.7);
+}
+.plano-card.destaque h3,
+.plano-card.destaque .plano-resumo { color: #0D0D0D; }
+
+/* ===== Capsule / pill ===== */
+.capsule {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 12px 26px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+/* ===== meios de pagamento ===== */
+.pay-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 40px;
+  padding: 24px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px 16px 64px 16px;
+}
+.pay-item {
+  flex: 1 1 150px;
+  min-width: 140px;
+}
+
+/* ===== termos (2 colunas com divisor) ===== */
+.termos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0 44px;
+}
+.termos-divisor { background: var(--border); }
+
+/* Botao CTA padrao */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 999px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+.cta-btn:hover { transform: translateY(-2px); }
+.cta-gold { background: var(--gold); color: #0D0D0D; }
+.cta-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+
+/* assinatura no canto (marca em Archivo) */
+.assinatura {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 920px) {
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 760px) {
+  .section { padding: 64px 0; }
+  .split, .split.foto-direita { grid-template-columns: 1fr; gap: 36px; }
+  .split.inverter-mobile > *:first-child { order: 2; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .termos-grid { grid-template-columns: 1fr; gap: 36px; }
+  .termos-divisor { display: none; }
+  .fases-stage { flex-direction: column; perspective: none; }
+  .fase-card.inativo { flex: 1 1 auto; opacity: 0.55; transform: none; }
+  .fase-card.ativo { max-width: none; }
+  .planos-grid { flex-direction: column; align-items: stretch; }
+  .plano-card, .plano-card.destaque { max-width: none; transform: none; }
+  .plano-card.destaque { transform: none; }
+}
+@media (max-width: 480px) {
+  .portfolio-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Respeita reduce-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
 }
 
 /* Print CSS para PDF on-demand */
@@ -99,6 +391,8 @@ ul.gold-list li::before {
   body { background: #0D0D0D !important; }
   .side-nav, .popup-saida { display: none !important; }
   .proposta-page::after { display: none; }
+  .fase-card.inativo { display: none; }
+  .fase-card.ativo { animation: none; box-shadow: none; }
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;

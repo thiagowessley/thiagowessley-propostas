@@ -15,7 +15,7 @@ export function Contato({ proposta }: Props) {
 
   return (
     <AnimatedSection id="contato">
-      <p className="section-number">{numeroSecao} — Proximo Passo</p>
+      <p className="section-number">{numeroSecao}: Proximo Passo</p>
       <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', marginBottom: '16px' }}>
         Pronto para avancar?
       </h2>

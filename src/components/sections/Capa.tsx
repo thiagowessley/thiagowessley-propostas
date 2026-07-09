@@ -1,10 +1,20 @@
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import type { PropostaData } from '../../types/proposta'
-import { ValidadeCountdown } from '../ui/ValidadeCountdown'
+import { formatarData, calcularDiasRestantes } from '../../lib/tempo'
 
 interface Props {
   proposta: PropostaData
   tempoLeitura: number
+}
+
+const lineUp = {
+  hidden: { opacity: 0, y: 28 },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, delay: 0.1 + i * 0.12, ease: [0.2, 0.7, 0.2, 1] as const },
+  }),
 }
 
 export function Capa({ proposta, tempoLeitura }: Props) {
@@ -19,42 +29,96 @@ export function Capa({ proposta, tempoLeitura }: Props) {
     setCopyAbertura(copy)
   }, [proposta.utm_copy])
 
-  return (
-    <section id="capa" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
+  const envioISO = proposta.envio ?? new Date().toISOString().slice(0, 10)
+  const diasValidade = Math.max(0, calcularDiasRestantes(proposta.validade) >= 0
+    ? Math.round((new Date(proposta.validade).getTime() - new Date(envioISO).getTime()) / 86400000)
+    : 0)
 
+  return (
+    <section
+      id="capa"
+      style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', overflow: 'hidden', padding: '80px 0' }}
+    >
       {proposta.video_capa && (
         <video
           autoPlay muted loop playsInline
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.15, zIndex: 0 }}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.12, zIndex: 0 }}
         >
           <source src={proposta.video_capa} type="video/mp4" />
         </video>
       )}
 
-      <div style={{ position: 'relative', zIndex: 1 }}>
-        <p style={{ fontSize: '0.78rem', color: 'var(--muted)', marginBottom: '32px' }}>
-          Leitura: ~{tempoLeitura} min
-        </p>
+      {/* assinatura canto superior direito */}
+      <span className="assinatura" style={{ position: 'absolute', top: 0, right: 0 }}>
+        Thiago Wessley
+      </span>
 
+      <div style={{ position: 'relative', zIndex: 1, width: '100%' }}>
         {copyAbertura && (
-          <p style={{ fontSize: '0.9rem', color: 'var(--gold)', marginBottom: '16px', fontStyle: 'italic' }}>
+          <motion.p
+            custom={0} variants={lineUp} initial="hidden" animate="show"
+            style={{ fontSize: '0.95rem', color: 'var(--gold)', marginBottom: '20px', fontStyle: 'italic', maxWidth: '620px' }}
+          >
             {copyAbertura}
-          </p>
+          </motion.p>
         )}
 
-        <p style={{ fontFamily: 'Archivo', fontWeight: 900, fontSize: '0.8rem', letterSpacing: '0.3em', color: 'var(--gold)', textTransform: 'uppercase', marginBottom: '24px' }}>
-          Thiago Wessley
-        </p>
+        <motion.h1 custom={1} variants={lineUp} initial="hidden" animate="show" className="sec-title" style={{ marginBottom: '12px' }}>
+          <span className="thin">Proposta</span>
+          <span className="bold">Comercial</span>
+        </motion.h1>
 
-        <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: 1.1, marginBottom: '16px' }}>
-          {proposta.servico}
-        </h1>
+        <motion.p
+          custom={2} variants={lineUp} initial="hidden" animate="show"
+          style={{ fontSize: '1.05rem', color: 'var(--ice)', marginBottom: '56px' }}
+        >
+          {proposta.servico} <span style={{ color: 'var(--muted)' }}>·</span> {proposta.cliente}
+        </motion.p>
 
-        <p style={{ fontSize: '1.1rem', color: 'var(--muted)', marginBottom: '48px' }}>
-          Proposta para {proposta.cliente}
-        </p>
+        {/* Cliente / Responsavel */}
+        <motion.div
+          custom={3} variants={lineUp} initial="hidden" animate="show"
+          style={{ display: 'flex', gap: '64px', flexWrap: 'wrap', marginBottom: '40px' }}
+        >
+          <div>
+            <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Cliente</p>
+            <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.cliente}</p>
+          </div>
+          <div>
+            <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Responsavel</p>
+            <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.responsavel ?? 'Thiago Wessley'}</p>
+          </div>
+        </motion.div>
 
-        <ValidadeCountdown validade={proposta.validade} />
+        {/* linha de info: envio | validade ------ */}
+        <motion.div
+          custom={4} variants={lineUp} initial="hidden" animate="show"
+          style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '64px' }}
+        >
+          <span style={{ width: '20px', height: '20px', borderRadius: '50%', border: '1px solid var(--muted)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.7rem', color: 'var(--muted)', flexShrink: 0, fontStyle: 'italic' }}>i</span>
+          <p style={{ fontSize: '0.92rem', color: 'var(--ice)', whiteSpace: 'nowrap' }}>
+            Envio da proposta {formatarData(envioISO)}
+            <span style={{ color: 'var(--border)', margin: '0 14px' }}>|</span>
+            Validade de {diasValidade} dias
+          </p>
+          <span style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
+        </motion.div>
+
+        {proposta.intro_capa && (
+          <motion.p
+            custom={5} variants={lineUp} initial="hidden" animate="show"
+            style={{ fontSize: '0.9rem', color: 'var(--muted)', maxWidth: '780px', lineHeight: 1.8 }}
+          >
+            {proposta.intro_capa}
+          </motion.p>
+        )}
+
+        <motion.p
+          custom={6} variants={lineUp} initial="hidden" animate="show"
+          style={{ fontSize: '0.78rem', color: 'var(--muted)', marginTop: '28px' }}
+        >
+          Leitura: ~{tempoLeitura} min
+        </motion.p>
       </div>
     </section>
   )

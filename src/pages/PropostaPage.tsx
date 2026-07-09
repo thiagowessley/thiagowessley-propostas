@@ -1,13 +1,19 @@
 import { useEffect, useMemo } from 'react'
 import { useParams } from 'react-router-dom'
 import { getPropostaBySlug } from '../propostas/index'
-import { PropostaLayout } from '../components/layout/PropostaLayout'
+import { PropostaLayout, type NavItem } from '../components/layout/PropostaLayout'
 import { Capa } from '../components/sections/Capa'
+import { Sobre } from '../components/sections/Sobre'
 import { Cenario } from '../components/sections/Cenario'
 import { Escopo } from '../components/sections/Escopo'
+import { Portfolio } from '../components/sections/Portfolio'
 import { Financeiro } from '../components/sections/Financeiro'
+import { PrazosAlteracoes } from '../components/sections/PrazosAlteracoes'
+import { ContratoEntrega } from '../components/sections/ContratoEntrega'
+import { Pagamento } from '../components/sections/Pagamento'
+import { ServicoAdicional } from '../components/sections/ServicoAdicional'
 import { Referencias } from '../components/sections/Referencias'
-import { Contato } from '../components/sections/Contato'
+import { Encerramento } from '../components/sections/Encerramento'
 import { PopupSaida } from '../components/ui/PopupSaida'
 import { registrarVisita } from '../lib/analytics'
 import { calcularTempoLeitura } from '../lib/tempo'
@@ -19,7 +25,7 @@ export function PropostaPage() {
   useEffect(() => {
     if (proposta) {
       registrarVisita(proposta.slug)
-      document.title = `Proposta ${proposta.servico} — ${proposta.cliente}`
+      document.title = `Proposta ${proposta.servico}: ${proposta.cliente}`
     }
   }, [proposta])
 
@@ -35,6 +41,24 @@ export function PropostaPage() {
     return calcularTempoLeitura(textos)
   }, [proposta])
 
+  const navItems = useMemo<NavItem[]>(() => {
+    if (!proposta) return []
+    const s = proposta.secoes
+    const items: NavItem[] = [{ id: 'capa', label: 'Inicio' }]
+    if (proposta.sobre) items.push({ id: 'sobre', label: 'Sobre' })
+    items.push({ id: 'cenario', label: 'O Cenario' })
+    items.push({ id: 'escopo', label: 'Escopo' })
+    if (proposta.portfolio) items.push({ id: 'portfolio', label: 'Portfolio' })
+    items.push({ id: 'financeiro', label: 'Investimento' })
+    if (s.prazos) items.push({ id: 'prazos', label: 'Prazos' })
+    if (s.contrato) items.push({ id: 'contrato', label: 'Contrato' })
+    if (s.pagamento) items.push({ id: 'pagamento', label: 'Pagamento' })
+    if (s.servico_adicional) items.push({ id: 'servico-adicional', label: 'Extra' })
+    if (s.referencias) items.push({ id: 'referencias', label: 'Referencias' })
+    items.push({ id: 'encerramento', label: 'Proximo Passo' })
+    return items
+  }, [proposta])
+
   if (!proposta) {
     return (
       <div style={{ padding: '60px', textAlign: 'center' }}>
@@ -46,21 +70,30 @@ export function PropostaPage() {
     )
   }
 
+  const s = proposta.secoes
+
   return (
     <>
-      <PropostaLayout>
+      <PropostaLayout navItems={navItems}>
         <Capa proposta={proposta} tempoLeitura={tempoLeitura} />
-        <Cenario cenario={proposta.secoes.cenario} />
-        <Escopo fases={proposta.secoes.fases} />
+        {proposta.sobre && <Sobre sobre={proposta.sobre} foto={proposta.foto_profissional} />}
+        <Cenario cenario={s.cenario} />
+        <Escopo fases={s.fases} />
+        {proposta.portfolio && <Portfolio portfolio={proposta.portfolio} />}
         <Financeiro
           valor={proposta.valor}
-          primeiros30={proposta.secoes.primeiros_30_dias}
-          confidencialidade={proposta.secoes.confidencialidade}
+          planos={s.planos}
+          primeiros30={s.primeiros_30_dias}
+          confidencialidade={s.confidencialidade}
         />
-        {proposta.secoes.referencias && (
-          <Referencias referencias={proposta.secoes.referencias} />
+        {s.prazos && <PrazosAlteracoes prazos={s.prazos} />}
+        {s.contrato && <ContratoEntrega colunas={s.contrato} />}
+        {s.pagamento && <Pagamento pagamento={s.pagamento} />}
+        {s.servico_adicional && (
+          <ServicoAdicional servico={{ ...s.servico_adicional, imagem: s.servico_adicional.imagem || proposta.foto_secundaria || '' }} />
         )}
-        <Contato proposta={proposta} />
+        {s.referencias && <Referencias referencias={s.referencias} />}
+        <Encerramento proposta={proposta} />
       </PropostaLayout>
       <PopupSaida whatsapp={proposta.contato.whatsapp} />
     </>

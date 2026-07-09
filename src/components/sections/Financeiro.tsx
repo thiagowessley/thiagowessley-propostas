@@ -5,44 +5,89 @@ import { formatarReais } from '../../lib/tempo'
 
 interface Props {
   valor: PropostaData['valor']
+  planos?: PropostaData['secoes']['planos']
   primeiros30?: string[]
   confidencialidade?: string
 }
 
-export function Financeiro({ valor, primeiros30, confidencialidade }: Props) {
+function PlanoCard({ plano }: { plano: NonNullable<Props['planos']>[number] }) {
+  const valorTexto = plano.valor > 0 ? formatarReais(plano.valor) : 'Sob consulta'
+  return (
+    <div className={`plano-card${plano.destaque ? ' destaque' : ''}`}>
+      <h3 style={{ fontSize: '1.6rem', marginBottom: '6px' }}>{plano.nome}</h3>
+      <p className="plano-resumo" style={{ fontWeight: 500, color: plano.destaque ? '#0D0D0D' : 'var(--gold)', marginBottom: '20px', fontSize: '0.95rem' }}>
+        {plano.resumo}
+      </p>
+      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', flex: 1, marginBottom: '24px' }}>
+        {plano.itens.map((it, i) => (
+          <li key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', fontSize: '0.88rem', color: plano.destaque ? '#2a2a2a' : 'var(--ice)' }}>
+            <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: plano.destaque ? '#C9A050' : 'var(--gold)', flexShrink: 0, marginTop: '8px' }} />
+            <span>{it}</span>
+          </li>
+        ))}
+      </ul>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <span className="capsule" style={{
+          background: plano.destaque ? '#0D0D0D' : 'var(--bg)',
+          color: plano.destaque ? 'var(--gold)' : 'var(--white)',
+          border: plano.destaque ? 'none' : '1px solid var(--border)',
+          fontSize: '1.15rem',
+          width: '100%',
+        }}>
+          {valorTexto}{plano.periodo && plano.valor > 0 ? <span style={{ fontSize: '0.7rem', fontWeight: 400, marginLeft: '4px' }}>{plano.periodo}</span> : null}
+        </span>
+      </div>
+      {plano.rodape && (
+        <p style={{ marginTop: '12px', fontSize: '0.72rem', color: plano.destaque ? '#5a5a5a' : 'var(--muted)', textAlign: 'center' }}>
+          {plano.rodape}
+        </p>
+      )}
+    </div>
+  )
+}
+
+export function Financeiro({ valor, planos, primeiros30, confidencialidade }: Props) {
+  const temPlanos = planos && planos.length > 0
+
   return (
     <AnimatedSection id="financeiro">
-      <p className="section-number">03 — Investimento</p>
-      <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', marginBottom: '40px' }}>
-        Proposta financeira
+      <p className="eyebrow"><span className="accent">Investimento</span></p>
+      <h2 className="sec-title" style={{ marginBottom: '48px' }}>
+        <span className="thin">{temPlanos ? 'Escolha seu' : 'Proposta'}</span>
+        <span className="bold">{temPlanos ? 'pacote' : 'financeira'}</span>
       </h2>
 
       {valor.alternativa && (
-        <div style={{ marginBottom: '32px', padding: '24px', border: '1px solid var(--border)', borderRadius: '8px', opacity: 0.6 }}>
-          <p style={{ fontSize: '0.72rem', color: 'var(--muted)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Referencia de mercado (agencia)</p>
-          <p style={{ fontFamily: 'Archivo', fontWeight: 900, fontSize: '1.8rem', color: 'var(--muted)', textDecoration: 'line-through' }}>
+        <div style={{ marginBottom: '32px', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.72rem', color: 'var(--muted)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Referencia de mercado (agencia)</p>
+          <p style={{ fontFamily: 'Archivo', fontWeight: 900, fontSize: '1.6rem', color: 'var(--muted)', textDecoration: 'line-through' }}>
             {formatarReais(valor.alternativa)}
           </p>
         </div>
       )}
 
-      <div style={{ padding: '32px', background: 'var(--bg-card)', border: '1px solid var(--gold)', borderRadius: '8px', marginBottom: '24px' }}>
-        <ValorHover valor={valor.principal} label="Sua proposta" />
-        {valor.manutencao && (
-          <p style={{ marginTop: '16px', color: 'var(--muted)', fontSize: '0.9rem' }}>
-            + {formatarReais(valor.manutencao)}/mes manutencao (opcional)
-          </p>
-        )}
-      </div>
+      {temPlanos ? (
+        <div className="planos-grid">
+          {planos!.map((p, i) => <PlanoCard key={i} plano={p} />)}
+        </div>
+      ) : (
+        <div style={{ maxWidth: '480px', margin: '0 auto', padding: '32px', background: 'var(--bg-card)', border: '1px solid var(--gold)', borderRadius: '18px' }}>
+          <ValorHover valor={valor.principal} label="Sua proposta" />
+          {valor.manutencao && (
+            <p style={{ marginTop: '16px', color: 'var(--muted)', fontSize: '0.9rem' }}>
+              + {formatarReais(valor.manutencao)}/mes manutencao (opcional)
+            </p>
+          )}
+        </div>
+      )}
 
       {primeiros30 && primeiros30.length > 0 && (
-        <div style={{ marginTop: '40px' }}>
-          <h3 style={{ fontSize: '1rem', color: 'var(--ice)', marginBottom: '16px' }}>Os primeiros 30 dias</h3>
-          <ul className="gold-list" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        <div style={{ marginTop: '64px', maxWidth: '680px' }}>
+          <h3 style={{ fontSize: '1.1rem', color: 'var(--white)', marginBottom: '18px' }}>Os primeiros 30 dias</h3>
+          <ul className="gold-list" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {primeiros30.map((item, i) => (
-              <li key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--gold)', flexShrink: 0, marginTop: '8px' }} />
-                <span style={{ color: 'var(--ice)', fontSize: '0.9rem' }}>{item}</span>
+              <li key={i}>
+                <span style={{ color: 'var(--ice)', fontSize: '0.92rem' }}>{item}</span>
               </li>
             ))}
           </ul>
@@ -50,7 +95,7 @@ export function Financeiro({ valor, primeiros30, confidencialidade }: Props) {
       )}
 
       {confidencialidade && (
-        <p style={{ marginTop: '32px', color: 'var(--muted)', fontSize: '0.8rem', borderTop: '1px solid var(--border)', paddingTop: '16px' }}>
+        <p style={{ marginTop: '40px', color: 'var(--muted)', fontSize: '0.8rem', borderTop: '1px solid var(--border)', paddingTop: '20px', maxWidth: '780px' }}>
           {confidencialidade}
         </p>
       )}
