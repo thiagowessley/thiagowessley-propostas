@@ -137,9 +137,9 @@ export const caridadeRedes: PropostaData = {
           'Relatório mensal de desempenho',
           'Prioridade no atendimento',
         ],
-        valor: 5400,
-        periodo: 'total (12 meses)',
-        rodape: 'Pago antecipado ou trimestral, equivale a R$ 450/mês',
+        valor: 450,
+        periodo: '/mês',
+        rodape: 'Cobrança mensal, contrato de 12 meses',
       },
       {
         nome: 'Sob demanda',
