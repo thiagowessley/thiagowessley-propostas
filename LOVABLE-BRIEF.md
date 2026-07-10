@@ -1,11 +1,21 @@
 # Brief para o Lovable: Template de Proposta Comercial (Thiago Wessley)
 
-Arquitetura escolhida (29/06/2026): UM app, cada proposta e um link `/p/[slug]`.
-O Lovable entra para deixar o VISUAL bonito. Depois o Claude transplanta o design
-pro app que ja roda (`thiagowessley-propostas`), preservando analytics, QR e webhook.
+Arquitetura escolhida (29/06/2026, confirmada 10/07/2026): UM app, cada proposta
+e um link `/p/[slug]`. O Lovable entra para deixar o VISUAL bonito. Depois o
+Claude transplanta o design pro app que ja roda (`thiagowessley-propostas`),
+preservando analytics, QR e webhook.
 
-> O que ainda ajudaria: exportar os frames do modelo Figma como PNG (2x). Nao e
-> bloqueante: o brief abaixo ja parte das 10 referencias que o Thiago aprovou.
+**Atualizacao 10/07/2026: o sistema ja esta em producao com 3 propostas reais**
+(`propostas.thiagowessley.com.br/p/instituto-site`, `/p/caridade-site`,
+`/p/caridade-redes`). O Lovable entra agora pra um REFRESH visual, nao pra um
+build do zero. Referencias visuais ja aprovadas nesta rodada: `dynamisfamily.com.br`
+(nav fixa no topo, hero com badge) e `ideaproof.io` (cabecalho de secao com
+numero circulado + eyebrow, titulo com trecho em italico colorido, selo de
+confianca). Ver secao "PARTE 1.1" abaixo.
+
+> O que ainda ajudaria: exportar os frames do modelo Figma original como PNG
+> (2x), se ainda fizer sentido. Nao e bloqueante: o brief abaixo ja cobre as
+> referencias aprovadas.
 
 ---
 
@@ -46,6 +56,34 @@ Listas usam um ponto dourado (circulo 5px #C9A050), nunca travessao.
 Construa as 12 secoes na ordem e com os layouts da PARTE 2 abaixo. Use o
 conteudo de exemplo da PARTE 3.
 ```
+
+---
+
+## PARTE 1.1: referencias visuais adicionais (10/07/2026)
+
+Duas referencias aprovadas nesta rodada de refresh, sempre mantendo o sistema
+visual da PARTE 1 (dourado/dark premium), nunca as cores originais das referencias:
+
+**dynamisfamily.com.br**
+- Nav fixa no topo (nao lateral): logo a esquerda, links de secao no centro,
+  botao dourado de CTA sempre visivel a direita, barra fina de progresso de
+  leitura embaixo da nav.
+- Badge/eyebrow acima do titulo da capa com o tipo de servico (ex: "SITE
+  INSTITUCIONAL").
+
+**ideaproof.io** (usar SO estes 3 elementos, o resto do site e mockup de
+produto SaaS que nao se aplica a uma proposta de servico):
+1. Cabecalho de secao com circulo numerado (ex: "01") + linha horizontal +
+   eyebrow em caixa alta, antes do titulo de cada secao.
+2. Titulo de duas linhas onde um TRECHO fica em italico e na cor dourada
+   (nao a linha inteira), ex: "O que voce recebe de volta, *em ~2 minutos*."
+3. Selo de confianca pequeno abaixo do CTA principal (ex: "Sem compromisso ·
+   Resposta em minutos"), estilo texto pequeno com icones.
+
+NAO trazer do ideaproof.io: os paineis estilo "app" com dados/graficos, o
+roadmap em zigue-zague com nos conectados por linha curva, os cards de
+integracao com fontes de dados. Sao ilustracoes de produto de software e nao
+tem equivalente numa proposta de comunicacao/design/audiovisual.
 
 ---
 
@@ -119,19 +157,27 @@ pagamento, FAQ, encerramento). Assim o Lovable mostra texto real, nao "lorem ips
 
 ## PARTE 4: depois que o Lovable terminar o visual
 
-1. Lovable empurra pro GitHub sozinho (conectar conta na primeira vez).
-2. Importar o repo na Vercel. ATENCAO (licao ja registrada): o auto-detect pode
-   mostrar "TanStack Start"; trocar manualmente para **Vite**. Build: `npm run build`,
-   Output: `dist`.
-3. Identidade git / email: o commit precisa usar o email REAL do GitHub do Thiago
-   (`th.ws.gm@gmail.com`), senao a Vercel BLOQUEIA o deploy automatico.
-4. Dominio: quando o novo visual estiver aprovado, repontar
-   `propostas.thiagowessley.com.br` para o projeto novo na Vercel (apex e
-   subdominio sao DNS independentes; mexer no subdominio nao afeta o
-   thiagowessley.com.br).
-5. Claude entra e transplanta/religa a parte de sistema: rota `/p/:slug`
-   data-driven, analytics de abertura, webhook do Make, QR local, PDF on-demand.
-   A partir dai, proposta nova = um arquivo de dados = um link. Sem duplicar nada.
+**Nao precisa mexer em dominio nem criar projeto novo na Vercel.** O visual do
+Lovable vai ser TRANSPLANTADO pro repo que ja esta no ar
+(`propostas.thiagowessley.com.br`), nao vira um site paralelo. Passos:
+
+1. Lovable empurra o codigo pro GitHub sozinho (projeto novo e separado, so
+   pra guardar o visual, ex: `thiagowessley-propostas-lovable-draft`).
+2. Thiago manda pro Claude o link do projeto Lovable (ou do repo GitHub que
+   ele criou).
+3. Claude le os componentes que o Lovable gerou e substitui, um a um, os
+   componentes equivalentes em `src/components/sections/*.tsx` e
+   `src/components/layout/*.tsx` do repo `thiagowessley-propostas` (o que ja
+   esta em producao), preservando: o roteamento por slug (`PropostaPage.tsx`),
+   os arquivos de dados (`src/propostas/*.ts`), analytics de abertura, webhook
+   do Make, QR local e PDF on-demand.
+4. Commit + push no repo existente. O deploy automatico na Vercel atualiza o
+   MESMO dominio (`propostas.thiagowessley.com.br`) sozinho, sem repontar nada.
+5. Se algum dia fizer sentido o Lovable virar dono do proprio deploy (deixou
+   de ser so design e virou o app de verdade): aí sim entra a etapa de
+   importar o repo dele na Vercel (atencao: auto-detect pode mostrar
+   "TanStack Start", trocar manualmente pra **Vite**) e repontar o dominio.
+   Mas isso NAO e o plano atual.
 
 ## O que o Claude faz por voce em cada proposta nova (modelo escolhido)
 - Voce passa: nome do cliente, responsavel, servico, valores, e os textos (ou so
