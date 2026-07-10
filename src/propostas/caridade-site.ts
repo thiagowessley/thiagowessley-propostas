@@ -193,15 +193,6 @@ export const caridadeSite: PropostaData = {
         { nome: 'Cartão', detalhe: 'Parcelado via link de pagamento' },
       ],
     },
-    servico_adicional: {
-      titulo: 'Doação online com cobrança automática',
-      paragrafos: [
-        'A versão inicial do site direciona o doador para Pix e dados bancários exibidos na página "Doe Agora". É o caminho mais rápido para colocar a captação no ar.',
-        'Se o Instituto quiser cobrança automática (cartão recorrente, boleto gerado pelo próprio site), integramos um gateway de pagamento à parte.',
-        'As taxas de processamento são cobradas pelo próprio gateway (Mercado Pago, Stripe ou similar) e ficam fora do valor desta proposta.',
-      ],
-      imagem: '/img/thiago-horizontal.jpg',
-    },
     referencias: [
       {
         nome: 'GRAACC (Brasil)',
