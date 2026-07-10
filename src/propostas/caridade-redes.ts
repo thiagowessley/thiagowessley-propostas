@@ -123,8 +123,8 @@ export const caridadeRedes: PropostaData = {
           'Relatório mensal de desempenho',
         ],
         valor: 1500,
-        periodo: '/mês',
-        rodape: 'Compromisso fechado de 3 meses',
+        periodo: 'total (3 meses)',
+        rodape: 'Pago antecipado, equivale a R$ 500/mês',
       },
       {
         nome: 'Sob demanda',
@@ -143,7 +143,7 @@ export const caridadeRedes: PropostaData = {
     prazos: [
       { texto: 'O início da produção ocorre em até 5 dias úteis após a aprovação e o envio dos acessos às redes sociais.', bold: 'até 5 dias úteis' },
       { texto: 'O conteúdo é enviado para aprovação com antecedência mínima de 3 dias úteis antes da publicação.', bold: 'antecedência mínima de 3 dias úteis' },
-      { texto: 'O pacote é fechado para 3 meses. Após esse período, renova mês a mês no mesmo valor, salvo aviso de cancelamento.', bold: 'renova mês a mês no mesmo valor' },
+      { texto: 'O pacote é fechado para 3 meses. Após esse período, a continuidade passa para o plano mês a mês, salvo aviso de cancelamento.', bold: 'passa para o plano mês a mês' },
       { texto: 'Solicitações enviadas em sábados, domingos e feriados são respondidas no próximo dia útil.', bold: 'no próximo dia útil' },
     ],
     contrato: [
@@ -210,7 +210,7 @@ export const caridadeRedes: PropostaData = {
       },
       {
         pergunta: 'Depois dos 3 meses, como funciona?',
-        resposta: 'O pacote renova mês a mês no mesmo valor, ou encerra sem multa, conforme decisão do Instituto.',
+        resposta: 'A continuidade passa para o plano mês a mês (sem o desconto do pacote fechado), ou encerra sem multa, conforme decisão do Instituto.',
       },
     ],
     primeiros_30_dias: [
