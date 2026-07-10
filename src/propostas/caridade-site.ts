@@ -74,7 +74,7 @@ export const caridadeSite: PropostaData = {
       {
         numero: '01',
         titulo: 'O site, página a página',
-        periodo: 'SEMANA 1-2',
+        periodo: 'SEMANA 1',
         itens: [
           { titulo: 'Home', descricao: 'Hero com chamada para doação, indicadores de impacto e resumo institucional.' },
           { titulo: 'Sobre o Instituto', descricao: 'História desde 1859, missão e o que o posiciona como referência em São Francisco do Sul.' },
@@ -89,7 +89,7 @@ export const caridadeSite: PropostaData = {
       {
         numero: '02',
         titulo: 'Sistema e desenvolvimento',
-        periodo: 'SEMANA 3-4',
+        periodo: 'SEMANA 1',
         itens: [
           { titulo: 'Painel administrativo', descricao: 'Login seguro para a equipe do Instituto gerenciar conteúdo, projetos e imagens sem programador.' },
           { titulo: 'Cadastro de voluntários', descricao: 'Banco de dados próprio: formulário público + lista e aprovação no painel.' },
@@ -100,7 +100,7 @@ export const caridadeSite: PropostaData = {
       {
         numero: '03',
         titulo: 'Refino e publicação',
-        periodo: 'SEMANA 5',
+        periodo: 'SEMANA 2',
         itens: [
           { titulo: 'SEO básico e avançado', descricao: 'Meta tags, headings, URLs amigáveis, sitemap XML e schema markup.' },
           { titulo: 'Testes e revisão', descricao: 'Rodada de ajustes finos de conteúdo, layout e fluxo do painel.' },
@@ -155,7 +155,7 @@ export const caridadeSite: PropostaData = {
       },
     ],
     prazos: [
-      { texto: 'O prazo de produção é de 25 a 35 dias úteis, dado o escopo de sistema completo (não apenas site institucional).', bold: '25 a 35 dias úteis' },
+      { texto: 'O prazo de produção é de 7 a 10 dias úteis, dado o escopo de sistema completo (não apenas site institucional).', bold: '7 a 10 dias úteis' },
       { texto: 'O serviço só começa a ser produzido a partir do envio do briefing completo, da assinatura do contrato e do pagamento.', bold: 'briefing completo, da assinatura do contrato e do pagamento' },
       { texto: 'A entrega inclui até 02 rodadas de revisão e uma sessão de treinamento do painel administrativo.', bold: 'até 02 rodadas de revisão e uma sessão de treinamento' },
       { texto: 'A entrega para aprovação é feita por link e, após o ok, o site vai ao ar.', bold: 'vai ao ar' },
