@@ -6,7 +6,6 @@ import { Capa } from '../components/sections/Capa'
 import { Sobre } from '../components/sections/Sobre'
 import { Cenario } from '../components/sections/Cenario'
 import { Escopo } from '../components/sections/Escopo'
-import { Portfolio } from '../components/sections/Portfolio'
 import { Financeiro } from '../components/sections/Financeiro'
 import { PrazosAlteracoes } from '../components/sections/PrazosAlteracoes'
 import { ContratoEntrega } from '../components/sections/ContratoEntrega'
@@ -70,12 +69,11 @@ export function PropostaPage() {
 
   return (
     <>
-      <PropostaLayout navItems={navItems} whatsapp={proposta.contato.whatsapp}>
+      <PropostaLayout navItems={navItems}>
         <Capa proposta={proposta} tempoLeitura={tempoLeitura} />
         {proposta.sobre && <Sobre sobre={proposta.sobre} foto={proposta.foto_profissional} />}
         <Cenario cenario={s.cenario} />
         <Escopo fases={s.fases} />
-        {proposta.portfolio && <Portfolio portfolio={proposta.portfolio} />}
         <Financeiro
           valor={proposta.valor}
           planos={s.planos}

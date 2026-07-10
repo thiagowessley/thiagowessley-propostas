@@ -198,7 +198,6 @@ export const instituto: PropostaData = {
       paragrafos: [
         'A cobertura de eventos é contratada à parte, com formulário e proposta próprios. Entra quando o Instituto tiver ações presenciais para registrar.',
         'A entrega padrão inclui até 10 fotos editadas, um aftermovie de até 1:30 min, cortes para redes e arquivo no Flickr institucional.',
-        'Despesas de deslocamento, hospedagem e alimentação são por conta do cliente, independente da localidade.',
       ],
       imagem: '/img/thiago-horizontal.jpg',
     },

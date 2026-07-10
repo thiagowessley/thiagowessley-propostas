@@ -87,18 +87,12 @@ h1, h2, h3, h4 {
 }
 .top-nav-links a:hover { color: var(--ice); }
 .top-nav-links a.ativo { color: var(--gold); }
-.top-nav-cta {
-  flex-shrink: 0;
-  padding: 10px 22px;
-  font-size: 0.75rem;
-}
 .top-nav-progress { height: 2px; background: var(--border); }
 .top-nav-progress-fill { height: 100%; background: var(--gold); transition: width 0.15s; }
 
 @media (max-width: 760px) {
   .top-nav-bar { padding: 0 20px; height: 60px; }
   .top-nav-links { display: none; }
-  .top-nav-cta { padding: 8px 16px; font-size: 0.68rem; }
 }
 
 /* Barra dourada lateral */

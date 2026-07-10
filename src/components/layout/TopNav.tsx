@@ -7,10 +7,9 @@ interface NavItem {
 
 interface Props {
   items: NavItem[]
-  whatsapp: string
 }
 
-export function TopNav({ items, whatsapp }: Props) {
+export function TopNav({ items }: Props) {
   const [activeId, setActiveId] = useState<string>('')
   const [progress, setProgress] = useState(0)
 
@@ -32,8 +31,6 @@ export function TopNav({ items, whatsapp }: Props) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [items])
 
-  const linkWhats = `https://wa.me/${whatsapp}?text=${encodeURIComponent('Olá, vi a proposta e quero conversar.')}`
-
   return (
     <header className="top-nav">
       <div className="top-nav-bar">
@@ -49,9 +46,6 @@ export function TopNav({ items, whatsapp }: Props) {
             </a>
           ))}
         </nav>
-        <a href={linkWhats} target="_blank" rel="noopener noreferrer" className="cta-btn cta-gold top-nav-cta">
-          Falar no WhatsApp
-        </a>
       </div>
       <div className="top-nav-progress">
         <div className="top-nav-progress-fill" style={{ width: `${progress}%` }} />

@@ -9,13 +9,12 @@ export interface NavItem {
 interface Props {
   children: ReactNode
   navItems: NavItem[]
-  whatsapp: string
 }
 
-export function PropostaLayout({ children, navItems, whatsapp }: Props) {
+export function PropostaLayout({ children, navItems }: Props) {
   return (
     <>
-      <TopNav items={navItems} whatsapp={whatsapp} />
+      <TopNav items={navItems} />
       <div className="proposta-page" style={{ maxWidth: 'var(--maxw)', margin: '0 auto', padding: '0 40px' }}>
         {children}
       </div>
