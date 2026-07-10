@@ -16,7 +16,6 @@ export function Encerramento({ proposta }: Props) {
 
   return (
     <AnimatedSection id="encerramento">
-      <span className="assinatura" style={{ position: 'absolute', top: '40px', right: 0 }}>Thiago Wessley</span>
       <DecoLines style={{ top: '20px', right: '-40px', opacity: 0.25 }} width={400} height={480} />
 
       {proposta.secoes.faq && proposta.secoes.faq.length > 0 && (

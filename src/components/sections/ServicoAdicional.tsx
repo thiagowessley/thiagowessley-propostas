@@ -9,7 +9,6 @@ export function ServicoAdicional({ servico }: Props) {
   return (
     <AnimatedSection id="servico-adicional" className="">
       <div style={{ position: 'absolute', inset: 0, background: 'var(--bg-soft)', zIndex: -1 }} />
-      <span className="assinatura" style={{ position: 'absolute', bottom: '40px', right: 0 }}>Thiago Wessley</span>
 
       <div className="split inverter-mobile" style={{ gridTemplateColumns: '1fr 1fr' }}>
         {/* Texto a esquerda */}

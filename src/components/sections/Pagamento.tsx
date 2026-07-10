@@ -9,7 +9,6 @@ interface Props {
 export function Pagamento({ pagamento }: Props) {
   return (
     <AnimatedSection id="pagamento">
-      <span className="assinatura" style={{ position: 'absolute', top: '40px', right: 0 }}>Thiago Wessley</span>
       <DecoLines style={{ top: '40px', right: '-40px', opacity: 0.25 }} width={360} height={420} />
 
       <h2 className="sec-title" style={{ marginBottom: '44px' }}>

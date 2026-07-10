@@ -101,24 +101,6 @@ h1, h2, h3, h4 {
   .top-nav-cta { padding: 8px 16px; font-size: 0.68rem; }
 }
 
-/* Watermark THIAGO WESSLEY em toda pagina */
-.proposta-page::after {
-  content: 'THIAGO WESSLEY';
-  font-family: 'Archivo', sans-serif;
-  font-weight: 900;
-  font-size: 38px;
-  letter-spacing: 0.35em;
-  color: var(--gold);
-  opacity: 0.04;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-30deg);
-  pointer-events: none;
-  white-space: nowrap;
-  z-index: 0;
-}
-
 /* Barra dourada lateral */
 .gold-bar {
   width: 3px;
@@ -177,12 +159,6 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 12px;
   margin-bottom: 20px;
-}
-.eyebrow::before {
-  content: '';
-  width: 28px;
-  height: 2px;
-  background: var(--gold);
 }
 .eyebrow .accent { color: var(--gold); }
 
@@ -470,9 +446,6 @@ ul.gold-list li::before {
 @media print {
   body { background: #0D0D0D !important; }
   .top-nav, .popup-saida { display: none !important; }
-  .proposta-page::after { display: none; }
-  .fase-card.inativo { display: none; }
-  .fase-card.ativo { animation: none; box-shadow: none; }
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;

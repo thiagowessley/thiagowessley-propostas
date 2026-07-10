@@ -36,7 +36,6 @@ function Coluna({ col }: { col: TermoColuna }) {
 export function ContratoEntrega({ colunas }: Props) {
   return (
     <AnimatedSection id="contrato">
-      <span className="assinatura" style={{ position: 'absolute', top: '40px', right: 0 }}>Thiago Wessley</span>
       {colunas.length >= 2 ? (
         <div className="termos-grid">
           <Coluna col={colunas[0]} />

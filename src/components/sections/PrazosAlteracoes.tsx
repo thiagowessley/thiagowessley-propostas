@@ -23,7 +23,6 @@ function TextoComBold({ item }: { item: ItemPrazo }) {
 export function PrazosAlteracoes({ prazos }: Props) {
   return (
     <AnimatedSection id="prazos">
-      <span className="assinatura" style={{ position: 'absolute', top: '40px', right: 0 }}>Thiago Wessley</span>
       <h2 className="sec-title" style={{ marginBottom: '44px' }}>
         <span className="thin">Prazos e</span>
         <span className="bold">Alterações</span>
