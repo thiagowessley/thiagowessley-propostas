@@ -5,7 +5,6 @@ export const caridadeRedes: PropostaData = {
   cliente: 'Instituto Humanitário Caridade',
   segmento: 'Instituto humanitário, ex-Hospital de Caridade',
   servico: 'Gestão de Redes Sociais',
-  responsavel: 'Wagner',
   validade: '2026-07-25',
   envio: '2026-07-10',
   intro_capa: 'Esta proposta apresenta o escopo da gestão de redes sociais do Instituto por 3 meses, o processo de produção de conteúdo, prazos, condições e investimento.',

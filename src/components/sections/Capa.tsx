@@ -87,10 +87,12 @@ export function Capa({ proposta, tempoLeitura }: Props) {
             <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Cliente</p>
             <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.cliente}</p>
           </div>
-          <div>
-            <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Responsável</p>
-            <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.responsavel ?? 'Thiago Wessley'}</p>
-          </div>
+          {proposta.responsavel && (
+            <div>
+              <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Responsável</p>
+              <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.responsavel}</p>
+            </div>
+          )}
         </motion.div>
 
         {/* linha de info: envio | validade ------ */}
