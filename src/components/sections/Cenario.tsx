@@ -28,6 +28,19 @@ export function Cenario({ cenario }: Props) {
           </div>
         ))}
       </div>
+
+      {cenario.entregas && cenario.entregas.length > 0 && (
+        <div style={{ marginTop: '44px' }}>
+          <p style={{ fontSize: '0.72rem', color: 'var(--gold)', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '16px' }}>
+            O que o site precisa entregar
+          </p>
+          <ul className="gold-list" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '10px 24px' }}>
+            {cenario.entregas.map((item, i) => (
+              <li key={i} style={{ color: 'var(--ice)', fontSize: '0.92rem' }}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </AnimatedSection>
   )
 }

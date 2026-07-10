@@ -114,6 +114,7 @@ export interface PropostaData {
       problema: string
       publico: string
       desafio: string
+      entregas?: string[]  // "o que o site precisa entregar", lista de beneficios
     }
     fases: FaseEscopo[]
     referencias?: Referencia[]
