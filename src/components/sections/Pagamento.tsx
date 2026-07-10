@@ -13,7 +13,7 @@ export function Pagamento({ pagamento }: Props) {
       <DecoLines style={{ top: '40px', right: '-40px', opacity: 0.25 }} width={360} height={420} />
 
       <h2 className="sec-title" style={{ marginBottom: '44px' }}>
-        <span className="thin">Condicoes de</span>
+        <span className="thin">Condições de</span>
         <span className="bold">Pagamento</span>
       </h2>
 

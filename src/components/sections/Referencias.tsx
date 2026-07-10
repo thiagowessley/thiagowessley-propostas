@@ -11,13 +11,13 @@ export function Referencias({ referencias }: Props) {
 
   return (
     <AnimatedSection id="referencias">
-      <p className="eyebrow"><span className="accent">Referencias</span></p>
+      <p className="eyebrow"><span className="accent">Referências</span></p>
       <h2 className="sec-title" style={{ marginBottom: '12px' }}>
         <span className="thin">O que nos</span>
         <span className="bold">inspirou</span>
       </h2>
       <p style={{ color: 'var(--muted)', marginBottom: '40px', fontSize: '0.9rem' }}>
-        Sites reais estudados para este projeto, com a tecnica que vamos aplicar.
+        Sites reais estudados para este projeto, com a técnica que vamos aplicar.
       </p>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
         {referencias.map((ref, i) => (
@@ -30,7 +30,7 @@ export function Referencias({ referencias }: Props) {
             onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--gold)')}
             onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--border)')}
           >
-            <p style={{ fontSize: '0.72rem', color: 'var(--gold)', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '8px' }}>Referencia {String(i + 1).padStart(2, '0')}</p>
+            <p style={{ fontSize: '0.72rem', color: 'var(--gold)', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: '8px' }}>Referência {String(i + 1).padStart(2, '0')}</p>
             <p style={{ color: 'var(--white)', fontWeight: 500, marginBottom: '12px' }}>{ref.nome}</p>
             <p style={{ fontSize: '0.85rem', color: 'var(--muted)', lineHeight: 1.6 }}>
               <span style={{ color: 'var(--ice)' }}>O que aplicamos: </span>{ref.tecnica}

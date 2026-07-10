@@ -44,25 +44,25 @@ export function PropostaPage() {
   const navItems = useMemo<NavItem[]>(() => {
     if (!proposta) return []
     const s = proposta.secoes
-    const items: NavItem[] = [{ id: 'capa', label: 'Inicio' }]
+    const items: NavItem[] = [{ id: 'capa', label: 'Início' }]
     if (proposta.sobre) items.push({ id: 'sobre', label: 'Sobre' })
-    items.push({ id: 'cenario', label: 'O Cenario' })
+    items.push({ id: 'cenario', label: 'O Cenário' })
     items.push({ id: 'escopo', label: 'Escopo' })
-    if (proposta.portfolio) items.push({ id: 'portfolio', label: 'Portfolio' })
+    if (proposta.portfolio) items.push({ id: 'portfolio', label: 'Portfólio' })
     items.push({ id: 'financeiro', label: 'Investimento' })
     if (s.prazos) items.push({ id: 'prazos', label: 'Prazos' })
     if (s.contrato) items.push({ id: 'contrato', label: 'Contrato' })
     if (s.pagamento) items.push({ id: 'pagamento', label: 'Pagamento' })
     if (s.servico_adicional) items.push({ id: 'servico-adicional', label: 'Extra' })
-    if (s.referencias) items.push({ id: 'referencias', label: 'Referencias' })
-    items.push({ id: 'encerramento', label: 'Proximo Passo' })
+    if (s.referencias) items.push({ id: 'referencias', label: 'Referências' })
+    items.push({ id: 'encerramento', label: 'Próximo Passo' })
     return items
   }, [proposta])
 
   if (!proposta) {
     return (
       <div style={{ padding: '60px', textAlign: 'center' }}>
-        <h2 style={{ color: 'var(--muted)' }}>Proposta nao encontrada.</h2>
+        <h2 style={{ color: 'var(--muted)' }}>Proposta não encontrada.</h2>
         <p style={{ color: 'var(--muted)', marginTop: '8px', fontSize: '0.9rem' }}>
           Verifique o link ou entre em contato.
         </p>

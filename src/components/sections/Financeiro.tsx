@@ -59,7 +59,7 @@ export function Financeiro({ valor, planos, primeiros30, confidencialidade }: Pr
 
       {valor.alternativa && (
         <div style={{ marginBottom: '32px', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.72rem', color: 'var(--muted)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Referencia de mercado (agencia)</p>
+          <p style={{ fontSize: '0.72rem', color: 'var(--muted)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Referência de mercado (agência)</p>
           <p style={{ fontFamily: 'Archivo', fontWeight: 900, fontSize: '1.6rem', color: 'var(--muted)', textDecoration: 'line-through' }}>
             {formatarReais(valor.alternativa)}
           </p>
@@ -75,7 +75,7 @@ export function Financeiro({ valor, planos, primeiros30, confidencialidade }: Pr
           <ValorHover valor={valor.principal} label="Sua proposta" />
           {valor.manutencao && (
             <p style={{ marginTop: '16px', color: 'var(--muted)', fontSize: '0.9rem' }}>
-              + {formatarReais(valor.manutencao)}/mes manutencao (opcional)
+              + {formatarReais(valor.manutencao)}/mês manutenção (opcional)
             </p>
           )}
         </div>

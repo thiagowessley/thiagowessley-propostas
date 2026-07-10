@@ -12,7 +12,7 @@ export function Portfolio({ portfolio }: Props) {
         {/* Coluna esquerda: titulo + texto + link */}
         <div className="reading" style={{ maxWidth: '420px' }}>
           <h2 className="sec-title" style={{ marginBottom: '28px' }}>
-            <span className="bold">Portfolio</span>
+            <span className="bold">Portfólio</span>
           </h2>
           {portfolio.intro.map((p, i) => (
             <p key={i} style={{ color: 'var(--ice)', lineHeight: 1.75, marginBottom: '16px', fontSize: '0.95rem' }}>

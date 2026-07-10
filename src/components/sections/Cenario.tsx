@@ -8,7 +8,7 @@ interface Props {
 export function Cenario({ cenario }: Props) {
   return (
     <AnimatedSection id="cenario">
-      <p className="eyebrow"><span className="accent">O</span> cenario</p>
+      <p className="eyebrow"><span className="accent">O</span> cenário</p>
       <h2 className="sec-title" style={{ marginBottom: '44px' }}>
         <span className="thin">O que esta</span>
         <span className="bold">em jogo</span>
@@ -16,7 +16,7 @@ export function Cenario({ cenario }: Props) {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '24px' }}>
         {[
           { label: 'Posicionamento', texto: cenario.problema },
-          { label: 'Publico', texto: cenario.publico },
+          { label: 'Público', texto: cenario.publico },
           { label: 'Desafio', texto: cenario.desafio },
         ].map(({ label, texto }) => (
           <div key={label} style={{ display: 'flex', gap: '12px' }}>

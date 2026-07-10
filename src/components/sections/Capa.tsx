@@ -85,7 +85,7 @@ export function Capa({ proposta, tempoLeitura }: Props) {
             <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.cliente}</p>
           </div>
           <div>
-            <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Responsavel</p>
+            <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Responsável</p>
             <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.responsavel ?? 'Thiago Wessley'}</p>
           </div>
         </motion.div>

@@ -26,7 +26,7 @@ export function PrazosAlteracoes({ prazos }: Props) {
       <span className="assinatura" style={{ position: 'absolute', top: '40px', right: 0 }}>Thiago Wessley</span>
       <h2 className="sec-title" style={{ marginBottom: '44px' }}>
         <span className="thin">Prazos e</span>
-        <span className="bold">Alteracoes</span>
+        <span className="bold">Alterações</span>
       </h2>
       <ul className="gold-list" style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '820px' }}>
         {prazos.map((item, i) => (

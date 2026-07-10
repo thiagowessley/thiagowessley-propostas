@@ -15,9 +15,9 @@ export function Contato({ proposta }: Props) {
 
   return (
     <AnimatedSection id="contato">
-      <p className="section-number">{numeroSecao}: Proximo Passo</p>
+      <p className="section-number">{numeroSecao}: Próximo Passo</p>
       <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', marginBottom: '16px' }}>
-        Pronto para avancar?
+        Pronto para avançar?
       </h2>
 
       {proposta.secoes.faq && <FAQInline itens={proposta.secoes.faq} />}
@@ -26,7 +26,7 @@ export function Contato({ proposta }: Props) {
         <CommitmentLadder onCompleto={() => setCtaAtivo(true)} />
 
         <a
-          href={`https://wa.me/${proposta.contato.whatsapp}?text=Ola, vi a proposta e quero avancar.`}
+          href={`https://wa.me/${proposta.contato.whatsapp}?text=Olá, vi a proposta e quero avançar.`}
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -46,7 +46,7 @@ export function Contato({ proposta }: Props) {
             textTransform: 'uppercase',
           }}
         >
-          Quero avancar
+          Quero avançar
         </a>
 
         <button

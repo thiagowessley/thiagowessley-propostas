@@ -10,9 +10,9 @@ interface Props {
 }
 
 export function Encerramento({ proposta }: Props) {
-  const linkWhats = `https://wa.me/${proposta.contato.whatsapp}?text=${encodeURIComponent('Ola, vi a proposta e quero avancar.')}`
+  const linkWhats = `https://wa.me/${proposta.contato.whatsapp}?text=${encodeURIComponent('Olá, vi a proposta e quero avançar.')}`
   const qrUrl = proposta.contato.qr ?? '/img/qr-whatsapp.png'
-  const texto = proposta.secoes.encerramento ?? 'Quando terminar de ler, me chama no WhatsApp e a gente fecha os proximos passos.'
+  const texto = proposta.secoes.encerramento ?? 'Quando terminar de ler, me chama no WhatsApp e a gente fecha os próximos passos.'
 
   return (
     <AnimatedSection id="encerramento">
@@ -27,7 +27,7 @@ export function Encerramento({ proposta }: Props) {
       )}
 
       <h2 className="sec-title" style={{ marginBottom: '24px' }}>
-        <span className="thin">Proximo</span>
+        <span className="thin">Próximo</span>
         <span className="bold">passo</span>
       </h2>
 
