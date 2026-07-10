@@ -9,7 +9,7 @@ export const caridadeRedes: PropostaData = {
   envio: '2026-07-10',
   intro_capa: 'Esta proposta apresenta o escopo da gestão de redes sociais do Instituto por 3 meses, o processo de produção de conteúdo, prazos, condições e investimento.',
   valor: {
-    principal: 1800,
+    principal: 1500,
     alternativa: 4200,
     moeda: 'BRL',
   },
@@ -100,6 +100,18 @@ export const caridadeRedes: PropostaData = {
     ],
     planos: [
       {
+        nome: 'Mês a mês',
+        resumo: 'Sem fidelidade',
+        itens: [
+          'Tudo do Pacote 3 meses',
+          'Sem compromisso de permanência',
+          'Cancelamento a qualquer momento',
+        ],
+        valor: 597,
+        periodo: '/mês',
+        rodape: 'Sem compromisso de permanência',
+      },
+      {
         nome: 'Pacote 3 meses',
         destaque: true,
         resumo: 'O mais escolhido',
@@ -110,21 +122,9 @@ export const caridadeRedes: PropostaData = {
           'Publicação em Instagram, Facebook, LinkedIn e YouTube',
           'Relatório mensal de desempenho',
         ],
-        valor: 1800,
+        valor: 1500,
         periodo: '/mês',
         rodape: 'Compromisso fechado de 3 meses',
-      },
-      {
-        nome: 'Mês a mês',
-        resumo: 'Sem fidelidade',
-        itens: [
-          'Tudo do Pacote 3 meses',
-          'Sem compromisso de permanência',
-          'Cancelamento a qualquer momento',
-        ],
-        valor: 2200,
-        periodo: '/mês',
-        rodape: 'Valor maior pela flexibilidade',
       },
       {
         nome: 'Sob demanda',
