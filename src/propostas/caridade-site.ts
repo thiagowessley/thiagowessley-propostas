@@ -177,6 +177,7 @@ export const caridadeSite: PropostaData = {
           'O envio do conteúdo deve ocorrer durante a fase de produção, para entrar no site junto das demais páginas.',
           'Logotipos e arquivos da marca devem ser enviados em PDF, SVG, PSD ou AI.',
           'Cobrança online (cartão, boleto recorrente) não está inclusa: escopo cobre doação via Pix e dados bancários exibidos no site.',
+          'O banco de dados e a hospedagem são criados em contas próprias do Instituto (Supabase e Vercel), com o Thiago como responsável técnico. Os dados de voluntários e associados ficam sob titularidade do Instituto, nunca do desenvolvedor.',
         ],
       },
     ],
