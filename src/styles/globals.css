@@ -335,6 +335,7 @@ ul.gold-list li::before {
   flex-wrap: wrap;
 }
 .plano-card {
+  position: relative;
   flex: 1 1 280px;
   max-width: 340px;
   background: var(--bg-card);
@@ -345,14 +346,27 @@ ul.gold-list li::before {
   flex-direction: column;
 }
 .plano-card.destaque {
-  background: var(--ice);
-  color: #0D0D0D;
-  border-color: var(--ice);
+  border-color: var(--gold);
   transform: translateY(-12px);
-  box-shadow: 0 24px 60px -20px rgba(0,0,0,0.7);
+  box-shadow: 0 0 0 1px var(--gold), 0 0 40px -8px rgba(201, 160, 80, 0.5), 0 24px 60px -20px rgba(0,0,0,0.7);
+  animation: glowPulse 3.2s ease-in-out infinite;
 }
-.plano-card.destaque h3,
-.plano-card.destaque .plano-resumo { color: #0D0D0D; }
+.plano-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+  color: #0D0D0D;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
 
 /* ===== Capsule / pill ===== */
 .capsule {

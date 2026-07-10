@@ -1,4 +1,5 @@
 import { AnimatedSection } from '../ui/AnimatedSection'
+import { CheckIcon } from '../ui/CheckIcon'
 import type { PropostaData } from '../../types/proposta'
 
 interface Props {
@@ -37,21 +38,7 @@ export function Cenario({ cenario }: Props) {
           <ul style={{ listStyle: 'none', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px 24px' }}>
             {cenario.entregas.map((item, i) => (
               <li key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                <span style={{
-                  flexShrink: 0,
-                  width: '20px',
-                  height: '20px',
-                  borderRadius: '50%',
-                  border: '1px solid var(--gold)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginTop: '1px',
-                }}>
-                  <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
-                    <path d="M1 4L3.5 6.5L9 1" stroke="var(--gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
+                <CheckIcon />
                 <span style={{ color: 'var(--ice)', fontSize: '0.92rem', lineHeight: 1.5 }}>{item}</span>
               </li>
             ))}

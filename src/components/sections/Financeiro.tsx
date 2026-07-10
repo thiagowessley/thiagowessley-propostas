@@ -1,5 +1,6 @@
 import { AnimatedSection } from '../ui/AnimatedSection'
 import { ValorHover } from '../ui/ValorHover'
+import { CheckIcon } from '../ui/CheckIcon'
 import type { PropostaData } from '../../types/proposta'
 import { formatarReais } from '../../lib/tempo'
 
@@ -14,22 +15,23 @@ function PlanoCard({ plano }: { plano: NonNullable<Props['planos']>[number] }) {
   const valorTexto = plano.valor > 0 ? formatarReais(plano.valor) : 'Sob consulta'
   return (
     <div className={`plano-card${plano.destaque ? ' destaque' : ''}`}>
+      {plano.destaque && <span className="plano-badge">Mais escolhido</span>}
       <h3 style={{ fontSize: '1.6rem', marginBottom: '6px' }}>{plano.nome}</h3>
-      <p className="plano-resumo" style={{ fontWeight: 500, color: plano.destaque ? '#0D0D0D' : 'var(--gold)', marginBottom: '20px', fontSize: '0.95rem' }}>
+      <p className="plano-resumo" style={{ fontWeight: 500, color: 'var(--gold)', marginBottom: '20px', fontSize: '0.95rem', fontStyle: 'italic' }}>
         {plano.resumo}
       </p>
-      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', flex: 1, marginBottom: '24px' }}>
+      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1, marginBottom: '24px' }}>
         {plano.itens.map((it, i) => (
-          <li key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', fontSize: '0.88rem', color: plano.destaque ? '#2a2a2a' : 'var(--ice)' }}>
-            <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: plano.destaque ? '#C9A050' : 'var(--gold)', flexShrink: 0, marginTop: '8px' }} />
+          <li key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', fontSize: '0.88rem', color: 'var(--ice)' }}>
+            <CheckIcon />
             <span>{it}</span>
           </li>
         ))}
       </ul>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <span className="capsule" style={{
-          background: plano.destaque ? '#0D0D0D' : 'var(--bg)',
-          color: plano.destaque ? 'var(--gold)' : 'var(--white)',
+          background: plano.destaque ? 'var(--gold)' : 'var(--bg)',
+          color: plano.destaque ? '#0D0D0D' : 'var(--white)',
           border: plano.destaque ? 'none' : '1px solid var(--border)',
           fontSize: '1.15rem',
           width: '100%',
@@ -38,7 +40,7 @@ function PlanoCard({ plano }: { plano: NonNullable<Props['planos']>[number] }) {
         </span>
       </div>
       {plano.rodape && (
-        <p style={{ marginTop: '12px', fontSize: '0.72rem', color: plano.destaque ? '#5a5a5a' : 'var(--muted)', textAlign: 'center' }}>
+        <p style={{ marginTop: '12px', fontSize: '0.72rem', color: 'var(--muted)', textAlign: 'center' }}>
           {plano.rodape}
         </p>
       )}
