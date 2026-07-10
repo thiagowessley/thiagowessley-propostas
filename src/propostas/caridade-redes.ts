@@ -127,6 +127,21 @@ export const caridadeRedes: PropostaData = {
         rodape: 'Pago antecipado, equivale a R$ 500/mês',
       },
       {
+        nome: 'Pacote 1 ano',
+        resumo: 'Maior economia',
+        itens: [
+          'Planejamento de conteúdo mensal',
+          'Criação de artes e materiais visuais',
+          'Redação de legendas',
+          'Publicação em Instagram, Facebook, LinkedIn e YouTube',
+          'Relatório mensal de desempenho',
+          'Prioridade no atendimento',
+        ],
+        valor: 5400,
+        periodo: 'total (12 meses)',
+        rodape: 'Pago antecipado ou trimestral, equivale a R$ 450/mês',
+      },
+      {
         nome: 'Sob demanda',
         resumo: 'Produção extra',
         itens: [
