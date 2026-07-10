@@ -37,6 +37,70 @@ h1, h2, h3, h4 {
   color: var(--white);
 }
 
+/* ===== Nav fixa no topo ===== */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.top-nav-bar {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.top-nav-logo {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  text-transform: uppercase;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.top-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  justify-content: center;
+  overflow-x: auto;
+  min-width: 0;
+}
+.top-nav-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+.top-nav-links a:hover { color: var(--ice); }
+.top-nav-links a.ativo { color: var(--gold); }
+.top-nav-cta {
+  flex-shrink: 0;
+  padding: 10px 22px;
+  font-size: 0.75rem;
+}
+.top-nav-progress { height: 2px; background: var(--border); }
+.top-nav-progress-fill { height: 100%; background: var(--gold); transition: width 0.15s; }
+
+@media (max-width: 760px) {
+  .top-nav-bar { padding: 0 20px; height: 60px; }
+  .top-nav-links { display: none; }
+  .top-nav-cta { padding: 8px 16px; font-size: 0.68rem; }
+}
+
 /* Watermark THIAGO WESSLEY em toda pagina */
 .proposta-page::after {
   content: 'THIAGO WESSLEY';
@@ -362,7 +426,9 @@ ul.gold-list li::before {
 @media (max-width: 920px) {
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
 }
+.proposta-page { padding-top: 72px; }
 @media (max-width: 760px) {
+  .proposta-page { padding-top: 60px; }
   .section { padding: 64px 0; }
   .split, .split.foto-direita { grid-template-columns: 1fr; gap: 36px; }
   .split.inverter-mobile > *:first-child { order: 2; }
@@ -389,7 +455,7 @@ ul.gold-list li::before {
 /* Print CSS para PDF on-demand */
 @media print {
   body { background: #0D0D0D !important; }
-  .side-nav, .popup-saida { display: none !important; }
+  .top-nav, .popup-saida { display: none !important; }
   .proposta-page::after { display: none; }
   .fase-card.inativo { display: none; }
   .fase-card.ativo { animation: none; box-shadow: none; }

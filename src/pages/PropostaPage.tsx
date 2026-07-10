@@ -44,18 +44,14 @@ export function PropostaPage() {
   const navItems = useMemo<NavItem[]>(() => {
     if (!proposta) return []
     const s = proposta.secoes
-    const items: NavItem[] = [{ id: 'capa', label: 'Início' }]
+    const items: NavItem[] = []
     if (proposta.sobre) items.push({ id: 'sobre', label: 'Sobre' })
-    items.push({ id: 'cenario', label: 'O Cenário' })
+    items.push({ id: 'cenario', label: 'Cenário' })
     items.push({ id: 'escopo', label: 'Escopo' })
-    if (proposta.portfolio) items.push({ id: 'portfolio', label: 'Portfólio' })
     items.push({ id: 'financeiro', label: 'Investimento' })
     if (s.prazos) items.push({ id: 'prazos', label: 'Prazos' })
-    if (s.contrato) items.push({ id: 'contrato', label: 'Contrato' })
-    if (s.pagamento) items.push({ id: 'pagamento', label: 'Pagamento' })
-    if (s.servico_adicional) items.push({ id: 'servico-adicional', label: 'Extra' })
     if (s.referencias) items.push({ id: 'referencias', label: 'Referências' })
-    items.push({ id: 'encerramento', label: 'Próximo Passo' })
+    items.push({ id: 'encerramento', label: 'Contato' })
     return items
   }, [proposta])
 
@@ -74,7 +70,7 @@ export function PropostaPage() {
 
   return (
     <>
-      <PropostaLayout navItems={navItems}>
+      <PropostaLayout navItems={navItems} whatsapp={proposta.contato.whatsapp}>
         <Capa proposta={proposta} tempoLeitura={tempoLeitura} />
         {proposta.sobre && <Sobre sobre={proposta.sobre} foto={proposta.foto_profissional} />}
         <Cenario cenario={s.cenario} />

@@ -48,12 +48,15 @@ export function Capa({ proposta, tempoLeitura }: Props) {
         </video>
       )}
 
-      {/* assinatura canto superior direito */}
-      <span className="assinatura" style={{ position: 'absolute', top: 0, right: 0 }}>
-        Thiago Wessley
-      </span>
-
       <div style={{ position: 'relative', zIndex: 1, width: '100%' }}>
+        <motion.p
+          custom={0} variants={lineUp} initial="hidden" animate="show"
+          className="eyebrow"
+          style={{ display: 'inline-flex' }}
+        >
+          <span className="accent">{proposta.servico}</span>
+        </motion.p>
+
         {copyAbertura && (
           <motion.p
             custom={0} variants={lineUp} initial="hidden" animate="show"

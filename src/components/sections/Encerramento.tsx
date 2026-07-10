@@ -26,39 +26,49 @@ export function Encerramento({ proposta }: Props) {
         </div>
       )}
 
-      <h2 className="sec-title" style={{ marginBottom: '24px' }}>
-        <span className="thin">Próximo</span>
-        <span className="bold">passo</span>
-      </h2>
+      <div style={{
+        textAlign: 'center',
+        maxWidth: '680px',
+        margin: '0 auto',
+        padding: '56px 40px',
+        background: 'var(--bg-card)',
+        border: '1px solid var(--gold-dim)',
+        borderRadius: '24px',
+      }}>
+        <h2 className="sec-title" style={{ marginBottom: '24px' }}>
+          <span className="thin">Próximo</span>
+          <span className="bold">passo</span>
+        </h2>
 
-      <p style={{ color: 'var(--ice)', lineHeight: 1.75, fontSize: '1.02rem', maxWidth: '540px', marginBottom: '28px' }}>
-        {texto}
-      </p>
+        <p style={{ color: 'var(--ice)', lineHeight: 1.75, fontSize: '1.02rem', maxWidth: '480px', margin: '0 auto 28px' }}>
+          {texto}
+        </p>
 
-      <div style={{ marginBottom: '40px' }}>
-        <ValidadeCountdown validade={proposta.validade} />
-      </div>
+        <div style={{ marginBottom: '32px', display: 'flex', justifyContent: 'center' }}>
+          <ValidadeCountdown validade={proposta.validade} />
+        </div>
 
-      <div style={{ display: 'flex', gap: '32px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '64px' }}>
-        <img
-          src={qrUrl}
-          alt="QR Code para WhatsApp"
-          width={150}
-          height={150}
-          style={{ borderRadius: '8px', border: '1px solid var(--border)', background: 'var(--bg-card)' }}
-          loading="lazy"
-        />
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-          <a href={linkWhats} target="_blank" rel="noopener noreferrer" className="cta-btn cta-gold">
-            Falar no WhatsApp
-          </a>
-          <button onClick={baixarPDF} className="cta-btn cta-ghost" style={{ textTransform: 'none' }}>
-            Baixar em PDF
-          </button>
+        <div style={{ display: 'flex', gap: '32px', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <img
+            src={qrUrl}
+            alt="QR Code para WhatsApp"
+            width={130}
+            height={130}
+            style={{ borderRadius: '8px', border: '1px solid var(--border)', background: 'var(--bg)' }}
+            loading="lazy"
+          />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+            <a href={linkWhats} target="_blank" rel="noopener noreferrer" className="cta-btn cta-gold">
+              Falar no WhatsApp
+            </a>
+            <button onClick={baixarPDF} className="cta-btn cta-ghost" style={{ textTransform: 'none' }}>
+              Baixar em PDF
+            </button>
+          </div>
         </div>
       </div>
 
-      <div style={{ paddingTop: '28px', borderTop: '1px solid var(--border)', color: 'var(--muted)', fontSize: '0.85rem', display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+      <div style={{ marginTop: '48px', paddingTop: '28px', borderTop: '1px solid var(--border)', color: 'var(--muted)', fontSize: '0.85rem', display: 'flex', gap: '14px', flexWrap: 'wrap', justifyContent: 'center' }}>
         <span>{proposta.contato.email}</span>
         {proposta.contato.instagram && (
           <>

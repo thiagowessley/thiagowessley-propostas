@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { SideNav } from './SideNav'
+import { TopNav } from './TopNav'
 
 export interface NavItem {
   id: string
@@ -9,13 +9,16 @@ export interface NavItem {
 interface Props {
   children: ReactNode
   navItems: NavItem[]
+  whatsapp: string
 }
 
-export function PropostaLayout({ children, navItems }: Props) {
+export function PropostaLayout({ children, navItems, whatsapp }: Props) {
   return (
-    <div className="proposta-page" style={{ maxWidth: 'var(--maxw)', margin: '0 auto', padding: '0 40px' }}>
-      <SideNav items={navItems} />
-      {children}
-    </div>
+    <>
+      <TopNav items={navItems} whatsapp={whatsapp} />
+      <div className="proposta-page" style={{ maxWidth: 'var(--maxw)', margin: '0 auto', padding: '0 40px' }}>
+        {children}
+      </div>
+    </>
   )
 }
