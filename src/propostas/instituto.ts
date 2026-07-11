@@ -22,7 +22,7 @@ export const instituto: PropostaData = {
   sobre: {
     saudacao: 'Olá!',
     paragrafos: [
-      'Sou o Thiago Wessley, de Joinville. Trabalho na fronteira entre comunicação, design e audiovisual, ajudando marcas a aparecerem do jeito certo: site que converte, conteúdo que sustenta presença e vídeo que carrega a mensagem.',
+      'Sou o Thiago Wessley, de Joinville. Trabalho na fronteira entre comunicação, design e audiovisual, ajudando marcas a ganhar visibilidade profissional: site que converte, conteúdo que sustenta presença e vídeo que carrega a mensagem.',
       'Nos últimos anos entreguei sites institucionais, identidade visual, cobertura de eventos e gestão de conteúdo para empresas e projetos que precisavam parecer sérios antes mesmo de crescer.',
       'O que me move é tirar a marca da invisibilidade: estrutura clara, estética premium e conteúdo que alimenta tanto o Google quanto as IAs que as pessoas já usam para buscar.',
     ],
