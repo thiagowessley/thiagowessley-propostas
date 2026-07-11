@@ -103,8 +103,11 @@ export const caridadeRedes: PropostaData = {
         nome: 'Mês a mês',
         resumo: 'Sem fidelidade',
         itens: [
-          'Tudo do Pacote 3 meses',
-          'Sem compromisso de permanência',
+          'Planejamento de conteúdo mensal',
+          'Criação de artes e materiais visuais',
+          'Redação de legendas',
+          'Publicação em Instagram, Facebook, LinkedIn e YouTube',
+          'Relatório mensal de desempenho',
           'Cancelamento a qualquer momento',
         ],
         valor: 597,
