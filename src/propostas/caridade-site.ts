@@ -76,7 +76,7 @@ export const caridadeSite: PropostaData = {
         titulo: 'O site, página a página',
         periodo: 'SEMANA 1-2',
         itens: [
-          { titulo: 'Home', descricao: 'Hero com chamada para doação, indicadores de impacto e resumo institucional.' },
+          { titulo: 'Página Inicial', descricao: 'Hero com chamada para doação, indicadores de impacto e resumo institucional.' },
           { titulo: 'Sobre o Instituto', descricao: 'História desde 1859, missão e o que o posiciona como referência em São Francisco do Sul.' },
           { titulo: 'Serviços', descricao: 'Portfólio dos serviços prestados pelo Instituto.' },
           { titulo: 'Projetos', descricao: 'Vitrine de projetos desenvolvidos, pronta para crescer com novos cases.' },

@@ -76,7 +76,7 @@ export const instituto: PropostaData = {
         titulo: 'O site, página a página',
         periodo: 'SEMANA 1-2',
         itens: [
-          { titulo: 'Home', descricao: 'Hero de impacto com suporte a vídeo institucional, dashboard de indicadores, resumo de atuação e chamadas para as áreas centrais.' },
+          { titulo: 'Página Inicial', descricao: 'Hero de impacto com suporte a vídeo institucional, dashboard de indicadores, resumo de atuação e chamadas para as áreas centrais.' },
           { titulo: 'Sobre o Instituto', descricao: 'História, propósito, missão e o que posiciona o instituto como referência.' },
           { titulo: 'Áreas de Atuação', descricao: 'Frentes de trabalho e competências técnicas, organizadas para leitura rápida.' },
           { titulo: 'Projetos e Cases', descricao: 'Vitrine de resultados e provas de impacto, pronta para crescer com novos cases.' },
@@ -248,7 +248,7 @@ export const instituto: PropostaData = {
     ],
     primeiros_30_dias: [
       'Semana 1: briefing de conteúdo + wireframes das 7 páginas',
-      'Semana 2: desenvolvimento das páginas principais (Home, Sobre, Missão)',
+      'Semana 2: desenvolvimento das páginas principais (Página Inicial, Sobre, Missão)',
       'Semana 3: páginas secundárias + integração de indicadores animados',
       'Semana 4: revisão, ajustes finos e deploy na hospedagem do cliente',
     ],
