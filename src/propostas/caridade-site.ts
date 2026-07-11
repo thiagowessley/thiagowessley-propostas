@@ -99,7 +99,7 @@ export const caridadeSite: PropostaData = {
       },
       {
         numero: '03',
-        titulo: 'Refino e publicação',
+        titulo: 'Ajustes finais e lançamento',
         periodo: 'SEMANA 3',
         itens: [
           { titulo: 'SEO básico e avançado', descricao: 'Meta tags, headings, URLs amigáveis, sitemap XML e schema markup.' },

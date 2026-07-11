@@ -98,7 +98,7 @@ export const instituto: PropostaData = {
       },
       {
         numero: '03',
-        titulo: 'Refino e publicação',
+        titulo: 'Ajustes finais e lançamento',
         periodo: 'SEMANA 4',
         itens: [
           { titulo: 'SEO básico', descricao: 'Meta tags, headings e URLs amigáveis em todas as páginas.' },
