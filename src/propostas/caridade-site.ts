@@ -12,6 +12,7 @@ export const caridadeSite: PropostaData = {
     principal: 4995,
     manutencao: 567,
     alternativa: 12900,
+    alternativa_label: 'Referência de mercado (site + sistema completo)',
     moeda: 'BRL',
   },
 

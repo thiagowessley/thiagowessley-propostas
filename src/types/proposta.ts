@@ -2,6 +2,7 @@ export interface ValorProposta {
   principal: number
   manutencao?: number
   alternativa?: number  // para ancoragem: valor mais alto mostrado primeiro
+  alternativa_label?: string  // legenda da ancoragem, ex: "Referencia de mercado (site + sistema completo)"
   moeda: 'BRL'
 }
 
