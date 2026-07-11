@@ -174,7 +174,7 @@ export const caridadeRedes: PropostaData = {
         titulo: 'Condições Gerais',
         itens: [
           'O Instituto fornece acesso às contas de Instagram, Facebook, LinkedIn e YouTube.',
-          'Aprovação de conteúdo é feita pelo Wagner ou por quem o Instituto indicar.',
+          'Aprovação de conteúdo é feita por quem o Instituto indicar.',
           'Fotos e vídeos brutos de eventos, quando existirem, devem ser enviados em boa qualidade.',
           'Captação de vídeo nova (não apenas edição) é orçada à parte, como cobertura de eventos.',
         ],
@@ -184,13 +184,11 @@ export const caridadeRedes: PropostaData = {
       blocos: [
         { titulo: 'Mensalidade', descricao: 'Cobrada no início de cada mês, via Pix ou transferência bancária.' },
         { titulo: 'Pacote fechado (3 meses)', descricao: 'Pode ser pago mês a mês ou antecipado, conforme preferência do Instituto.' },
-        { titulo: 'Parcelamento', descricao: 'Por link de pagamento, quando pago antecipado.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
         { nome: 'Boleto', detalhe: 'Compensação em até 2 dias úteis' },
         { nome: 'Transferência', detalhe: 'Depósito em conta corrente' },
-        { nome: 'Cartão', detalhe: 'Parcelado via link de pagamento' },
       ],
     },
     servico_adicional: {

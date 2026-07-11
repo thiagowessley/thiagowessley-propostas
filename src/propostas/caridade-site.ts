@@ -184,13 +184,12 @@ export const caridadeSite: PropostaData = {
       blocos: [
         { titulo: 'Valor total à vista', descricao: 'Através de Pix, boleto ou transferência bancária.' },
         { titulo: 'Sinal de pagamento (50% / 50%)', descricao: 'Primeira parte na aprovação da proposta, segunda na entrega do site.' },
-        { titulo: 'Parcelamento', descricao: 'Por link de pagamento. Número de parcelas conforme o escopo contratado.' },
+        { titulo: 'Parcelamento', descricao: 'Em boleto, número de parcelas conforme o escopo contratado.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
         { nome: 'Boleto', detalhe: 'Compensação em até 2 dias úteis' },
         { nome: 'Transferência', detalhe: 'Depósito em conta corrente' },
-        { nome: 'Cartão', detalhe: 'Parcelado via link de pagamento' },
       ],
     },
     referencias: [
