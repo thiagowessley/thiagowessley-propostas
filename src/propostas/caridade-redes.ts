@@ -236,7 +236,7 @@ export const caridadeRedes: PropostaData = {
       'Semana 4: leitura de desempenho e ajustes para o segundo mês',
     ],
     confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente ao Instituto Humanitário Caridade. Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento.',
-    encerramento: 'Você chegou até aqui, então já sabe o escopo, o valor e como o pacote funciona. Me chama no WhatsApp com o ok ou com as dúvidas que ficaram e a gente alinha os próximos passos.',
+    encerramento: 'Você chegou até aqui, então já sabe o escopo, o valor e como o pacote funciona. Me chama no WhatsApp pra fechar ou tirar as dúvidas que ficaram, e a gente alinha os próximos passos.',
   },
   utm_copy: {
     whatsapp: 'Wagner, segue a proposta de redes sociais do Instituto Humanitário Caridade.',

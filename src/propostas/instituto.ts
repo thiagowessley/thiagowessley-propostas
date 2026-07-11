@@ -158,7 +158,7 @@ export const instituto: PropostaData = {
       { texto: 'O prazo para produção do site é de 7 a 14 dias úteis, e para alterações é de 2 dias úteis.', bold: '7 a 14 dias úteis' },
       { texto: 'O serviço só começa a ser produzido a partir do envio do briefing, da assinatura do contrato e do pagamento.', bold: 'briefing, da assinatura do contrato e do pagamento' },
       { texto: 'Após a entrega para aprovação, o cliente tem direito a até 02 alterações inclusas. Além disso, cada alteração extra é orçada à parte.', bold: 'até 02 alterações inclusas' },
-      { texto: 'A entrega para aprovação é feita por link e, após o ok, o site vai ao ar na hospedagem do cliente.', bold: 'vai ao ar na hospedagem do cliente' },
+      { texto: 'A entrega para aprovação é feita por link. Aprovado, o site vai ao ar na hospedagem do cliente.', bold: 'vai ao ar na hospedagem do cliente' },
       { texto: 'Solicitações enviadas em sábados, domingos e feriados são respondidas no próximo dia útil.', bold: 'no próximo dia útil' },
     ],
     contrato: [
@@ -253,7 +253,7 @@ export const instituto: PropostaData = {
       'Semana 4: revisão, ajustes finos e deploy na hospedagem do cliente',
     ],
     confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente ao Instituto de Tecnologia, Inovação e Desenvolvimento. Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento.',
-    encerramento: 'Você chegou até aqui, então já sabe o que entra, quanto custa e como funciona. Me chama no WhatsApp com o ok ou com as dúvidas que ficaram e a gente alinha os próximos passos.',
+    encerramento: 'Você chegou até aqui, então já sabe o que entra, quanto custa e como funciona. Me chama no WhatsApp pra fechar ou tirar as dúvidas que ficaram, e a gente alinha os próximos passos.',
   },
   utm_copy: {
     whatsapp: 'Miguel, segue a proposta que conversamos.',

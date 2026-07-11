@@ -172,7 +172,7 @@ export const caridadeSite: PropostaData = {
       { texto: 'O prazo de produção é de 3 semanas, dado o escopo de sistema completo (não apenas site institucional).', bold: '3 semanas' },
       { texto: 'O serviço só começa a ser produzido a partir do envio do briefing completo, da assinatura do contrato e do pagamento.', bold: 'briefing completo, da assinatura do contrato e do pagamento' },
       { texto: 'A entrega inclui até 02 rodadas de revisão e uma sessão de treinamento do painel administrativo.', bold: 'até 02 rodadas de revisão e uma sessão de treinamento' },
-      { texto: 'A entrega para aprovação é feita por link e, após o ok, o site vai ao ar.', bold: 'vai ao ar' },
+      { texto: 'A entrega para aprovação é feita por link. Aprovado, o site vai ao ar.', bold: 'vai ao ar' },
       { texto: 'Solicitações enviadas em sábados, domingos e feriados são respondidas no próximo dia útil.', bold: 'no próximo dia útil' },
     ],
     contrato: [
@@ -240,7 +240,7 @@ export const caridadeSite: PropostaData = {
       'Semana 5: SEO, testes, treinamento do painel e publicação',
     ],
     confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente ao Instituto Humanitário Caridade. Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento.',
-    encerramento: 'Você chegou até aqui, então já sabe o escopo, o valor e como o sistema funciona. Me chama no WhatsApp com o ok ou com as dúvidas que ficaram e a gente alinha os próximos passos.',
+    encerramento: 'Você chegou até aqui, então já sabe o escopo, o valor e como o sistema funciona. Me chama no WhatsApp pra fechar ou tirar as dúvidas que ficaram, e a gente alinha os próximos passos.',
   },
   utm_copy: {
     whatsapp: 'Wagner, segue a proposta do site do Instituto Humanitário Caridade.',
