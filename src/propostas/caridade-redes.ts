@@ -172,7 +172,7 @@ export const caridadeRedes: PropostaData = {
     pagamento: {
       blocos: [
         { titulo: 'Mensalidade', descricao: 'Cobrada no início de cada mês, via Pix ou transferência bancária.' },
-        { titulo: 'Pacote fechado (3 meses)', descricao: 'Pode ser pago mês a mês ou antecipado, conforme preferência do Instituto.' },
+        { titulo: 'Pacote fechado (3 meses)', descricao: 'Pode ser pago mês a mês ou antecipado, conforme preferência do Instituto. O valor total dos 3 meses é devido integralmente, mesmo em caso de cancelamento antecipado.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
