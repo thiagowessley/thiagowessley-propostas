@@ -10,7 +10,7 @@ export const caridadeSite: PropostaData = {
   intro_capa: 'Esta proposta apresenta o escopo do site institucional com sistema próprio de gestão (voluntários, associados e conteúdo), o processo de produção, prazos, condições e investimento.',
   valor: {
     principal: 1997,
-    manutencao: 567,
+    manutencao: 497,
     alternativa: 12900,
     alternativa_label: 'Referência de mercado (site + sistema completo)',
     moeda: 'BRL',
@@ -148,7 +148,7 @@ export const caridadeSite: PropostaData = {
           'Pequenos ajustes de layout',
           'Prioridade no atendimento',
         ],
-        valor: 567,
+        valor: 497,
         periodo: '/mês',
         rodape: 'Após a entrega do site (opcional)',
       },
