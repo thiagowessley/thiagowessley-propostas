@@ -1,7 +1,7 @@
 import type { PropostaData } from '../types/proposta'
 
 export const caridadeSite: PropostaData = {
-  slug: 'caridade-site',
+  slug: 'instituto-humanitario-site',
   cliente: 'Instituto Humanitário Caridade',
   segmento: 'Instituto humanitário, ex-Hospital de Caridade',
   servico: 'Site Institucional e Sistema de Gestão',
