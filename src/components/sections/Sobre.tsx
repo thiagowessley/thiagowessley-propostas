@@ -11,7 +11,7 @@ interface Props {
 export function Sobre({ sobre, foto }: Props) {
   return (
     <AnimatedSection id="sobre">
-      <div className="split foto-esquerda" style={{ gridTemplateColumns: '0.95fr 1.05fr' }}>
+      <div className="split foto-esquerda">
         {/* Foto a esquerda (decisao do Thiago) */}
         <div style={{ position: 'relative' }}>
           <div className="media vertical" style={{ borderRadius: '4px 4px 64px 4px' }}>

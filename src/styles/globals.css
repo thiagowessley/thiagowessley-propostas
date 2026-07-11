@@ -185,6 +185,7 @@ ul.gold-list li::before {
   align-items: center;
 }
 .split.foto-direita { grid-template-columns: 1.05fr 0.95fr; }
+.split.foto-esquerda { grid-template-columns: 0.95fr 1.05fr; }
 .reading { max-width: 560px; }
 
 /* Imagem com canto arredondado (padrao das referencias) */
@@ -414,7 +415,7 @@ ul.gold-list li::before {
 @media (max-width: 760px) {
   .proposta-page { padding-top: 60px; }
   .section { padding: 64px 0; }
-  .split, .split.foto-direita { grid-template-columns: 1fr; gap: 36px; }
+  .split, .split.foto-direita, .split.foto-esquerda { grid-template-columns: 1fr !important; gap: 36px; }
   .split.inverter-mobile > *:first-child { order: 2; }
   .skills-grid { grid-template-columns: 1fr; }
   .termos-grid { grid-template-columns: 1fr; gap: 36px; }
