@@ -124,7 +124,8 @@ export const caridadeSite: PropostaData = {
       },
       {
         nome: 'Site + Sistema',
-        resumo: 'Site institucional com painel próprio',
+        destaque: true,
+        resumo: 'O mais escolhido',
         itens: [
           '8 páginas institucionais',
           'Painel administrativo com login',
@@ -138,8 +139,7 @@ export const caridadeSite: PropostaData = {
       },
       {
         nome: 'Gestão Mensal do Site',
-        destaque: true,
-        resumo: 'O mais escolhido',
+        resumo: 'Complemento opcional',
         itens: [
           'Suporte técnico do sistema e do painel',
           'Atualização de conteúdo sob demanda',
