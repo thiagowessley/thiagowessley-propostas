@@ -1,4 +1,5 @@
 import type { PropostaData } from '../types/proposta'
+import { SOBRE_PADRAO, TITULO_PAGINA_INICIAL, TITULO_FASE_LANCAMENTO, condicaoAprovacaoPublicacao, encerramentoPadrao } from '../lib/copy-padrao'
 
 export const caridadeSite: PropostaData = {
   slug: 'instituto-humanitario-site',
@@ -19,22 +20,7 @@ export const caridadeSite: PropostaData = {
   foto_profissional: '/img/thiago-vertical.jpg',
   foto_secundaria: '/img/thiago-horizontal.jpg',
 
-  sobre: {
-    saudacao: 'Olá!',
-    paragrafos: [
-      'Sou o Thiago Wessley, de Joinville. Trabalho na fronteira entre comunicação, design e audiovisual, ajudando marcas a ganhar visibilidade profissional: site que converte, conteúdo que sustenta presença e vídeo que carrega a mensagem.',
-      'Nos últimos anos entreguei sites institucionais, identidade visual, cobertura de eventos e gestão de conteúdo para empresas e projetos que precisavam parecer sérios antes mesmo de crescer.',
-      'O que me move é tirar a marca da invisibilidade: estrutura clara, estética premium e conteúdo que alimenta tanto o Google quanto as IAs que as pessoas já usam para buscar.',
-    ],
-    atuacao: [
-      { nome: 'Comunicação', nivel: 95 },
-      { nome: 'Design', nivel: 90 },
-      { nome: 'Audiovisual', nivel: 88 },
-      { nome: 'Desenvolvimento Web', nivel: 82 },
-      { nome: 'SEO e GEO', nivel: 80 },
-      { nome: 'Tráfego Pago', nivel: 72 },
-    ],
-  },
+  sobre: SOBRE_PADRAO,
 
   portfolio: {
     intro: [
@@ -76,7 +62,7 @@ export const caridadeSite: PropostaData = {
         titulo: 'O site, página a página',
         periodo: 'SEMANA 1-2',
         itens: [
-          { titulo: 'Página Inicial', descricao: 'Hero com chamada para doação, indicadores de impacto e resumo institucional.' },
+          { titulo: TITULO_PAGINA_INICIAL, descricao: 'Hero com chamada para doação, indicadores de impacto e resumo institucional.' },
           { titulo: 'Sobre o Instituto', descricao: 'História desde 1859, missão e o que o posiciona como referência em São Francisco do Sul.' },
           { titulo: 'Serviços', descricao: 'Portfólio dos serviços prestados pelo Instituto.' },
           { titulo: 'Projetos', descricao: 'Vitrine de projetos desenvolvidos, pronta para crescer com novos cases.' },
@@ -99,7 +85,7 @@ export const caridadeSite: PropostaData = {
       },
       {
         numero: '03',
-        titulo: 'Ajustes finais e lançamento',
+        titulo: TITULO_FASE_LANCAMENTO,
         periodo: 'SEMANA 3',
         itens: [
           { titulo: 'SEO básico e avançado', descricao: 'Meta tags, headings, URLs amigáveis, sitemap XML e schema markup.' },
@@ -172,7 +158,7 @@ export const caridadeSite: PropostaData = {
       { texto: 'O prazo de produção é de 3 semanas, dado o escopo de sistema completo (não apenas site institucional).', bold: '3 semanas' },
       { texto: 'O serviço só começa a ser produzido a partir do envio do briefing completo, da assinatura do contrato e do pagamento.', bold: 'briefing completo, da assinatura do contrato e do pagamento' },
       { texto: 'A entrega inclui até 02 rodadas de revisão e uma sessão de treinamento do painel administrativo.', bold: 'até 02 rodadas de revisão e uma sessão de treinamento' },
-      { texto: 'A entrega para aprovação é feita por link. Aprovado, o site vai ao ar.', bold: 'vai ao ar' },
+      condicaoAprovacaoPublicacao(),
       { texto: 'Solicitações enviadas em sábados, domingos e feriados são respondidas no próximo dia útil.', bold: 'no próximo dia útil' },
     ],
     contrato: [
@@ -240,7 +226,7 @@ export const caridadeSite: PropostaData = {
       'Semana 5: SEO, testes, treinamento do painel e publicação',
     ],
     confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente ao Instituto Humanitário Caridade. Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento.',
-    encerramento: 'Você chegou até aqui, então já sabe o escopo, o valor e como o sistema funciona. Me chama no WhatsApp pra fechar ou tirar as dúvidas que ficaram, e a gente alinha os próximos passos.',
+    encerramento: encerramentoPadrao('o escopo, o valor e como o sistema funciona'),
   },
   utm_copy: {
     whatsapp: 'Wagner, segue a proposta do site do Instituto Humanitário Caridade.',

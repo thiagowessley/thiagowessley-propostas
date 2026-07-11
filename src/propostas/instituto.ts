@@ -1,4 +1,5 @@
 import type { PropostaData } from '../types/proposta'
+import { SOBRE_PADRAO, TITULO_PAGINA_INICIAL, TITULO_FASE_LANCAMENTO, condicaoAprovacaoPublicacao, encerramentoPadrao, ENTREGA_COBERTURA_PADRAO } from '../lib/copy-padrao'
 
 export const instituto: PropostaData = {
   slug: 'instituto-site',
@@ -19,22 +20,7 @@ export const instituto: PropostaData = {
   foto_profissional: '/img/thiago-vertical.jpg',
   foto_secundaria: '/img/thiago-horizontal.jpg',
 
-  sobre: {
-    saudacao: 'Olá!',
-    paragrafos: [
-      'Sou o Thiago Wessley, de Joinville. Trabalho na fronteira entre comunicação, design e audiovisual, ajudando marcas a ganhar visibilidade profissional: site que converte, conteúdo que sustenta presença e vídeo que carrega a mensagem.',
-      'Nos últimos anos entreguei sites institucionais, identidade visual, cobertura de eventos e gestão de conteúdo para empresas e projetos que precisavam parecer sérios antes mesmo de crescer.',
-      'O que me move é tirar a marca da invisibilidade: estrutura clara, estética premium e conteúdo que alimenta tanto o Google quanto as IAs que as pessoas já usam para buscar.',
-    ],
-    atuacao: [
-      { nome: 'Comunicação', nivel: 95 },
-      { nome: 'Design', nivel: 90 },
-      { nome: 'Audiovisual', nivel: 88 },
-      { nome: 'Desenvolvimento Web', nivel: 82 },
-      { nome: 'SEO e GEO', nivel: 80 },
-      { nome: 'Tráfego Pago', nivel: 72 },
-    ],
-  },
+  sobre: SOBRE_PADRAO,
 
   portfolio: {
     intro: [
@@ -76,7 +62,7 @@ export const instituto: PropostaData = {
         titulo: 'O site, página a página',
         periodo: 'SEMANA 1-2',
         itens: [
-          { titulo: 'Página Inicial', descricao: 'Hero de impacto com suporte a vídeo institucional, dashboard de indicadores, resumo de atuação e chamadas para as áreas centrais.' },
+          { titulo: TITULO_PAGINA_INICIAL, descricao: 'Hero de impacto com suporte a vídeo institucional, dashboard de indicadores, resumo de atuação e chamadas para as áreas centrais.' },
           { titulo: 'Sobre o Instituto', descricao: 'História, propósito, missão e o que posiciona o instituto como referência.' },
           { titulo: 'Áreas de Atuação', descricao: 'Frentes de trabalho e competências técnicas, organizadas para leitura rápida.' },
           { titulo: 'Projetos e Cases', descricao: 'Vitrine de resultados e provas de impacto, pronta para crescer com novos cases.' },
@@ -98,7 +84,7 @@ export const instituto: PropostaData = {
       },
       {
         numero: '03',
-        titulo: 'Ajustes finais e lançamento',
+        titulo: TITULO_FASE_LANCAMENTO,
         periodo: 'SEMANA 4',
         itens: [
           { titulo: 'SEO básico', descricao: 'Meta tags, headings e URLs amigáveis em todas as páginas.' },
@@ -158,7 +144,7 @@ export const instituto: PropostaData = {
       { texto: 'O prazo para produção do site é de 7 a 14 dias úteis, e para alterações é de 2 dias úteis.', bold: '7 a 14 dias úteis' },
       { texto: 'O serviço só começa a ser produzido a partir do envio do briefing, da assinatura do contrato e do pagamento.', bold: 'briefing, da assinatura do contrato e do pagamento' },
       { texto: 'Após a entrega para aprovação, o cliente tem direito a até 02 alterações inclusas. Além disso, cada alteração extra é orçada à parte.', bold: 'até 02 alterações inclusas' },
-      { texto: 'A entrega para aprovação é feita por link. Aprovado, o site vai ao ar na hospedagem do cliente.', bold: 'vai ao ar na hospedagem do cliente' },
+      condicaoAprovacaoPublicacao('na hospedagem do cliente'),
       { texto: 'Solicitações enviadas em sábados, domingos e feriados são respondidas no próximo dia útil.', bold: 'no próximo dia útil' },
     ],
     contrato: [
@@ -196,7 +182,7 @@ export const instituto: PropostaData = {
       titulo: 'Cobertura de eventos',
       paragrafos: [
         'A cobertura de eventos é contratada à parte, com formulário e proposta próprios. Entra quando o Instituto tiver ações presenciais para registrar.',
-        'A entrega padrão inclui até 20 fotos editadas, um aftermovie de até 1:00 min, cortes para redes e arquivo no Flickr institucional.',
+        ENTREGA_COBERTURA_PADRAO,
       ],
       imagem: '/img/thiago-horizontal.jpg',
     },
@@ -248,12 +234,12 @@ export const instituto: PropostaData = {
     ],
     primeiros_30_dias: [
       'Semana 1: briefing de conteúdo + wireframes das 7 páginas',
-      'Semana 2: desenvolvimento das páginas principais (Página Inicial, Sobre, Missão)',
+      `Semana 2: desenvolvimento das páginas principais (${TITULO_PAGINA_INICIAL}, Sobre, Missão)`,
       'Semana 3: páginas secundárias + integração de indicadores animados',
       'Semana 4: revisão, ajustes finos e deploy na hospedagem do cliente',
     ],
     confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente ao Instituto de Tecnologia, Inovação e Desenvolvimento. Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento.',
-    encerramento: 'Você chegou até aqui, então já sabe o que entra, quanto custa e como funciona. Me chama no WhatsApp pra fechar ou tirar as dúvidas que ficaram, e a gente alinha os próximos passos.',
+    encerramento: encerramentoPadrao('o que entra, quanto custa e como funciona'),
   },
   utm_copy: {
     whatsapp: 'Miguel, segue a proposta que conversamos.',

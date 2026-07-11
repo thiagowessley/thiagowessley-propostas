@@ -1,4 +1,5 @@
 import type { PropostaData } from '../types/proposta'
+import { SOBRE_PADRAO, encerramentoPadrao, ENTREGA_COBERTURA_PADRAO } from '../lib/copy-padrao'
 
 export const caridadeRedes: PropostaData = {
   slug: 'instituto-humanitario-redes',
@@ -17,22 +18,7 @@ export const caridadeRedes: PropostaData = {
   foto_profissional: '/img/thiago-vertical.jpg',
   foto_secundaria: '/img/thiago-horizontal.jpg',
 
-  sobre: {
-    saudacao: 'Olá!',
-    paragrafos: [
-      'Sou o Thiago Wessley, de Joinville. Trabalho na fronteira entre comunicação, design e audiovisual, ajudando marcas a ganhar visibilidade profissional: site que converte, conteúdo que sustenta presença e vídeo que carrega a mensagem.',
-      'Nos últimos anos entreguei sites institucionais, identidade visual, cobertura de eventos e gestão de conteúdo para empresas e projetos que precisavam parecer sérios antes mesmo de crescer.',
-      'O que me move é tirar a marca da invisibilidade: estrutura clara, estética premium e conteúdo que alimenta tanto o Google quanto as IAs que as pessoas já usam para buscar.',
-    ],
-    atuacao: [
-      { nome: 'Comunicação', nivel: 95 },
-      { nome: 'Design', nivel: 90 },
-      { nome: 'Audiovisual', nivel: 88 },
-      { nome: 'Desenvolvimento Web', nivel: 82 },
-      { nome: 'SEO e GEO', nivel: 80 },
-      { nome: 'Tráfego Pago', nivel: 72 },
-    ],
-  },
+  sobre: SOBRE_PADRAO,
 
   portfolio: {
     intro: [
@@ -198,7 +184,7 @@ export const caridadeRedes: PropostaData = {
       titulo: 'Cobertura de eventos',
       paragrafos: [
         'A cobertura de eventos é contratada à parte, com formulário e proposta próprios. Entra quando o Instituto tiver ações presenciais para registrar, e alimenta diretamente o conteúdo das redes.',
-        'A entrega padrão inclui até 20 fotos editadas, um aftermovie de até 1:00 min, cortes para redes e arquivo no Flickr institucional.',
+        ENTREGA_COBERTURA_PADRAO,
         'Despesas de deslocamento, hospedagem e alimentação são por conta do Instituto, independente da localidade.',
       ],
       imagem: '/img/thiago-horizontal.jpg',
@@ -236,7 +222,7 @@ export const caridadeRedes: PropostaData = {
       'Semana 4: leitura de desempenho e ajustes para o segundo mês',
     ],
     confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente ao Instituto Humanitário Caridade. Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento.',
-    encerramento: 'Você chegou até aqui, então já sabe o escopo, o valor e como o pacote funciona. Me chama no WhatsApp pra fechar ou tirar as dúvidas que ficaram, e a gente alinha os próximos passos.',
+    encerramento: encerramentoPadrao('o escopo, o valor e como o pacote funciona'),
   },
   utm_copy: {
     whatsapp: 'Wagner, segue a proposta de redes sociais do Instituto Humanitário Caridade.',
