@@ -110,6 +110,19 @@ export const caridadeSite: PropostaData = {
     ],
     planos: [
       {
+        nome: 'Site Institucional',
+        resumo: 'Sem sistema, com página de doação',
+        itens: [
+          '7 páginas institucionais',
+          'Bloco de doação (Pix e dados bancários)',
+          'Design dark premium próprio',
+          'SEO básico',
+        ],
+        valor: 997,
+        periodo: 'entrega única',
+        rodape: '50% na aprovação, 50% na entrega',
+      },
+      {
         nome: 'Site + Sistema',
         resumo: 'Site institucional com painel próprio',
         itens: [
