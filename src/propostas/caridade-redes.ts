@@ -140,7 +140,7 @@ export const caridadeRedes: PropostaData = {
           'Relatório mensal de desempenho',
           'Prioridade no atendimento',
         ],
-        valor: 497,
+        valor: 430,
         periodo: '/mês',
         rodape: 'Cobrança mensal, contrato de 12 meses',
       },
