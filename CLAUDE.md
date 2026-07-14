@@ -11,6 +11,13 @@ Stack: React 18 + Vite 5 + TypeScript + react-router-dom v6 + Framer Motion
   false, decisao de 15/07/2026 pra proposta nao vazar em PDF). Proposta nova NAO precisa setar
   nada. As 3 propostas anteriores a essa data (instituto, caridade-site, caridade-redes) setam
   mostrarBotaoPdf: true pra manter o comportamento que ja tinham.
+- Secao "Portfolio" (grid de peças + link pro thiagowessley.com.br): oculta por padrao (campo
+  mostrarPortfolio, default false). So aparece se a proposta setar mostrarPortfolio: true e
+  tiver o campo portfolio preenchido. Componente e tipo continuam existindo, so nao renderiza
+  sem pedido explicito.
+- CTA principal do Encerramento tem texto customizavel (campo ctaWhatsapp, default "Falar no
+  WhatsApp"). Usar quando fizer sentido reforcar urgencia especifica do servico (ex: "Reservar
+  minha data" pra servico preso a uma data de evento).
 - Commits frequentes apos cada task
 
 ## Deploy

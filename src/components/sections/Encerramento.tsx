@@ -58,7 +58,7 @@ export function Encerramento({ proposta }: Props) {
           />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
             <a href={linkWhats} target="_blank" rel="noopener noreferrer" className="cta-btn cta-gold">
-              Falar no WhatsApp
+              {proposta.ctaWhatsapp ?? 'Falar no WhatsApp'}
             </a>
             {proposta.mostrarBotaoPdf && (
               <button onClick={baixarPDF} className="cta-btn cta-ghost" style={{ textTransform: 'none' }}>

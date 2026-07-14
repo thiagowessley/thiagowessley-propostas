@@ -104,6 +104,8 @@ export interface PropostaData {
   video_capa?: string       // caminho relativo ou URL do video
   intro_capa?: string       // paragrafo de introducao no rodape da capa
   mostrarBotaoPdf?: boolean // default false: propostas novas nao expoem download em PDF
+  mostrarPortfolio?: boolean // default false: secao de Portfolio fica oculta a menos que a proposta peca
+  ctaWhatsapp?: string      // texto do botao principal de WhatsApp no Encerramento. default: "Falar no WhatsApp"
 
   // perfil do profissional (reutilizavel entre propostas)
   foto_profissional?: string

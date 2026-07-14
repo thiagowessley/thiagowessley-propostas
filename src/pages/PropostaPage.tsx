@@ -4,6 +4,7 @@ import { getPropostaBySlug } from '../propostas/index'
 import { PropostaLayout, type NavItem } from '../components/layout/PropostaLayout'
 import { Capa } from '../components/sections/Capa'
 import { Sobre } from '../components/sections/Sobre'
+import { Portfolio } from '../components/sections/Portfolio'
 import { Cenario } from '../components/sections/Cenario'
 import { Escopo } from '../components/sections/Escopo'
 import { Financeiro } from '../components/sections/Financeiro'
@@ -47,6 +48,7 @@ export function PropostaPage() {
     if (proposta.sobre) items.push({ id: 'sobre', label: 'Sobre' })
     items.push({ id: 'cenario', label: 'Cenário' })
     items.push({ id: 'escopo', label: 'Escopo' })
+    if (proposta.mostrarPortfolio && proposta.portfolio) items.push({ id: 'portfolio', label: 'Portfólio' })
     items.push({ id: 'financeiro', label: 'Investimento' })
     if (s.prazos) items.push({ id: 'prazos', label: 'Prazos' })
     if (s.referencias) items.push({ id: 'referencias', label: 'Referências' })
@@ -74,6 +76,7 @@ export function PropostaPage() {
         {proposta.sobre && <Sobre sobre={proposta.sobre} foto={proposta.foto_profissional} />}
         <Cenario cenario={s.cenario} />
         <Escopo fases={s.fases} />
+        {proposta.mostrarPortfolio && proposta.portfolio && <Portfolio portfolio={proposta.portfolio} />}
         <Financeiro
           valor={proposta.valor}
           planos={s.planos}

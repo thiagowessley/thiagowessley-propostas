@@ -10,19 +10,43 @@ export const crisAftermovie: PropostaData = {
   envio: '2026-07-14',
   intro_capa: 'Esta proposta apresenta o escopo, o prazo e o investimento para a produção do aftermovie do seu evento.',
   valor: {
-    principal: 500,
+    principal: 497,
+    alternativa: 1500,
+    alternativa_label: 'Referência de mercado (diária avulsa em Joinville)',
     moeda: 'BRL',
   },
+  mostrarPortfolio: true,
+  ctaWhatsapp: 'Reservar minha data',
 
   foto_profissional: '/img/thiago-vertical.jpg',
   foto_secundaria: '/img/thiago-horizontal.jpg',
 
   sobre: SOBRE_PADRAO,
 
+  portfolio: {
+    intro: [
+      'Nos últimos anos participei de projetos em diferentes áreas do design, da web e do audiovisual.',
+      'Cada um deles somou um repertório: cobertura de evento, identidade, site institucional, conteúdo para redes e produção de vídeo.',
+      'No link abaixo você confere algumas peças desenvolvidas e parte do arquivo de eventos que cobri.',
+    ],
+    link: { label: 'Ver portfólio completo', url: 'https://thiagowessley.com.br/' },
+    itens: [
+      { titulo: 'Dart 316', categoria: 'Show ao vivo', imagem: '/img/portfolio/p2.webp' },
+      { titulo: 'Rooftop Garden', categoria: 'Evento social', imagem: '/img/portfolio/p3.webp' },
+      { titulo: 'Festa Infantil', categoria: 'Cobertura completa', imagem: '/img/portfolio/p6.webp' },
+      { titulo: 'Rooftop Colin', categoria: 'Aftermovie', imagem: '/img/portfolio/p7.webp' },
+      { titulo: 'Beier Group', categoria: 'Site institucional', imagem: '/img/portfolio/w1.png' },
+      { titulo: 'Beier Group', categoria: 'Painel mobile', imagem: '/img/portfolio/w2.png' },
+      { titulo: 'Landing de autoridade', categoria: 'Web design', imagem: '/img/portfolio/w3.png' },
+      { titulo: 'Beier Group', categoria: 'Depoimentos em vídeo', imagem: '/img/portfolio/w4.png' },
+      { titulo: 'Landing de conversão', categoria: 'Web design', imagem: '/img/portfolio/w5.png' },
+    ],
+  },
+
   secoes: {
     cenario: {
       problema: 'Um evento bem produzido perde força quando o vídeo não tem direção, ritmo e acabamento à altura do que aconteceu. A energia do dia não chega inteira a quem assiste.',
-      publico: 'Convidados, redes sociais e quem for assistir ao vídeo sem ter estado no evento.',
+      publico: 'Convidados do evento e quem assistir ao vídeo depois, nas redes, sem ter estado lá.',
       desafio: 'Transformar os melhores momentos do evento em um vídeo de até 1 minuto com cara de peça comercial: ritmo, cor e trilha que passam a sensação de produção profissional.',
       entregas: [
         'Vídeo com acabamento de peça comercial',
@@ -53,7 +77,7 @@ export const crisAftermovie: PropostaData = {
           'Trilha sonora licenciada',
           'Entrega em MP4 ou MOV, até 1:00 min',
         ],
-        valor: 500,
+        valor: 497,
         periodo: 'entrega única',
         rodape: 'Entrega logo após o evento, com até 7 dias úteis de garantia',
       },
@@ -70,7 +94,7 @@ export const crisAftermovie: PropostaData = {
           'Cortes adicionais para Reels e Stories',
           'Versionamento em 9:16 e 1:1',
         ],
-        valor: 800,
+        valor: 797,
         periodo: 'entrega única',
         rodape: 'Entrega logo após o evento, com até 7 dias úteis de garantia',
       },
@@ -84,7 +108,7 @@ export const crisAftermovie: PropostaData = {
       {
         titulo: 'Contrato e Entrega',
         itens: [
-          'O pagamento é dividido em 50% na aprovação e 50% na entrega.',
+          'O pagamento é feito 100% na aprovação, para reserva da data.',
           'A entrega do vídeo final é feita por link, em MP4 ou MOV.',
           'Revisões além do escopo combinado são orçadas à parte.',
         ],
@@ -98,8 +122,7 @@ export const crisAftermovie: PropostaData = {
     ],
     pagamento: {
       blocos: [
-        { titulo: 'Aprovação', descricao: '50% do valor na aprovação da proposta, para reserva da data.' },
-        { titulo: 'Entrega', descricao: '50% restante na entrega do vídeo final.' },
+        { titulo: 'Reserva da data', descricao: '100% do valor na aprovação da proposta, garante a data do evento na agenda.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
