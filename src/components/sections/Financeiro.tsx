@@ -55,8 +55,8 @@ export function Financeiro({ valor, planos, primeiros30, confidencialidade }: Pr
     <AnimatedSection id="financeiro">
       <p className="eyebrow"><span className="accent">Investimento</span></p>
       <h2 className="sec-title" style={{ marginBottom: '48px' }}>
-        <span className="thin">{temPlanos ? 'Escolha seu' : 'Proposta'}</span>
-        <span className="bold">{temPlanos ? 'pacote' : 'financeira'}</span>
+        <span className="thin">{temPlanos ? 'Pacotes e' : 'Proposta'}</span>
+        <span className="bold">{temPlanos ? 'valores' : 'financeira'}</span>
       </h2>
 
       {valor.alternativa && (
