@@ -35,7 +35,7 @@ export const crisAftermovie: PropostaData = {
       { titulo: 'Rolf Colin Corporate', categoria: 'Aftermovie institucional', imagem: '/img/portfolio/p7.webp' },
       { titulo: 'Making Of', categoria: 'Bastidores de captação', imagem: '/img/portfolio/p1.webp' },
       { titulo: 'Jantar Corporativo', categoria: 'Cobertura de evento', imagem: '/img/portfolio/p4.webp' },
-      { titulo: 'Festa Infantil', categoria: 'Cobertura completa', imagem: '/img/portfolio/p6.webp' },
+      { titulo: 'Reunião Estratégica', categoria: 'Cobertura corporativa', imagem: '/img/portfolio/p8.webp' },
       { titulo: 'Dimas Neto', categoria: 'Depoimento em vídeo', imagem: '/img/portfolio/p9.jpg' },
     ],
   },
