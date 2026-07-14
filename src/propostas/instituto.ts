@@ -10,6 +10,7 @@ export const instituto: PropostaData = {
   validade: '2026-07-24',
   envio: '2026-07-09',
   intro_capa: 'Esta proposta apresenta o escopo do site institucional, o processo de produção, prazos, condições e investimento. Foi montada para deixar claro o que entra em cada fase e o que cada parte assume, sem espaço para ruído depois.',
+  mostrarBotaoPdf: true,
   valor: {
     principal: 1997,
     manutencao: 497,

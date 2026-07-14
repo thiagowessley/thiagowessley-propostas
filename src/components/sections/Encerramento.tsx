@@ -60,9 +60,11 @@ export function Encerramento({ proposta }: Props) {
             <a href={linkWhats} target="_blank" rel="noopener noreferrer" className="cta-btn cta-gold">
               Falar no WhatsApp
             </a>
-            <button onClick={baixarPDF} className="cta-btn cta-ghost" style={{ textTransform: 'none' }}>
-              Baixar em PDF
-            </button>
+            {proposta.mostrarBotaoPdf && (
+              <button onClick={baixarPDF} className="cta-btn cta-ghost" style={{ textTransform: 'none' }}>
+                Baixar em PDF
+              </button>
+            )}
           </div>
         </div>
       </div>

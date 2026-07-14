@@ -7,9 +7,17 @@ Stack: React 18 + Vite 5 + TypeScript + react-router-dom v6 + Framer Motion
 - Dark premium e o padrao: variaveis CSS em globals.css, nunca hardcode de cor
 - Proposta nova = criar arquivo em src/propostas/[slug].ts e registrar em src/propostas/index.ts
 - Nunca alterar o template (componentes) para acomodar dados de uma proposta especifica
+- Botao "Baixar em PDF" no Encerramento: NAO aparece por padrao (campo mostrarBotaoPdf, default
+  false, decisao de 15/07/2026 pra proposta nao vazar em PDF). Proposta nova NAO precisa setar
+  nada. As 3 propostas anteriores a essa data (instituto, caridade-site, caridade-redes) setam
+  mostrarBotaoPdf: true pra manter o comportamento que ja tinham.
 - Commits frequentes apos cada task
 
 ## Deploy
 - git push para Vercel build automatico
-- Dominio: thiagowessley.com.br (configurar na Vercel)
+- Dominio em producao: propostas.thiagowessley.com.br (subdominio proprio, ja configurado na Vercel)
+- NUNCA usar thiagowessley.com.br (sem "propostas.") em link de proposta: esse dominio e do
+  projeto do portfolio (thiagowessley-portfolio), outro app na Vercel. Link errado = 404 ou
+  site errado pro cliente.
+- Toda URL de proposta segue o padrao: propostas.thiagowessley.com.br/p/[slug]
 - Email git: th.ws.gm@gmail.com (obrigatorio para deploy automatico funcionar)

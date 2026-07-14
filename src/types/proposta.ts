@@ -103,6 +103,7 @@ export interface PropostaData {
   valor: ValorProposta
   video_capa?: string       // caminho relativo ou URL do video
   intro_capa?: string       // paragrafo de introducao no rodape da capa
+  mostrarBotaoPdf?: boolean // default false: propostas novas nao expoem download em PDF
 
   // perfil do profissional (reutilizavel entre propostas)
   foto_profissional?: string

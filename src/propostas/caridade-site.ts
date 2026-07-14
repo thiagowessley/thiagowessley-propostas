@@ -9,6 +9,7 @@ export const caridadeSite: PropostaData = {
   validade: '2026-07-25',
   envio: '2026-07-10',
   intro_capa: 'Esta proposta apresenta o escopo do site institucional com sistema próprio de gestão (voluntários, associados e conteúdo), o processo de produção, prazos, condições e investimento.',
+  mostrarBotaoPdf: true,
   valor: {
     principal: 1997,
     manutencao: 497,
