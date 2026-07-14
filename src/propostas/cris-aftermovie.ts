@@ -21,11 +21,11 @@ export const crisAftermovie: PropostaData = {
 
   secoes: {
     cenario: {
-      problema: 'Um evento bem produzido perde força quando o vídeo tem cara de registro caseiro. Sem direção, ritmo e acabamento à altura do que aconteceu, a energia do dia não chega inteira a quem assiste.',
+      problema: 'Um evento bem produzido perde força quando o vídeo não tem direção, ritmo e acabamento à altura do que aconteceu. A energia do dia não chega inteira a quem assiste.',
       publico: 'Convidados, redes sociais e quem for assistir ao vídeo sem ter estado no evento.',
-      desafio: 'Transformar os melhores momentos do evento em um vídeo de até 1 minuto com cara de peça comercial: ritmo, cor e trilha que passam a sensação de produção profissional, não de registro amador.',
+      desafio: 'Transformar os melhores momentos do evento em um vídeo de até 1 minuto com cara de peça comercial: ritmo, cor e trilha que passam a sensação de produção profissional.',
       entregas: [
-        'Vídeo com acabamento de peça comercial, não de registro caseiro',
+        'Vídeo com acabamento de peça comercial',
         'Aftermovie editado com ritmo, cor e trilha em nível profissional',
         'Material que representa a marca por trás do evento com o mesmo padrão dele',
       ],
@@ -62,7 +62,11 @@ export const crisAftermovie: PropostaData = {
         destaque: true,
         resumo: 'Com material para redes',
         itens: [
-          'Tudo do pacote Aftermovie',
+          'Captação em vídeo, até 1 diária',
+          'Edição completa com corte e ritmo',
+          'Correção de cor',
+          'Trilha sonora licenciada',
+          'Entrega em MP4 ou MOV, até 1:00 min',
           'Cortes adicionais para Reels e Stories',
           'Versionamento em 9:16 e 1:1',
         ],
