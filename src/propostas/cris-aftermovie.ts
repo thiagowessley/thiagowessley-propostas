@@ -25,21 +25,20 @@ export const crisAftermovie: PropostaData = {
 
   portfolio: {
     intro: [
-      'Nos últimos anos participei de projetos em diferentes áreas do design, da web e do audiovisual.',
-      'Cada um deles somou um repertório: cobertura de evento, identidade, site institucional, conteúdo para redes e produção de vídeo.',
-      'No link abaixo você confere algumas peças desenvolvidas e parte do arquivo de eventos que cobri.',
+      'Nos últimos anos participei de coberturas de evento, vídeos institucionais e produções audiovisuais em diferentes formatos.',
+      'Cada um deles somou um repertório: shows ao vivo, eventos corporativos, depoimentos em vídeo e aftermovies.',
+      'No link abaixo você confere mais peças e parte do arquivo de eventos que cobri.',
     ],
     link: { label: 'Ver portfólio completo', url: 'https://thiagowessley.com.br/' },
     itens: [
       { titulo: 'Dart 316', categoria: 'Show ao vivo', imagem: '/img/portfolio/p2.webp' },
       { titulo: 'Rooftop Garden', categoria: 'Evento social', imagem: '/img/portfolio/p3.webp' },
+      { titulo: 'Casa Calantti', categoria: 'Cobertura de evento', imagem: '/img/portfolio/p5.webp' },
+      { titulo: 'Rolf Colin Corporate', categoria: 'Aftermovie institucional', imagem: '/img/portfolio/p7.webp' },
+      { titulo: 'Making Of', categoria: 'Bastidores de captação', imagem: '/img/portfolio/p1.webp' },
+      { titulo: 'Jantar Corporativo', categoria: 'Cobertura de evento', imagem: '/img/portfolio/p4.webp' },
       { titulo: 'Festa Infantil', categoria: 'Cobertura completa', imagem: '/img/portfolio/p6.webp' },
-      { titulo: 'Rooftop Colin', categoria: 'Aftermovie', imagem: '/img/portfolio/p7.webp' },
-      { titulo: 'Beier Group', categoria: 'Site institucional', imagem: '/img/portfolio/w1.png' },
-      { titulo: 'Beier Group', categoria: 'Painel mobile', imagem: '/img/portfolio/w2.png' },
-      { titulo: 'Landing de autoridade', categoria: 'Web design', imagem: '/img/portfolio/w3.png' },
-      { titulo: 'Beier Group', categoria: 'Depoimentos em vídeo', imagem: '/img/portfolio/w4.png' },
-      { titulo: 'Landing de conversão', categoria: 'Web design', imagem: '/img/portfolio/w5.png' },
+      { titulo: 'Dimas Neto', categoria: 'Depoimento em vídeo', imagem: '/img/portfolio/p9.jpg' },
     ],
   },
 
