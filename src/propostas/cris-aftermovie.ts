@@ -11,8 +11,6 @@ export const crisAftermovie: PropostaData = {
   intro_capa: 'Esta proposta apresenta o escopo, o prazo e o investimento para a produção do aftermovie do seu evento.',
   valor: {
     principal: 497,
-    alternativa: 1500,
-    alternativa_label: 'Referência de mercado (diária avulsa em Joinville)',
     moeda: 'BRL',
   },
   mostrarPortfolio: true,
