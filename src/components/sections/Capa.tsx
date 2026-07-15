@@ -85,7 +85,7 @@ export function Capa({ proposta, tempoLeitura }: Props) {
             style={{ display: 'flex', gap: '64px', flexWrap: 'wrap', marginBottom: '40px' }}
           >
             <div>
-              <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Cliente</p>
+              <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Preparado para</p>
               <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.cliente}</p>
             </div>
             <div>
