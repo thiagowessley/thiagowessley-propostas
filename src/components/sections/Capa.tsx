@@ -78,22 +78,22 @@ export function Capa({ proposta, tempoLeitura }: Props) {
           {proposta.servico} <span style={{ color: 'var(--muted)' }}>·</span> {proposta.cliente}
         </motion.p>
 
-        {/* Cliente / Responsavel */}
-        <motion.div
-          custom={3} variants={lineUp} initial="hidden" animate="show"
-          style={{ display: 'flex', gap: '64px', flexWrap: 'wrap', marginBottom: '40px' }}
-        >
-          <div>
-            <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Cliente</p>
-            <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.cliente}</p>
-          </div>
-          {proposta.responsavel && (
+        {/* Cliente / Responsavel: so mostra quando ha responsavel distinto do cliente, senao repete o nome que ja aparece no subtitulo */}
+        {proposta.responsavel && (
+          <motion.div
+            custom={3} variants={lineUp} initial="hidden" animate="show"
+            style={{ display: 'flex', gap: '64px', flexWrap: 'wrap', marginBottom: '40px' }}
+          >
+            <div>
+              <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Cliente</p>
+              <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.cliente}</p>
+            </div>
             <div>
               <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Responsável</p>
               <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.responsavel}</p>
             </div>
-          )}
-        </motion.div>
+          </motion.div>
+        )}
 
         {/* linha de info: envio | validade ------ */}
         <motion.div
