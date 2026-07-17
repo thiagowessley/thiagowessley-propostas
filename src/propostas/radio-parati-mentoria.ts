@@ -10,7 +10,7 @@ export const radioParatiMentoria: PropostaData = {
   envio: '2026-07-17',
   intro_capa: 'Esta proposta apresenta o escopo, o prazo e o investimento da mentoria individual para quem vai assumir a produção de vídeo publicitário da rádio.',
   valor: {
-    principal: 1497,
+    principal: 997,
     moeda: 'BRL',
   },
   mostrarPortfolio: true,
@@ -88,7 +88,7 @@ export const radioParatiMentoria: PropostaData = {
           '3 encontros online de acompanhamento',
           'Revisão de material produzido nas primeiras semanas',
         ],
-        valor: 1497,
+        valor: 997,
         periodo: 'entrega única',
         rodape: 'Pagamento 100% na aprovação, para reserva da data da imersão',
       },

@@ -46,7 +46,10 @@ export const radioParatiProducao: PropostaData = {
       entregas: [
         'Vídeo publicitário pronto para veicular a cada contrato fechado',
         'Captação e edição profissionais, sem custo de equipe própria',
-        'Agenda dedicada de até 2 diárias por semana',
+        'Fala direta do anunciante pra câmera, com texto de destaque em série e identidade visual consistente entre vídeos',
+        'Correção de cor e trilha sonora licenciada em toda entrega',
+        'Agenda dedicada de até 2 diárias por semana, sem depender de disponibilidade externa',
+        'Deslocamento e produção por conta do Thiago, a rádio só aprova o resultado',
       ],
     },
     fases: [
@@ -56,6 +59,7 @@ export const radioParatiProducao: PropostaData = {
         periodo: 'SEMANAL',
         itens: [
           { titulo: 'Repasse do briefing', descricao: 'A cada contrato fechado, a rádio repassa o que precisa aparecer no vídeo do anunciante.' },
+          { titulo: 'Definição da oferta', descricao: 'Alinhamento do texto de destaque que vai virar overlay no vídeo: promoção, produto ou chamada do anunciante.' },
           { titulo: 'Agendamento da captação', descricao: 'Encaixe dentro da janela de até 2 diárias por semana. Reunir vários anunciantes no mesmo dia rende mais vídeos pela mesma diária.' },
         ],
       },
@@ -65,6 +69,8 @@ export const radioParatiProducao: PropostaData = {
         periodo: 'DIA COMBINADO',
         itens: [
           { titulo: 'Captação em vídeo', descricao: 'Registro no local do anunciante, com direção de cena e enquadramento em padrão publicitário.', limite: 'até 2 diárias/semana' },
+          { titulo: 'Fala direta pra câmera', descricao: 'Condução do anunciante pra um depoimento natural, sem depender de roteiro decorado.' },
+          { titulo: 'Registro da oferta', descricao: 'Captação do que vai virar o texto de destaque na edição, já pensado no formato de série.' },
         ],
       },
       {
@@ -73,6 +79,7 @@ export const radioParatiProducao: PropostaData = {
         periodo: 'APÓS A CAPTAÇÃO',
         itens: [
           { titulo: 'Edição', descricao: 'Corte, ritmo, correção de cor e trilha sonora licenciada.' },
+          { titulo: 'Texto de destaque', descricao: 'Aplicação do template fixo de fonte e cor, mudando só a oferta de cada anunciante.' },
           { titulo: 'Entrega', descricao: 'Vídeo final em MP4, pronto para veicular nas redes da rádio e repasse ao anunciante.', limite: 'até 5 dias úteis' },
         ],
       },
@@ -83,7 +90,9 @@ export const radioParatiProducao: PropostaData = {
         resumo: 'Diária de captação',
         itens: [
           'Captação em vídeo no local do anunciante',
+          'Fala direta pra câmera com texto de destaque em série',
           'Edição completa com corte, ritmo e correção de cor',
+          'Trilha sonora licenciada',
           'Entrega em MP4, pronta para veicular',
           'Agenda dedicada de até 2 diárias por semana',
           'Deslocamento até o local por conta da Rádio Parati FM',
