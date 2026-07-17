@@ -135,6 +135,11 @@ export const radioParatiProducao: PropostaData = {
         url: 'https://www.instagram.com/araquari_news/',
         tecnica: 'Portal de notícias de Araquari com 70,9 mil seguidores que vende vídeo publicitário para negócio local, organizado por destaques fixos de anunciante (consórcios, salão, imóveis, veterinária). Aplicação: mesmo formato de vídeo por anunciante, com destaque fixo no perfil como vitrine permanente do contrato fechado.',
       },
+      {
+        nome: 'Topázio Neto',
+        url: 'https://www.instagram.com/topaziofloripa/',
+        tecnica: 'Conteúdo pessoal com 561 mil seguidores construído em cima de fala direta pra câmera e texto de destaque em série, sempre na mesma fonte e cor por tema. Aplicação: cada anunciante fala direto pra câmera, com um template fixo de texto de destaque que muda só a oferta, virando um molde rápido de repetir a cada captação.',
+      },
     ],
     faq: [
       {
