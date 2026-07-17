@@ -7,7 +7,7 @@ import type { SobreProfissional } from '../types/proposta'
  */
 
 export const SOBRE_PADRAO: SobreProfissional = {
-  saudacao: 'Olá!',
+  saudacao: 'Quem entrega',
   paragrafos: [
     'Sou o Thiago Wessley, de Joinville. Trabalho na fronteira entre comunicação, design e audiovisual, ajudando marcas a ganhar visibilidade profissional: site que converte, conteúdo que sustenta presença e vídeo que carrega a mensagem.',
     'Nos últimos anos entreguei sites institucionais, identidade visual, cobertura de eventos e gestão de conteúdo para empresas e projetos que precisavam parecer sérios antes mesmo de crescer.',
