@@ -40,7 +40,7 @@ export const radioParatiMentoria: PropostaData = {
 
   secoes: {
     cenario: {
-      problema: 'A rádio decidiu vender vídeo publicitário para os anunciantes, mas nunca produziu isso internamente. Trazer alguém para o audiovisual resolve o operacional, mas essa pessoa entra sem processo, sem referência técnica e sem fluxo definido para orientar o trabalho.',
+      problema: 'A Rádio Parati FM é a única emissora de Araquari, cidade que é hoje a 5ª que mais cresce em Santa Catarina e a 6ª do Brasil: população saltou de 24 mil para mais de 50 mil habitantes em pouco mais de uma década, com mais de 5.500 empresas já instaladas. Trazer alguém para o audiovisual resolve o operacional dessa demanda crescente, mas essa pessoa entra sem processo, sem referência técnica e sem fluxo definido para orientar o trabalho.',
       publico: 'Anunciantes que fecham contrato de vídeo com a Rádio Parati FM e esperam material com padrão profissional.',
       desafio: 'Preparar quem for assumir o audiovisual para captar, editar e publicar vídeo publicitário com padrão profissional, sem depender de tentativa e erro nos primeiros contratos.',
       entregas: [
@@ -110,7 +110,6 @@ export const radioParatiMentoria: PropostaData = {
       {
         titulo: 'Condições Gerais',
         itens: [
-          'Despesas de deslocamento até o local da imersão são por conta da Rádio Parati FM.',
           'O conteúdo ensinado é de uso interno da Rádio Parati FM, sem redistribuição.',
         ],
       },
