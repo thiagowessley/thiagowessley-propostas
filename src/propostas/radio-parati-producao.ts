@@ -82,7 +82,7 @@ export const radioParatiProducao: PropostaData = {
     planos: [
       {
         nome: 'Produção Completa',
-        resumo: 'Diária de captação + comissão por contrato',
+        resumo: 'Diária de captação',
         itens: [
           'Captação em vídeo no local do anunciante',
           'Edição completa com corte, ritmo e correção de cor',
@@ -92,13 +92,11 @@ export const radioParatiProducao: PropostaData = {
         ],
         valor: 797,
         periodo: '/diária de captação',
-        rodape: '+ 20% de comissão sobre o valor de cada contrato fechado, cobrado na aprovação do contrato',
       },
     ],
     prazos: [
       { texto: 'A captação ocorre em até 2 diárias por semana, agendadas conforme os contratos fechados pela rádio.', bold: 'até 2 diárias por semana' },
       { texto: 'A edição e a entrega do vídeo final ocorrem em até 5 dias úteis após a captação.', bold: 'até 5 dias úteis' },
-      { texto: 'A comissão de 20% é cobrada na aprovação de cada contrato, independente da data em que o anunciante efetua o pagamento à rádio.', bold: 'na aprovação de cada contrato' },
       { texto: 'Captações que ultrapassem o teto semanal são reagendadas para a semana seguinte ou orçadas como diária extra.', bold: 'reagendadas para a semana seguinte' },
     ],
     contrato: [
@@ -106,7 +104,6 @@ export const radioParatiProducao: PropostaData = {
         titulo: 'Contrato e Entrega',
         itens: [
           'A diária de captação é cobrada por dia de trabalho, independente do número de vídeos produzidos naquele dia.',
-          'A comissão de 20% incide sobre o valor bruto de cada contrato fechado pela rádio com o anunciante.',
           'A entrega do vídeo final é feita por link, em MP4.',
         ],
       },
@@ -122,7 +119,6 @@ export const radioParatiProducao: PropostaData = {
     pagamento: {
       blocos: [
         { titulo: 'Diária de captação', descricao: 'R$ 797 por dia de trabalho, cobrada na data da captação, via Pix ou transferência.' },
-        { titulo: 'Comissão por contrato', descricao: '20% do valor de cada contrato fechado, cobrada na aprovação do contrato com o anunciante.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
@@ -143,10 +139,6 @@ export const radioParatiProducao: PropostaData = {
     ],
     faq: [
       {
-        pergunta: 'A comissão é sobre o valor cheio do contrato ou tem desconto?',
-        resposta: 'Incide sobre o valor bruto fechado com o anunciante, sem desconto.',
-      },
-      {
         pergunta: 'E se a rádio fechar mais contratos do que cabe nas 2 diárias da semana?',
         resposta: 'O excedente é reagendado para a semana seguinte ou orçado como diária extra, combinado antes da captação.',
       },
@@ -154,12 +146,6 @@ export const radioParatiProducao: PropostaData = {
         pergunta: 'A diária cobre quantos vídeos?',
         resposta: 'A diária é por dia de trabalho, não por vídeo. Se a agenda permitir captar mais de um anunciante no mesmo dia, o custo da diária não muda.',
       },
-    ],
-    primeiros_30_dias: [
-      'Semana 1: alinhamento do briefing padrão e do fluxo de aprovação de cada contrato',
-      'Semana 2: primeiras captações dentro do teto semanal',
-      'Semana 3: entrega dos primeiros vídeos e ajuste de padrão junto à rádio',
-      'Semana 4: leitura do volume fechado e revisão do teto semanal, se necessário',
     ],
     confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente à Rádio Parati FM. Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento. Se preferirem formar a própria estrutura interna com o estagiário, veja a proposta de mentoria individual.',
     encerramento: encerramentoPadrao('o escopo, o processo e o investimento'),
