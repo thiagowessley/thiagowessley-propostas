@@ -41,14 +41,13 @@ export const radioParatiProducao: PropostaData = {
 
   secoes: {
     cenario: {
-      problema: 'A Rádio Parati FM decidiu vender vídeo publicitário aos seus anunciantes, mas hoje não tem estrutura de captação nem edição para sustentar esse volume. Um estagiário resolve o operacional no futuro, mas ainda deixa a rádio sem experiência para orquestrar prazo, qualidade e entrega enquanto o processo amadurece.',
+      problema: 'Vídeo publicitário é uma forma direta de rentabilizar a audiência da Rádio Parati FM, mas sustentar esse formato em volume exige captação e edição com padrão profissional em cada contrato fechado, o que normalmente demanda estrutura dedicada de produção.',
       publico: 'Anunciantes que fecham contrato de vídeo publicitário com a Rádio Parati FM, e a audiência que consome esse conteúdo nas redes da rádio.',
-      desafio: 'Transformar cada contrato fechado pela rádio em um vídeo publicitário pronto para veicular, com captação e edição profissional, sem a rádio precisar montar estrutura própria agora.',
+      desafio: 'Transformar cada contrato fechado pela rádio em um vídeo publicitário pronto para veicular, com captação e edição profissional, sem depender de montar uma estrutura própria.',
       entregas: [
         'Vídeo publicitário pronto para veicular a cada contrato fechado',
         'Captação e edição profissionais, sem custo de equipe própria',
         'Agenda dedicada de até 2 diárias por semana',
-        'Modelo já validado na praça: a Araquari News, concorrente direta em Araquari, sustenta audiência e faturamento com esse mesmo formato de vídeo publicitário',
       ],
     },
     fases: [
