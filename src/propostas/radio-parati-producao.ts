@@ -41,7 +41,7 @@ export const radioParatiProducao: PropostaData = {
 
   secoes: {
     cenario: {
-      problema: 'Vídeo publicitário é uma forma direta de rentabilizar a audiência da Rádio Parati FM, mas sustentar esse formato em volume exige captação e edição com padrão profissional em cada contrato fechado, o que normalmente demanda estrutura dedicada de produção.',
+      problema: 'A Rádio Parati FM é a única emissora de Araquari, cidade que é hoje a 5ª que mais cresce em Santa Catarina e a 6ª do Brasil: população saltou de 24 mil para mais de 50 mil habitantes em pouco mais de uma década, com mais de 5.500 empresas já instaladas. Vídeo publicitário é a forma direta de captar essa base crescente de anunciantes, mas sustentar esse formato em volume exige captação e edição com padrão profissional em cada contrato fechado.',
       publico: 'Ouvintes e moradores de Araquari e região que acompanham a Rádio Parati FM pela notícia, a música e a agenda de eventos locais. É esse alcance que dá valor ao vídeo de cada anunciante.',
       desafio: 'Transformar cada contrato fechado pela rádio em um vídeo publicitário pronto para veicular, com captação e edição profissional, sem depender de montar uma estrutura própria.',
       entregas: [
