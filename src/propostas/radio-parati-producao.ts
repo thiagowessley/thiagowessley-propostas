@@ -147,7 +147,7 @@ export const radioParatiProducao: PropostaData = {
         resposta: 'A diária é por dia de trabalho, não por vídeo. Se a agenda permitir captar mais de um anunciante no mesmo dia, o custo da diária não muda.',
       },
     ],
-    confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente à Rádio Parati FM. Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento. Se preferirem formar a própria estrutura interna com o estagiário, veja a proposta de mentoria individual.',
+    confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente à Rádio Parati FM. Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento. Se preferirem formar a própria estrutura interna, veja a proposta de mentoria individual.',
     encerramento: encerramentoPadrao('o escopo, o processo e o investimento'),
   },
   utm_copy: {

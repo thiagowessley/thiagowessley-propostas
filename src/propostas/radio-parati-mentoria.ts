@@ -5,11 +5,11 @@ export const radioParatiMentoria: PropostaData = {
   slug: 'radio-parati-mentoria',
   cliente: 'Rádio Parati FM',
   segmento: 'Rádio local, Araquari e região',
-  servico: 'Mentoria de Produção Audiovisual para Estagiário',
+  servico: 'Mentoria de Produção Audiovisual',
   responsavel: 'Fernanda',
   validade: '2026-08-01',
   envio: '2026-07-17',
-  intro_capa: 'Esta proposta apresenta o escopo, o prazo e o investimento da mentoria individual para o estagiário que vai assumir a produção de vídeo publicitário da rádio.',
+  intro_capa: 'Esta proposta apresenta o escopo, o prazo e o investimento da mentoria individual para quem vai assumir a produção de vídeo publicitário da rádio.',
   valor: {
     principal: 1497,
     moeda: 'BRL',
@@ -26,7 +26,7 @@ export const radioParatiMentoria: PropostaData = {
     intro: [
       'Nos últimos anos participei de coberturas de evento, vídeos institucionais e produções audiovisuais em diferentes formatos.',
       'Cada um deles somou um repertório: shows ao vivo, eventos corporativos, depoimentos em vídeo e aftermovies.',
-      'É esse padrão técnico que a mentoria transfere para o estagiário da rádio.',
+      'É esse padrão técnico que a mentoria transfere para quem vai produzir os vídeos da rádio.',
     ],
     link: { label: 'Ver portfólio completo', url: 'https://thiagowessley.com.br/' },
     itens: [
@@ -41,14 +41,16 @@ export const radioParatiMentoria: PropostaData = {
 
   secoes: {
     cenario: {
-      problema: 'A rádio decidiu vender vídeo publicitário para os anunciantes, mas nunca produziu isso internamente. A ideia de contratar um estagiário para o audiovisual resolve o operacional, mas ele entra sem processo, sem referência técnica e sem fluxo definido para orientar o trabalho.',
+      problema: 'A rádio decidiu vender vídeo publicitário para os anunciantes, mas nunca produziu isso internamente. Trazer alguém para o audiovisual resolve o operacional, mas essa pessoa entra sem processo, sem referência técnica e sem fluxo definido para orientar o trabalho.',
       publico: 'Anunciantes que fecham contrato de vídeo com a Rádio Parati FM e esperam material com padrão profissional.',
-      desafio: 'Preparar o futuro estagiário para captar, editar e publicar vídeo publicitário com padrão profissional, sem depender de tentativa e erro nos primeiros contratos.',
+      desafio: 'Preparar quem for assumir o audiovisual para captar, editar e publicar vídeo publicitário com padrão profissional, sem depender de tentativa e erro nos primeiros contratos.',
       entregas: [
-        'Estagiário capacitado a produzir vídeo publicitário do zero',
-        'Guia de referência com specs técnicas e checklist de entrega',
-        'Padrão técnico definido, sem tentativa e erro nos primeiros contratos',
-        'Acompanhamento nas primeiras semanas de produção real',
+        'Profissional capaz de captar, editar e publicar vídeo publicitário sozinho, do briefing à entrega',
+        'Checklist técnico de captação (câmera, áudio, luz, enquadramento) pra repetir em qualquer visita comercial',
+        'Modelo de fala direta pra câmera e texto de destaque em série, prontos pra aplicar em cada anunciante',
+        'Fluxo de edição e publicação já definido por formato de rede',
+        'Padrão técnico fechado, sem tentativa e erro nos primeiros contratos',
+        'Acompanhamento real nas primeiras semanas de produção',
       ],
     },
     fases: [
@@ -57,8 +59,11 @@ export const radioParatiMentoria: PropostaData = {
         titulo: 'Imersão Presencial',
         periodo: '1 DIA',
         itens: [
-          { titulo: 'Captação', descricao: 'Como segurar a câmera, enquadramento, áudio e o que captar em uma visita comercial.' },
-          { titulo: 'Edição', descricao: 'Fluxo de corte, ritmo, cor e entrega no editor usado pela rádio.' },
+          { titulo: 'Equipamento e captação', descricao: 'Câmera ou celular, estabilização e o kit mínimo necessário pra gravar com qualidade profissional.' },
+          { titulo: 'Áudio e luz', descricao: 'Microfone de lapela, como aproveitar luz natural e o que evitar pra não perder a captação.' },
+          { titulo: 'Enquadramento e direção de cena', descricao: 'Como conduzir o anunciante na frente da câmera e os ângulos que valorizam o negócio dele.' },
+          { titulo: 'Roteiro rápido', descricao: 'Como planejar em poucos minutos o que captar antes de chegar no local do anunciante.' },
+          { titulo: 'Edição', descricao: 'Corte, ritmo, cor, trilha licenciada e texto de destaque em série no editor usado pela rádio.' },
           { titulo: 'Publicação', descricao: 'Formatos e specs de entrega por rede: Reels, Stories e feed.' },
         ],
       },
@@ -67,9 +72,10 @@ export const radioParatiMentoria: PropostaData = {
         titulo: 'Acompanhamento Online',
         periodo: '3 ENCONTROS',
         itens: [
-          { titulo: 'Revisão de material', descricao: 'Análise do que o estagiário produziu nas primeiras semanas de trabalho.', limite: 'até 3 encontros' },
+          { titulo: 'Revisão de material', descricao: 'Análise do que foi produzido nas primeiras semanas de trabalho.', limite: 'até 3 encontros' },
           { titulo: 'Ajuste de fluxo', descricao: 'Correção de erros recorrentes e reforço do padrão técnico combinado.' },
           { titulo: 'Dúvidas em tempo real', descricao: 'Espaço aberto para perguntas específicas de cada contrato em produção.' },
+          { titulo: 'Fluxo consolidado', descricao: 'Processo que passa a funcionar sozinho, sem depender mais dos encontros de acompanhamento.' },
         ],
       },
     ],
@@ -78,8 +84,8 @@ export const radioParatiMentoria: PropostaData = {
         nome: 'Mentoria Individual',
         resumo: '1 dia presencial + 3 encontros online',
         itens: [
-          'Imersão presencial de 1 dia: captação, edição e publicação',
-          'Guia de referência com specs técnicas e checklist de entrega',
+          'Imersão presencial de 1 dia: equipamento, captação, edição e publicação',
+          'Checklist técnico e modelo de texto de destaque prontos pra repetir',
           '3 encontros online de acompanhamento',
           'Revisão de material produzido nas primeiras semanas',
         ],
@@ -123,7 +129,7 @@ export const radioParatiMentoria: PropostaData = {
     encerramento: encerramentoPadrao('o escopo, o prazo e o investimento'),
   },
   utm_copy: {
-    whatsapp: 'Fernanda, segue a proposta de mentoria audiovisual para o estagiário da Rádio Parati FM.',
+    whatsapp: 'Fernanda, segue a proposta de mentoria audiovisual para a Rádio Parati FM.',
     default: '',
   },
   contato: {
