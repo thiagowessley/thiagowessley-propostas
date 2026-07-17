@@ -76,7 +76,6 @@ export const radioParatiMentoria: PropostaData = {
     planos: [
       {
         nome: 'Mentoria Individual',
-        destaque: true,
         resumo: '1 dia presencial + 3 encontros online',
         itens: [
           'Imersão presencial de 1 dia: captação, edição e publicação',
@@ -120,7 +119,7 @@ export const radioParatiMentoria: PropostaData = {
         { nome: 'Transferência', detalhe: 'Depósito em conta corrente' },
       ],
     },
-    confidencialidade: 'Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento.',
+    confidencialidade: 'Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento. Se preferirem já sair com material pronto, sem montar estrutura própria, veja a proposta de produção completa.',
     encerramento: encerramentoPadrao('o escopo, o prazo e o investimento'),
   },
   utm_copy: {

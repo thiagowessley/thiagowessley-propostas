@@ -82,7 +82,6 @@ export const radioParatiProducao: PropostaData = {
     planos: [
       {
         nome: 'Produção Completa',
-        destaque: true,
         resumo: 'Diária de captação + comissão por contrato',
         itens: [
           'Captação em vídeo no local do anunciante',
@@ -157,7 +156,7 @@ export const radioParatiProducao: PropostaData = {
       'Semana 3: entrega dos primeiros vídeos e ajuste de padrão junto à rádio',
       'Semana 4: leitura do volume fechado e revisão do teto semanal, se necessário',
     ],
-    confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente à Rádio Parati FM. Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento.',
+    confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente à Rádio Parati FM. Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento. Se preferirem formar a própria estrutura interna com o estagiário, veja a proposta de mentoria individual.',
     encerramento: encerramentoPadrao('o escopo, o processo e o investimento'),
   },
   utm_copy: {
