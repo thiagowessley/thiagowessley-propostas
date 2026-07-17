@@ -19,7 +19,14 @@ export const radioParatiProducao: PropostaData = {
   foto_profissional: '/img/thiago-vertical.jpg',
   foto_secundaria: '/img/thiago-horizontal.jpg',
 
-  sobre: SOBRE_PADRAO,
+  sobre: {
+    ...SOBRE_PADRAO,
+    atuacao: [
+      { nome: 'Audiovisual', nivel: 95 },
+      { nome: 'Comunicação', nivel: 90 },
+      { nome: 'Design', nivel: 88 },
+    ],
+  },
 
   portfolio: {
     intro: [

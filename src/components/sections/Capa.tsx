@@ -98,15 +98,15 @@ export function Capa({ proposta, tempoLeitura }: Props) {
         {/* linha de info: envio | validade ------ */}
         <motion.div
           custom={4} variants={lineUp} initial="hidden" animate="show"
-          style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '64px' }}
+          style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '64px', flexWrap: 'wrap' }}
         >
           <span style={{ width: '20px', height: '20px', borderRadius: '50%', border: '1px solid var(--muted)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.7rem', color: 'var(--muted)', flexShrink: 0, fontStyle: 'italic' }}>i</span>
-          <p style={{ fontSize: '0.92rem', color: 'var(--ice)', whiteSpace: 'nowrap' }}>
+          <p style={{ fontSize: '0.92rem', color: 'var(--ice)' }}>
             Envio da proposta {formatarData(envioISO)}
             <span style={{ color: 'var(--border)', margin: '0 14px' }}>|</span>
             Validade de {diasValidade} dias
           </p>
-          <span style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
+          <span style={{ flex: 1, minWidth: '24px', height: '1px', background: 'var(--border)' }} />
         </motion.div>
 
         {proposta.intro_capa && (
