@@ -42,7 +42,7 @@ export const radioParatiProducao: PropostaData = {
   secoes: {
     cenario: {
       problema: 'Vídeo publicitário é uma forma direta de rentabilizar a audiência da Rádio Parati FM, mas sustentar esse formato em volume exige captação e edição com padrão profissional em cada contrato fechado, o que normalmente demanda estrutura dedicada de produção.',
-      publico: 'Anunciantes que fecham contrato de vídeo publicitário com a Rádio Parati FM, e a audiência que consome esse conteúdo nas redes da rádio.',
+      publico: 'Ouvintes e moradores de Araquari e região que acompanham a Rádio Parati FM pela notícia, a música e a agenda de eventos locais. É esse alcance que dá valor ao vídeo de cada anunciante.',
       desafio: 'Transformar cada contrato fechado pela rádio em um vídeo publicitário pronto para veicular, com captação e edição profissional, sem depender de montar uma estrutura própria.',
       entregas: [
         'Vídeo publicitário pronto para veicular a cada contrato fechado',
@@ -57,7 +57,7 @@ export const radioParatiProducao: PropostaData = {
         periodo: 'SEMANAL',
         itens: [
           { titulo: 'Repasse do briefing', descricao: 'A cada contrato fechado, a rádio repassa o que precisa aparecer no vídeo do anunciante.' },
-          { titulo: 'Agendamento da captação', descricao: 'Encaixe dentro da janela de até 2 diárias por semana.' },
+          { titulo: 'Agendamento da captação', descricao: 'Encaixe dentro da janela de até 2 diárias por semana. Reunir vários anunciantes no mesmo dia rende mais vídeos pela mesma diária.' },
         ],
       },
       {
@@ -91,6 +91,7 @@ export const radioParatiProducao: PropostaData = {
         ],
         valor: 797,
         periodo: '/diária de captação',
+        rodape: 'A diária cobre todos os anunciantes captados no mesmo dia, não é um valor por vídeo',
       },
     ],
     prazos: [
