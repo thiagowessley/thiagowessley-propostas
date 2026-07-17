@@ -6,7 +6,7 @@ export const radioParatiProducao: PropostaData = {
   cliente: 'Rádio Parati FM',
   segmento: 'Rádio local, Araquari e região',
   servico: 'Produção de Vídeos Publicitários',
-  validade: '2026-08-01',
+  validade: '2026-07-24',
   envio: '2026-07-17',
   intro_capa: 'Esta proposta apresenta o modelo de produção de vídeo publicitário para os contratos fechados pela Rádio Parati FM: escopo, processo, prazos, condições e investimento.',
   valor: {
@@ -25,6 +25,7 @@ export const radioParatiProducao: PropostaData = {
       { nome: 'Audiovisual', nivel: 95 },
       { nome: 'Comunicação', nivel: 90 },
       { nome: 'Design', nivel: 88 },
+      { nome: 'Desenvolvimento Web', nivel: 80 },
     ],
   },
 
@@ -162,7 +163,7 @@ export const radioParatiProducao: PropostaData = {
         resposta: 'A diária é por dia de trabalho, não por vídeo. Se a agenda permitir captar mais de um anunciante no mesmo dia, o custo da diária não muda.',
       },
     ],
-    confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente à Rádio Parati FM. Validade de 15 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento. Se preferirem formar a própria estrutura interna, veja a proposta de mentoria individual.',
+    confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente à Rádio Parati FM. Validade de 7 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento. Se preferirem formar a própria estrutura interna, veja a proposta de mentoria individual.',
     encerramento: encerramentoPadrao('o escopo, o processo e o investimento'),
   },
   utm_copy: {
