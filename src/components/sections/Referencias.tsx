@@ -17,7 +17,7 @@ export function Referencias({ referencias }: Props) {
         <span className="bold">inspirou</span>
       </h2>
       <p style={{ color: 'var(--muted)', marginBottom: '40px', fontSize: '0.9rem' }}>
-        Sites reais estudados para este projeto, com a técnica que vamos aplicar.
+        Referências reais estudadas para este projeto, com a técnica que vamos aplicar.
       </p>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
         {referencias.map((ref, i) => (

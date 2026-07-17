@@ -12,7 +12,7 @@ export function BadgeCredibilidade() {
       marginTop: '40px',
     }}>
       <span style={{ color: 'var(--gold)' }}>&#10022;</span>
-      Esta proposta foi construída com a mesma tecnologia que usaremos no seu projeto.
+      Esta proposta foi construída com o mesmo cuidado que o seu projeto vai receber.
     </div>
   )
 }
