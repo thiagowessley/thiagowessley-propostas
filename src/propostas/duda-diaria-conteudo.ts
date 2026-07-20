@@ -57,7 +57,7 @@ export const dudaDiariaConteudo: PropostaData = {
         periodo: 'ANTES DA DIÁRIA',
         itens: [
           { titulo: 'Repasse de pauta', descricao: 'Você define os temas do mês: dúvidas de paciente, mitos de dieta, bastidor de consulta, o que fizer sentido.' },
-          { titulo: 'Roteiro leve', descricao: 'Alinhamento rápido de cada vídeo antes de gravar, sem depender de texto decorado.' },
+          { titulo: 'Direção de formato', descricao: 'O conteúdo técnico é seu, como especialista. Eu entro com a estrutura: por exemplo, qual gancho funciona nos primeiros 3 segundos de cada vídeo.' },
           { titulo: 'Agendamento da diária', descricao: 'Data combinada com antecedência, dentro da agenda mensal fixa.' },
         ],
       },
@@ -145,7 +145,7 @@ export const dudaDiariaConteudo: PropostaData = {
         itens: [
           'Diária fora de Joinville e região: R$ 1.200/mês, mesma estrutura, com deslocamento por conta da Duda.',
           'A trilha sonora usada nas edições é licenciada, sem risco de direito autoral.',
-          'Pauta e temas ficam a critério da Duda, com orientação de enquadramento e condução na fala por conta do Thiago.',
+          'O conteúdo técnico dos vídeos é de responsabilidade da Duda, como especialista. A direção de formato (gancho, ritmo, estrutura) fica por conta do Thiago.',
         ],
       },
     ],
@@ -171,6 +171,10 @@ export const dudaDiariaConteudo: PropostaData = {
       {
         pergunta: 'Preciso roteirizar tudo antes?',
         resposta: 'Não. A pauta é combinada antes da diária, mas a condução na hora da fala é feita junto, sem depender de texto decorado.',
+      },
+      {
+        pergunta: 'Quem escreve o roteiro dos vídeos?',
+        resposta: 'O conteúdo técnico, o que falar sobre nutrição, é seu: você é a especialista. Eu entro na estrutura de cada vídeo, como o gancho ideal pros primeiros 3 segundos, pra transformar seu conhecimento em vídeo que prende.',
       },
     ],
     primeiros_30_dias: [
