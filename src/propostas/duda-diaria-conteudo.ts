@@ -56,9 +56,9 @@ export const dudaDiariaConteudo: PropostaData = {
         titulo: 'Planejamento e Pauta',
         periodo: 'ANTES DA DIÁRIA',
         itens: [
-          { titulo: 'Repasse de pauta e roteiro', descricao: 'Você define os temas e o roteiro de cada vídeo, com o conhecimento técnico que só você tem.' },
-          { titulo: 'Apoio pontual de estrutura', descricao: 'Se precisar de uma orientação rápida, como o gancho dos primeiros segundos, eu ajudo. Roteirização não é responsabilidade contratada.' },
-          { titulo: 'Agendamento da diária', descricao: 'Data combinada com antecedência, dentro da agenda mensal.' },
+          { titulo: 'Repasse de pauta e roteiro', descricao: 'Você chega com os temas e o roteiro prontos: o conhecimento técnico é todo seu.' },
+          { titulo: 'Apoio pontual de estrutura', descricao: 'Precisa de uma mão com o gancho dos primeiros segundos? Eu oriento na hora.' },
+          { titulo: 'Agendamento da diária', descricao: 'Data marcada com antecedência, dentro da sua agenda mensal.' },
         ],
       },
       {
@@ -66,9 +66,9 @@ export const dudaDiariaConteudo: PropostaData = {
         titulo: 'Diária de Captação',
         periodo: 'DIA COMBINADO',
         itens: [
-          { titulo: 'Captação em vídeo', descricao: 'Registro em volume, numa única visita ao seu espaço de atendimento ou onde for combinado.', limite: 'até 8h corridas, visita única' },
-          { titulo: 'Fala direta pra câmera', descricao: 'Condução natural pra cada vídeo, sem enrolação nem múltiplas retomadas.' },
-          { titulo: 'Quantidade de vídeos', descricao: 'Limitada só pelo tempo da diária, não por um número fixo de peças.' },
+          { titulo: 'Captação em vídeo', descricao: 'Uma visita só, no seu espaço ou onde combinarmos, com a câmera rodando o dia inteiro.', limite: 'até 8h corridas, visita única' },
+          { titulo: 'Fala direta pra câmera', descricao: 'Conduzo cada gravação pra sair natural e direto ao ponto, sem repetir tomada atrás de tomada.' },
+          { titulo: 'Quantos vídeos couberem', descricao: 'O limite é o tempo da diária, não um número fechado de peças.' },
         ],
       },
       {
@@ -76,9 +76,9 @@ export const dudaDiariaConteudo: PropostaData = {
         titulo: 'Edição e Entrega',
         periodo: 'APÓS A DIÁRIA',
         itens: [
-          { titulo: 'Edição completa', descricao: 'Corte, ritmo e legenda em cada vídeo, pronto pra postar.' },
-          { titulo: 'Organização por semana', descricao: 'Vídeos entregues já separados pra cobrir o mês inteiro, sem você precisar planejar a ordem.' },
-          { titulo: 'Entrega', descricao: 'Por link, em MP4, pronta pra publicar direto no Instagram. Entrega escalonada: os primeiros vídeos já saem enquanto o restante segue em edição.', limite: 'primeiros vídeos na 1ª semana' },
+          { titulo: 'Edição completa', descricao: 'Corte, ritmo e legenda: cada vídeo pronto pra ir direto pro ar.' },
+          { titulo: 'Organização por semana', descricao: 'Tudo entregue já separado pro mês, sem você gastar tempo planejando a ordem.' },
+          { titulo: 'Entrega escalonada', descricao: 'Por link, em MP4. Os primeiros vídeos chegam enquanto o resto ainda está em edição.', limite: 'primeiros vídeos na 1ª semana' },
         ],
       },
     ],
