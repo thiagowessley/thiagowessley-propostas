@@ -25,7 +25,7 @@ export const dudaDiariaConteudo: PropostaData = {
     intro: [
       'Nos últimos anos participei de coberturas de evento, vídeos institucionais e produções audiovisuais em diferentes formatos.',
       'Cada um deles somou um repertório: fala direta pra câmera, ritmo de corte e edição pensada pra quem assiste rápido, no feed.',
-      'É esse padrão que entra em cada vídeo captado nas suas diárias mensais.',
+      'É esse padrão que entra em cada vídeo captado na sua diária mensal.',
     ],
     link: { label: 'Ver portfólio completo', url: 'https://thiagowessley.com.br/' },
     itens: [
@@ -45,7 +45,7 @@ export const dudaDiariaConteudo: PropostaData = {
       desafio: 'Produzir volume de vídeo o mês inteiro sem você precisar segurar câmera, editar ou sacrificar horário de atendimento pra isso.',
       entregas: [
         'Vídeos em volume, sem você precisar gravar ou editar sozinha',
-        'Conteúdo do mês inteiro resolvido em até 2 diárias',
+        'Conteúdo do mês inteiro resolvido numa única diária',
         'Edição completa, pronta pra postar',
         'Tempo de atendimento preservado, sem virar produtora de conteúdo em paralelo',
       ],
@@ -58,7 +58,7 @@ export const dudaDiariaConteudo: PropostaData = {
         itens: [
           { titulo: 'Repasse de pauta e roteiro', descricao: 'Você define os temas e o roteiro de cada vídeo, com o conhecimento técnico que só você tem.' },
           { titulo: 'Apoio pontual de estrutura', descricao: 'Se precisar de uma orientação rápida, como o gancho dos primeiros segundos, eu ajudo. Roteirização não é responsabilidade contratada.' },
-          { titulo: 'Agendamento das diárias', descricao: 'Datas combinadas com antecedência, dentro da agenda mensal de até 2 diárias.' },
+          { titulo: 'Agendamento da diária', descricao: 'Data combinada com antecedência, dentro da agenda mensal.' },
         ],
       },
       {
@@ -66,7 +66,7 @@ export const dudaDiariaConteudo: PropostaData = {
         titulo: 'Diária de Captação',
         periodo: 'DIA COMBINADO',
         itens: [
-          { titulo: 'Captação em vídeo', descricao: 'Registro em volume, no seu espaço de atendimento ou onde for combinado.', limite: 'até 8h por diária, até 2 diárias/mês incluídas' },
+          { titulo: 'Captação em vídeo', descricao: 'Registro em volume, no seu espaço de atendimento ou onde for combinado.', limite: 'até 8h' },
           { titulo: 'Fala direta pra câmera', descricao: 'Condução natural pra cada vídeo, sem enrolação nem múltiplas retomadas.' },
           { titulo: 'Quantidade de vídeos', descricao: 'Limitada só pelo tempo da diária, não por um número fixo de peças.' },
         ],
@@ -87,72 +87,58 @@ export const dudaDiariaConteudo: PropostaData = {
         nome: 'Mês a Mês',
         resumo: 'Sem prazo fixo',
         itens: [
-          'Cobrança por diária realizada, até 2 diárias por mês',
-          'Cada diária de até 8h, quantidade de vídeos livre dentro do tempo',
+          '1 diária de captação por mês, até 8h',
+          'Quantidade de vídeos livre dentro do tempo da diária',
           'Edição completa de cada vídeo (corte, ritmo, legenda)',
-          'Entrega organizada por semana, pronta pra postar',
-          'Renovação mês a mês, sem contrato de permanência',
+          'Entrega em até 7 dias úteis, organizada pra postar o mês inteiro',
+          'Sem contrato de permanência',
         ],
         valor: 800,
-        periodo: '/diária',
+        periodo: '/mês',
         rodape: 'Liberdade de sair quando quiser, sem prazo contratado',
       },
       {
-        nome: 'Contrato 6 Meses',
-        resumo: 'Compromisso de 6 meses',
-        itens: [
-          'Cobrança por diária realizada, até 2 diárias por mês',
-          'Cada diária de até 8h, quantidade de vídeos livre dentro do tempo',
-          'Edição completa de cada vídeo (corte, ritmo, legenda)',
-          'Entrega organizada por semana, pronta pra postar',
-          'Contrato de permanência de 6 meses',
-        ],
-        valor: 700,
-        periodo: '/diária',
-        rodape: 'Valor por diária fixo durante todo o contrato, previsibilidade pros dois lados',
-      },
-      {
-        nome: 'Contrato 12 Meses',
+        nome: 'Contrato Anual',
         destaque: true,
         resumo: 'Compromisso de 1 ano',
         itens: [
-          'Cobrança por diária realizada, até 2 diárias por mês',
-          'Cada diária de até 8h, quantidade de vídeos livre dentro do tempo',
+          '1 diária de captação por mês, até 8h',
+          'Quantidade de vídeos livre dentro do tempo da diária',
           'Edição completa de cada vídeo (corte, ritmo, legenda)',
-          'Entrega organizada por semana, pronta pra postar',
+          'Entrega em até 7 dias úteis, organizada pra postar o mês inteiro',
           'Contrato de permanência de 12 meses',
         ],
         valor: 597,
-        periodo: '/diária',
-        rodape: 'Valor por diária fixo o ano inteiro: agenda garantida pra mim, conteúdo garantido pra você',
+        periodo: '/mês',
+        rodape: 'Mensalidade fixa o ano inteiro: agenda garantida pra mim, conteúdo garantido pra você',
       },
       {
         nome: 'Diária Extra',
-        resumo: 'Reforço além das 2 diárias',
+        resumo: 'Mais volume quando precisar',
         itens: [
           'Mesmo bloco de até 8h de captação e edição completa',
-          'Cobrada além das 2 diárias já previstas no mês',
+          'Soma ao plano contratado, quantas vezes precisar no mês',
           'Ideal pra lançamento, campanha ou data especial',
         ],
         valor: 800,
         periodo: 'diária extra',
-        rodape: 'Agendada conforme disponibilidade, sem prioridade sobre as diárias já contratadas',
+        rodape: 'Agendada conforme disponibilidade, sem prioridade sobre a diária já contratada',
       },
     ],
     prazos: [
-      { texto: 'Nos planos de 6 ou 12 meses, o contrato tem permanência pelo prazo contratado, contada a partir da primeira diária.', bold: 'permanência pelo prazo contratado' },
-      { texto: 'As diárias mensais são agendadas com antecedência mínima de 5 dias úteis, conforme disponibilidade.', bold: 'antecedência mínima de 5 dias úteis' },
+      { texto: 'No contrato anual, a permanência é de 12 meses, contada a partir da primeira diária.', bold: 'permanência é de 12 meses' },
+      { texto: 'A diária mensal é agendada com antecedência mínima de 5 dias úteis, conforme disponibilidade.', bold: 'antecedência mínima de 5 dias úteis' },
       { texto: 'A edição completa dos vídeos é entregue em até 7 dias úteis após cada diária.', bold: 'até 7 dias úteis' },
-      { texto: 'Diárias além das 2 previstas no mês entram na agenda conforme disponibilidade, sem prioridade sobre as diárias já contratadas.', bold: 'sem prioridade sobre as diárias já contratadas' },
+      { texto: 'Diárias extras entram na agenda conforme disponibilidade, sem prioridade sobre a diária já contratada.', bold: 'sem prioridade sobre a diária já contratada' },
     ],
     contrato: [
       {
         titulo: 'Contrato e Entrega',
         itens: [
-          'O pagamento é cobrado por diária realizada, no valor correspondente ao prazo contratado.',
+          'O pagamento é cobrado no início de cada ciclo, para reserva da agenda.',
           'A entrega dos vídeos editados é feita por link, organizada por semana.',
-          'Nos planos de 6 ou 12 meses, o contrato tem permanência pelo prazo contratado.',
-          'Cancelamento antecipado nos planos de 6 ou 12 meses gera multa de 50% sobre o valor de uma diária por mês restante até completar o contrato.',
+          'No contrato anual, a permanência é de 12 meses.',
+          'Cancelamento antecipado no contrato anual gera multa de 50% sobre as mensalidades restantes até completar o contrato.',
           'No plano mês a mês, não há permanência contratada nem multa de cancelamento.',
         ],
       },
@@ -167,8 +153,8 @@ export const dudaDiariaConteudo: PropostaData = {
     ],
     pagamento: {
       blocos: [
-        { titulo: 'Diárias do Plano', descricao: 'Cada diária realizada é cobrada no valor do prazo contratado (mês a mês, 6 ou 12 meses), até 2 por mês, via Pix ou transferência.' },
-        { titulo: 'Diária Extra', descricao: 'R$ 800 por diária avulsa além das 2 já previstas no mês, cobrada na data da captação.' },
+        { titulo: 'Mensalidade', descricao: 'Cobrada no início de cada ciclo, via Pix ou transferência. Inclui 1 diária por mês.' },
+        { titulo: 'Diária Extra', descricao: 'R$ 800 por diária avulsa além da já incluída no mês, cobrada na data da captação.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
@@ -178,15 +164,11 @@ export const dudaDiariaConteudo: PropostaData = {
     faq: [
       {
         pergunta: 'Quantos vídeos eu recebo por diária?',
-        resposta: 'Não tem número fechado. Cada diária é um bloco de até 8h de captação: quantos vídeos couberem nesse tempo, todos editados e prontos pra postar.',
+        resposta: 'Não tem número fechado. A diária é um bloco de até 8h de captação: quantos vídeos couberem nesse tempo, todos editados e prontos pra postar.',
       },
       {
-        pergunta: 'Se eu usar só 1 diária em algum mês, pago menos?',
-        resposta: 'Sim. Cada plano cobra por diária realizada: 1 diária no mês, paga o valor de 1; 2 diárias, paga o valor de 2. O prazo do contrato (mês a mês, 6 ou 12 meses) muda o valor de cada diária, não vira uma mensalidade fixa independente do uso.',
-      },
-      {
-        pergunta: 'Posso contratar mais de uma diária no mesmo mês?',
-        resposta: 'Sim, até 2 diárias por mês fazem parte do plano contratado, cada uma cobrada no valor por diária do seu prazo. A partir da terceira, entra como diária extra avulsa de R$ 800.',
+        pergunta: 'Posso ter mais de uma diária no mesmo mês?',
+        resposta: 'Sim. O plano já inclui 1 diária por mês. Cada diária extra que você precisar custa R$ 800, cobrada à parte, pra lançamento, campanha ou data especial.',
       },
       {
         pergunta: 'Quem escreve o roteiro dos vídeos?',
@@ -194,13 +176,13 @@ export const dudaDiariaConteudo: PropostaData = {
       },
       {
         pergunta: 'Existe fidelidade no contrato?',
-        resposta: 'Depende do plano. No mês a mês não há permanência contratada. Nos planos de 6 ou 12 meses existe permanência pelo prazo escolhido, com multa de 50% sobre o valor de uma diária por mês restante em caso de cancelamento antecipado.',
+        resposta: 'Depende do plano. No mês a mês não há permanência contratada. No contrato anual existe permanência de 12 meses, com multa de 50% sobre as mensalidades restantes em caso de cancelamento antecipado.',
       },
     ],
     primeiros_30_dias: [
-      'Semana 1: pauta do mês e agendamento das diárias',
-      'Semana 2: primeira diária de captação e início da edição',
-      'Semana 3: segunda diária (se houver) e primeiros vídeos publicados',
+      'Semana 1: pauta do mês e agendamento da diária',
+      'Semana 2: diária de captação e início da edição',
+      'Semana 3: primeiros vídeos entregues e publicados',
       'Semana 4: restante do conteúdo entregue, mês coberto',
     ],
     confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente à Duda. Validade de 7 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento.',
