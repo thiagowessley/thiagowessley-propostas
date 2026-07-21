@@ -10,7 +10,7 @@ export const dudaDiariaConteudo: PropostaData = {
   envio: '2026-07-20',
   intro_capa: 'Esta proposta apresenta o modelo de diária de conteúdo em vídeo para o seu Instagram: escopo, processo, prazos, condições e investimento.',
   valor: {
-    principal: 800,
+    principal: 640,
     moeda: 'BRL',
   },
   mostrarPortfolio: true,
@@ -84,34 +84,49 @@ export const dudaDiariaConteudo: PropostaData = {
     ],
     planos: [
       {
-        nome: 'Diária Mensal',
-        destaque: true,
-        resumo: 'O mês inteiro resolvido',
+        nome: 'Diária Mensal · 6 meses',
+        resumo: 'Compromisso mínimo',
         itens: [
           'Captação em vídeo, até 8h no dia combinado',
           'Quantidade de vídeos livre dentro do tempo da diária',
           'Edição completa de cada vídeo (corte, ritmo, legenda)',
           'Entrega organizada por semana, pronta pra postar o mês inteiro',
-          'Pauta e roteiro leve alinhados antes da diária',
-          'Agenda mensal fixa, sem precisar recontratar todo mês',
+          'Pauta e direção de formato alinhadas antes da diária',
+          'Contrato de permanência mínima de 6 meses',
         ],
         valor: 800,
         periodo: '/mês',
-        rodape: 'Cobrança mensal, cancelamento a qualquer momento sem multa',
+        rodape: 'O menor prazo aceito pra este formato',
       },
       {
-        nome: 'Meia Diária Mensal',
+        nome: 'Diária Mensal · 12 meses',
+        destaque: true,
+        resumo: 'Mensalidade mais baixa',
+        itens: [
+          'Captação em vídeo, até 8h no dia combinado',
+          'Quantidade de vídeos livre dentro do tempo da diária',
+          'Edição completa de cada vídeo (corte, ritmo, legenda)',
+          'Entrega organizada por semana, pronta pra postar o mês inteiro',
+          'Pauta e direção de formato alinhadas antes da diária',
+          'Contrato de permanência mínima de 12 meses',
+        ],
+        valor: 640,
+        periodo: '/mês',
+        rodape: '20% mais barato por mês que o plano de 6 meses',
+      },
+      {
+        nome: 'Meia Diária · 12 meses',
         resumo: 'Menos volume, mesmo padrão',
         itens: [
           'Captação em vídeo, até 4h no dia combinado',
           'Quantidade de vídeos livre dentro do tempo da diária',
           'Edição completa de cada vídeo (corte, ritmo, legenda)',
           'Entrega organizada, pronta pra postar',
-          'Indicada pra quem já resolve parte do conteúdo sozinha',
+          'Contrato de permanência mínima de 12 meses',
         ],
         valor: 450,
         periodo: '/mês',
-        rodape: 'Menos horas, mesmo deslocamento e setup: por isso não é metade do valor da diária cheia',
+        rodape: 'Disponível apenas no contrato de 12 meses',
       },
       {
         nome: 'Diária Extra',
@@ -127,6 +142,7 @@ export const dudaDiariaConteudo: PropostaData = {
       },
     ],
     prazos: [
+      { texto: 'O contrato tem permanência mínima de 6 ou 12 meses, conforme o plano escolhido, contados a partir da primeira diária.', bold: 'permanência mínima de 6 ou 12 meses' },
       { texto: 'A diária mensal é agendada com antecedência mínima de 5 dias úteis, conforme disponibilidade.', bold: 'antecedência mínima de 5 dias úteis' },
       { texto: 'A edição completa dos vídeos é entregue em até 5 dias úteis após a diária.', bold: 'até 5 dias úteis' },
       { texto: 'Diárias extras dentro do mesmo mês entram na agenda conforme disponibilidade, sem prioridade sobre a diária fixa mensal.', bold: 'sem prioridade sobre a diária fixa mensal' },
@@ -137,7 +153,8 @@ export const dudaDiariaConteudo: PropostaData = {
         itens: [
           'O pagamento da diária mensal é cobrado no início de cada ciclo, para reserva da agenda.',
           'A entrega dos vídeos editados é feita por link, organizada por semana.',
-          'Cancelamento a qualquer momento, sem multa, com aviso antes do início do próximo ciclo.',
+          'O contrato tem permanência mínima de 6 ou 12 meses, conforme o plano escolhido.',
+          'Cancelamento antes do fim do prazo contratado gera multa de 50% sobre as mensalidades restantes até completar o contrato.',
         ],
       },
       {
@@ -151,7 +168,7 @@ export const dudaDiariaConteudo: PropostaData = {
     ],
     pagamento: {
       blocos: [
-        { titulo: 'Diária Mensal', descricao: 'R$ 800 cobrados no início de cada ciclo, via Pix ou transferência.' },
+        { titulo: 'Diária Mensal', descricao: 'Cobrada no início de cada ciclo, via Pix ou transferência. Valor conforme o plano de 6 ou 12 meses.' },
         { titulo: 'Diária Extra', descricao: 'R$ 800 por diária adicional dentro do mesmo mês, cobrada na data da captação.' },
       ],
       meios: [
@@ -175,6 +192,10 @@ export const dudaDiariaConteudo: PropostaData = {
       {
         pergunta: 'Quem escreve o roteiro dos vídeos?',
         resposta: 'O conteúdo técnico, o que falar sobre nutrição, é seu: você é a especialista. Eu entro na estrutura de cada vídeo, como o gancho ideal pros primeiros 3 segundos, pra transformar seu conhecimento em vídeo que prende.',
+      },
+      {
+        pergunta: 'Existe fidelidade no contrato?',
+        resposta: 'Sim. O plano de 6 meses é o compromisso mínimo aceito nesse formato, e o de 12 meses sai com mensalidade mais baixa. Cancelamento antes do fim do prazo contratado gera multa de 50% sobre as mensalidades restantes.',
       },
     ],
     primeiros_30_dias: [
