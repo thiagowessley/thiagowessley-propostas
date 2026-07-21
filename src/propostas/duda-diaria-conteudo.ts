@@ -66,7 +66,7 @@ export const dudaDiariaConteudo: PropostaData = {
         titulo: 'Diária de Captação',
         periodo: 'DIA COMBINADO',
         itens: [
-          { titulo: 'Captação em vídeo', descricao: 'Registro em volume, no seu espaço de atendimento ou onde for combinado.', limite: 'até 8h' },
+          { titulo: 'Captação em vídeo', descricao: 'Registro em volume, numa única visita ao seu espaço de atendimento ou onde for combinado.', limite: 'até 8h corridas, visita única' },
           { titulo: 'Fala direta pra câmera', descricao: 'Condução natural pra cada vídeo, sem enrolação nem múltiplas retomadas.' },
           { titulo: 'Quantidade de vídeos', descricao: 'Limitada só pelo tempo da diária, não por um número fixo de peças.' },
         ],
@@ -118,9 +118,10 @@ export const dudaDiariaConteudo: PropostaData = {
         itens: [
           'Mesmo bloco de até 8h de captação e edição completa',
           'Soma ao plano contratado, quantas vezes precisar no mês',
+          'Inclui atendimento em plantão de fim de semana',
           'Ideal pra lançamento, campanha ou data especial',
         ],
-        valor: 1197,
+        valor: 1497,
         periodo: 'diária extra',
         rodape: 'Prioridade na agenda por já ser cliente do plano mensal',
       },
@@ -145,6 +146,7 @@ export const dudaDiariaConteudo: PropostaData = {
       {
         titulo: 'Condições Gerais',
         itens: [
+          'A diária é uma visita única e contínua de até 8h corridas. Não é fracionada em mais de um encontro no mesmo dia.',
           'Diária fora de Joinville e região: valor ajustado conforme deslocamento, combinado à parte.',
           'A trilha sonora usada nas edições é licenciada, sem risco de direito autoral.',
           'O roteiro e o conteúdo técnico de cada vídeo são de responsabilidade da Duda. Orientação pontual de estrutura pode ser oferecida quando necessário, mas não é escopo contratado.',
@@ -154,7 +156,7 @@ export const dudaDiariaConteudo: PropostaData = {
     pagamento: {
       blocos: [
         { titulo: 'Mensalidade', descricao: 'Cobrada no início de cada ciclo, via Pix ou transferência. Inclui 1 diária por mês.' },
-        { titulo: 'Diária Extra', descricao: 'R$ 1.197 por diária avulsa além da já incluída no mês, cobrada na data da captação.' },
+        { titulo: 'Diária Extra', descricao: 'R$ 1.497 por diária avulsa além da já incluída no mês, cobrada na data da captação. Inclui plantão de fim de semana.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
@@ -167,8 +169,12 @@ export const dudaDiariaConteudo: PropostaData = {
         resposta: 'Não tem número fechado. A diária é um bloco de até 8h de captação: quantos vídeos couberem nesse tempo, todos editados e prontos pra postar.',
       },
       {
+        pergunta: 'A diária pode ser dividida, tipo manhã e tarde em datas ou horários diferentes?',
+        resposta: 'Não. A diária é uma visita única e contínua, de até 8h corridas. Isso mantém o formato de prestação de serviço combinado, e não uma disponibilidade fracionada ao longo do dia.',
+      },
+      {
         pergunta: 'Posso ter mais de uma diária no mesmo mês?',
-        resposta: 'Sim. O plano já inclui 1 diária por mês. Cada diária extra que você precisar custa R$ 1.197, com prioridade na agenda por você já ser cliente, pra lançamento, campanha ou data especial.',
+        resposta: 'Sim. O plano já inclui 1 diária por mês. Cada diária extra que você precisar custa R$ 1.497, com prioridade na agenda por você já ser cliente, e cobre inclusive plantão de fim de semana, pra lançamento, campanha ou data especial.',
       },
       {
         pergunta: 'Quem escreve o roteiro dos vídeos?',
