@@ -1,9 +1,9 @@
 import type { PropostaData } from '../types/proposta'
 import { SOBRE_PADRAO, encerramentoPadrao } from '../lib/copy-padrao'
 
-export const dudaDiariaConteudo: PropostaData = {
-  slug: 'duda-diaria-conteudo',
-  cliente: 'Duda',
+export const eduardaDiariaConteudo: PropostaData = {
+  slug: 'eduarda-diaria-conteudo',
+  cliente: 'Eduarda',
   segmento: 'Nutricionista, emagrecimento e saúde da mulher',
   servico: 'Diária de Conteúdo em Vídeo',
   validade: '2026-07-28',
@@ -42,11 +42,11 @@ export const dudaDiariaConteudo: PropostaData = {
     cenario: {
       problema: 'Manter presença em vídeo o mês inteiro consome duas coisas que não sobram na sua rotina: tempo de gravação e tempo de edição, ambos tirados da agenda de atendimento presencial e online.',
       publico: 'Mulheres em busca de emagrecimento saudável e cuidado com a própria saúde, que te acompanham pelo Instagram antes de fechar a consulta, presencial ou online.',
-      desafio: 'Produzir volume de vídeo o mês inteiro sem você precisar segurar câmera, editar ou sacrificar horário de atendimento pra isso.',
+      desafio: 'Terceirizar a captação e a edição pra um profissional que entrega rápido, sem você precisar aprender a editar, comprar equipamento ou contratar alguém só pra isso.',
       entregas: [
         'Vídeos em volume, sem você precisar gravar ou editar sozinha',
-        'Conteúdo do mês inteiro resolvido numa única diária',
-        'Edição completa, pronta pra postar',
+        'Captação e edição terceirizadas, sem contratar funcionário nem virar editora de vídeo',
+        'Primeiros vídeos no ar já na 1ª semana, sem fila parada esperando sua agenda',
         'Tempo de atendimento preservado, sem virar produtora de conteúdo em paralelo',
       ],
     },
@@ -203,7 +203,7 @@ export const dudaDiariaConteudo: PropostaData = {
     encerramento: encerramentoPadrao('o escopo, o processo e o investimento'),
   },
   utm_copy: {
-    whatsapp: 'Duda, segue a proposta da diária de conteúdo em vídeo pro seu Instagram.',
+    whatsapp: 'Eduarda, segue a proposta da diária de conteúdo em vídeo pro seu Instagram.',
     default: '',
   },
   contato: {
