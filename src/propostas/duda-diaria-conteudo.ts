@@ -159,10 +159,12 @@ export const dudaDiariaConteudo: PropostaData = {
       blocos: [
         { titulo: 'Mensalidade', descricao: 'Cobrada no início de cada ciclo, via Pix ou transferência. Inclui 1 diária por mês.' },
         { titulo: 'Diária Extra', descricao: 'R$ 1.497 por diária avulsa além da já incluída no mês, cobrada na data da captação. Inclui plantão de fim de semana e entrega acelerada, em até 3 dias úteis.' },
+        { titulo: 'Pagamento em Cripto', descricao: 'Aceito em USDT (Tether), dólar digital, pela cotação do dia do pagamento. Taxa de rede da transação é por conta de quem envia.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
         { nome: 'Transferência', detalhe: 'Depósito em conta corrente' },
+        { nome: 'USDT (Tether)', detalhe: 'Dólar digital, cotação do dia' },
       ],
     },
     faq: [
