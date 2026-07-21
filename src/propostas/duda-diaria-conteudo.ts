@@ -78,7 +78,7 @@ export const dudaDiariaConteudo: PropostaData = {
         itens: [
           { titulo: 'Edição completa', descricao: 'Corte, ritmo e legenda em cada vídeo, pronto pra postar.' },
           { titulo: 'Organização por semana', descricao: 'Vídeos entregues já separados pra cobrir o mês inteiro, sem você precisar planejar a ordem.' },
-          { titulo: 'Entrega', descricao: 'Por link, em MP4, pronta pra publicar direto no Instagram.', limite: 'até 7 dias úteis' },
+          { titulo: 'Entrega', descricao: 'Por link, em MP4, pronta pra publicar direto no Instagram. Entrega escalonada: os primeiros vídeos já saem enquanto o restante segue em edição.', limite: 'primeiros vídeos na 1ª semana' },
         ],
       },
     ],
@@ -90,7 +90,7 @@ export const dudaDiariaConteudo: PropostaData = {
           '1 diária de captação por mês, até 8h',
           'Quantidade de vídeos livre dentro do tempo da diária',
           'Edição completa de cada vídeo (corte, ritmo, legenda)',
-          'Entrega em até 7 dias úteis, organizada pra postar o mês inteiro',
+          'Primeiros vídeos já na 1ª semana, restante ao longo do mês',
           'Sem contrato de permanência',
         ],
         valor: 797,
@@ -105,7 +105,7 @@ export const dudaDiariaConteudo: PropostaData = {
           '1 diária de captação por mês, até 8h',
           'Quantidade de vídeos livre dentro do tempo da diária',
           'Edição completa de cada vídeo (corte, ritmo, legenda)',
-          'Entrega em até 7 dias úteis, organizada pra postar o mês inteiro',
+          'Primeiros vídeos já na 1ª semana, restante ao longo do mês',
           'Contrato de permanência de 12 meses',
         ],
         valor: 597,
@@ -114,23 +114,25 @@ export const dudaDiariaConteudo: PropostaData = {
       },
       {
         nome: 'Diária Extra',
-        resumo: 'Mais volume quando precisar',
+        resumo: 'Entrega acelerada',
         itens: [
           'Mesmo bloco de até 8h de captação e edição completa',
           'Soma ao plano contratado, quantas vezes precisar no mês',
           'Inclui atendimento em plantão de fim de semana',
+          'Entrega acelerada: vídeos prontos em até 3 dias úteis',
           'Ideal pra lançamento, campanha ou data especial',
         ],
         valor: 1497,
         periodo: 'diária extra',
-        rodape: 'Prioridade na agenda por já ser cliente do plano mensal',
+        rodape: 'Prioridade na agenda por já ser cliente do plano mensal ou anual',
       },
     ],
     prazos: [
       { texto: 'No contrato anual, a permanência é de 12 meses, contada a partir da primeira diária.', bold: 'permanência é de 12 meses' },
       { texto: 'A diária mensal é agendada com antecedência mínima de 5 dias úteis, conforme disponibilidade.', bold: 'antecedência mínima de 5 dias úteis' },
-      { texto: 'A edição completa dos vídeos é entregue em até 7 dias úteis após cada diária.', bold: 'até 7 dias úteis' },
-      { texto: 'Diárias extras entram na agenda com prioridade, por você já ser cliente do plano mensal.', bold: 'com prioridade' },
+      { texto: 'Os primeiros vídeos são entregues já na primeira semana após a diária; o restante segue em edição e chega ao longo do mês.', bold: 'já na primeira semana' },
+      { texto: 'Na diária extra, a entrega é acelerada: vídeos prontos em até 3 dias úteis.', bold: 'entrega é acelerada' },
+      { texto: 'Diárias extras entram na agenda com prioridade, por você já ser cliente do plano mensal ou anual.', bold: 'com prioridade' },
     ],
     contrato: [
       {
@@ -156,7 +158,7 @@ export const dudaDiariaConteudo: PropostaData = {
     pagamento: {
       blocos: [
         { titulo: 'Mensalidade', descricao: 'Cobrada no início de cada ciclo, via Pix ou transferência. Inclui 1 diária por mês.' },
-        { titulo: 'Diária Extra', descricao: 'R$ 1.497 por diária avulsa além da já incluída no mês, cobrada na data da captação. Inclui plantão de fim de semana.' },
+        { titulo: 'Diária Extra', descricao: 'R$ 1.497 por diária avulsa além da já incluída no mês, cobrada na data da captação. Inclui plantão de fim de semana e entrega acelerada, em até 3 dias úteis.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
@@ -174,7 +176,7 @@ export const dudaDiariaConteudo: PropostaData = {
       },
       {
         pergunta: 'Posso ter mais de uma diária no mesmo mês?',
-        resposta: 'Sim. O plano já inclui 1 diária por mês. Cada diária extra que você precisar custa R$ 1.497, com prioridade na agenda por você já ser cliente, e cobre inclusive plantão de fim de semana, pra lançamento, campanha ou data especial.',
+        resposta: 'Sim. O plano já inclui 1 diária por mês. Cada diária extra que você precisar custa R$ 1.497, com prioridade na agenda por você já ser cliente, entrega acelerada em até 3 dias úteis e cobertura de plantão de fim de semana, pra lançamento, campanha ou data especial.',
       },
       {
         pergunta: 'Quem escreve o roteiro dos vídeos?',
