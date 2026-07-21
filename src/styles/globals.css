@@ -297,6 +297,21 @@ ul.gold-list li::before {
   50%      { box-shadow: 0 0 0 1px var(--gold), 0 0 40px -2px rgba(201,160,80,0.6); }
 }
 
+/* ===== Urgencia crescente: validade proxima do vencimento ===== */
+@keyframes validadePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 160, 80, 0.0); }
+  50%      { box-shadow: 0 0 14px 3px rgba(201, 160, 80, 0.5); }
+}
+.validade-urgente {
+  animation: validadePulse 1.8s ease-in-out infinite;
+}
+
+/* ===== Efeito pico-fim: CTA final ===== */
+@keyframes ctaGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 160, 80, 0); }
+  50%      { box-shadow: 0 0 28px 4px rgba(201, 160, 80, 0.45); }
+}
+
 /* ===== Pricing cards ===== */
 .planos-grid {
   display: flex;
@@ -311,20 +326,35 @@ ul.gold-list li::before {
 }
 @media (min-width: 761px) {
   .fase-stepper {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    height: 40px;
     max-width: 640px;
     margin: 0 auto 36px;
   }
 }
-.fase-stepper-item {
-  display: flex;
-  align-items: center;
-  flex: 1;
+.fase-track {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 50%;
+  height: 2px;
+  background: var(--border);
+  transform: translateY(-50%);
+  overflow: hidden;
 }
-.fase-stepper-item:last-child {
-  flex: 0 0 auto;
+.fase-track-fill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+  transform-origin: left center;
+}
+.fase-nodes {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .fase-node {
   flex-shrink: 0;
@@ -340,13 +370,6 @@ ul.gold-list li::before {
   font-family: 'Archivo', sans-serif;
   font-weight: 900;
   font-size: 0.82rem;
-}
-.fase-connector {
-  flex: 1;
-  height: 2px;
-  margin: 0 8px;
-  background: linear-gradient(90deg, var(--gold-dim), var(--gold));
-  transform-origin: left center;
 }
 .fase-card {
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -445,7 +468,8 @@ ul.gold-list li::before {
   transition: transform 0.2s, background 0.2s, color 0.2s;
 }
 .cta-btn:hover { transform: translateY(-2px); }
-.cta-gold { background: var(--gold); color: #0D0D0D; }
+.cta-gold { background: var(--gold); color: #0D0D0D; animation: ctaGlow 2.6s ease-in-out infinite; }
+.cta-gold:hover { animation-play-state: paused; }
 .cta-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
 
 /* assinatura no canto (marca em Archivo) */

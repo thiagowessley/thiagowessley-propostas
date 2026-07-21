@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { AnimatedSection } from '../ui/AnimatedSection'
 import { DecoLines } from '../ui/DecoLines'
 import { FAQInline } from '../ui/FAQInline'
@@ -57,9 +58,18 @@ export function Encerramento({ proposta }: Props) {
             loading="lazy"
           />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-            <a href={linkWhats} target="_blank" rel="noopener noreferrer" className="cta-btn cta-gold">
+            <motion.a
+              href={linkWhats}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-btn cta-gold"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ type: 'spring', stiffness: 260, damping: 18, delay: 0.15 }}
+            >
               {proposta.ctaWhatsapp ?? 'Falar no WhatsApp'}
-            </a>
+            </motion.a>
             {proposta.mostrarBotaoPdf && (
               <button onClick={baixarPDF} className="cta-btn cta-ghost" style={{ textTransform: 'none' }}>
                 Baixar em PDF

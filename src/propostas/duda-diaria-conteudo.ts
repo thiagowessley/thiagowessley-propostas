@@ -68,7 +68,7 @@ export const dudaDiariaConteudo: PropostaData = {
         itens: [
           { titulo: 'Captação em vídeo', descricao: 'Uma visita só, no seu espaço ou onde combinarmos, com a câmera rodando o dia inteiro.', limite: 'até 8h corridas, visita única' },
           { titulo: 'Fala direta pra câmera', descricao: 'Conduzo cada gravação pra sair natural e direto ao ponto, sem repetir tomada atrás de tomada.' },
-          { titulo: 'Quantos vídeos couberem', descricao: 'O limite é o tempo da diária, não um número fechado de peças.' },
+          { titulo: 'Quantos vídeos couberem', descricao: 'O limite é o tempo da diária, não um número fechado de peças. E encerra quando você sentir que já é suficiente, mesmo antes das 8h.' },
         ],
       },
       {
@@ -148,10 +148,10 @@ export const dudaDiariaConteudo: PropostaData = {
       {
         titulo: 'Condições Gerais',
         itens: [
-          'A diária é uma visita única e contínua de até 8h corridas. Não é fracionada em mais de um encontro no mesmo dia.',
+          'A diária é uma visita única e contínua de até 8h corridas, sem fracionamento em mais de um encontro no mesmo dia. Encerrar antes do tempo não gera crédito nem horas a compensar em outra data.',
           'Diária fora de Joinville e região: valor ajustado conforme deslocamento, combinado à parte.',
           'A trilha sonora usada nas edições é licenciada, sem risco de direito autoral.',
-          'O roteiro e o conteúdo técnico de cada vídeo são de responsabilidade da Duda. Orientação pontual sobre estrutura, gancho, tom de voz, gestos e expressão pode ser oferecida quando necessário, mas não é escopo contratado.',
+          'O roteiro e o conteúdo técnico de cada vídeo são de sua responsabilidade. Orientação pontual sobre estrutura, gancho, tom de voz, gestos e expressão pode ser oferecida quando necessário, mas não é escopo contratado.',
         ],
       },
     ],
@@ -175,6 +175,10 @@ export const dudaDiariaConteudo: PropostaData = {
         resposta: 'Não. A diária é uma visita única e contínua, de até 8h corridas. Isso mantém o formato de prestação de serviço combinado, e não uma disponibilidade fracionada ao longo do dia.',
       },
       {
+        pergunta: 'E se a diária acabar antes das 8h?',
+        resposta: 'Sem problema. A diária encerra quando você sentir que já é suficiente. Como é um bloco fechado, encerrar antes do tempo não gera crédito nem horas a compensar em outra data.',
+      },
+      {
         pergunta: 'Posso ter mais de uma diária no mesmo mês?',
         resposta: 'Sim. O plano já inclui 1 diária por mês. Cada diária extra que você precisar custa R$ 1.497, com prioridade na agenda por você já ser cliente, entrega acelerada em até 3 dias úteis e cobertura de plantão de fim de semana, pra lançamento, campanha ou data especial.',
       },
@@ -193,7 +197,7 @@ export const dudaDiariaConteudo: PropostaData = {
       'Semana 3: primeiros vídeos entregues e publicados',
       'Semana 4: restante do conteúdo entregue, mês coberto',
     ],
-    confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente à Duda. Validade de 7 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento.',
+    confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente a você. Validade de 7 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento.',
     encerramento: encerramentoPadrao('o escopo, o processo e o investimento'),
   },
   utm_copy: {

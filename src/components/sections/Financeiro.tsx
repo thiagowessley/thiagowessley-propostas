@@ -1,5 +1,6 @@
 import { AnimatedSection } from '../ui/AnimatedSection'
 import { ValorHover } from '../ui/ValorHover'
+import { AnimatedValor } from '../ui/AnimatedValor'
 import { CheckIcon } from '../ui/CheckIcon'
 import type { PropostaData } from '../../types/proposta'
 import { formatarReais } from '../../lib/tempo'
@@ -12,7 +13,6 @@ interface Props {
 }
 
 function PlanoCard({ plano }: { plano: NonNullable<Props['planos']>[number] }) {
-  const valorTexto = plano.valor > 0 ? formatarReais(plano.valor) : 'Sob consulta'
   return (
     <div className={`plano-card${plano.destaque ? ' destaque' : ''}`}>
       {plano.destaque && <span className="plano-badge">Mais escolhido</span>}
@@ -36,7 +36,8 @@ function PlanoCard({ plano }: { plano: NonNullable<Props['planos']>[number] }) {
           fontSize: '1.15rem',
           width: '100%',
         }}>
-          {valorTexto}{plano.periodo && plano.valor > 0 ? <span style={{ fontSize: '0.7rem', fontWeight: 400, marginLeft: '4px' }}>{plano.periodo}</span> : null}
+          {plano.valor > 0 ? <AnimatedValor valor={plano.valor} /> : 'Sob consulta'}
+          {plano.periodo && plano.valor > 0 ? <span style={{ fontSize: '0.7rem', fontWeight: 400, marginLeft: '4px' }}>{plano.periodo}</span> : null}
         </span>
       </div>
       {plano.rodape && (

@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useScroll } from 'framer-motion'
 import { AnimatedSection } from '../ui/AnimatedSection'
 import { CheckIcon } from '../ui/CheckIcon'
 import type { FaseEscopo } from '../../types/proposta'
@@ -7,12 +8,21 @@ interface Props {
   fases: FaseEscopo[]
 }
 
-function FaseStepper({ fases }: { fases: FaseEscopo[] }) {
+function FaseStepper({ fases, containerRef }: { fases: FaseEscopo[]; containerRef: React.RefObject<HTMLDivElement | null> }) {
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start 0.75', 'end 0.4'],
+  })
+
   return (
     <div className="fase-stepper">
-      {fases.map((fase, i) => (
-        <div className="fase-stepper-item" key={fase.numero}>
+      <div className="fase-track">
+        <motion.div className="fase-track-fill" style={{ scaleX: scrollYProgress }} />
+      </div>
+      <div className="fase-nodes">
+        {fases.map((fase, i) => (
           <motion.div
+            key={fase.numero}
             className="fase-node"
             initial={{ scale: 0.5, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -21,17 +31,8 @@ function FaseStepper({ fases }: { fases: FaseEscopo[] }) {
           >
             {fase.numero}
           </motion.div>
-          {i < fases.length - 1 && (
-            <motion.div
-              className="fase-connector"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 0.45, delay: i * 0.18 + 0.2, ease: 'easeOut' }}
-            />
-          )}
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   )
 }
@@ -80,6 +81,8 @@ function FaseCard({ fase, indiceFase }: { fase: FaseEscopo; indiceFase: number }
 }
 
 export function Escopo({ fases }: Props) {
+  const trilhaRef = useRef<HTMLDivElement>(null)
+
   return (
     <AnimatedSection id="escopo">
       <p className="eyebrow"><span className="accent">Fases</span> do projeto</p>
@@ -88,10 +91,12 @@ export function Escopo({ fases }: Props) {
         <span className="bold">incluido</span>
       </h2>
 
-      <FaseStepper fases={fases} />
+      <div ref={trilhaRef}>
+        <FaseStepper fases={fases} containerRef={trilhaRef} />
 
-      <div className="planos-grid" style={{ alignItems: 'stretch' }}>
-        {fases.map((fase, i) => <FaseCard key={fase.numero} fase={fase} indiceFase={i} />)}
+        <div className="planos-grid" style={{ alignItems: 'stretch' }}>
+          {fases.map((fase, i) => <FaseCard key={fase.numero} fase={fase} indiceFase={i} />)}
+        </div>
       </div>
     </AnimatedSection>
   )

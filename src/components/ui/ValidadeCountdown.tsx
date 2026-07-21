@@ -10,16 +10,19 @@ export function ValidadeCountdown({ validade }: Props) {
   const urgente = dias <= 3 && !vencida
 
   return (
-    <div style={{
-      display: 'inline-flex',
-      alignItems: 'center',
-      gap: '8px',
-      padding: '6px 14px',
-      border: `1px solid ${vencida ? '#e07070' : urgente ? 'var(--gold)' : 'var(--border)'}`,
-      borderRadius: '4px',
-      fontSize: '0.8rem',
-      color: vencida ? '#e07070' : urgente ? 'var(--gold)' : 'var(--muted)',
-    }}>
+    <div
+      className={urgente ? 'validade-urgente' : undefined}
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '8px',
+        padding: '6px 14px',
+        border: `1px solid ${vencida ? '#e07070' : urgente ? 'var(--gold)' : 'var(--border)'}`,
+        borderRadius: '4px',
+        fontSize: '0.8rem',
+        color: vencida ? '#e07070' : urgente ? 'var(--gold)' : 'var(--muted)',
+      }}
+    >
       {vencida
         ? 'Proposta vencida'
         : dias === 0
