@@ -93,9 +93,9 @@ export const dudaDiariaConteudo: PropostaData = {
           'Entrega em até 7 dias úteis, organizada pra postar o mês inteiro',
           'Sem contrato de permanência',
         ],
-        valor: 800,
+        valor: 797,
         periodo: '/mês',
-        rodape: 'Liberdade de sair quando quiser, sem prazo contratado',
+        rodape: 'Sem prazo contratado, renovação mês a mês',
       },
       {
         nome: 'Contrato Anual',
@@ -110,7 +110,7 @@ export const dudaDiariaConteudo: PropostaData = {
         ],
         valor: 597,
         periodo: '/mês',
-        rodape: 'Mensalidade fixa o ano inteiro: agenda garantida pra mim, conteúdo garantido pra você',
+        rodape: 'Valor fixo durante os 12 meses de contrato',
       },
       {
         nome: 'Diária Extra',
@@ -120,16 +120,16 @@ export const dudaDiariaConteudo: PropostaData = {
           'Soma ao plano contratado, quantas vezes precisar no mês',
           'Ideal pra lançamento, campanha ou data especial',
         ],
-        valor: 800,
+        valor: 1197,
         periodo: 'diária extra',
-        rodape: 'Agendada conforme disponibilidade, sem prioridade sobre a diária já contratada',
+        rodape: 'Prioridade na agenda por já ser cliente do plano mensal',
       },
     ],
     prazos: [
       { texto: 'No contrato anual, a permanência é de 12 meses, contada a partir da primeira diária.', bold: 'permanência é de 12 meses' },
       { texto: 'A diária mensal é agendada com antecedência mínima de 5 dias úteis, conforme disponibilidade.', bold: 'antecedência mínima de 5 dias úteis' },
       { texto: 'A edição completa dos vídeos é entregue em até 7 dias úteis após cada diária.', bold: 'até 7 dias úteis' },
-      { texto: 'Diárias extras entram na agenda conforme disponibilidade, sem prioridade sobre a diária já contratada.', bold: 'sem prioridade sobre a diária já contratada' },
+      { texto: 'Diárias extras entram na agenda com prioridade, por você já ser cliente do plano mensal.', bold: 'com prioridade' },
     ],
     contrato: [
       {
@@ -154,7 +154,7 @@ export const dudaDiariaConteudo: PropostaData = {
     pagamento: {
       blocos: [
         { titulo: 'Mensalidade', descricao: 'Cobrada no início de cada ciclo, via Pix ou transferência. Inclui 1 diária por mês.' },
-        { titulo: 'Diária Extra', descricao: 'R$ 800 por diária avulsa além da já incluída no mês, cobrada na data da captação.' },
+        { titulo: 'Diária Extra', descricao: 'R$ 1.197 por diária avulsa além da já incluída no mês, cobrada na data da captação.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
@@ -168,7 +168,7 @@ export const dudaDiariaConteudo: PropostaData = {
       },
       {
         pergunta: 'Posso ter mais de uma diária no mesmo mês?',
-        resposta: 'Sim. O plano já inclui 1 diária por mês. Cada diária extra que você precisar custa R$ 800, cobrada à parte, pra lançamento, campanha ou data especial.',
+        resposta: 'Sim. O plano já inclui 1 diária por mês. Cada diária extra que você precisar custa R$ 1.197, com prioridade na agenda por você já ser cliente, pra lançamento, campanha ou data especial.',
       },
       {
         pergunta: 'Quem escreve o roteiro dos vídeos?',
