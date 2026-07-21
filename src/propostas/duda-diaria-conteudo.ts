@@ -57,7 +57,7 @@ export const dudaDiariaConteudo: PropostaData = {
         periodo: 'ANTES DA DIÁRIA',
         itens: [
           { titulo: 'Repasse de pauta e roteiro', descricao: 'Você chega com os temas e o roteiro prontos: o conhecimento técnico é todo seu.' },
-          { titulo: 'Apoio pontual de estrutura', descricao: 'Precisa de uma mão com o gancho dos primeiros segundos? Eu oriento na hora.' },
+          { titulo: 'Apoio pontual de estrutura', descricao: 'Oriento o que ajuda o vídeo a performar: gancho, tom de voz, gestos e expressão. O conteúdo continua todo seu.' },
           { titulo: 'Agendamento da diária', descricao: 'Data marcada com antecedência, dentro da sua agenda mensal.' },
         ],
       },
@@ -151,7 +151,7 @@ export const dudaDiariaConteudo: PropostaData = {
           'A diária é uma visita única e contínua de até 8h corridas. Não é fracionada em mais de um encontro no mesmo dia.',
           'Diária fora de Joinville e região: valor ajustado conforme deslocamento, combinado à parte.',
           'A trilha sonora usada nas edições é licenciada, sem risco de direito autoral.',
-          'O roteiro e o conteúdo técnico de cada vídeo são de responsabilidade da Duda. Orientação pontual de estrutura pode ser oferecida quando necessário, mas não é escopo contratado.',
+          'O roteiro e o conteúdo técnico de cada vídeo são de responsabilidade da Duda. Orientação pontual sobre estrutura, gancho, tom de voz, gestos e expressão pode ser oferecida quando necessário, mas não é escopo contratado.',
         ],
       },
     ],
@@ -180,7 +180,7 @@ export const dudaDiariaConteudo: PropostaData = {
       },
       {
         pergunta: 'Quem escreve o roteiro dos vídeos?',
-        resposta: 'O roteiro e o conteúdo técnico são responsabilidade sua, como especialista. Se precisar de uma orientação pontual de estrutura, como o gancho dos primeiros segundos, eu ajudo, mas isso não é escopo contratado.',
+        resposta: 'O roteiro e o conteúdo técnico são responsabilidade sua, como especialista. Se precisar de uma orientação pontual sobre estrutura, gancho, tom de voz, gestos ou expressão pra o vídeo performar melhor, eu ajudo, mas isso não é escopo contratado.',
       },
       {
         pergunta: 'Existe fidelidade no contrato?',
