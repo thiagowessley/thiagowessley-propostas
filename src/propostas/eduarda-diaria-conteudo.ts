@@ -124,7 +124,7 @@ export const eduardaDiariaConteudo: PropostaData = {
           'Mesmo bloco de até 8h de captação e edição completa',
           'Soma ao plano contratado, quantas vezes precisar no mês',
           'Inclui atendimento em plantão de fim de semana',
-          'Entrega acelerada: vídeos prontos em até 3 dias úteis',
+          'Entrega acelerada: todos os vídeos prontos em até 7 dias úteis',
           'Ideal pra lançamento, campanha ou data especial',
         ],
         valor: 1497,
@@ -136,7 +136,7 @@ export const eduardaDiariaConteudo: PropostaData = {
       { texto: 'No contrato anual, a permanência é de 12 meses, contada a partir da primeira diária.', bold: 'permanência é de 12 meses' },
       { texto: 'A diária mensal é agendada com antecedência mínima de 5 dias úteis, conforme disponibilidade.', bold: 'antecedência mínima de 5 dias úteis' },
       { texto: 'Os primeiros vídeos são entregues já na primeira semana após a diária; o restante segue em edição e chega ao longo do mês.', bold: 'já na primeira semana' },
-      { texto: 'Na diária extra, a entrega é acelerada: vídeos prontos em até 3 dias úteis.', bold: 'entrega é acelerada' },
+      { texto: 'Na diária extra, a entrega é acelerada: todos os vídeos prontos em até 7 dias úteis, sem esperar o restante do mês.', bold: 'entrega é acelerada' },
       { texto: 'Diárias extras entram na agenda com prioridade, por você já ser cliente do plano mensal ou anual.', bold: 'com prioridade' },
     ],
     contrato: [
@@ -163,7 +163,7 @@ export const eduardaDiariaConteudo: PropostaData = {
     pagamento: {
       blocos: [
         { titulo: 'Mensalidade', descricao: 'Cobrada no início de cada ciclo, via Pix ou transferência. Inclui 1 diária por mês.' },
-        { titulo: 'Diária Extra', descricao: 'R$ 1.497 por diária avulsa além da já incluída no mês, cobrada na data da captação. Inclui plantão de fim de semana e entrega acelerada, em até 3 dias úteis.' },
+        { titulo: 'Diária Extra', descricao: 'R$ 1.497 por diária avulsa além da já incluída no mês, cobrada na data da captação. Inclui plantão de fim de semana e entrega acelerada, em até 7 dias úteis.' },
         { titulo: 'Pagamento em Cripto', descricao: 'Aceito em USDT (Tether), dólar digital, pela cotação do dia do pagamento. Taxa de rede da transação é por conta de quem envia.' },
       ],
       meios: [
@@ -187,7 +187,7 @@ export const eduardaDiariaConteudo: PropostaData = {
       },
       {
         pergunta: 'Posso ter mais de uma diária no mesmo mês?',
-        resposta: 'Sim. O plano já inclui 1 diária por mês. Cada diária extra que você precisar custa R$ 1.497, com prioridade na agenda por você já ser cliente, entrega acelerada em até 3 dias úteis e cobertura de plantão de fim de semana, pra lançamento, campanha ou data especial.',
+        resposta: 'Sim. O plano já inclui 1 diária por mês. Cada diária extra que você precisar custa R$ 1.497, com prioridade na agenda por você já ser cliente, entrega acelerada em até 7 dias úteis e cobertura de plantão de fim de semana, pra lançamento, campanha ou data especial.',
       },
       {
         pergunta: 'Quem escreve o roteiro dos vídeos?',
