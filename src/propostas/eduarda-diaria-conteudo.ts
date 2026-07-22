@@ -172,6 +172,18 @@ export const eduardaDiariaConteudo: PropostaData = {
         { nome: 'USDT (Tether)', detalhe: 'Dólar digital, cotação do dia' },
       ],
     },
+    referencias: [
+      {
+        nome: 'Patricia Davidson (Brasil)',
+        url: 'https://www.instagram.com/patriciadavidson.nutri/',
+        tecnica: 'Nutricionista com 3,4 milhões de seguidores construída em cima de emagrecimento feminino e saúde hormonal, com presença constante em vídeo, sempre no mesmo formato de fala direta pra câmera. Aplicação: a mesma consistência de presença em vídeo, sem depender de picos esporádicos de postagem, é o que a diária mensal sustenta pro seu Instagram.',
+      },
+      {
+        nome: 'Karin Paciulo (Brasil)',
+        url: 'https://www.instagram.com/karinpaciulonutri/',
+        tecnica: 'Nutricionista especializada em mulheres 40+ e menopausa, com posicionamento de nicho claro e conteúdo recorrente em vídeo sobre os mesmos temas centrais. Aplicação: nicho definido (emagrecimento e saúde da mulher, como o seu) e volume de vídeo consistente formam a combinação que gera autoridade, mesmo numa conta de porte menor que a de uma grande influenciadora.',
+      },
+    ],
     faq: [
       {
         pergunta: 'Quantos vídeos eu recebo por diária?',
