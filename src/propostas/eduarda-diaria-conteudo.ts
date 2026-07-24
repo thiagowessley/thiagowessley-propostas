@@ -3,11 +3,11 @@ import { SOBRE_PADRAO, encerramentoPadrao } from '../lib/copy-padrao'
 
 export const eduardaDiariaConteudo: PropostaData = {
   slug: 'eduarda-diaria-conteudo',
-  cliente: 'Eduarda',
+  cliente: 'Maria Eduarda Longatto',
   segmento: 'Nutricionista, emagrecimento e saúde da mulher',
   servico: 'Diária de Conteúdo em Vídeo',
-  validade: '2026-07-28',
-  envio: '2026-07-21',
+  validade: '2026-07-31',
+  envio: '2026-07-24',
   intro_capa: 'Esta proposta apresenta o modelo de diária de conteúdo em vídeo para o seu Instagram: escopo, processo, prazos, condições e investimento.',
   valor: {
     principal: 597,
