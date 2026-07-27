@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { PropostaPage } from './pages/PropostaPage'
+import { AprovacaoPage } from './pages/AprovacaoPage'
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/p/:slug" element={<PropostaPage />} />
+        <Route path="/a/:slug" element={<AprovacaoPage />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
