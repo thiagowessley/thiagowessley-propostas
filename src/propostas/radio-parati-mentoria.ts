@@ -6,8 +6,8 @@ export const radioParatiMentoria: PropostaData = {
   cliente: 'Rádio Parati FM',
   segmento: 'Rádio local, Araquari e região',
   servico: 'Mentoria de Produção Audiovisual',
-  validade: '2026-07-24',
-  envio: '2026-07-17',
+  validade: '2026-08-04',
+  envio: '2026-07-28',
   intro_capa: 'Esta proposta apresenta o escopo, o prazo e o investimento da mentoria individual para quem vai assumir a produção de vídeo publicitário da rádio.',
   valor: {
     principal: 997,

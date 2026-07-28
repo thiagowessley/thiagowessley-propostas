@@ -6,8 +6,8 @@ export const radioParatiProducao: PropostaData = {
   cliente: 'Rádio Parati FM',
   segmento: 'Rádio local, Araquari e região',
   servico: 'Produção de Vídeos Publicitários',
-  validade: '2026-07-24',
-  envio: '2026-07-17',
+  validade: '2026-08-04',
+  envio: '2026-07-28',
   intro_capa: 'Esta proposta apresenta o modelo de produção de vídeo publicitário para os contratos fechados pela Rádio Parati FM: escopo, processo, prazos, condições e investimento.',
   valor: {
     principal: 797,
