@@ -58,7 +58,7 @@ function FaseCard({ fase, indiceFase }: { fase: FaseEscopo; indiceFase: number }
             <div>
               <span style={{ color: 'var(--white)', fontSize: '0.9rem' }}>{item.titulo}</span>
               {item.limite && (
-                <span style={{ marginLeft: '8px', fontSize: '0.68rem', color: 'var(--muted)', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '3px', padding: '2px 6px' }}>
+                <span style={{ marginLeft: '8px', fontSize: '0.68rem', color: 'var(--muted)', background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: '3px', padding: '2px 6px', display: 'inline-block', textWrap: 'balance' as const }}>
                   {item.limite}
                 </span>
               )}
