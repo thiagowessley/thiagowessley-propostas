@@ -6,7 +6,7 @@ export const eduardaAdrianaDiariaCompartilhada: PropostaData = {
   cliente: 'Maria Eduarda Longatto e Adriana Schatz',
   segmento: 'Nutrição e Organização Pessoal',
   servico: 'Diária de Conteúdo em Vídeo Compartilhada',
-  validade: '2026-08-14',
+  validade: '2026-08-08',
   envio: '2026-08-07',
   intro_capa: 'Esta proposta apresenta o modelo de diária de conteúdo em vídeo compartilhada entre vocês duas: escopo, processo, prazos, condições e investimento individual de cada uma.',
   valor: {
@@ -46,7 +46,7 @@ export const eduardaAdrianaDiariaCompartilhada: PropostaData = {
   secoes: {
     cenario: {
       problema: 'Manter presença em vídeo o mês inteiro consome tempo de gravação e tempo de edição.',
-      publico: 'Pacientes e clientes que acompanham cada uma de vocês pelo Instagram antes de fechar consulta ou mentoria, seja em nutrição ou em organização pessoal.',
+      publico: 'Pacientes e clientes que acompanham cada uma de vocês pelo Instagram antes de fechar consulta, consultoria, mentoria ou acompanhamento, seja em nutrição ou em organização pessoal.',
       desafio: 'Dividir uma única diária entre as duas, sem abrir mão da edição completa e sem pagar o valor de duas diárias inteiras.',
       entregas: [
         'Uma diária só, em um único período, com vídeos pra vocês duas',
@@ -188,7 +188,7 @@ export const eduardaAdrianaDiariaCompartilhada: PropostaData = {
       'Semana 3: restante da edição em andamento',
       'Semana 4: mês coberto para as duas',
     ],
-    confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente a vocês duas. Validade de 7 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento.',
+    confidencialidade: 'Esta proposta é confidencial e destinada exclusivamente a vocês duas. Validade de 24 horas a partir do envio. Preços sujeitos a atualização após o vencimento.',
     encerramento: encerramentoPadrao('o escopo, o processo e o investimento'),
   },
   utm_copy: {

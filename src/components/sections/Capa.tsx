@@ -104,7 +104,7 @@ export function Capa({ proposta, tempoLeitura }: Props) {
           <p style={{ fontSize: '0.92rem', color: 'var(--ice)' }}>
             Envio da proposta {formatarData(envioISO)}
             <span style={{ color: 'var(--border)', margin: '0 14px' }}>|</span>
-            Validade de {diasValidade} dias
+            Validade de {diasValidade} dia{diasValidade === 1 ? '' : 's'}
           </p>
           <span style={{ flex: 1, minWidth: '24px', height: '1px', background: 'var(--border)' }} />
         </motion.div>
