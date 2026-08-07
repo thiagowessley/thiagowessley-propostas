@@ -106,6 +106,7 @@ export const eduardaAdrianaDiariaCompartilhada: PropostaData = {
         itens: [
           'Mesmo bloco de até 8h de captação e edição completa',
           'Para quando precisarem de mais de uma diária de captação no mês',
+          'Disponível em fim de semana, feriado ou plantão, quando for o caso',
           'Entrega acelerada: todos os vídeos prontos em até 7 dias úteis',
           'Ideal pra lançamento, campanha ou data especial de qualquer uma das duas',
         ],
@@ -146,7 +147,7 @@ export const eduardaAdrianaDiariaCompartilhada: PropostaData = {
     pagamento: {
       blocos: [
         { titulo: 'Mensalidade', descricao: 'Cobrada no início de cada ciclo, via Pix ou transferência, separadamente para cada uma: R$ 498,50/mês por pessoa (R$ 997/mês combinado).' },
-        { titulo: 'Diária Extra Compartilhada', descricao: 'R$ 1.497 combinado por diária avulsa além da já incluída no mês, pra quando precisarem de mais um dia de captação, cobrada na data da captação.' },
+        { titulo: 'Diária Extra Compartilhada', descricao: 'R$ 1.497 combinado por diária avulsa além da já incluída no mês, pra quando precisarem de mais um dia de captação, inclusive fim de semana, feriado ou plantão. Cobrada na data da captação.' },
         { titulo: 'Pagamento em Cripto', descricao: 'Aceito em USDT (Tether), dólar digital, pela cotação do dia do pagamento. Taxa de rede da transação é por conta de quem envia.' },
       ],
       meios: [
@@ -174,7 +175,7 @@ export const eduardaAdrianaDiariaCompartilhada: PropostaData = {
       },
       {
         pergunta: 'Posso ter mais de uma diária no mesmo mês?',
-        resposta: 'Sim. O plano já inclui 1 diária por mês. Cada diária extra compartilhada custa R$ 1.497 combinado, com prioridade na agenda por já serem clientes e entrega acelerada em até 7 dias úteis.',
+        resposta: 'Sim. O plano já inclui 1 diária por mês. Cada diária extra compartilhada custa R$ 1.497 combinado, com prioridade na agenda por já serem clientes, entrega acelerada em até 7 dias úteis e disponibilidade em fim de semana, feriado ou plantão, quando for o caso.',
       },
       {
         pergunta: 'Quem escreve o roteiro dos vídeos?',
