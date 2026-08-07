@@ -16,7 +16,7 @@ export function AnimatedValor({ valor }: Props) {
     const controls = animate(0, valor, {
       duration: 0.7,
       ease: 'easeOut',
-      onUpdate: (v) => setDisplay(Math.round(v)),
+      onUpdate: (v) => setDisplay(Math.round(v * 100) / 100),
     })
     return () => controls.stop()
   }, [isInView, valor])

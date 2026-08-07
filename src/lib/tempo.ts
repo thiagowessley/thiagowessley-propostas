@@ -26,12 +26,14 @@ export function formatarData(iso: string): string {
   })
 }
 
-/** Formata valor em reais: 1997 -> "R$ 1.997" */
+/** Formata valor em reais: 1997 -> "R$ 1.997", 498.5 -> "R$ 498,50" */
 export function formatarReais(valor: number): string {
+  const temCentavos = !Number.isInteger(valor)
   return valor.toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL',
-    minimumFractionDigits: 0,
+    minimumFractionDigits: temCentavos ? 2 : 0,
+    maximumFractionDigits: temCentavos ? 2 : 0,
   })
 }
 
