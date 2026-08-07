@@ -6,6 +6,7 @@ import { crisAftermovie } from './cris-aftermovie'
 import { radioParatiMentoria } from './radio-parati-mentoria'
 import { radioParatiProducao } from './radio-parati-producao'
 import { eduardaDiariaConteudo } from './eduarda-diaria-conteudo'
+import { eduardaAdrianaDiariaCompartilhada } from './eduarda-adriana-diaria-compartilhada'
 
 export const propostas: Record<string, PropostaData> = {
   instituto,
@@ -15,6 +16,7 @@ export const propostas: Record<string, PropostaData> = {
   radioParatiMentoria,
   radioParatiProducao,
   eduardaDiariaConteudo,
+  eduardaAdrianaDiariaCompartilhada,
 }
 
 export function getPropostaBySlug(slug: string): PropostaData | undefined {
