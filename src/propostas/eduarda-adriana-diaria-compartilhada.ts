@@ -14,7 +14,7 @@ export const eduardaAdrianaDiariaCompartilhada: PropostaData = {
     moeda: 'BRL',
   },
   mostrarPortfolio: true,
-  ctaWhatsapp: 'Reservar nossa diária',
+  ctaWhatsapp: 'Reservar a diária',
 
   foto_profissional: '/img/thiago-vertical.jpg',
   foto_secundaria: '/img/thiago-horizontal.jpg',
