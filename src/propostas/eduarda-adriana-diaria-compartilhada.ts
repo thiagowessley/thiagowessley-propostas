@@ -112,15 +112,15 @@ export const eduardaAdrianaDiariaCompartilhada: PropostaData = {
         ],
         valor: 1497,
         periodo: 'diária extra combinada',
-        rodape: 'Prioridade na agenda por já serem clientes do plano compartilhado',
+        rodape: 'Prioridade na agenda por já serem clientes',
       },
     ],
     prazos: [
       { texto: 'A permanência é de 12 meses, contada a partir da primeira diária. Não há opção mês a mês nesse formato compartilhado.', bold: 'permanência é de 12 meses' },
       { texto: 'A diária mensal é agendada com antecedência mínima de 5 dias úteis, conforme disponibilidade das duas.', bold: 'antecedência mínima de 5 dias úteis' },
       { texto: 'Os primeiros vídeos são entregues já na primeira semana após a diária; o restante segue em edição e chega ao longo do mês.', bold: 'já na primeira semana' },
-      { texto: 'Se uma de vocês cancelar o contrato durante a permanência, a outra deixa de ter o valor compartilhado e passa a pagar o valor da diária solo (mês a mês ou anual), ou negocia um novo formato.', bold: 'a outra deixa de ter o valor compartilhado' },
-      { texto: 'Na diária extra, a entrega é acelerada: todos os vídeos prontos em até 7 dias úteis, sem esperar o restante do mês.', bold: 'entrega é acelerada' },
+      { texto: 'Se uma de vocês cancelar o contrato durante a permanência, a outra deixa de ter o valor compartilhado e passa a pagar o valor da diária solo (mês a mês ou anual).', bold: 'a outra deixa de ter o valor compartilhado' },
+      { texto: 'Na diária extra, a vantagem é a entrega acelerada e o atendimento fora do horário comercial, incluindo fim de semana e plantão: todos os vídeos prontos em até 7 dias úteis, sem esperar o restante do mês.', bold: 'entrega acelerada e o atendimento fora do horário comercial' },
     ],
     contrato: [
       {
@@ -130,7 +130,7 @@ export const eduardaAdrianaDiariaCompartilhada: PropostaData = {
           'A entrega dos vídeos editados é feita por link, organizada por semana e por perfil.',
           'A permanência é de 12 meses, única condição disponível nesse formato compartilhado.',
           'Cancelamento antecipado gera multa de 50% sobre as mensalidades restantes até completar o contrato, para quem cancelar.',
-          'Se uma de vocês sair do contrato, a outra passa automaticamente a pagar o valor da diária solo (R$ 797/mês ou R$ 597/mês no anual), ou negocia um novo formato.',
+          'Se uma de vocês sair do contrato, a outra passa automaticamente a pagar o valor da diária solo (R$ 797/mês ou R$ 597/mês no anual).',
         ],
       },
       {
@@ -171,7 +171,7 @@ export const eduardaAdrianaDiariaCompartilhada: PropostaData = {
       },
       {
         pergunta: 'E se uma de nós quiser parar antes do contrato acabar?',
-        resposta: 'Quem cancela paga a multa de 50% sobre as mensalidades restantes. E a outra deixa de ter o valor compartilhado, porque deixa de dividir a diária com outra pessoa: o valor dela vira o da diária solo, mês a mês ou anual, ou vocês combinam um novo formato.',
+        resposta: 'Quem cancela paga a multa de 50% sobre as mensalidades restantes. E a outra deixa de ter o valor compartilhado, porque deixa de dividir a diária com outra pessoa: o valor dela vira o da diária solo, mês a mês ou anual.',
       },
       {
         pergunta: 'Posso ter mais de uma diária no mesmo mês?',
