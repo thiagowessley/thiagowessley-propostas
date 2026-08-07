@@ -71,7 +71,7 @@ export const eduardaAdrianaDiariaCompartilhada: PropostaData = {
         periodo: 'DIA COMBINADO',
         itens: [
           { titulo: 'Captação em vídeo', descricao: 'Uma única visita, no consultório/escritório de vocês, com a câmera rodando', limite: 'até 8h corridas, em horário único' },
-          { titulo: 'Quantos vídeos couberem no tempo', descricao: 'O limite é o tempo da diária, não um número fechado de peças, dividido entre vocês duas.', limite: 'tipicamente até 10 vídeos por pessoa' },
+          { titulo: 'Quantos vídeos couberem no tempo', descricao: 'O limite é o tempo da diária, dividido entre vocês duas, não um número fechado de peças.', limite: 'tipicamente até 10 vídeos por pessoa' },
         ],
       },
       {
