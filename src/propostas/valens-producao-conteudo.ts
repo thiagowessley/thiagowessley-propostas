@@ -67,9 +67,9 @@ export const valensProducaoConteudo: PropostaData = {
         titulo: 'Diária de Captação',
         periodo: 'DIA COMBINADO',
         itens: [
-          { titulo: 'Captação em vídeo', descricao: 'Uma visita só, no HUB de Inovação, no Garten Shopping ou onde combinarmos, com a câmera rodando o dia inteiro.', limite: 'até 8h corridas, visita única' },
+          { titulo: 'Captação em vídeo', descricao: 'Uma visita só, no espaço que combinarmos, com a câmera rodando o dia inteiro.', limite: 'visita única e contínua' },
           { titulo: 'Fala direta pra câmera', descricao: 'Conduzo cada gravação pra sair natural e direto ao ponto, sem repetir tomada atrás de tomada.' },
-          { titulo: 'Quantos vídeos couberem', descricao: 'O limite é o tempo da diária, não um número fechado de peças. Encerra quando vocês sentirem que já é suficiente, mesmo antes das 8h.' },
+          { titulo: 'Quantos vídeos couberem', descricao: 'O limite é o tempo da diária, não um número fechado de peças. Encerra quando vocês sentirem que já é suficiente.' },
         ],
       },
       {
@@ -88,7 +88,7 @@ export const valensProducaoConteudo: PropostaData = {
         nome: 'Diária Mês a Mês',
         resumo: 'Captação + edição, sem prazo fixo',
         itens: [
-          '1 diária de captação por mês, até 8h',
+          '1 diária de captação por mês, visita única',
           'Quantidade de vídeos livre dentro do tempo da diária',
           'Edição completa de cada vídeo (corte, ritmo, legenda)',
           'Primeiros vídeos já na 1ª semana, restante ao longo do mês',
@@ -101,9 +101,9 @@ export const valensProducaoConteudo: PropostaData = {
       {
         nome: 'Diária Anual',
         destaque: true,
-        resumo: 'Captação + edição, compromisso de 1 ano',
+        resumo: 'Captação + edição, plano anual',
         itens: [
-          '1 diária de captação por mês, até 8h',
+          '1 diária de captação por mês, visita única',
           'Quantidade de vídeos livre dentro do tempo da diária',
           'Edição completa de cada vídeo (corte, ritmo, legenda)',
           'Primeiros vídeos já na 1ª semana, restante ao longo do mês',
@@ -117,7 +117,7 @@ export const valensProducaoConteudo: PropostaData = {
         nome: 'Diária Extra',
         resumo: 'Entrega acelerada',
         itens: [
-          'Mesmo bloco de até 8h de captação e edição completa',
+          'Mesma diária completa de captação e edição',
           'Soma ao plano contratado, quantas vezes precisar no mês',
           'Inclui atendimento em plantão de fim de semana',
           'Entrega acelerada: todos os vídeos prontos em até 7 dias úteis',
@@ -161,7 +161,7 @@ export const valensProducaoConteudo: PropostaData = {
       { texto: 'A diária mensal é agendada com antecedência mínima de 5 dias úteis, conforme disponibilidade.', bold: 'antecedência mínima de 5 dias úteis' },
       { texto: 'Os primeiros vídeos são entregues já na primeira semana após a diária; o restante segue em edição e chega ao longo do mês.', bold: 'já na primeira semana' },
       { texto: 'Na diária extra, a entrega é acelerada: todos os vídeos prontos em até 7 dias úteis, sem esperar o restante do mês.', bold: 'entrega é acelerada' },
-      { texto: 'No pacote de edição, o prazo é de até 5 dias úteis por lote de até 10 vídeos, contado a partir do recebimento do material bruto.', bold: 'até 5 dias úteis' },
+      { texto: 'No pacote de edição, o prazo é de até 7 dias úteis por lote de até 10 vídeos, contado a partir do recebimento do material bruto.', bold: 'até 7 dias úteis' },
     ],
     contrato: [
       {
@@ -177,7 +177,7 @@ export const valensProducaoConteudo: PropostaData = {
       {
         titulo: 'Condições Gerais',
         itens: [
-          'A diária é uma visita única e contínua de até 8h corridas, sem fracionamento em mais de um encontro no mesmo dia. Encerrar antes do tempo não gera crédito nem horas a compensar em outra data.',
+          'A diária é uma visita única e contínua, sem fracionamento em mais de um encontro no mesmo dia. Encerrar antes do tempo não gera crédito nem horas a compensar em outra data.',
           'Diária fora de Joinville e região: valor ajustado conforme deslocamento, combinado à parte.',
           'A trilha sonora usada nas edições é licenciada, sem risco de direito autoral. Uma vez aprovada, não pode ser trocada sem orçamento novo.',
           'O roteiro e o conteúdo técnico de cada vídeo (Método Pulsar, metodologia, pautas) são de responsabilidade da Valens.',
@@ -213,18 +213,18 @@ export const valensProducaoConteudo: PropostaData = {
     faq: [
       {
         pergunta: 'Qual a diferença entre a diária completa e o pacote só edição?',
-        resposta: 'Na diária completa eu capto e edito no mesmo dia: o valor mensal já inclui 1 diária de até 8h. No pacote só edição, vocês já gravam o material (evento, imersão, bastidor) e me enviam bruto: eu só edito, cobrado por pacote mensal de até 10 vídeos ou por vídeo avulso.',
+        resposta: 'Na diária completa eu capto e edito no mesmo dia: o valor mensal já inclui 1 diária, visita única. No pacote só edição, vocês já gravam o material (evento, imersão, bastidor) e me enviam bruto: eu só edito, cobrado por pacote mensal de até 10 vídeos ou por vídeo avulso.',
       },
       {
         pergunta: 'Quantos vídeos vocês recebem por diária?',
-        resposta: 'Não tem número fechado. A diária é um bloco de até 8h de captação: quantos vídeos couberem nesse tempo, todos editados e prontos pra postar.',
+        resposta: 'Não tem número fechado. A diária é uma visita única de captação: quantos vídeos couberem no dia, todos editados e prontos pra postar.',
       },
       {
         pergunta: 'A diária pode ser dividida, tipo manhã e tarde em datas ou horários diferentes?',
-        resposta: 'Não. A diária é uma visita única e contínua, de até 8h corridas. Isso mantém o formato de prestação de serviço combinado, e não uma disponibilidade fracionada ao longo do dia.',
+        resposta: 'Não. A diária é uma visita única e contínua. Isso mantém o formato de prestação de serviço combinado, e não uma disponibilidade fracionada ao longo do dia.',
       },
       {
-        pergunta: 'E se a diária acabar antes das 8h?',
+        pergunta: 'E se a diária acabar mais cedo?',
         resposta: 'Sem problema. A diária encerra quando vocês sentirem que já é suficiente. Como é um bloco fechado, encerrar antes do tempo não gera crédito nem horas a compensar em outra data.',
       },
       {
