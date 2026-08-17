@@ -146,14 +146,11 @@ export const eduardaAdrianaDiariaCompartilhada: PropostaData = {
     ],
     pagamento: {
       blocos: [
-        { titulo: 'Mensalidade', descricao: 'Cobrada no início de cada ciclo, via Pix ou transferência, separadamente para cada uma: R$ 498,50/mês por pessoa (R$ 997/mês combinado).' },
+        { titulo: 'Mensalidade', descricao: 'Cobrada no início de cada ciclo, via Pix, separadamente para cada uma: R$ 498,50/mês por pessoa (R$ 997/mês combinado).' },
         { titulo: 'Diária Extra Compartilhada', descricao: 'R$ 1.497 combinado por diária avulsa além da já incluída no mês, pra quando precisarem de mais um dia de captação, inclusive fim de semana, feriado ou plantão. Cobrada na data da captação.' },
-        { titulo: 'Pagamento em Cripto', descricao: 'Aceito em USDT (Tether), dólar digital, pela cotação do dia do pagamento. Taxa de rede da transação é por conta de quem envia.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
-        { nome: 'Transferência', detalhe: 'Depósito em conta corrente' },
-        { nome: 'USDT (Tether)', detalhe: 'Dólar digital, cotação do dia' },
       ],
     },
     faq: [
