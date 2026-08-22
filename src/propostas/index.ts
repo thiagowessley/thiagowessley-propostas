@@ -9,6 +9,7 @@ import { eduardaDiariaConteudo } from './eduarda-diaria-conteudo'
 import { eduardaAdrianaDiariaCompartilhada } from './eduarda-adriana-diaria-compartilhada'
 import { valensProducaoConteudo } from './valens-producao-conteudo'
 import { dgAtivosSite } from './dg-ativos-site'
+import { thaisDiariaEsportiva } from './thais-diaria-esportiva'
 
 export const propostas: Record<string, PropostaData> = {
   instituto,
@@ -21,6 +22,7 @@ export const propostas: Record<string, PropostaData> = {
   eduardaAdrianaDiariaCompartilhada,
   valensProducaoConteudo,
   dgAtivosSite,
+  thaisDiariaEsportiva,
 }
 
 export function getPropostaBySlug(slug: string): PropostaData | undefined {
