@@ -15,7 +15,7 @@ export const thaisDiariaEsportiva: PropostaData = {
     moeda: 'BRL',
   },
   mostrarPortfolio: true,
-  ctaWhatsapp: 'Fechar a diária de conteúdo',
+  ctaWhatsapp: 'Confirmar a diária de conteúdo',
 
   foto_profissional: '/img/thiago-vertical.jpg',
   foto_secundaria: '/img/thiago-horizontal.jpg',
@@ -122,7 +122,7 @@ export const thaisDiariaEsportiva: PropostaData = {
           'Ideal pra gravar com patrocinador direto na loja, fora do dia principal',
           'Sem urgência de fim de semana: entra no fluxo normal de edição',
         ],
-        valor: 500,
+        valor: 697,
         periodo: 'diária extra',
         rodape: 'Cobrada como fração da diária mensal, não como serviço de urgência',
       },
@@ -158,7 +158,7 @@ export const thaisDiariaEsportiva: PropostaData = {
     pagamento: {
       blocos: [
         { titulo: 'Mensalidade Diária', descricao: 'Cobrada no início de cada ciclo, via Pix ou transferência. Inclui 1 diária por mês.' },
-        { titulo: 'Diária Extra', descricao: 'R$ 500 por diária adicional no mesmo mês, cobrada na data da captação.' },
+        { titulo: 'Diária Extra', descricao: 'R$ 697 por diária adicional no mesmo mês, cobrada na data da captação.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
