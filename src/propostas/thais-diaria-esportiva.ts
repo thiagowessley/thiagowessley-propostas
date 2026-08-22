@@ -69,7 +69,7 @@ export const thaisDiariaEsportiva: PropostaData = {
         itens: [
           { titulo: 'Captação em vídeo', descricao: 'Uma visita só, com a câmera rodando o dia inteiro, pra cobrir patrocinadores e anúncios de torneio.', limite: 'visita única e contínua' },
           { titulo: 'Fala direta pra câmera', descricao: 'Conduzo cada gravação pra sair natural e direto ao ponto, sem repetir tomada atrás de tomada.' },
-          { titulo: 'Em torno de 10 vídeos', descricao: 'O limite é o tempo da diária, não um número fechado de peças.' },
+          { titulo: 'Em torno de 5 vídeos', descricao: 'Esse é o volume típico dentro do tempo da diária.', limite: 'até 10 vídeos por diária' },
         ],
       },
       {
@@ -89,7 +89,7 @@ export const thaisDiariaEsportiva: PropostaData = {
         resumo: 'Captação + edição, sem prazo fixo',
         itens: [
           '1 diária de captação por mês, visita única, sempre em Joinville',
-          'Em torno de 10 vídeos por diária, dentro do tempo do dia',
+          'Em torno de 5 vídeos por diária, até 10 no máximo',
           'Edição completa de cada vídeo (corte, ritmo, legenda)',
           'Primeiros vídeos já na 1ª semana, restante ao longo do mês',
           'Sem contrato de permanência',
@@ -104,7 +104,7 @@ export const thaisDiariaEsportiva: PropostaData = {
         resumo: 'Captação + edição, plano anual',
         itens: [
           '1 diária de captação por mês, visita única, sempre em Joinville',
-          'Em torno de 10 vídeos por diária, dentro do tempo do dia',
+          'Em torno de 5 vídeos por diária, até 10 no máximo',
           'Edição completa de cada vídeo (corte, ritmo, legenda)',
           'Primeiros vídeos já na 1ª semana, restante ao longo do mês',
           'Contrato de permanência de 12 meses',
@@ -172,7 +172,7 @@ export const thaisDiariaEsportiva: PropostaData = {
       },
       {
         pergunta: 'Quantos vídeos saem de cada diária?',
-        resposta: 'Em torno de 10, mas não é um número fechado. A diária é uma visita única de captação: quantos vídeos couberem no dia, todos editados e prontos pra postar.',
+        resposta: 'Em torno de 5, com teto de até 10 por diária. A diária é uma visita única de captação, mas fica limitada a esse teto pra manter o prazo de edição previsível.',
       },
       {
         pergunta: 'A diária pode ser dividida em mais de um encontro no mesmo dia?',
