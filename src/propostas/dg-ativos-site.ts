@@ -12,7 +12,7 @@ export const dgAtivosSite: PropostaData = {
   intro_capa:
     'O site está construído e o painel de edição vai junto com ele, sem custo adicional. Este documento fecha o escopo do que está sendo entregue, deixa claro o que fica sob responsabilidade de quem depois da publicação, e apresenta o plano opcional de gestão mensal para quem preferir delegar a operação.',
   valor: {
-    principal: 1000,
+    principal: 997,
     moeda: 'BRL',
   },
   ctaWhatsapp: 'Aprovar o escopo e a entrega',
@@ -137,7 +137,7 @@ export const dgAtivosSite: PropostaData = {
           'Treinamento em vídeo, manual escrito e transferência de todos os acessos',
           '2 rodadas de revisão inclusas',
         ],
-        valor: 1000,
+        valor: 997,
         periodo: 'entrega única',
         rodape: 'Investimento acertado em 20/08. O painel de edição entra sem custo adicional.',
       },
@@ -213,7 +213,7 @@ export const dgAtivosSite: PropostaData = {
       blocos: [
         {
           titulo: 'Site Institucional',
-          descricao: 'R$ 1.000 em duas parcelas de R$ 500: a primeira na assinatura do contrato, a segunda na entrega do site no ar.',
+          descricao: 'R$ 997 em duas parcelas: R$ 498,50 na assinatura do contrato e R$ 498,50 na entrega do site no ar.',
         },
         {
           titulo: 'Gestão Mensal, se for contratada',
