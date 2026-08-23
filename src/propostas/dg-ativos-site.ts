@@ -35,6 +35,7 @@ export const dgAtivosSite: PropostaData = {
         'Cada ativo apresentado como decisão patrimonial, não como anúncio de imóvel',
         'Um endereço fixo para os reports do DG Intelligence e para a captação de contatos',
         'Estrutura pronta para receber o catálogo de imóveis quando o conteúdo chegar',
+        'O mesmo site em português e em inglês, para o investidor que chega pela operação na Flórida',
         'Domínio, hospedagem e ferramentas registrados no nome do próprio cliente',
       ],
     },
@@ -125,11 +126,13 @@ export const dgAtivosSite: PropostaData = {
         nome: 'Site Institucional',
         resumo: 'Já acertado e em produção',
         itens: [
-          'Seis páginas: inicial, DG Ativos, Negócios e Ativos, Insights, Curadoria de Imóveis e DG Intelligence',
+          'Nove destinos: inicial, DG Ativos, Negócios e Ativos, Insights, Curadoria de Imóveis, DG Intelligence, Contato, Política de Privacidade e a página de cada frente de trabalho',
           'Identidade da marca aplicada, com as fontes e a paleta oficiais',
           'Responsivo em celular, tablet e computador',
-          'Formulário de captação do DG Intelligence funcionando',
-          'Publicação no domínio novo, com e-mail profissional e medição de acesso',
+          'Ficha própria para cada imóvel e página própria para cada análise, com carrossel de fotos e imagem no meio do texto',
+          'Site inteiro em português e em inglês, com troca de idioma na mesma página',
+          'Formulários de contato e do DG Intelligence entregando e-mail de verdade',
+          'Setup de infraestrutura: domínio, hospedagem, e-mail profissional no domínio e medição de acesso, tudo em conta do próprio cliente',
           '2 rodadas de revisão inclusas',
         ],
         valor: 1000,
@@ -149,7 +152,7 @@ export const dgAtivosSite: PropostaData = {
         ],
         valor: 297,
         periodo: '/mês',
-        rodape: 'Sem plano, alteração avulsa custa R$ 150 por hora técnica',
+        rodape: 'Quem preferir não assinar paga por demanda: R$ 150 a hora técnica, mínimo de 1 hora',
       },
       {
         nome: 'Modelo B: Autonomia total',
@@ -161,7 +164,8 @@ export const dgAtivosSite: PropostaData = {
           'Troca de foto e edição de texto em qualquer página',
           'Seis tipos de bloco para adicionar, remover e reordenar',
           'Foto pesada da câmera é otimizada sozinha na publicação',
-          'Vídeo de treinamento e transferência de todos os acessos',
+          'Vídeo de treinamento, manual escrito e transferência de todos os acessos',
+          'Já construído e testado: entra junto com o site, sem esperar semana seguinte',
         ],
         valor: 997,
         periodo: 'entrega única',
@@ -186,8 +190,8 @@ export const dgAtivosSite: PropostaData = {
         bold: '2 rodadas de revisão',
       },
       {
-        texto: 'O painel de autonomia do Modelo B é entregue na semana seguinte à publicação do site, para não disputar prazo com a entrega de agosto.',
-        bold: 'na semana seguinte à publicação',
+        texto: 'O painel do Modelo B já está construído e testado, e entra junto com a publicação do site, sem prazo separado.',
+        bold: 'já está construído e testado',
       },
       {
         texto: 'O catálogo de imóveis e o report em PDF entram quando o conteúdo chegar, sem data presa à entrega de agosto.',
@@ -208,7 +212,8 @@ export const dgAtivosSite: PropostaData = {
       {
         titulo: 'Contas e Pós-entrega',
         itens: [
-          'Domínio, hospedagem, ferramenta de e-mail e demais serviços são registrados em nome do cliente, que é o titular de tudo desde o primeiro dia.',
+          'Domínio, hospedagem, ferramenta de e-mail e demais serviços são registrados em nome do cliente, que é o titular de tudo desde o primeiro dia. Eu entro como colaborador técnico, nunca como dono.',
+          'O envio dos formulários roda no plano gratuito do serviço contratado em nome do cliente, hoje suficiente para 3.000 mensagens por mês. Volume acima disso passa a ter custo, que é do cliente.',
           'Custos de terceiros (registro de domínio, licença de fonte, planos pagos) não estão inclusos no valor do site.',
           'O cliente declara ter os direitos de uso dos textos, imagens, logotipo e fontes que fornecer.',
           'A garantia técnica é de 30 dias e cobre defeito de funcionamento, não mudança de conteúdo nem de opinião.',
@@ -232,8 +237,8 @@ export const dgAtivosSite: PropostaData = {
           descricao: 'R$ 997 em parcela única, cobrados na entrega do painel e do treinamento. Sem mensalidade depois disso.',
         },
         {
-          titulo: 'Fora do escopo',
-          descricao: 'Item novo fora do combinado: R$ 200 cada. Suporte pontual sem plano de gestão: R$ 150 por hora técnica.',
+          titulo: 'Fora do escopo e trabalho avulso',
+          descricao: 'Item novo fora do combinado: R$ 200 cada. Alteração ou publicação avulsa para quem ficar sem plano de gestão: R$ 150 a hora técnica, mínimo de 1 hora, orçada antes de começar.',
         },
       ],
       meios: [
@@ -283,6 +288,16 @@ export const dgAtivosSite: PropostaData = {
           'Cada alteração salva vira uma versão gravada, então dá para voltar ao estado anterior. Se for preciso a minha mão para resolver, é suporte avulso a R$ 150 por hora técnica, ou já está incluso para quem tiver o plano de gestão.',
       },
       {
+        pergunta: 'O formulário do site manda e-mail para onde?',
+        resposta:
+          'Para a caixa que o cliente indicar. O site conversa com um serviço de envio registrado na conta dele, no plano gratuito, que cobre 3.000 mensagens por mês. A chave desse serviço fica guardada na hospedagem, nunca dentro do site, e quem responde o contato responde direto do e-mail da marca, no domínio novo. Nada disso passa por conta minha.',
+      },
+      {
+        pergunta: 'Por que o site tem versão em inglês?',
+        resposta:
+          'Porque o trabalho inclui operação na Flórida e a credencial CIPS, e quem chega de fora precisa entender a operação sem tradutor. O site inteiro existe nos dois idiomas e troca na mesma página, sem levar a pessoa para outro lugar. O texto em inglês foi escrito por mim e entra na mesma lista de aprovação do texto em português.',
+      },
+      {
         pergunta: 'A página de Insights vai puxar o Instagram?',
         resposta:
           'O perfil @dgativos ainda não existe, e o Instagram deixou de permitir incorporar feed de perfil pela via gratuita: hoje exige conta comercial ligada a página do Facebook, ou ferramenta paga. Por isso a página nasce com conteúdo editorial próprio, que também rende mais em busca, e o feed entra depois se a marca quiser.',
@@ -290,8 +305,8 @@ export const dgAtivosSite: PropostaData = {
     ],
     primeiros_30_dias: [
       'Semana 1: página inicial e institucional prontas em preview, revisão com a agência',
-      'Semana 2: seis páginas completas, formulário funcionando e site no ar no domínio novo',
-      'Semana 3: painel de edição, coleções e treinamento em vídeo, no Modelo B',
+      'Semana 2: site completo nos dois idiomas, formulários entregando e-mail e site no ar no domínio novo',
+      'Semana 3: painel de edição liberado, treinamento em vídeo e manual escrito, no Modelo B',
       'Semana 4: catálogo de imóveis populado conforme o conteúdo chegar',
     ],
     confidencialidade:
