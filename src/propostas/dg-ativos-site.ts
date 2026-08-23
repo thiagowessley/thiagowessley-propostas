@@ -5,17 +5,17 @@ export const dgAtivosSite: PropostaData = {
   slug: 'dg-ativos-site',
   cliente: 'DG Ativos Imobiliários',
   segmento: 'Inteligência e gestão de ativos imobiliários, Joinville/SC',
-  servico: 'Site institucional e modelo de pós-entrega',
+  servico: 'Site institucional com autonomia de edição',
   responsavel: 'The Lovers Company',
   validade: '2026-08-27',
   envio: '2026-08-20',
   intro_capa:
-    'O site já está acertado e em produção. Este documento existe para resolver a decisão que vem depois dele: quem mexe no site quando ele estiver no ar. São dois modelos possíveis, com escopo, limite e investimento de cada um.',
+    'O site está construído e o painel de edição vai junto com ele, sem custo adicional. Este documento fecha o escopo do que está sendo entregue, deixa claro o que fica sob responsabilidade de quem depois da publicação, e apresenta o plano opcional de gestão mensal para quem preferir delegar a operação.',
   valor: {
     principal: 1000,
     moeda: 'BRL',
   },
-  ctaWhatsapp: 'Definir o modelo de pós-entrega',
+  ctaWhatsapp: 'Aprovar o escopo e a entrega',
 
   foto_profissional: '/img/thiago-vertical.jpg',
   foto_secundaria: '/img/thiago-horizontal.jpg',
@@ -29,7 +29,7 @@ export const dgAtivosSite: PropostaData = {
       publico:
         'Famílias de alta renda, investidores sofisticados e empresários que não buscam imóvel, buscam decisão. Gente que compra por confiança, valoriza acesso e informação privilegiada, e quer um conselheiro em vez de um corretor.',
       desafio:
-        'O site é a parte previsível. O que decide o custo dos próximos dois anos é outra coisa: quando o Daniel quiser publicar um imóvel novo, subir um report ou trocar uma foto, ele faz sozinho ou depende de alguém. Essa decisão precisa ser tomada agora, não depois da entrega.',
+        'O site é a parte previsível. O que decide o custo dos próximos dois anos é outra coisa: quando o Daniel quiser publicar um imóvel novo, subir um relatório ou trocar uma foto, ele faz sozinho. O painel de edição vai junto com a entrega justamente para que a operação do site não vire uma linha de custo mensal.',
       entregas: [
         'Uma marca institucional que não se parece com imobiliária tradicional',
         'Cada ativo apresentado como decisão patrimonial, não como anúncio de imóvel',
@@ -85,17 +85,17 @@ export const dgAtivosSite: PropostaData = {
               'Página do report com o estado de lançamento em breve e campo de e-mail funcionando, gravando os contatos em ferramenta na conta do próprio cliente.',
           },
           {
-            titulo: 'Publicação no domínio novo',
+            titulo: 'Publicação e setup de infraestrutura',
             descricao:
-              'Site no ar em dgativos.com.br, com certificado de segurança, e-mail profissional no domínio e medição de acesso configurada.',
-            limite: '2 rodadas de revisão inclusas',
+              'Site no ar em dgativos.com.br, com certificado de segurança, e-mail profissional no domínio, envio dos formulários ligado e medição de acesso configurada. Todas as contas são abertas em nome do cliente e os acessos são transferidos para ele. Esta configuração acontece uma única vez, na entrega.',
+            limite: 'setup único, na entrega',
           },
         ],
       },
       {
         numero: '03',
         titulo: 'Autonomia do cliente',
-        periodo: 'EXCLUSIVO DO MODELO B',
+        periodo: 'INCLUSO NA ENTREGA',
         itens: [
           {
             titulo: 'Painel de edição no próprio site',
@@ -116,7 +116,7 @@ export const dgAtivosSite: PropostaData = {
           {
             titulo: 'Treinamento e transferência',
             descricao:
-              'Vídeo curto mostrando como trocar foto, editar texto e publicar imóvel, mais a passagem de todos os acessos para o nome do cliente.',
+              'Vídeo curto mostrando como trocar foto, editar texto e publicar imóvel, manual escrito de uso do painel, e a passagem de todos os acessos para o nome do cliente.',
           },
         ],
       },
@@ -124,52 +124,37 @@ export const dgAtivosSite: PropostaData = {
     planos: [
       {
         nome: 'Site Institucional',
-        resumo: 'Já acertado e em produção',
+        destaque: true,
+        resumo: 'Entrega completa, com o painel de edição incluso',
         itens: [
           'Nove destinos: inicial, DG Ativos, Negócios e Ativos, Insights, Curadoria de Imóveis, DG Intelligence, Contato, Política de Privacidade e a página de cada frente de trabalho',
-          'Identidade da marca aplicada, com as fontes e a paleta oficiais',
-          'Responsivo em celular, tablet e computador',
           'Ficha própria para cada imóvel e página própria para cada análise, com carrossel de fotos e imagem no meio do texto',
           'Site inteiro em português e em inglês, com troca de idioma na mesma página',
+          'Identidade da marca aplicada, com as fontes e a paleta oficiais, responsivo em celular, tablet e computador',
           'Formulários de contato e do DG Intelligence entregando e-mail de verdade',
-          'Setup de infraestrutura: domínio, hospedagem, e-mail profissional no domínio e medição de acesso, tudo em conta do próprio cliente',
+          'Painel de edição no próprio site: imóvel novo, análise nova, troca de foto e de texto, sem depender de ninguém',
+          'Setup de infraestrutura na entrega: domínio, hospedagem, e-mail no domínio e medição de acesso, tudo em conta do próprio cliente',
+          'Treinamento em vídeo, manual escrito e transferência de todos os acessos',
           '2 rodadas de revisão inclusas',
         ],
         valor: 1000,
         periodo: 'entrega única',
-        rodape: 'Valor já combinado. Os modelos ao lado são a decisão que falta',
+        rodape: 'Investimento acertado em 20/08. O painel de edição entra sem custo adicional.',
       },
       {
-        nome: 'Modelo A: Gestão contínua',
-        resumo: 'Quem mexe no site sou eu',
+        nome: 'Gestão Mensal',
+        resumo: 'Opcional, para quem prefere delegar a operação',
         itens: [
-          'Até 4 alterações de conteúdo por mês (texto, foto, imóvel novo, report novo)',
-          'Monitoramento do site, com aviso antes do cliente perceber qualquer queda',
-          'Cópia de segurança e atualizações técnicas por conta minha',
+          'Até 4 publicações ou alterações de conteúdo por mês, feitas por mim',
+          'Monitoramento do site, com aviso antes de o cliente perceber qualquer queda',
+          'Cópia de segurança e atualizações técnicas por minha conta',
           'Relatório trimestral de acesso e desempenho',
-          'Prioridade de agenda, resposta em até 2 dias úteis',
-          'Sem permanência: cancela quando quiser',
+          'Prioridade de agenda, com resposta em até 2 dias úteis',
+          'Sem permanência: encerra a qualquer momento, com aviso de 30 dias',
         ],
-        valor: 297,
+        valor: 597,
         periodo: '/mês',
-        rodape: 'Quem preferir não assinar paga por demanda: R$ 150 a hora técnica, mínimo de 1 hora',
-      },
-      {
-        nome: 'Modelo B: Autonomia total',
-        destaque: true,
-        resumo: 'Quem mexe no site é o cliente',
-        itens: [
-          'Painel de edição dentro do próprio site, com login do cliente',
-          'Coleções de imóveis, reports e insights prontas para receber item novo',
-          'Troca de foto e edição de texto em qualquer página',
-          'Seis tipos de bloco para adicionar, remover e reordenar',
-          'Foto pesada da câmera é otimizada sozinha na publicação',
-          'Vídeo de treinamento, manual escrito e transferência de todos os acessos',
-          'Já construído e testado: entra junto com o site, sem esperar semana seguinte',
-        ],
-        valor: 997,
-        periodo: 'entrega única',
-        rodape: 'Sem mensalidade. Suporte pontual, se precisar, a R$ 150 por hora técnica',
+        rodape: 'Sem o plano, cada demanda é orçada antes de começar, a R$ 150 a hora técnica.',
       },
     ],
     prazos: [
@@ -190,7 +175,7 @@ export const dgAtivosSite: PropostaData = {
         bold: '2 rodadas de revisão',
       },
       {
-        texto: 'O painel do Modelo B já está construído e testado, e entra junto com a publicação do site, sem prazo separado.',
+        texto: 'O painel de edição já está construído e testado, e é liberado junto com a publicação do site, sem prazo nem custo separados.',
         bold: 'já está construído e testado',
       },
       {
@@ -207,6 +192,7 @@ export const dgAtivosSite: PropostaData = {
           'Estão inclusas 2 rodadas de revisão, limitadas a ajuste de conteúdo e alteração visual pontual, sem reestruturar página nem criar componente novo.',
           'Textos, fotos, logotipo e catálogo de imóveis são fornecidos pelo cliente. Criação de conteúdo não faz parte do escopo.',
           'Página nova, tipo de bloco novo e funcionalidade não prevista são orçados à parte.',
+          'O painel de edição, o treinamento e o manual de uso fazem parte da entrega, sem custo adicional.',
         ],
       },
       {
@@ -217,8 +203,9 @@ export const dgAtivosSite: PropostaData = {
           'Custos de terceiros (registro de domínio, licença de fonte, planos pagos) não estão inclusos no valor do site.',
           'O cliente declara ter os direitos de uso dos textos, imagens, logotipo e fontes que fornecer.',
           'A garantia técnica é de 30 dias e cobre defeito de funcionamento, não mudança de conteúdo nem de opinião.',
-          'No Modelo B, alteração feita pelo cliente no painel é de responsabilidade dele. Correção do que ele alterar é suporte avulso.',
-          'Depois da transferência dos acessos, a disponibilidade e a renovação dos serviços passam a ser do cliente.',
+          'Alteração feita pelo cliente no painel é de responsabilidade dele. Corrigir o que ele alterar é trabalho avulso, orçado antes de começar.',
+          'A configuração de domínio, hospedagem, e-mail e integrações faz parte da entrega e acontece uma única vez, na publicação do site. Depois da transferência dos acessos, a renovação do domínio, o pagamento de qualquer serviço, a disponibilidade e a manutenção dessas contas passam a ser responsabilidade do cliente.',
+          'Administração contínua dessas contas, mudança de provedor, migração futura e suporte recorrente não estão inclusos no valor do site e só existem mediante o plano de Gestão Mensal ou orçamento avulso.',
         ],
       },
     ],
@@ -229,12 +216,8 @@ export const dgAtivosSite: PropostaData = {
           descricao: 'R$ 1.000 em duas parcelas de R$ 500: a primeira na assinatura do contrato, a segunda na entrega do site no ar.',
         },
         {
-          titulo: 'Modelo A: Gestão contínua',
-          descricao: 'R$ 297 por mês, cobrados no início de cada ciclo, a partir do mês seguinte à publicação. Sem permanência.',
-        },
-        {
-          titulo: 'Modelo B: Autonomia total',
-          descricao: 'R$ 997 em parcela única, cobrados na entrega do painel e do treinamento. Sem mensalidade depois disso.',
+          titulo: 'Gestão Mensal, se for contratada',
+          descricao: 'R$ 597 por mês, cobrados no início de cada ciclo, a partir do mês seguinte à publicação. Opcional, sem permanência e com aviso de 30 dias para encerrar.',
         },
         {
           titulo: 'Fora do escopo e trabalho avulso',
@@ -248,14 +231,14 @@ export const dgAtivosSite: PropostaData = {
     },
     faq: [
       {
-        pergunta: 'Na prática, o que muda entre o Modelo A e o Modelo B?',
+        pergunta: 'O painel de edição está incluso mesmo, ou é um adicional?',
         resposta:
-          'Muda quem tem a chave. No Modelo A o site é entregue pronto e toda alteração passa por mim, o que garante que nada quebra e que o padrão visual se mantém, com custo mensal previsível. No Modelo B o cliente recebe um painel dentro do próprio site e passa a publicar imóvel, report e texto sozinho, sem mensalidade e sem depender da minha agenda.',
+          'Está incluso no investimento do site, sem custo separado. Ele já está construído e testado, e é liberado junto com a publicação. A ideia é simples: a operação do site não deve virar uma linha de custo mensal para a DG.',
       },
       {
-        pergunta: 'No Modelo B, o que exatamente o cliente consegue fazer sozinho?',
+        pergunta: 'O que exatamente o cliente consegue fazer sozinho?',
         resposta:
-          'Trocar qualquer foto, editar qualquer texto, publicar imóvel novo com fotos e descrição, subir report novo do DG Intelligence, escrever um insight e montar página adicionando, removendo e reordenando blocos de uma biblioteca com a cara da marca. Cada alteração fica gravada com histórico, então dá para voltar atrás em qualquer mudança.',
+          'Trocar qualquer foto, editar qualquer texto, publicar imóvel novo com carrossel de fotos e ficha completa, subir relatório novo do DG Intelligence e escrever uma análise, inclusive com imagem no meio do texto. Cada alteração fica gravada com histórico, então dá para voltar atrás em qualquer mudança.',
       },
       {
         pergunta: 'E o que ele não vai conseguir fazer?',
@@ -265,12 +248,17 @@ export const dgAtivosSite: PropostaData = {
       {
         pergunta: 'O cliente precisa saber alguma coisa de tecnologia?',
         resposta:
-          'Não. Ele entra num endereço, digita o login e vê uma tela de edição parecida com um formulário. O vídeo de treinamento mostra como trocar uma foto e publicar um imóvel do início ao fim. Nenhuma ferramenta de programação aparece para ele em momento nenhum.',
+          'Não. Ele entra num endereço, faz login e vê uma tela de edição parecida com um formulário. O vídeo de treinamento e o manual escrito mostram como trocar uma foto e publicar um imóvel do início ao fim. Nenhuma ferramenta de programação aparece para ele em momento nenhum.',
+      },
+      {
+        pergunta: 'Quem cuida do domínio, da hospedagem e do e-mail depois da entrega?',
+        resposta:
+          'O cliente. Toda a configuração inicial faz parte da entrega: registro do domínio, hospedagem publicada, e-mail no domínio e medição de acesso ficam prontos e testados, tudo em conta no nome dele. A partir da transferência dos acessos, a renovação do domínio, o pagamento de qualquer serviço e a manutenção dessas contas passam a ser responsabilidade do cliente. Quem quiser que isso continue comigo contrata a Gestão Mensal.',
       },
       {
         pergunta: 'Quanto custa manter o site no ar todo mês?',
         resposta:
-          'Só o domínio, cerca de R$ 40 por ano. Hospedagem, e-mail no domínio, painel de edição e captação de contatos rodam em plano gratuito, sem limite de visitas e com uso comercial permitido. Não há mensalidade de plataforma em nenhum dos dois modelos.',
+          'Só o domínio, cerca de R$ 40 por ano. Hospedagem, e-mail no domínio, painel de edição e envio dos formulários rodam em plano gratuito, sem limite de visitas e com uso comercial permitido. Não existe mensalidade obrigatória de plataforma.',
       },
       {
         pergunta: 'Por que as contas ficam no nome do cliente?',
@@ -278,19 +266,9 @@ export const dgAtivosSite: PropostaData = {
           'Porque o site é dele. Domínio, hospedagem e ferramentas registrados no nome do titular significam que ele nunca fica refém de fornecedor nenhum, inclusive de mim. Vale registrar que o domínio do site atual, danielgomesbrokersc.com.br, está hoje no nome de um terceiro, e é exatamente esse tipo de situação que a estrutura nova evita.',
       },
       {
-        pergunta: 'Dá para começar no Modelo A e migrar para o B depois?',
-        resposta:
-          'Dá, e sem retrabalho. O site já nasce com o conteúdo separado do código justamente por isso: ligar o painel depois é configuração, não reconstrução. O investimento do Modelo B continua o mesmo se for feito depois.',
-      },
-      {
-        pergunta: 'O que acontece se o cliente quebrar alguma coisa no painel?',
-        resposta:
-          'Cada alteração salva vira uma versão gravada, então dá para voltar ao estado anterior. Se for preciso a minha mão para resolver, é suporte avulso a R$ 150 por hora técnica, ou já está incluso para quem tiver o plano de gestão.',
-      },
-      {
         pergunta: 'O formulário do site manda e-mail para onde?',
         resposta:
-          'Para a caixa que o cliente indicar. O site conversa com um serviço de envio registrado na conta dele, no plano gratuito, que cobre 3.000 mensagens por mês. A chave desse serviço fica guardada na hospedagem, nunca dentro do site, e quem responde o contato responde direto do e-mail da marca, no domínio novo. Nada disso passa por conta minha.',
+          'Para a caixa que o cliente indicar. O site conversa com um serviço de envio registrado na conta dele, no plano gratuito, que cobre 3.000 mensagens por mês. A chave desse serviço fica guardada na hospedagem, nunca dentro do site, e quem responde o contato responde direto do e-mail da marca, no domínio novo.',
       },
       {
         pergunta: 'Por que o site tem versão em inglês?',
@@ -302,19 +280,24 @@ export const dgAtivosSite: PropostaData = {
         resposta:
           'O perfil @dgativos ainda não existe, e o Instagram deixou de permitir incorporar feed de perfil pela via gratuita: hoje exige conta comercial ligada a página do Facebook, ou ferramenta paga. Por isso a página nasce com conteúdo editorial próprio, que também rende mais em busca, e o feed entra depois se a marca quiser.',
       },
+      {
+        pergunta: 'E se aparecer uma demanda pontual depois da entrega?',
+        resposta:
+          'É orçada antes de começar, a R$ 150 a hora técnica, com mínimo de uma hora. Quem prefere previsibilidade contrata a Gestão Mensal e passa a ter até quatro publicações por mês, monitoramento e prioridade de agenda inclusos.',
+      },
     ],
     primeiros_30_dias: [
       'Semana 1: página inicial e institucional prontas em preview, revisão com a agência',
       'Semana 2: site completo nos dois idiomas, formulários entregando e-mail e site no ar no domínio novo',
-      'Semana 3: painel de edição liberado, treinamento em vídeo e manual escrito, no Modelo B',
+      'Semana 3: painel de edição liberado, treinamento em vídeo e manual escrito entregues',
       'Semana 4: catálogo de imóveis populado conforme o conteúdo chegar',
     ],
     confidencialidade:
       'Este documento é confidencial e destinado exclusivamente à DG Ativos Imobiliários e à The Lovers Company. Validade de 7 dias corridos a partir da data de envio. Valores sujeitos a atualização após o vencimento.',
-    encerramento: encerramentoPadrao('o que entra em cada modelo, o que muda entre eles e quanto custa cada um'),
+    encerramento: encerramentoPadrao('o que está sendo entregue, o que fica com quem depois da publicação e quanto custa manter o site no ar'),
   },
   utm_copy: {
-    whatsapp: 'Segue o comparativo dos dois modelos de pós-entrega do site da DG Ativos.',
+    whatsapp: 'Segue a proposta do site da DG Ativos, com o escopo fechado e o painel de edição incluso.',
     default: '',
   },
   contato: {
