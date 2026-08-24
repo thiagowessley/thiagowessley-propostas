@@ -66,7 +66,7 @@ export const dgAtivosSite: PropostaData = {
       {
         numero: '02',
         titulo: 'Páginas, formulário e publicação',
-        periodo: 'ATÉ 28/08',
+        periodo: 'ATÉ 31/08',
         itens: [
           {
             titulo: 'Negócios e Ativos',
@@ -163,8 +163,8 @@ export const dgAtivosSite: PropostaData = {
         bold: 'até domingo, 23 de agosto',
       },
       {
-        texto: 'A entrega completa do site no domínio novo, incluindo o catálogo de imóveis, acontece até 28 de agosto, condicionada ao domínio registrado, às contas criadas e ao recebimento do material do cliente.',
-        bold: 'até 28 de agosto',
+        texto: 'A entrega completa do site no domínio novo, incluindo o catálogo de imóveis, acontece até 31 de agosto, condicionada ao domínio registrado, às contas criadas e ao recebimento do material do cliente.',
+        bold: 'até 31 de agosto',
       },
       {
         texto: 'O prazo fica suspenso enquanto faltar material de responsabilidade do cliente, sem penalidade para nenhum dos lados.',
