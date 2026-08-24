@@ -1,5 +1,5 @@
 import type { PropostaData } from '../types/proposta'
-import { SOBRE_PADRAO, encerramentoPadrao, TITULO_PAGINA_INICIAL } from '../lib/copy-padrao'
+import { SOBRE_PADRAO, TITULO_PAGINA_INICIAL } from '../lib/copy-padrao'
 
 export const dgAtivosSite: PropostaData = {
   slug: 'dg-ativos-site',
@@ -163,7 +163,7 @@ export const dgAtivosSite: PropostaData = {
         bold: 'até domingo, 23 de agosto',
       },
       {
-        texto: 'A entrega completa das seis páginas no domínio novo acontece até 28 de agosto, condicionada ao domínio registrado e às contas criadas.',
+        texto: 'A entrega completa do site no domínio novo, incluindo o catálogo de imóveis, acontece até 28 de agosto, condicionada ao domínio registrado, às contas criadas e ao recebimento do material do cliente.',
         bold: 'até 28 de agosto',
       },
       {
@@ -177,10 +177,6 @@ export const dgAtivosSite: PropostaData = {
       {
         texto: 'O painel de edição já está construído e testado, e é liberado junto com a publicação do site, sem prazo nem custo separados.',
         bold: 'já está construído e testado',
-      },
-      {
-        texto: 'O catálogo de imóveis e o report em PDF entram quando o conteúdo chegar, sem data presa à entrega de agosto.',
-        bold: 'quando o conteúdo chegar',
       },
     ],
     contrato: [
@@ -253,17 +249,17 @@ export const dgAtivosSite: PropostaData = {
       {
         pergunta: 'Quem cuida do domínio, da hospedagem e do e-mail depois da entrega?',
         resposta:
-          'O cliente. Toda a configuração inicial faz parte da entrega: registro do domínio, hospedagem publicada, e-mail no domínio e medição de acesso ficam prontos e testados, tudo em conta no nome dele. A partir da transferência dos acessos, a renovação do domínio, o pagamento de qualquer serviço e a manutenção dessas contas passam a ser responsabilidade do cliente. Quem quiser que isso continue comigo contrata a Gestão Mensal.',
+          'O cliente. Toda a configuração inicial faz parte da entrega: registro do domínio, hospedagem publicada, e-mail no domínio e medição de acesso ficam prontos e testados, tudo em conta no nome dele. A partir da transferência dos acessos, a renovação do domínio, o pagamento de qualquer serviço e a manutenção dessas contas passam a ser responsabilidade do cliente. A administração contínua dessas contas está disponível como parte da Gestão Mensal, para quem preferir manter esse suporte.',
       },
       {
         pergunta: 'Quanto custa manter o site no ar todo mês?',
         resposta:
-          'Só o domínio, cerca de R$ 40 por ano. Hospedagem, e-mail no domínio, painel de edição e envio dos formulários rodam em plano gratuito, sem limite de visitas e com uso comercial permitido. Não existe mensalidade obrigatória de plataforma.',
+          'Só o domínio, entre R$ 40 e R$ 90 por ano, conforme o registrador escolhido. Hospedagem, e-mail no domínio, painel de edição e envio dos formulários rodam em plano gratuito, sem limite de visitas e com uso comercial permitido. Não existe mensalidade obrigatória de plataforma.',
       },
       {
         pergunta: 'Por que as contas ficam no nome do cliente?',
         resposta:
-          'Porque o site é dele. Domínio, hospedagem e ferramentas registrados no nome do titular significam que ele nunca fica refém de fornecedor nenhum, inclusive de mim. Vale registrar que o domínio do site atual, danielgomesbrokersc.com.br, está hoje no nome de um terceiro, e é exatamente esse tipo de situação que a estrutura nova evita.',
+          'Porque o site é dele. Domínio, hospedagem e ferramentas registrados no nome do titular garantem independência total em relação a qualquer fornecedor, presente ou futuro. Vale registrar que o domínio do site atual, danielgomesbrokersc.com.br, está hoje no nome de um terceiro, e é exatamente esse tipo de situação que a estrutura nova evita.',
       },
       {
         pergunta: 'O formulário do site manda e-mail para onde?',
@@ -288,13 +284,14 @@ export const dgAtivosSite: PropostaData = {
     ],
     primeiros_30_dias: [
       'Semana 1: página inicial e institucional prontas em preview, revisão com a agência',
-      'Semana 2: site completo nos dois idiomas, formulários entregando e-mail e site no ar no domínio novo',
+      'Semana 2: site completo nos dois idiomas, catálogo de imóveis publicado, formulários entregando e-mail e site no ar no domínio novo',
       'Semana 3: painel de edição liberado e manual escrito entregue',
-      'Semana 4: catálogo de imóveis populado conforme o conteúdo chegar',
+      'Semana 4: primeira rodada de ajustes apontados pelo cliente, dentro do prazo de revisão combinado',
     ],
     confidencialidade:
       'Este documento é confidencial e destinado exclusivamente à DG Ativos Imobiliários e à The Lovers Company. Validade de 7 dias corridos a partir da data de envio. Valores sujeitos a atualização após o vencimento.',
-    encerramento: encerramentoPadrao('o que está sendo entregue, o que fica com quem depois da publicação e quanto custa manter o site no ar'),
+    encerramento:
+      'Este documento reúne o escopo completo do site, as responsabilidades de cada parte depois da publicação e os custos de manutenção. Para aprovar ou tirar dúvidas, fico à disposição no WhatsApp.',
   },
   utm_copy: {
     whatsapp: 'Segue a proposta do site da DG Ativos, com o escopo fechado e o painel de edição incluso.',
