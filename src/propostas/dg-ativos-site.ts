@@ -114,9 +114,9 @@ export const dgAtivosSite: PropostaData = {
             limite: '6 tipos de bloco',
           },
           {
-            titulo: 'Treinamento e transferência',
+            titulo: 'Manual e transferência',
             descricao:
-              'Vídeo curto mostrando como trocar foto, editar texto e publicar imóvel, manual escrito de uso do painel, e a passagem de todos os acessos para o nome do cliente.',
+              'Manual escrito mostrando como trocar foto, editar texto e publicar imóvel, e a passagem de todos os acessos para o nome do cliente.',
           },
         ],
       },
@@ -134,7 +134,7 @@ export const dgAtivosSite: PropostaData = {
           'Formulários de contato e do DG Intelligence entregando e-mail de verdade',
           'Painel de edição no próprio site: imóvel novo, análise nova, troca de foto e de texto, sem depender de ninguém',
           'Setup de infraestrutura na entrega: domínio, hospedagem, e-mail no domínio e medição de acesso, tudo em conta do próprio cliente',
-          'Treinamento em vídeo, manual escrito e transferência de todos os acessos',
+          'Manual escrito de uso do painel e transferência de todos os acessos',
           '2 rodadas de revisão inclusas',
         ],
         valor: 997,
@@ -248,7 +248,7 @@ export const dgAtivosSite: PropostaData = {
       {
         pergunta: 'O cliente precisa saber alguma coisa de tecnologia?',
         resposta:
-          'Não. Ele entra num endereço, faz login e vê uma tela de edição parecida com um formulário. O vídeo de treinamento e o manual escrito mostram como trocar uma foto e publicar um imóvel do início ao fim. Nenhuma ferramenta de programação aparece para ele em momento nenhum.',
+          'Não. Ele entra num endereço, faz login e vê uma tela de edição parecida com um formulário. O manual escrito mostra o passo a passo, com print de cada tela, de como trocar uma foto e publicar um imóvel do início ao fim. Nenhuma ferramenta de programação aparece para ele em momento nenhum.',
       },
       {
         pergunta: 'Quem cuida do domínio, da hospedagem e do e-mail depois da entrega?',
@@ -289,7 +289,7 @@ export const dgAtivosSite: PropostaData = {
     primeiros_30_dias: [
       'Semana 1: página inicial e institucional prontas em preview, revisão com a agência',
       'Semana 2: site completo nos dois idiomas, formulários entregando e-mail e site no ar no domínio novo',
-      'Semana 3: painel de edição liberado, treinamento em vídeo e manual escrito entregues',
+      'Semana 3: painel de edição liberado e manual escrito entregue',
       'Semana 4: catálogo de imóveis populado conforme o conteúdo chegar',
     ],
     confidencialidade:
