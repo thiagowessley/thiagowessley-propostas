@@ -29,6 +29,7 @@ export const tassianaBniAftermovie: PropostaData = {
     ],
     link: { label: 'Ver portfólio completo', url: 'https://thiagowessley.com.br/' },
     itens: [
+      { titulo: 'Juliano Madeira', categoria: 'Palestra BNI', imagem: '/img/portfolio/video-palestra-bni-juliano-madeira.jpg' },
       { titulo: 'Dart 316', categoria: 'Show ao vivo', imagem: '/img/portfolio/p2.webp' },
       { titulo: 'Rooftop Garden', categoria: 'Evento social', imagem: '/img/portfolio/p3.webp' },
       { titulo: 'Casa Calantti', categoria: 'Cobertura de evento', imagem: '/img/portfolio/p5.webp' },
@@ -37,6 +38,7 @@ export const tassianaBniAftermovie: PropostaData = {
       { titulo: 'Jantar Corporativo', categoria: 'Cobertura de evento', imagem: '/img/portfolio/p4.webp' },
       { titulo: 'Reunião Estratégica', categoria: 'Cobertura corporativa', imagem: '/img/portfolio/p8.webp' },
       { titulo: 'Dimas Neto', categoria: 'Depoimento em vídeo', imagem: '/img/portfolio/p9.jpg' },
+      { titulo: 'Fabiana Golembiewski', categoria: 'Podcast', imagem: '/img/portfolio/video-podcast-fabiana-golembiewski.jpg' },
     ],
   },
 
