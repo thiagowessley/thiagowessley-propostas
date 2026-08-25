@@ -11,6 +11,7 @@ import { valensProducaoConteudo } from './valens-producao-conteudo'
 import { dgAtivosSite } from './dg-ativos-site'
 import { thaisDiariaEsportiva } from './thais-diaria-esportiva'
 import { tassianaBniAftermovie } from './tassiana-bni-aftermovie'
+import { rafaelBniAftermovie } from './rafael-bni-aftermovie'
 
 export const propostas: Record<string, PropostaData> = {
   instituto,
@@ -25,6 +26,7 @@ export const propostas: Record<string, PropostaData> = {
   dgAtivosSite,
   thaisDiariaEsportiva,
   tassianaBniAftermovie,
+  rafaelBniAftermovie,
 }
 
 export function getPropostaBySlug(slug: string): PropostaData | undefined {
