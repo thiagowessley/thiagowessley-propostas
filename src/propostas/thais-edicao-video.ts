@@ -96,8 +96,8 @@ export const thaisEdicaoVideo: PropostaData = {
         ],
         valor: 247,
         periodo: '/mês (pacote de 10 vídeos)',
-        rodape: 'Vídeo avulso fora do pacote: R$ 30 cada',
-        video: { youtubeId: 'V5lMb2SksPs', label: 'Exemplo de edição básica: Maria Eduarda, Nutricionista' },
+        rodape: 'Vídeo avulso fora do pacote: R$ 47 cada',
+        video: { youtubeId: 'V5lMb2SksPs', label: 'Exemplo de edição básica: Maria Eduarda' },
       },
       {
         nome: 'Edição Avançada',
@@ -112,7 +112,7 @@ export const thaisEdicaoVideo: PropostaData = {
         ],
         valor: 697,
         periodo: '/mês (pacote de 10 vídeos)',
-        rodape: 'Vídeo avulso fora do pacote: R$ 79 cada',
+        rodape: 'Vídeo avulso fora do pacote: R$ 97 cada',
         video: { youtubeId: 'JNHSNxgJT1s', label: 'Exemplo de edição avançada: Camila Oliveira' },
       },
     ],
@@ -144,7 +144,7 @@ export const thaisEdicaoVideo: PropostaData = {
     pagamento: {
       blocos: [
         { titulo: 'Pacote de Edição', descricao: 'Cobrado no início de cada ciclo, conforme o pacote escolhido (básica ou avançada).' },
-        { titulo: 'Vídeo Avulso', descricao: 'Fora do pacote: R$ 30 (básica) ou R$ 79 (avançada), cobrado por vídeo entregue.' },
+        { titulo: 'Vídeo Avulso', descricao: 'Fora do pacote: R$ 47 (básica) ou R$ 97 (avançada), cobrado por vídeo entregue.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
@@ -166,7 +166,7 @@ export const thaisEdicaoVideo: PropostaData = {
       },
       {
         pergunta: 'E se o volume passar de 10 vídeos no mês?',
-        resposta: 'O que passar do pacote contratado é cobrado como vídeo avulso, no valor do plano escolhido (R$ 30 na básica, R$ 79 na avançada).',
+        resposta: 'O que passar do pacote contratado é cobrado como vídeo avulso, no valor do plano escolhido (R$ 47 na básica, R$ 97 na avançada).',
       },
       {
         pergunta: 'Existe fidelidade no contrato?',
