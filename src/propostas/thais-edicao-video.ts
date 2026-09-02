@@ -41,12 +41,12 @@ export const thaisEdicaoVideo: PropostaData = {
 
   secoes: {
     cenario: {
-      problema: 'Sua agência atende clientes de segmentos diferentes (médicas, gráfica, salão de beleza) e precisa manter um volume constante de Reels no ar, mas o atraso do editor atual está comprometendo o prazo de entrega pros seus clientes.',
+      problema: 'Sua agência atende clientes de segmentos diferentes (médicas, gráfica, salão de beleza) e precisa manter um volume constante de Reels no ar, com previsibilidade de prazo em cada entrega.',
       publico: 'Clientes finais da sua agência, cada um com o próprio público no Instagram, que dependem de Reels publicados no ritmo combinado pra manter o anúncio e o conteúdo orgânico rodando.',
-      desafio: 'Ter um fluxo de edição confiável, que cumpra prazo todo mês, sem você precisar acompanhar de perto cada entrega.',
+      desafio: 'Ter um fluxo de edição com prazo fechado todo mês, sem precisar acompanhar de perto cada entrega pra garantir que sai no tempo certo.',
       entregas: [
         'Vídeos editados sempre dentro do prazo combinado, sem fila atrasada',
-        'Edição terceirizada, sem contratar editor próprio pra agência',
+        'Um único ponto de edição, com padrão de qualidade consistente em todos os clientes',
         'Escopo fechado por lote, sem surpresa de prazo ou retrabalho',
         'Primeiros vídeos do lote entregues já na primeira semana',
       ],

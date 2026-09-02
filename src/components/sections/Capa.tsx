@@ -78,8 +78,8 @@ export function Capa({ proposta, tempoLeitura }: Props) {
           {proposta.servico} <span style={{ color: 'var(--muted)' }}>·</span> {proposta.cliente}
         </motion.p>
 
-        {/* Cliente / Responsavel: so mostra quando ha responsavel distinto do cliente, senao repete o nome que ja aparece no subtitulo */}
-        {proposta.responsavel && (
+        {/* Cliente / Responsavel: so mostra as duas colunas quando ha responsavel distinto do cliente, senao mostra so uma vez o nome */}
+        {(proposta.responsavel || proposta.cliente) && (
           <motion.div
             custom={3} variants={lineUp} initial="hidden" animate="show"
             style={{ display: 'flex', gap: '64px', flexWrap: 'wrap', marginBottom: '40px' }}
@@ -88,10 +88,12 @@ export function Capa({ proposta, tempoLeitura }: Props) {
               <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Preparado para</p>
               <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.cliente}</p>
             </div>
-            <div>
-              <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Responsável</p>
-              <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.responsavel}</p>
-            </div>
+            {proposta.responsavel && proposta.responsavel !== proposta.cliente && (
+              <div>
+                <p style={{ fontWeight: 500, color: 'var(--white)', fontSize: '0.95rem' }}>Responsável</p>
+                <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>{proposta.responsavel}</p>
+              </div>
+            )}
           </motion.div>
         )}
 
