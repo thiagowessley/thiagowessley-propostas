@@ -104,7 +104,7 @@ export const thaisEdicaoVideo: PropostaData = {
         destaque: true,
         resumo: 'Edição sobre material já gravado',
         itens: [
-          'Tudo da edição básica, mais efeitos sonoros, animação e b-roll',
+          'Tudo da edição básica, mais efeitos sonoros, animação e b-roll (imagem própria ou de banco, quando o cliente final não tiver material de apoio)',
           'Pacote de até 10 vídeos por mês',
           'Entrega em MP4, pronta pra postar',
           '2 rodadas de ajuste por vídeo (corte de fala e legenda)',
