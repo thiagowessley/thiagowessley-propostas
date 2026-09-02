@@ -41,7 +41,7 @@ export const thaisEdicaoVideo: PropostaData = {
 
   secoes: {
     cenario: {
-      problema: 'Sua agência atende clientes de segmentos diferentes (médicas, gráfica, salão de beleza) e precisa manter um volume constante de Reels no ar, com previsibilidade de prazo em cada entrega.',
+      problema: 'Sua agência atende clientes de segmentos diferentes e precisa manter um volume constante de Reels no ar, com previsibilidade de prazo em cada entrega.',
       publico: 'Clientes finais da sua agência, cada um com o próprio público no Instagram, que dependem de Reels publicados no ritmo combinado pra manter o anúncio e o conteúdo orgânico rodando.',
       desafio: 'Ter um fluxo de edição com prazo fechado todo mês, sem precisar acompanhar de perto cada entrega pra garantir que sai no tempo certo.',
       entregas: [
@@ -91,7 +91,7 @@ export const thaisEdicaoVideo: PropostaData = {
           'Corte, ritmo, legenda, correção de cor e transição',
           'Pacote de até 10 vídeos por mês',
           'Entrega em MP4, pronta pra postar',
-          '1 rodada de ajuste por vídeo (corte de fala e legenda)',
+          '2 rodadas de ajuste por vídeo (corte de fala e legenda)',
           'Sem diária de captação: o material bruto é enviado por você',
         ],
         valor: 247,
@@ -107,7 +107,7 @@ export const thaisEdicaoVideo: PropostaData = {
           'Tudo da edição básica, mais efeitos sonoros, animação e b-roll',
           'Pacote de até 10 vídeos por mês',
           'Entrega em MP4, pronta pra postar',
-          '1 rodada de ajuste por vídeo (corte de fala e legenda)',
+          '2 rodadas de ajuste por vídeo (corte de fala e legenda)',
           'Sem diária de captação: o material bruto é enviado por você',
         ],
         valor: 697,
@@ -136,7 +136,7 @@ export const thaisEdicaoVideo: PropostaData = {
         itens: [
           'A qualidade de áudio e imagem do material bruto enviado é de responsabilidade de quem contrata.',
           'A trilha sonora usada nas edições é licenciada, sem risco de direito autoral. Uma vez aprovada, não pode ser trocada sem orçamento novo.',
-          'Cada vídeo tem direito a 1 rodada de ajuste, limitada a corte de fala já gravada e ajuste de legenda. Nova captação, nova cena ou troca de trilha são orçadas à parte.',
+          'Cada vídeo tem direito a 2 rodadas de ajuste, limitadas a corte de fala já gravada e ajuste de legenda. Nova captação, nova cena ou troca de trilha são orçadas à parte.',
           'Capa e thumbnail de vídeo não estão inclusos no escopo de edição, são orçados à parte.',
         ],
       },
@@ -174,7 +174,7 @@ export const thaisEdicaoVideo: PropostaData = {
       },
       {
         pergunta: 'Dá pra pedir alteração depois de pronto?',
-        resposta: 'Cada vídeo tem direito a 1 rodada de ajuste, limitada a corte de fala já gravada e ajuste de legenda. Nova cena, nova captação ou troca de trilha são orçadas à parte.',
+        resposta: 'Cada vídeo tem direito a 2 rodadas de ajuste, limitadas a corte de fala já gravada e ajuste de legenda. Nova cena, nova captação ou troca de trilha são orçadas à parte.',
       },
     ],
     primeiros_30_dias: [
