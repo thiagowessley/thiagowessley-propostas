@@ -45,6 +45,24 @@ function PlanoCard({ plano }: { plano: NonNullable<Props['planos']>[number] }) {
           {plano.rodape}
         </p>
       )}
+      {plano.video && (
+        <div style={{ marginTop: '24px' }}>
+          <div style={{ position: 'relative', width: '100%', aspectRatio: '9 / 16', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
+            <iframe
+              src={`https://www.youtube.com/embed/${plano.video.youtubeId}`}
+              title={plano.video.label ?? plano.nome}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }}
+            />
+          </div>
+          {plano.video.label && (
+            <p style={{ marginTop: '10px', fontSize: '0.72rem', color: 'var(--muted)', textAlign: 'center' }}>
+              {plano.video.label}
+            </p>
+          )}
+        </div>
+      )}
     </div>
   )
 }

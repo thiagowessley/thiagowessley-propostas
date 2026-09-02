@@ -85,8 +85,8 @@ export const thaisEdicaoVideo: PropostaData = {
     ],
     planos: [
       {
-        nome: 'Edição Simples',
-        resumo: 'Você grava, eu edito',
+        nome: 'Edição Básica',
+        resumo: 'Edição sobre material já gravado',
         itens: [
           'Corte, ritmo, legenda, correção de cor e transição',
           'Pacote de até 10 vídeos por mês',
@@ -97,13 +97,14 @@ export const thaisEdicaoVideo: PropostaData = {
         valor: 247,
         periodo: '/mês (pacote de 10 vídeos)',
         rodape: 'Vídeo avulso fora do pacote: R$ 30 cada',
+        video: { youtubeId: 'V5lMb2SksPs', label: 'Exemplo de edição básica: Maria Eduarda, Nutricionista' },
       },
       {
         nome: 'Edição Avançada',
         destaque: true,
-        resumo: 'Você grava, eu edito',
+        resumo: 'Edição sobre material já gravado',
         itens: [
-          'Tudo da edição simples, mais efeitos sonoros, animação e b-roll',
+          'Tudo da edição básica, mais efeitos sonoros, animação e b-roll',
           'Pacote de até 10 vídeos por mês',
           'Entrega em MP4, pronta pra postar',
           '1 rodada de ajuste por vídeo (corte de fala e legenda)',
@@ -112,6 +113,7 @@ export const thaisEdicaoVideo: PropostaData = {
         valor: 697,
         periodo: '/mês (pacote de 10 vídeos)',
         rodape: 'Vídeo avulso fora do pacote: R$ 79 cada',
+        video: { youtubeId: 'JNHSNxgJT1s', label: 'Exemplo de edição avançada: Camila Oliveira' },
       },
     ],
     prazos: [
@@ -141,8 +143,8 @@ export const thaisEdicaoVideo: PropostaData = {
     ],
     pagamento: {
       blocos: [
-        { titulo: 'Pacote de Edição', descricao: 'Cobrado no início de cada ciclo, conforme o pacote escolhido (simples ou avançada).' },
-        { titulo: 'Vídeo Avulso', descricao: 'Fora do pacote: R$ 30 (simples) ou R$ 79 (avançada), cobrado por vídeo entregue.' },
+        { titulo: 'Pacote de Edição', descricao: 'Cobrado no início de cada ciclo, conforme o pacote escolhido (básica ou avançada).' },
+        { titulo: 'Vídeo Avulso', descricao: 'Fora do pacote: R$ 30 (básica) ou R$ 79 (avançada), cobrado por vídeo entregue.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
@@ -151,8 +153,8 @@ export const thaisEdicaoVideo: PropostaData = {
     },
     faq: [
       {
-        pergunta: 'Qual a diferença entre a edição simples e a avançada?',
-        resposta: 'A simples cobre corte, ritmo, legenda, correção de cor e transição. A avançada tem tudo isso mais efeito sonoro, animação e uso de imagens de apoio (b-roll), pra quem quer o vídeo com mais camada de produção.',
+        pergunta: 'Qual a diferença entre a edição básica e a avançada?',
+        resposta: 'A básica cobre corte, ritmo, legenda, correção de cor e transição. A avançada tem tudo isso mais efeito sonoro, animação e uso de imagens de apoio (b-roll), pra quem quer o vídeo com mais camada de produção.',
       },
       {
         pergunta: 'Como funciona o envio do material?',
@@ -164,7 +166,7 @@ export const thaisEdicaoVideo: PropostaData = {
       },
       {
         pergunta: 'E se o volume passar de 10 vídeos no mês?',
-        resposta: 'O que passar do pacote contratado é cobrado como vídeo avulso, no valor do plano escolhido (R$ 30 na simples, R$ 79 na avançada).',
+        resposta: 'O que passar do pacote contratado é cobrado como vídeo avulso, no valor do plano escolhido (R$ 30 na básica, R$ 79 na avançada).',
       },
       {
         pergunta: 'Existe fidelidade no contrato?',

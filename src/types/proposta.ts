@@ -56,6 +56,11 @@ export interface Portfolio {
   itens: PortfolioItem[]                   // grid de imagens
 }
 
+export interface PlanoVideo {
+  youtubeId: string  // id do video no YouTube
+  label?: string     // legenda pequena abaixo do video, ex: "Exemplo de entrega"
+}
+
 export interface PlanoPreco {
   nome: string           // "Basico", "Completo", "Setup"
   destaque?: boolean     // card central iluminado
@@ -64,6 +69,7 @@ export interface PlanoPreco {
   valor: number          // valor em reais (0 = "sob consulta")
   periodo?: string       // "/mes", "entrega unica"
   rodape?: string        // observacao pequena no fim
+  video?: PlanoVideo     // exemplo em video do resultado do plano, opcional
 }
 
 export interface ItemPrazo {
