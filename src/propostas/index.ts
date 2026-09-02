@@ -10,6 +10,7 @@ import { eduardaAdrianaDiariaCompartilhada } from './eduarda-adriana-diaria-comp
 import { valensProducaoConteudo } from './valens-producao-conteudo'
 import { dgAtivosSite } from './dg-ativos-site'
 import { thaisDiariaEsportiva } from './thais-diaria-esportiva'
+import { thaisEdicaoVideo } from './thais-edicao-video'
 import { tassianaBniAftermovie } from './tassiana-bni-aftermovie'
 import { rafaelBniAftermovie } from './rafael-bni-aftermovie'
 
@@ -25,6 +26,7 @@ export const propostas: Record<string, PropostaData> = {
   valensProducaoConteudo,
   dgAtivosSite,
   thaisDiariaEsportiva,
+  thaisEdicaoVideo,
   tassianaBniAftermovie,
   rafaelBniAftermovie,
 }
