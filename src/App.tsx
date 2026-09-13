@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { PropostaPage } from './pages/PropostaPage'
 import { AprovacaoPage } from './pages/AprovacaoPage'
+import { CatalogoPage } from './pages/CatalogoPage'
+import { PlanoPage } from './pages/PlanoPage'
 
 function Home() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/p/:slug" element={<PropostaPage />} />
         <Route path="/a/:slug" element={<AprovacaoPage />} />
+        <Route path="/c/:slug" element={<CatalogoPage />} />
+        <Route path="/n/:slug" element={<PlanoPage />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>

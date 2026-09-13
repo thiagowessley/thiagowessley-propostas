@@ -1,0 +1,243 @@
+/* Linha Pet Patas de Aço: direção visual Matéria Clara. Tudo escopado em .lp */
+
+:root {
+  --lp-osso: #F4F1EC;
+  --lp-osso-2: #EBE6DE;
+  --lp-papel: #FFFFFF;
+  --lp-grafite: #1C1C1A;
+  --lp-texto: #3A3833;
+  --lp-suave: #6E6A63;
+  --lp-metal: #8E9296;
+  --lp-terracota: #B8624A;
+  --lp-terracota-texto: #9A4E39;
+  --lp-linha: #DED9D1;
+  --lp-verde: #3F7A4E;
+  --lp-max: 1120px;
+}
+
+body.lp-body { background: var(--lp-osso); }
+
+.lp {
+  min-height: 100vh;
+  background: var(--lp-osso);
+  color: var(--lp-texto);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color-scheme: light;
+}
+
+.lp h1, .lp h2, .lp h3, .lp h4 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  color: var(--lp-grafite);
+  letter-spacing: -0.015em;
+}
+.lp h1 { font-size: clamp(48px, 7vw, 88px); font-weight: 300; line-height: 1; letter-spacing: -0.03em; }
+.lp h2 { font-size: clamp(30px, 3.6vw, 42px); line-height: 1.1; margin: 10px 0 18px; }
+.lp h3 { font-size: 24px; line-height: 1.2; }
+.lp h4 { font-family: 'Inter', system-ui, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0; color: var(--lp-grafite); }
+.lp p { margin: 0; }
+.lp a { color: var(--lp-terracota-texto); text-underline-offset: 3px; }
+
+.lp-wrap { max-width: var(--lp-max); margin: 0 auto; padding-left: 32px; padding-right: 32px; }
+.lp-vazio { display: grid; place-items: center; }
+
+.lp-rotulo {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--lp-suave);
+}
+.lp-lede { font-size: 19px; line-height: 1.55; color: var(--lp-suave); max-width: 640px; }
+.lp-lede-curta { font-size: 16px; margin-bottom: 28px; }
+.lp-nota { margin-top: 20px; font-size: 14px; color: var(--lp-suave); max-width: 760px; }
+.lp-num { font-family: 'Fraunces', Georgia, serif; font-size: 15px; color: var(--lp-terracota-texto); }
+
+/* topo */
+.lp-topo { position: sticky; top: 0; z-index: 50; background: rgba(244, 241, 236, 0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--lp-linha); }
+.lp-topo-barra { max-width: var(--lp-max); margin: 0 auto; padding: 0 32px; height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.lp-topo-marca { font-family: 'Fraunces', Georgia, serif; font-size: 18px; color: var(--lp-grafite); }
+.lp-topo-links { display: flex; gap: 24px; }
+.lp-topo-links a { font-size: 14px; color: var(--lp-suave); text-decoration: none; padding: 6px 0; border-bottom: 1px solid transparent; }
+.lp-topo-links a.ativo, .lp-topo-links a:hover { color: var(--lp-grafite); border-bottom-color: var(--lp-grafite); }
+
+/* capa */
+.lp-capa { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; padding-top: 88px; padding-bottom: 88px; }
+.lp-capa-plano { grid-template-columns: 1fr; padding-bottom: 56px; }
+.lp-capa-texto h1 { margin: 20px 0 24px; }
+.lp-endosso { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--lp-linha); font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--lp-grafite); display: inline-block; }
+
+/* seções */
+.lp-sec { padding-top: 80px; padding-bottom: 80px; border-top: 1px solid var(--lp-linha); }
+.lp-sec-cabeca { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-bottom: 8px; }
+.lp-texto { display: grid; gap: 16px; max-width: 760px; font-size: 17px; }
+
+/* pilares e passos */
+.lp-pilares { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
+.lp-pilar { background: var(--lp-papel); border: 1px solid var(--lp-linha); border-radius: 4px; padding: 32px 28px; }
+.lp-pilar h3 { margin: 18px 0 10px; }
+.lp-pilar p { font-size: 15px; }
+
+.lp-passos { list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); border-top: 1px solid var(--lp-grafite); }
+.lp-passo { padding: 22px 20px 8px 0; }
+.lp-passo h3 { font-size: 20px; margin: 10px 0 8px; }
+.lp-passo p { font-size: 14px; color: var(--lp-suave); }
+
+/* seletor */
+.lp-seletor { display: flex; flex-direction: column; gap: 8px; }
+.lp-seletor-rotulo { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--lp-suave); }
+.lp-seletor-opcoes { display: inline-flex; border: 1px solid var(--lp-grafite); border-radius: 999px; padding: 3px; background: var(--lp-papel); }
+.lp-seletor-opcoes button { font: 500 14px/1 'Inter', system-ui, sans-serif; border: 0; background: transparent; color: var(--lp-grafite); padding: 10px 18px; border-radius: 999px; cursor: pointer; }
+.lp-seletor-opcoes button[aria-pressed='true'] { background: var(--lp-grafite); color: var(--lp-osso); }
+.lp-seletor-opcoes button:focus-visible { outline: 2px solid var(--lp-terracota); outline-offset: 2px; }
+
+.lp-controles { position: sticky; top: 60px; z-index: 40; background: rgba(244, 241, 236, 0.95); backdrop-filter: blur(8px); border-top: 1px solid var(--lp-linha); border-bottom: 1px solid var(--lp-linha); }
+.lp-controles-barra { display: flex; gap: 32px; flex-wrap: wrap; padding-top: 14px; padding-bottom: 14px; }
+
+/* figura */
+.lp-figura { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; background: var(--lp-osso-2); display: block; }
+.lp-figura-vazia { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border: 1px solid var(--lp-linha); }
+.lp-figura-num { font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: 96px; line-height: 1; color: var(--lp-metal); }
+.lp-figura-nota { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lp-suave); }
+
+/* produtos */
+.lp-produtos { display: grid; gap: 72px; margin-top: 48px; }
+.lp-produto { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; break-inside: avoid; }
+.lp-produto:nth-child(even) .lp-figura { order: 2; }
+.lp-produto-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font-size: 13px; color: var(--lp-suave); }
+.lp-produto-num { font-family: 'Fraunces', Georgia, serif; font-size: 18px; color: var(--lp-terracota-texto); }
+.lp-selo { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lp-grafite); border: 1px solid var(--lp-grafite); border-radius: 999px; padding: 4px 10px; }
+.lp-produto h3 { font-size: 34px; margin: 14px 0 10px; }
+.lp-produto-resumo { font-size: 17px; color: var(--lp-grafite); }
+.lp-blocos { display: grid; gap: 16px; margin: 24px 0; }
+.lp-blocos h4 { margin-bottom: 4px; }
+.lp-blocos p { font-size: 15px; }
+.lp-specs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; margin: 0; border-top: 1px solid var(--lp-linha); }
+.lp-specs div { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--lp-linha); }
+.lp-specs dt { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lp-suave); }
+.lp-specs dd { margin: 2px 0 0; font-size: 14px; color: var(--lp-grafite); }
+.lp-preco { display: flex; align-items: baseline; justify-content: space-between; margin-top: 22px; }
+.lp-preco span { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lp-suave); }
+.lp-preco strong { font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: 34px; color: var(--lp-grafite); }
+.lp-ref { margin-top: 8px; font-size: 13px; color: var(--lp-suave); }
+
+/* tabelas */
+.lp-tabela-wrap { overflow-x: auto; margin-top: 12px; border: 1px solid var(--lp-linha); border-radius: 4px; background: var(--lp-papel); }
+.lp-tabela { width: 100%; border-collapse: collapse; font-size: 14px; }
+.lp-tabela th, .lp-tabela td { padding: 13px 16px; text-align: left; border-bottom: 1px solid var(--lp-linha); vertical-align: top; }
+.lp-tabela thead th { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lp-suave); background: var(--lp-osso); }
+.lp-tabela tbody th { font-weight: 500; color: var(--lp-grafite); }
+.lp-tabela tbody tr:last-child th, .lp-tabela tbody tr:last-child td { border-bottom: 0; }
+.lp-tabela-destaque { color: var(--lp-grafite); font-weight: 500; }
+.lp-tabela-numeros td, .lp-tabela-numeros th { white-space: nowrap; padding: 12px 11px; font-size: 13.5px; }
+.lp-n { text-align: right !important; font-variant-numeric: tabular-nums; }
+.lp-col-ativa { background: rgba(184, 98, 74, 0.07); }
+.lp-linha-destaque th, .lp-linha-destaque td { font-weight: 600; color: var(--lp-grafite); }
+.lp-alerta { color: var(--lp-terracota-texto); font-weight: 600; }
+.lp-status { font-size: 12px; white-space: nowrap; color: var(--lp-suave); }
+.lp-status-ok { color: var(--lp-verde); font-weight: 600; }
+
+/* kpis */
+.lp-kpis { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--lp-grafite); margin-top: 28px; }
+.lp-kpis-mercado { grid-template-columns: repeat(4, 1fr); margin-bottom: 32px; }
+.lp-kpi { display: flex; flex-direction: column; gap: 6px; padding: 22px 20px 22px 0; border-bottom: 1px solid var(--lp-linha); }
+.lp-kpi-valor { font-family: 'Fraunces', Georgia, serif; font-size: 34px; line-height: 1.1; color: var(--lp-grafite); font-variant-numeric: tabular-nums; }
+.lp-kpi-rotulo { font-size: 14px; color: var(--lp-texto); }
+.lp-kpi-fonte { font-size: 12px; color: var(--lp-suave); }
+
+/* blocos de texto */
+.lp-duas-colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 40px; }
+.lp-duas-colunas h3 { font-size: 22px; margin-bottom: 16px; }
+.lp-item { padding: 16px 0; border-top: 1px solid var(--lp-linha); }
+.lp-item h4 { margin-bottom: 4px; }
+.lp-item p { font-size: 15px; }
+.lp-fora { margin-top: 28px; }
+.lp-lista { margin: 0; padding-left: 18px; display: grid; gap: 12px; font-size: 15px; }
+.lp-lista li::marker { color: var(--lp-terracota); }
+
+.lp-riscos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 48px; margin-top: 28px; }
+.lp-risco { padding: 18px 0; border-top: 1px solid var(--lp-linha); break-inside: avoid; }
+.lp-risco h4 { font-size: 15px; margin-bottom: 6px; }
+.lp-risco p { font-size: 14px; color: var(--lp-suave); }
+
+.lp-roadmap { list-style: none; padding: 0; margin: 48px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--lp-grafite); }
+.lp-roadmap li { padding: 20px 20px 0 0; }
+.lp-roadmap-periodo { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lp-terracota-texto); }
+.lp-roadmap h3 { font-size: 20px; margin: 8px 0; }
+.lp-roadmap p { font-size: 14px; color: var(--lp-suave); }
+
+.lp-decisoes { background: var(--lp-grafite); max-width: none; border-top: 0; }
+.lp-decisoes > * { max-width: calc(var(--lp-max) - 64px); margin-left: auto; margin-right: auto; }
+.lp-decisoes .lp-rotulo { color: #B9B4AB; }
+.lp-decisoes h2 { color: var(--lp-osso); }
+.lp-lista-numerada { margin: 24px auto 0; padding-left: 26px; display: grid; gap: 14px; color: var(--lp-osso); font-size: 18px; }
+.lp-lista-numerada li::marker { font-family: 'Fraunces', Georgia, serif; color: #D9957F; }
+
+.lp-fontes { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 8px; font-size: 13px; }
+.lp-fontes span { color: var(--lp-suave); }
+
+.lp-rodape { max-width: var(--lp-max); margin: 0 auto; padding: 28px 32px 48px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--lp-suave); border-top: 1px solid var(--lp-linha); }
+
+/* responsivo */
+@media (max-width: 860px) {
+  .lp-wrap, .lp-topo-barra { padding-left: 20px; padding-right: 20px; }
+  .lp-capa, .lp-produto, .lp-duas-colunas, .lp-riscos { grid-template-columns: 1fr; gap: 28px; }
+  .lp-produto:nth-child(even) .lp-figura { order: 0; }
+  .lp-pilares, .lp-kpis, .lp-kpis-mercado, .lp-roadmap { grid-template-columns: 1fr; }
+  .lp-sec { padding-top: 56px; padding-bottom: 56px; }
+  .lp-topo-links { gap: 14px; }
+  .lp-controles-barra { gap: 16px; }
+  .lp-controles { position: static; }
+}
+
+/* impressão e PDF: a folha A4 tem menos de 860 px de largura, então aqui o layout de celular é desfeito */
+@media print {
+  .lp, .lp * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  @page { size: A4; margin: 12mm 11mm; }
+  .lp { font-size: 10.5pt; line-height: 1.5; min-height: 0; }
+  .lp-topo, .lp-controles { display: none; }
+  .lp-wrap { padding-left: 0; padding-right: 0; max-width: none; }
+  .lp h1 { font-size: 42pt; }
+  .lp h2 { font-size: 19pt; margin: 6px 0 12px; }
+  .lp h3 { font-size: 14pt; }
+  .lp-lede { font-size: 12pt; }
+  .lp-lede-curta { font-size: 10pt; margin-bottom: 10pt; }
+  .lp-texto { font-size: 10.5pt; gap: 8px; }
+  .lp-nota { font-size: 9pt; margin-top: 8px; }
+  .lp-sec { padding-top: 16pt; padding-bottom: 16pt; }
+  .lp-capa { grid-template-columns: 1fr 1fr; gap: 24px; padding-top: 8pt; padding-bottom: 20pt; }
+  .lp-capa-plano { grid-template-columns: 1fr; }
+  .lp-pilares { grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12pt; }
+  .lp-pilar { padding: 14px 12px; }
+  .lp-pilar p, .lp-passo p { font-size: 9.5pt; }
+  .lp-passos { grid-template-columns: repeat(3, 1fr); margin-top: 12pt; }
+  .lp-produtos { gap: 16pt; margin-top: 14pt; }
+  .lp-produto { grid-template-columns: 38% 1fr; gap: 18px; }
+  .lp-produto:nth-child(even) .lp-figura { order: 0; }
+  .lp-produto h3 { font-size: 17pt; margin: 6px 0 4px; }
+  .lp-produto-resumo { font-size: 10.5pt; }
+  .lp-blocos { gap: 6px; margin: 8px 0; }
+  .lp-blocos p, .lp-specs dd { font-size: 9pt; }
+  .lp-specs div { padding: 4px 8px 4px 0; }
+  .lp-preco { margin-top: 6px; }
+  .lp-preco strong { font-size: 17pt; }
+  .lp-ref { font-size: 8.5pt; }
+  .lp-figura-num { font-size: 44pt; }
+  .lp-kpis { grid-template-columns: repeat(3, 1fr); margin-top: 10pt; }
+  .lp-kpis-mercado { grid-template-columns: repeat(2, 1fr); margin-bottom: 10pt; }
+  .lp-kpi { padding: 8px 12px 8px 0; }
+  .lp-kpi-valor { font-size: 17pt; }
+  .lp-kpi-rotulo { font-size: 9pt; }
+  .lp-duas-colunas, .lp-riscos { grid-template-columns: 1fr 1fr; gap: 0 24px; margin-top: 12pt; }
+  .lp-roadmap { grid-template-columns: repeat(2, 1fr); margin-top: 14pt; }
+  .lp-tabela { font-size: 9pt; }
+  .lp-tabela th, .lp-tabela td { padding: 5px 8px; }
+  .lp-tabela-numeros td, .lp-tabela-numeros th { padding: 5px 6px; font-size: 8.5pt; }
+  .lp-tabela-wrap { overflow: visible; }
+  .lp-lista-numerada { font-size: 11pt; }
+  .lp-produto, .lp-kpi, .lp-risco, .lp-pilar, .lp-passo, .lp-tabela tr, .lp-item { break-inside: avoid; }
+  .lp h2, .lp-rotulo { break-after: avoid; }
+  .lp-rodape { padding: 12pt 0 0; }
+}

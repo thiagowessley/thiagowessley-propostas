@@ -18,6 +18,10 @@ Stack: React 18 + Vite 5 + TypeScript + react-router-dom v6 + Framer Motion
 - CTA principal do Encerramento tem texto customizavel (campo ctaWhatsapp, default "Falar no
   WhatsApp"). Usar quando fizer sentido reforcar urgencia especifica do servico (ex: "Reservar
   minha data" pra servico preso a uma data de evento).
+- Card de plano (PlanoPreco, secao Investimento) aceita campo opcional video ({youtubeId, label}),
+  renderizado como embed do YouTube vertical 9:16 logo abaixo do preco/rodape (02/09/2026,
+  Financeiro.tsx). Usar quando fizer sentido mostrar exemplo real do resultado daquele plano
+  especifico (ex: video de cliente real mostrando o padrao de edicao daquele tier).
 - Commits frequentes apos cada task
 
 ## Materiais de aprovacao (rota /a/:slug, 27/07/2026)
@@ -49,3 +53,24 @@ os componentes de PropostaPage (que sao especificos de venda/orcamento).
   site errado pro cliente.
 - Toda URL de proposta segue o padrao: propostas.thiagowessley.com.br/p/[slug]
 - Email git: th.ws.gm@gmail.com (obrigatorio para deploy automatico funcionar)
+
+## Linha de produto de cliente: catálogo e plano de negócios (rotas /c/:slug e /n/:slug, 13/09/2026)
+
+Terceiro sistema do repo, criado para a linha pet "Patas de Aço" da Dassg Têmpera. Não reutiliza
+componentes de proposta nem de aprovação, e NÃO usa o dark premium: é a identidade visual da marca
+do cliente (direção Matéria Clara: osso, grafite, terracota, Fraunces e Inter).
+
+- Conteúdo: src/linha-pet/patas-de-aco.ts (textos, produtos, recortes, fontes).
+- Números: src/linha-pet/modelo-financeiro.ts. Toda premissa mora ali e as páginas só chamam
+  calcular(). Nunca digitar valor à mão na página.
+- Verificação obrigatória antes de todo commit que mexer em premissa ou fórmula:
+  `node scripts/verificar-modelo-pet.mjs`. Ele refaz a conta de forma independente nos 6 cenários
+  e planta um erro de propósito para provar que detecta divergência. Saída esperada: "RESULTADO:
+  modelo conferido".
+- Páginas: src/pages/CatalogoPage.tsx e src/pages/PlanoPage.tsx; componentes em
+  src/components/linha-pet/; estilos em src/styles/linha-pet.css, tudo escopado na classe .lp.
+- Mockups dos produtos: public/img/linha-pet/[id]-[nome].jpg, apontados no campo imagem de cada
+  produto. Sem imagem, a página mostra um placeholder numerado em vez de quebrar.
+- URLs: propostas.thiagowessley.com.br/c/patas-de-aco e propostas.thiagowessley.com.br/n/patas-de-aco
+- O check-copy acusa "aço" no nome da marca: esperado, é decisão do Thiago (11/09/2026). Fora do
+  nome, usar "inox".
