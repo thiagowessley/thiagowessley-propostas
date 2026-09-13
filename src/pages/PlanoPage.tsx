@@ -109,7 +109,7 @@ export function PlanoPage() {
 
       <section className="lp-sec lp-wrap">
         <div className="lp-rotulo">02 · Lacuna</div>
-        <h2>A categoria existe lá fora e ainda não tem marca aqui</h2>
+        <h2>O inox já chegou ao Brasil, a marca de peso ainda não</h2>
         <div className="lp-texto">{p.lacuna.map(t => <p key={t}>{t}</p>)}</div>
       </section>
 
