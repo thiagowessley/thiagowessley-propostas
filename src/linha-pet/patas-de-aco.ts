@@ -152,7 +152,7 @@ export const patasDeAco: LinhaPetConteudo = {
         { rotulo: 'Detalhe', valor: 'Alças vazadas e pés de silicone' },
       ],
       referenciaMercado:
-        'Caixa de plástico: R$ 52 a R$ 79. Caixa de inox: nenhuma encontrada em comparador de preço no Brasil (Buscapé e Zoom, 13/09/2026).',
+        'Caixa de plástico: R$ 52 a R$ 79. Caixa de inox concorrente: Meau, da Petlove, R$ 229,90 (petlove.com.br, 13/09/2026).',
     },
     {
       id: 'p02',
@@ -376,9 +376,9 @@ export const patasDeAco: LinhaPetConteudo = {
     ],
     lacuna: [
       'No Brasil, o plástico domina a categoria. Caixas de areia de plástico custam de R$ 52 a R$ 79 no varejo.',
-      'Em 13/09/2026, nenhuma caixa de areia de inox apareceu nos comparadores Buscapé e Zoom. Fonte de água em inox existe apenas em versão genérica importada, de R$ 162 a R$ 193.',
+      'Já existe inox no mercado brasileiro: a Petlove vende uma caixa de areia própria, a Meau, por R$ 229,90, e marketplaces como Mercado Livre e Magazine Luiza têm dezenas de modelos importados entre R$ 95 e R$ 1.400.',
       'Nos Estados Unidos, a categoria já existe com marca: a Furrbby vende oito modelos de caixa de areia de inox de US$ 89,99 a US$ 129,99, e a iPrimio vende a sua na Amazon e no Walmart.',
-      'A primeira objeção de um investidor costuma ser a de que, se fosse um bom negócio, alguém já faria. Lá fora já fazem. No Brasil ainda não existe marca, e é essa janela que o plano disputa.',
+      'A objeção real de um investidor não é mais "existe inox no Brasil". É "por que pagar mais numa marca nova, se já existe inox mais barato". A resposta não pode ser só o material, precisa ser o que nenhum concorrente de inox de hoje entrega: design de móvel, linha completa e reposição.',
     ],
     precisaoTecnica: [
       'O inox 304 não endurece por têmpera. Ele ganha resistência só por deformação a frio, e o 430 também não é endurecível por tratamento térmico. Nenhuma peça de chapa fina desta linha passa por têmpera.',
@@ -450,8 +450,8 @@ export const patasDeAco: LinhaPetConteudo = {
         mitigacao: 'Cotar os quatro produtos-ícone com fornecedores de Joinville antes de fechar preço.',
       },
       {
-        risco: 'Marcas estrangeiras de inox podem chegar ao Brasil.',
-        mitigacao: 'Chegar antes, com fabricação nacional, reposição rápida e refis que só a própria marca oferece.',
+        risco: 'Já existe concorrente de inox no Brasil: a Meau, da Petlove, por R$ 229,90.',
+        mitigacao: 'Vencer pelo que a Meau não entrega: design de móvel, linha completa e refis. O preço só se sustenta se a diferença for visível, não só o material.',
       },
       {
         risco: 'O metal pesa e encarece o frete da venda online.',
@@ -509,6 +509,7 @@ export const patasDeAco: LinhaPetConteudo = {
     { titulo: 'Caixas de areia de inox, Furrbby', url: 'https://www.furrbby.com/collections/stainless-steel-litter-box', data: '13/09/2026' },
     { titulo: 'Guia técnico do inox 430 e resistência a cloreto, Alloy Materials', url: 'https://alloy-materials.com/430-stainless-steel-guide/', data: 'consultado em 13/09/2026' },
     { titulo: 'Inox 304 em gaiolas de biotério, Otto Environmental', url: 'https://www.ottoenvironmental.com/corrosion-resistance-of-304-stainless-steel-in-laboratory-animal-caging/', data: 'consultado em 13/09/2026' },
+    { titulo: 'Caixa de Areia Meau Inox com Soleira, Petlove', url: 'https://www.petlove.com.br/caixa-de-areia-meau-inox-com-soleira-para-gatos/p', data: 'consultado em 13/09/2026' },
   ],
 }
 
