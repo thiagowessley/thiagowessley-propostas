@@ -161,6 +161,7 @@ export const patasDeAco: LinhaPetConteudo = {
       categoria: 'Higiene',
       animal: 'Gato',
       papel: 'Ticket alto',
+      imagem: '/img/linha-pet/02-caixa-areia-coberta.jpg',
       resumo: 'A mesma base da caixa aberta, com cobertura removível para o gato que prefere privacidade.',
       problema:
         'A caixa fechada de plástico concentra o cheiro dentro da cúpula, e muitos tutores acabam tirando a cobertura.',
@@ -201,6 +202,7 @@ export const patasDeAco: LinhaPetConteudo = {
       categoria: 'Estrutura de parede',
       animal: 'Gato',
       papel: 'Ticket alto',
+      imagem: '/img/linha-pet/04-kit-parede-degraus-ponte.jpg',
       resumo: 'Um percurso completo de parede: três degraus em diagonal levando a uma ponte suspensa.',
       problema:
         'Em apartamento, o gato precisa de território vertical. Montado com peças avulsas de marcas diferentes, o percurso vira uma parede sem unidade visual.',
@@ -240,6 +242,7 @@ export const patasDeAco: LinhaPetConteudo = {
       categoria: 'Estrutura',
       animal: 'Gato',
       papel: 'Ticket alto',
+      imagem: '/img/linha-pet/06-torre-piso-modular.jpg',
       resumo: 'Três níveis desencontrados em tubo de inox, com almofadas de bouclê e nicho fechado.',
       problema:
         'A torre de papelão e carpete sai do prumo em poucos meses e vira o móvel que o tutor esconde quando recebe visita.',
@@ -278,6 +281,7 @@ export const patasDeAco: LinhaPetConteudo = {
       categoria: 'Reposição',
       animal: 'Gato e cão',
       papel: 'Recorrência',
+      imagem: '/img/linha-pet/08-refis-consumiveis.jpg',
       resumo: 'Poste de sisal, filtro da fonte, pá em inox e tela da cama. O motivo para o cliente voltar ao quiosque.',
       problema: 'Quando a parte que desgasta não tem reposição, o tutor descarta o produto inteiro.',
       porQueInox:
@@ -296,6 +300,7 @@ export const patasDeAco: LinhaPetConteudo = {
       categoria: 'Descanso',
       animal: 'Cão',
       papel: 'Ticket alto',
+      imagem: '/img/linha-pet/09-cama-suspensa-cao.jpg',
       resumo: 'Quadro em tubo de inox a 20 cm do chão, com tela técnica respirável que sai para lavar.',
       problema:
         'A cama de espuma absorve umidade, pelo e cheiro, e em pouco tempo nenhuma lavagem resolve.',
@@ -315,6 +320,7 @@ export const patasDeAco: LinhaPetConteudo = {
       categoria: 'Mobilidade',
       animal: 'Cão',
       papel: 'Ticket alto',
+      imagem: '/img/linha-pet/10-rampa-dobravel-cao.jpg',
       resumo: 'Rampa leve com piso emborrachado para o cão idoso subir no sofá ou na cama sem saltar.',
       problema:
         'Para o cão idoso, cada salto do sofá é mais um impacto nas articulações. A escada estreita não resolve para quem já tem dificuldade de movimento.',
@@ -334,6 +340,7 @@ export const patasDeAco: LinhaPetConteudo = {
       categoria: 'Organização',
       animal: 'Cão',
       papel: 'Entrada',
+      imagem: '/img/linha-pet/11-suporte-parede-guia.jpg',
       resumo: 'Barra com quatro ganchos e prateleira rasa para guia, coleira e chave na porta de casa.',
       problema: 'Sem lugar fixo, guia e coleira se espalham pela entrada e somem na hora do passeio.',
       porQueInox:
