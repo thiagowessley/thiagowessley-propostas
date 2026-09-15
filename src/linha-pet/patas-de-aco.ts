@@ -140,6 +140,7 @@ export const patasDeAco: LinhaPetConteudo = {
       categoria: 'Higiene',
       animal: 'Gato',
       papel: 'Produto-ícone',
+      imagem: '/img/linha-pet/01-caixa-areia-aberta.png',
       resumo: 'Borda traseira alta, entrada baixa e alças laterais. A caixa de areia que não precisa ser trocada.',
       problema:
         'A caixa de plástico risca com a pá em poucos meses. O cheiro entra nos riscos e a lavagem deixa de resolver, até a caixa ir para o lixo.',
@@ -180,6 +181,7 @@ export const patasDeAco: LinhaPetConteudo = {
       categoria: 'Estrutura de parede',
       animal: 'Gato',
       papel: 'Produto-ícone',
+      imagem: '/img/linha-pet/03-prateleira-parede.png',
       resumo: 'Chapa dobrada com fixação oculta e manta de feltro. O gato ganha altura e a sala não perde espaço.',
       problema:
         'Prateleira de MDF ou madeira cede com o salto repetido de um gato adulto e afrouxa na parede com o tempo.',
@@ -217,6 +219,7 @@ export const patasDeAco: LinhaPetConteudo = {
       categoria: 'Enriquecimento',
       animal: 'Gato',
       papel: 'Entrada e recorrência',
+      imagem: '/img/linha-pet/05-arranhador-base-pesada.png',
       resumo: 'Base de chapa pesada que não tomba e poste de sisal que se troca sem trocar a peça.',
       problema:
         'Arranhador leve balança quando o gato estica o corpo inteiro. Com o poste instável, o gato abandona o arranhador e volta para o sofá.',
@@ -255,6 +258,7 @@ export const patasDeAco: LinhaPetConteudo = {
       categoria: 'Hidratação',
       animal: 'Gato e cão',
       papel: 'Ticket médio',
+      imagem: '/img/linha-pet/07-fonte-agua-inox.png',
       resumo: 'Fio de água contínuo em corpo de inox, com bomba de 12 V e transformador fora da água.',
       problema:
         'O reservatório de plástico risca na limpeza, e a película de sujeira volta cada vez mais rápido. Fonte suja é fonte que o animal evita.',
