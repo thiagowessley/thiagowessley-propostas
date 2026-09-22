@@ -14,13 +14,18 @@ interface Props {
 
 function PlanoCard({ plano }: { plano: NonNullable<Props['planos']>[number] }) {
   return (
-    <div className={`plano-card${plano.destaque ? ' destaque' : ''}`}>
+    <div className={`plano-card${plano.destaque ? ' destaque' : ''}`} data-colunas={plano.colunasItens}>
       {plano.destaque && <span className="plano-badge">Mais escolhido</span>}
       <h3 style={{ fontSize: '1.6rem', marginBottom: '6px' }}>{plano.nome}</h3>
       <p className="plano-resumo" style={{ fontWeight: 500, color: 'var(--gold)', marginBottom: '20px', fontSize: '0.95rem', fontStyle: 'italic' }}>
         {plano.resumo}
       </p>
-      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1, marginBottom: '24px' }}>
+      <ul
+        className={plano.colunasItens ? 'plano-itens--colunas' : undefined}
+        style={plano.colunasItens
+          ? { listStyle: 'none', flex: 1, marginBottom: '24px' }
+          : { listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1, marginBottom: '24px' }}
+      >
         {plano.itens.map((it, i) => (
           <li key={i} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', fontSize: '0.88rem', color: 'var(--ice)' }}>
             <CheckIcon />

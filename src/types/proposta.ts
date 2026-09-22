@@ -70,6 +70,7 @@ export interface PlanoPreco {
   periodo?: string       // "/mes", "entrega unica"
   rodape?: string        // observacao pequena no fim
   video?: PlanoVideo     // exemplo em video do resultado do plano, opcional
+  colunasItens?: 2 | 3   // desktop: divide os bullets em colunas e alarga o card, opcional
 }
 
 export interface ItemPrazo {

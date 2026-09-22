@@ -397,6 +397,21 @@ ul.gold-list li::before {
   box-shadow: 0 0 0 1px var(--gold), 0 0 40px -8px rgba(201, 160, 80, 0.5), 0 24px 60px -20px rgba(0,0,0,0.7);
   animation: glowPulse 3.2s ease-in-out infinite;
 }
+/* Card largo com bullets em colunas: opcional (campo colunasItens), so vale no desktop */
+.plano-itens--colunas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (min-width: 761px) {
+  .plano-card[data-colunas] { flex: 1 1 100%; max-width: 780px; }
+  .plano-card[data-colunas="3"] { max-width: 1040px; }
+  .plano-card[data-colunas] .plano-itens--colunas { display: block; column-gap: 40px; }
+  .plano-card[data-colunas="2"] .plano-itens--colunas { column-count: 2; }
+  .plano-card[data-colunas="3"] .plano-itens--colunas { column-count: 3; }
+  .plano-card[data-colunas] .plano-itens--colunas li { break-inside: avoid; margin-bottom: 12px; }
+  .plano-card[data-colunas] .capsule { max-width: 420px; }
+}
 .plano-badge {
   position: absolute;
   top: 0;
