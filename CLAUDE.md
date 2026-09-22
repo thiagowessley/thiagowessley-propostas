@@ -56,21 +56,49 @@ os componentes de PropostaPage (que sao especificos de venda/orcamento).
 
 ## Linha de produto de cliente: catálogo e plano de negócios (rotas /c/:slug e /n/:slug, 13/09/2026)
 
-Terceiro sistema do repo, criado para a linha pet "Patas de Aço" da Dassg Têmpera. Não reutiliza
-componentes de proposta nem de aprovação, e NÃO usa o dark premium: é a identidade visual da marca
-do cliente (direção Matéria Clara: osso, grafite, terracota, Fraunces e Inter).
+Terceiro sistema do repo, criado para a linha pet da Dassg Têmpera. Não reutiliza componentes de
+proposta nem de aprovação, e NÃO usa o dark premium: é a identidade visual da marca do cliente
+(direção Matéria Clara: osso, grafite, terracota, Fraunces e Inter). **Desde 22/09/2026 suporta
+mais de uma linha de material (inox e plástico) num mesmo sistema de páginas**, ver estrutura
+abaixo.
 
-- Conteúdo: src/linha-pet/patas-de-aco.ts (textos, produtos, recortes, fontes).
-- Números: src/linha-pet/modelo-financeiro.ts. Toda premissa mora ali e as páginas só chamam
-  calcular(). Nunca digitar valor à mão na página.
-- Verificação obrigatória antes de todo commit que mexer em premissa ou fórmula:
-  `node scripts/verificar-modelo-pet.mjs`. Ele refaz a conta de forma independente nos 6 cenários
-  e planta um erro de propósito para provar que detecta divergência. Saída esperada: "RESULTADO:
-  modelo conferido".
-- Páginas: src/pages/CatalogoPage.tsx e src/pages/PlanoPage.tsx; componentes em
-  src/components/linha-pet/; estilos em src/styles/linha-pet.css, tudo escopado na classe .lp.
-- Mockups dos produtos: public/img/linha-pet/[id]-[nome].jpg, apontados no campo imagem de cada
-  produto. Sem imagem, a página mostra um placeholder numerado em vez de quebrar.
-- URLs: propostas.thiagowessley.com.br/c/patas-de-aco e propostas.thiagowessley.com.br/n/patas-de-aco
-- O check-copy acusa "aço" no nome da marca: esperado, é decisão do Thiago (11/09/2026). Fora do
-  nome, usar "inox".
+- Conteúdo por linha: src/linha-pet/patas-de-aco.ts (inox) e src/linha-pet/plastico.ts (plástico),
+  cada um exportando um objeto `LinhaPetConteudo` (textos, produtos, recortes, fontes). `getLinhaPetBySlug`
+  em patas-de-aco.ts resolve as duas (consulta o próprio objeto e, se não achar, delega a
+  `getLinhaPlasticoBySlug` de plastico.ts). Linha nova: criar `src/linha-pet/[nome].ts` com o mesmo
+  formato e adicionar a checagem em `getLinhaPetBySlug`.
+- Números por linha: cada linha pode ter o PRÓPRIO módulo de modelo financeiro (o inox usa
+  `modelo-financeiro.ts`, custo por área de chapa metálica; o plástico usa
+  `modelo-financeiro-plastico.ts`, custo por peso de resina mais amortização de molde, e tem um
+  segundo eixo, canal de venda, que o inox não tem). `src/linha-pet/modelo-por-slug.ts` resolve
+  qual módulo usar a partir do slug da URL; as páginas chamam sempre `getModeloBySlug(slug)`, nunca
+  importam um modelo fixo direto. Toda premissa mora no módulo do modelo, as páginas só chamam
+  `calcular()`. Nunca digitar valor à mão na página.
+- Verificação obrigatória antes de todo commit que mexer em premissa ou fórmula de qualquer linha:
+  `node scripts/verificar-modelo-pet.mjs` (inox) e/ou `node scripts/verificar-modelo-pet-plastico.mjs`
+  (plástico). Cada um refaz a conta de forma independente e planta um erro de propósito para provar
+  que detecta divergência. Ao criar modelo financeiro pra uma terceira linha, criar o verificador
+  dela também, mesmo padrão.
+- Páginas: src/pages/CatalogoPage.tsx e src/pages/PlanoPage.tsx são genéricas por slug (usam
+  `getLinhaPetBySlug` e `getModeloBySlug`), não pertencem a uma linha específica. Textos que só
+  fazem sentido pra uma linha (ex: "Por que em inox", "Plástico e inox, lado a lado", "Do quilo de
+  inox ao preço na prateleira") são campos OPCIONAIS no tipo `LinhaPetConteudo` (`porQueTitulo`,
+  `comparativoTitulo`, `custoTitulo`, `custoRotuloPeso`, `lacunaTitulo`, `ondeFornoEntraTitulo`
+  etc), com o texto do inox como valor padrão quando a linha não define o campo. Linha nova que
+  precisar de uma seção com framing diferente: adicionar mais um campo opcional no tipo em vez de
+  reescrever a página. Seletor de canal (`PlanoPage.tsx`) só aparece quando `modelo.canais` existe.
+- Componentes em src/components/linha-pet/; estilos em src/styles/linha-pet.css, tudo escopado na
+  classe .lp. **CSS de impressão:** todo controle interativo novo (seletor, botão, toggle) precisa
+  de regra própria escondendo ele em `@media print`, não basta confiar nos wrappers `.lp-topo` e
+  `.lp-controles` (achado real: o seletor de Recorte do catálogo ficava fora dos dois e aparecia
+  visível e clicável no PDF, corrigido com `.lp-sec-cabeca .lp-seletor { display: none }`).
+- Mockups dos produtos: public/img/linha-pet/[id]-[nome].jpg (inox) e pasta equivalente por linha,
+  apontados no campo imagem de cada produto. Sem imagem, a página mostra um placeholder numerado em
+  vez de quebrar.
+- PDF: `scripts/gerar-pdf-plastico.mjs` gera catálogo e plano a partir do dev server rodando,
+  usando Edge com porta de depuração (puppeteer.launch direto está quebrado desde o Edge 153, ver
+  skill licoes-tecnicas). Mesmo padrão serve pra gerar PDF de qualquer linha, trocando as URLs.
+- URLs: propostas.thiagowessley.com.br/c/patas-de-aco, /n/patas-de-aco (inox) e /c/linha-plastico,
+  /n/linha-plastico (plástico).
+- O check-copy acusa "aço" no nome da marca "Patas de Aço": esperado, é decisão do Thiago
+  (11/09/2026). Fora do nome, usar "inox" (nunca "aço" nem "metal" soltos referindo o material).
