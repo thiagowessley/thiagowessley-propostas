@@ -197,7 +197,7 @@ body.lp-body { background: var(--lp-osso); }
   .lp, .lp * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   @page { size: A4; margin: 12mm 11mm; }
   .lp { font-size: 10.5pt; line-height: 1.5; min-height: 0; }
-  .lp-topo, .lp-controles { display: none; }
+  .lp-topo, .lp-controles, .lp-sec-cabeca .lp-seletor { display: none; }
   .lp-wrap { padding-left: 0; padding-right: 0; max-width: none; }
   .lp h1 { font-size: 42pt; }
   .lp h2 { font-size: 19pt; margin: 6px 0 12px; }
