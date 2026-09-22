@@ -1,4 +1,5 @@
 import type { RecorteId } from './modelo-financeiro'
+import { getLinhaPlasticoBySlug } from './plastico'
 
 export interface Especificacao {
   rotulo: string
@@ -45,7 +46,12 @@ export interface LinhaPetConteudo {
     eyebrow: string
     subtitulo: string
     pilares: ItemTexto[]
+    teseTitulo?: string
     comparativo: { criterio: string; plastico: string; inox: string }[]
+    comparativoTitulo?: string
+    comparativoColEsquerda?: string
+    comparativoColDireita?: string
+    porQueTitulo?: string
     fabricacao: ItemTexto[]
     notaFabricacao: string
   }
@@ -58,10 +64,14 @@ export interface LinhaPetConteudo {
     mercadoTexto: string[]
     lacuna: string[]
     precisaoTecnica: string[]
+    ondeFornoEntraTitulo?: string
     ondeFornoEntra: ItemTexto[]
     cuidadosTecnicos: string[]
     foraDaLinha: ItemTexto[]
     operacao: ItemTexto[]
+    lacunaTitulo?: string
+    custoTitulo?: string
+    custoRotuloPeso?: string
     custoIntro: string
     quiosqueIntro: string
     fabricanteIntro: string
@@ -525,5 +535,6 @@ export const patasDeAco: LinhaPetConteudo = {
 }
 
 export function getLinhaPetBySlug(slug: string): LinhaPetConteudo | undefined {
-  return slug === patasDeAco.slug ? patasDeAco : undefined
+  if (slug === patasDeAco.slug) return patasDeAco
+  return getLinhaPlasticoBySlug(slug)
 }

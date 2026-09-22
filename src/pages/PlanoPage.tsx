@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getLinhaPetBySlug } from '../linha-pet/patas-de-aco'
-import { PREMISSAS, calcular, type CenarioId, type RecorteId } from '../linha-pet/modelo-financeiro'
+import { getModeloBySlug } from '../linha-pet/modelo-por-slug'
+import type { CenarioId, RecorteId } from '../linha-pet/modelo-financeiro'
 import { brl, brlOu, capitalizar, meses, num, pct, porExtenso, vezes } from '../linha-pet/formato'
 import { BarraTopo, Rodape, Seletor, usePaginaLinhaPet } from '../components/linha-pet/Comum'
 
@@ -11,8 +12,11 @@ const MARKUP_MINIMO = 2
 export function PlanoPage() {
   const { slug } = useParams<{ slug: string }>()
   const linha = slug ? getLinhaPetBySlug(slug) : undefined
+  const modelo = getModeloBySlug(slug ?? '')
   const [recorte, setRecorte] = useState<RecorteId>('A')
   const [cenario, setCenario] = useState<CenarioId>('base')
+  const canaisDisponiveis = modelo.canais ? Object.entries(modelo.canais).map(([id, c]) => ({ valor: id, rotulo: c.rotulo })) : []
+  const [canal, setCanal] = useState<string>(canaisDisponiveis[0]?.valor ?? '')
   usePaginaLinhaPet(linha ? `${linha.marca}: Plano de negócios` : 'Material não encontrado')
 
   if (!linha) {
@@ -24,37 +28,65 @@ export function PlanoPage() {
   }
 
   const p = linha.plano
-  const r = calcular(recorte, cenario)
-  const todos = CENARIOS.map(c => calcular(recorte, c))
-  const g = PREMISSAS.globais
-  const cs = PREMISSAS.cenarios
+  const r = modelo.calcular(recorte, cenario, canal)
+  const todos = CENARIOS.map(c => modelo.calcular(recorte, c, canal))
+  // As duas linhas têm premissas com campos diferentes (resina x chapa de inox, canal x quiosque).
+  // O `any` aqui fica só na montagem da tabela de premissas para exibição (abaixo), a conta
+  // financeira em si continua inteiramente tipada e conferida pelo verificador independente.
+  const g = modelo.PREMISSAS.globais as any
+  const cs = modelo.PREMISSAS.cenarios as any
   const nomeProduto = (id: string) => linha.produtos.find(x => x.id === id)?.nome ?? id
   const conservador = todos[0]
   const recorteAtual = linha.recortes.find(x => x.id === recorte) ?? linha.recortes[0]
   const faixa = (fn: (c: (typeof cs)['base']) => number) => `${brl(fn(cs.otimista))} a ${brl(fn(cs.conservador))}`
 
-  const leituraQuiosque =
-    conservador.quiosque.lucroMensal > 0
-      ? `Mesmo no cenário conservador o quiosque fecha o mês positivo, com ${brl(conservador.quiosque.lucroMensal)} de lucro.`
-      : `No cenário conservador o quiosque opera no prejuízo, com ${brl(conservador.quiosque.lucroMensal)} por mês. A operação se sustenta a partir do volume do cenário base, e é por isso que o roteiro valida a venda antes de qualquer contrato com shopping.`
+  const ehPlastico = linha.slug === 'linha-plastico'
+
+  function leituraDoConservador(): string {
+    const positivo = conservador.quiosque.lucroMensal > 0
+    const nome = ehPlastico ? 'canal' : 'quiosque'
+    if (positivo) {
+      return `Mesmo no cenário conservador o ${nome} fecha o mês positivo, com ${brl(conservador.quiosque.lucroMensal)} de lucro.`
+    }
+    const continuacao = ehPlastico
+      ? 'valida a venda com lote piloto antes de qualquer escala maior'
+      : 'valida a venda antes de qualquer contrato com shopping'
+    return `No cenário conservador o ${nome} opera no prejuízo, com ${brl(conservador.quiosque.lucroMensal)} por mês. A operação se sustenta a partir do volume do cenário base, e é por isso que o roteiro ${continuacao}.`
+  }
+  const leituraQuiosque = leituraDoConservador()
 
   const apertados = r.produtos.filter(x => x.markupQuiosque < MARKUP_MINIMO).map(x => nomeProduto(x.id))
 
-  const premissas = [
-    { item: 'Preço da chapa de inox 304L', valor: `${brl(cs.base.precoInoxKg)} por kg (conservador: ${num(cs.conservador.precoInoxKg, 2)})`, status: 'Verificado', origem: 'ZF Comercial de Aços, 13/09/2026' },
-    { item: 'Perda de chapa no corte', valor: pct(g.perdaChapa), status: 'Premissa', origem: 'Estimativa de aproveitamento' },
-    { item: 'Fator de processo sobre o material', valor: `${num(g.fatorProcesso.baixa, 1)} / ${num(g.fatorProcesso.media, 1)} / ${num(g.fatorProcesso.alta, 1)} (complexidade baixa, média, alta)`, status: 'Premissa, a cotar', origem: 'Sem preço público de corte, dobra e solda' },
-    { item: 'Margem da Dassg sobre o atacado', valor: pct(g.margemFabricante), status: 'Premissa', origem: 'Antes de tributos' },
-    { item: 'Tributos da Dassg sobre a venda', valor: pct(g.tributosFabricante), status: 'Premissa, a validar', origem: 'Confirmar com a contabilidade' },
-    { item: 'Taxas do varejo (cartão e Simples)', valor: pct(g.taxasVarejo), status: 'Premissa, a validar', origem: 'Confirmar com a contabilidade' },
-    { item: 'Volume de vendas', valor: `cenário base por produto; conservador ${pct(cs.conservador.multiplicadorVolume)}, otimista ${pct(cs.otimista.multiplicadorVolume)}`, status: 'Premissa', origem: 'A medir na validação de venda' },
-    { item: 'Aluguel do quiosque', valor: faixa(c => c.custosFixosQuiosque.aluguel), status: 'Faixa publicada', origem: 'AlugueOn 2024 e Expo Marca Display 2025' },
-    { item: 'Equipe (dois vendedores)', valor: faixa(c => c.custosFixosQuiosque.equipe), status: 'Faixa publicada', origem: 'Expo Marca Display 2025' },
-    { item: 'Montagem do quiosque', valor: faixa(c => c.investimentoQuiosque.montagem), status: 'Faixa publicada', origem: 'AlugueOn 2024' },
-    { item: 'Estoque inicial e capital de giro', valor: `${num(cs.base.investimentoQuiosque.mesesEstoqueInicial, 1)} mês de compras e ${cs.base.investimentoQuiosque.mesesCapitalGiro} meses de custo fixo`, status: 'Premissa', origem: 'Prática de varejo' },
-    { item: 'Desenvolvimento por produto', valor: faixa(c => c.desenvolvimentoPorProduto), status: 'Premissa', origem: 'Projeto e protótipo' },
-    { item: 'Registro de marca e identidade', valor: `${brl(g.registroMarca)} e ${brl(g.identidadeFotosEmbalagem)}`, status: 'Premissa', origem: 'Registro no INPI; identidade, fotos e embalagem' },
-  ]
+  const canalAtual: any = ehPlastico && modelo.canais ? (modelo.canais as any)[canal] : undefined
+
+  const premissas = ehPlastico
+    ? [
+        { item: 'Preço da resina de polipropileno', valor: `${brl(cs.base.precoResinaKg)} por kg (conservador: ${brl(cs.conservador.precoResinaKg)}, otimista: ${brl(cs.otimista.precoResinaKg)})`, status: 'Verificado, faixa larga', origem: 'MF Rural (lote industrial) e loja de varejo (lote pequeno), 22/09/2026' },
+        { item: 'Perda de resina no processo', valor: pct(g.perdaResina), status: 'Premissa', origem: 'Estimativa de purga e rebarba' },
+        { item: 'Fator de processo sobre o material', valor: `${num(g.fatorProcesso.baixa, 1)} / ${num(g.fatorProcesso.media, 1)} / ${num(g.fatorProcesso.alta, 1)} (complexidade baixa, média, alta)`, status: 'Premissa, a cotar', origem: 'Sem preço público de hora de injeção ou rotomoldagem' },
+        { item: 'Custo de molde por produto', valor: 'R$15.000 a R$70.000, amortizado em 20.000 a 100.000 unidades', status: 'Premissa, a cotar', origem: 'Faixa nacional de blogs de metalúrgica, sem cotação por peça específica' },
+        { item: 'Margem da Dassg sobre o atacado', valor: pct(g.margemFabricante), status: 'Premissa', origem: 'Antes de tributos, só no canal distribuidor' },
+        { item: 'Tributos da Dassg sobre a venda', valor: pct(g.tributosFabricante), status: 'Premissa, a validar', origem: 'Confirmar com a contabilidade' },
+        { item: 'Comissão ou margem do canal', valor: canalAtual ? pct(canalAtual.margemDistribuidorOuComissao) : '', status: 'Premissa, a validar', origem: 'Mercado Livre 10 a 19%, Shopee cerca de 14% mais R$7 fixo; sem taxa específica da categoria pet' },
+        { item: 'Volume de vendas', valor: `cenário base por produto; conservador ${pct(cs.conservador.multiplicadorVolume)}, otimista ${pct(cs.otimista.multiplicadorVolume)}`, status: 'Premissa', origem: 'A medir na validação de venda' },
+        { item: 'Custos fixos do canal por mês', valor: canalAtual ? brl(canalAtual.custosFixosMes.operacao + canalAtual.custosFixosMes.marketing + canalAtual.custosFixosMes.outros) : '', status: 'Premissa', origem: 'Estimativa de operação e marketing do canal' },
+        { item: 'Registro de marca e identidade', valor: `${brl(g.registroMarca)} e ${brl(g.identidadeFotosEmbalagem)}`, status: 'Premissa', origem: 'Registro no INPI; identidade, fotos e embalagem' },
+      ]
+    : [
+        { item: 'Preço da chapa de inox 304L', valor: `${brl(cs.base.precoInoxKg)} por kg (conservador: ${num(cs.conservador.precoInoxKg, 2)})`, status: 'Verificado', origem: 'ZF Comercial de Aços, 13/09/2026' },
+        { item: 'Perda de chapa no corte', valor: pct(g.perdaChapa), status: 'Premissa', origem: 'Estimativa de aproveitamento' },
+        { item: 'Fator de processo sobre o material', valor: `${num(g.fatorProcesso.baixa, 1)} / ${num(g.fatorProcesso.media, 1)} / ${num(g.fatorProcesso.alta, 1)} (complexidade baixa, média, alta)`, status: 'Premissa, a cotar', origem: 'Sem preço público de corte, dobra e solda' },
+        { item: 'Margem da Dassg sobre o atacado', valor: pct(g.margemFabricante), status: 'Premissa', origem: 'Antes de tributos' },
+        { item: 'Tributos da Dassg sobre a venda', valor: pct(g.tributosFabricante), status: 'Premissa, a validar', origem: 'Confirmar com a contabilidade' },
+        { item: 'Taxas do varejo (cartão e Simples)', valor: pct(g.taxasVarejo), status: 'Premissa, a validar', origem: 'Confirmar com a contabilidade' },
+        { item: 'Volume de vendas', valor: `cenário base por produto; conservador ${pct(cs.conservador.multiplicadorVolume)}, otimista ${pct(cs.otimista.multiplicadorVolume)}`, status: 'Premissa', origem: 'A medir na validação de venda' },
+        { item: 'Aluguel do quiosque', valor: faixa(c => c.custosFixosQuiosque.aluguel), status: 'Faixa publicada', origem: 'AlugueOn 2024 e Expo Marca Display 2025' },
+        { item: 'Equipe (dois vendedores)', valor: faixa(c => c.custosFixosQuiosque.equipe), status: 'Faixa publicada', origem: 'Expo Marca Display 2025' },
+        { item: 'Montagem do quiosque', valor: faixa(c => c.investimentoQuiosque.montagem), status: 'Faixa publicada', origem: 'AlugueOn 2024' },
+        { item: 'Estoque inicial e capital de giro', valor: `${num(cs.base.investimentoQuiosque.mesesEstoqueInicial, 1)} mês de compras e ${cs.base.investimentoQuiosque.mesesCapitalGiro} meses de custo fixo`, status: 'Premissa', origem: 'Prática de varejo' },
+        { item: 'Desenvolvimento por produto', valor: faixa(c => c.desenvolvimentoPorProduto), status: 'Premissa', origem: 'Projeto e protótipo' },
+        { item: 'Registro de marca e identidade', valor: `${brl(g.registroMarca)} e ${brl(g.identidadeFotosEmbalagem)}`, status: 'Premissa', origem: 'Registro no INPI; identidade, fotos e embalagem' },
+      ]
 
   return (
     <div className="lp">
@@ -73,6 +105,9 @@ export function PlanoPage() {
         <div className="lp-wrap lp-controles-barra">
           <Seletor rotulo="Recorte" valor={recorte} onChange={setRecorte} opcoes={linha.recortes.map(x => ({ valor: x.id, rotulo: x.titulo }))} />
           <Seletor rotulo="Cenário" valor={cenario} onChange={setCenario} opcoes={CENARIOS.map(c => ({ valor: c, rotulo: cs[c].rotulo }))} />
+          {canaisDisponiveis.length > 0 && (
+            <Seletor rotulo="Canal" valor={canal} onChange={setCanal} opcoes={canaisDisponiveis} />
+          )}
         </div>
       </div>
 
@@ -109,7 +144,7 @@ export function PlanoPage() {
 
       <section className="lp-sec lp-wrap">
         <div className="lp-rotulo">02 · Lacuna</div>
-        <h2>O inox já chegou ao Brasil, a marca de peso ainda não</h2>
+        <h2>{p.lacunaTitulo ?? 'O inox já chegou ao Brasil, a marca de peso ainda não'}</h2>
         <div className="lp-texto">{p.lacuna.map(t => <p key={t}>{t}</p>)}</div>
       </section>
 
@@ -119,7 +154,7 @@ export function PlanoPage() {
         <div className="lp-texto">{p.precisaoTecnica.map(t => <p key={t}>{t}</p>)}</div>
         <div className="lp-duas-colunas">
           <div>
-            <h3>Onde o forno da Dassg entra</h3>
+            <h3>{p.ondeFornoEntraTitulo ?? 'Onde o forno da Dassg entra'}</h3>
             {p.ondeFornoEntra.map(f => (
               <div key={f.titulo} className="lp-item">
                 <h4>{f.titulo}</h4>
@@ -183,13 +218,13 @@ export function PlanoPage() {
 
       <section className="lp-sec lp-wrap">
         <div className="lp-rotulo">06 · Custo por produto</div>
-        <h2>Do quilo de inox ao preço na prateleira</h2>
+        <h2>{p.custoTitulo ?? 'Do quilo de inox ao preço na prateleira'}</h2>
         <p className="lp-lede lp-lede-curta">{p.custoIntro}</p>
         <div className="lp-tabela-wrap">
           <table className="lp-tabela lp-tabela-numeros">
             <thead>
               <tr>
-                <th scope="col">Produto</th><th scope="col" className="lp-n">Inox (kg)</th><th scope="col" className="lp-n">Material</th><th scope="col" className="lp-n">Processo</th>
+                <th scope="col">Produto</th><th scope="col" className="lp-n">{p.custoRotuloPeso ?? 'Inox (kg)'}</th><th scope="col" className="lp-n">Material</th><th scope="col" className="lp-n">Processo</th>
                 <th scope="col" className="lp-n">Custo total</th><th scope="col" className="lp-n">Atacado</th><th scope="col" className="lp-n">Varejo</th><th scope="col" className="lp-n">Markup quiosque</th><th scope="col" className="lp-n">Vendas/mês</th>
               </tr>
             </thead>

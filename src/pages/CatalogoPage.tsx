@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getLinhaPetBySlug } from '../linha-pet/patas-de-aco'
-import { PREMISSAS, type RecorteId } from '../linha-pet/modelo-financeiro'
+import { getModeloBySlug } from '../linha-pet/modelo-por-slug'
+import type { RecorteId } from '../linha-pet/modelo-financeiro'
 import { brl, capitalizar, porExtenso } from '../linha-pet/formato'
 import { BarraTopo, Figura, Rodape, Seletor, usePaginaLinhaPet } from '../components/linha-pet/Comum'
 
 export function CatalogoPage() {
   const { slug } = useParams<{ slug: string }>()
   const linha = slug ? getLinhaPetBySlug(slug) : undefined
+  const modelo = getModeloBySlug(slug ?? '')
   const [recorte, setRecorte] = useState<RecorteId>('A')
   usePaginaLinhaPet(linha ? `${linha.marca}: Catálogo` : 'Material não encontrado')
 
@@ -24,7 +26,7 @@ export function CatalogoPage() {
   const produtos = recorteAtual.produtos
     .map(id => linha.produtos.find(p => p.id === id))
     .filter(p => p !== undefined)
-  const precoDe = (id: string) => PREMISSAS.produtos.find(p => p.id === id)?.precoVarejo
+  const precoDe = (id: string) => modelo.PREMISSAS.produtos.find(p => p.id === id)?.precoVarejo
   const icone = linha.produtos[0]
   const mesmaQuantidade = new Set(linha.recortes.map(r => r.produtos.length)).size === 1
   const tituloLinha = mesmaQuantidade
@@ -47,7 +49,7 @@ export function CatalogoPage() {
 
       <section className="lp-sec lp-wrap">
         <div className="lp-rotulo">A tese</div>
-        <h2>Três motivos para trocar o plástico</h2>
+        <h2>{c.teseTitulo ?? 'Três motivos para trocar o plástico'}</h2>
         <div className="lp-pilares">
           {c.pilares.map((p, i) => (
             <div key={p.titulo} className="lp-pilar">
@@ -97,7 +99,7 @@ export function CatalogoPage() {
                       <p>{p.problema}</p>
                     </div>
                     <div>
-                      <h4>Por que em inox</h4>
+                      <h4>{c.porQueTitulo ?? 'Por que em inox'}</h4>
                       <p>{p.porQueInox}</p>
                     </div>
                   </div>
@@ -125,14 +127,14 @@ export function CatalogoPage() {
 
       <section className="lp-sec lp-wrap">
         <div className="lp-rotulo">Comparativo</div>
-        <h2>Plástico e inox, lado a lado</h2>
+        <h2>{c.comparativoTitulo ?? 'Plástico e inox, lado a lado'}</h2>
         <div className="lp-tabela-wrap">
           <table className="lp-tabela">
             <thead>
               <tr>
                 <th scope="col">Critério</th>
-                <th scope="col">Plástico</th>
-                <th scope="col">Inox 304 {linha.marca}</th>
+                <th scope="col">{c.comparativoColEsquerda ?? 'Plástico'}</th>
+                <th scope="col">{c.comparativoColDireita ?? `Inox 304 ${linha.marca}`}</th>
               </tr>
             </thead>
             <tbody>
