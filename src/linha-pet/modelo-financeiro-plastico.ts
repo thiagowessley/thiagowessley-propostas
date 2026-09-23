@@ -104,11 +104,11 @@ export const PREMISSAS: Premissas = {
   },
   produtos: [
     { id: 'q01', pesoPecaKg: 0.3, complexidade: 'media', custoMoldeReais: 45000, vidaUtilMoldeUnidades: 60000, componentesReais: 55, embalagemReais: 15, precoVarejo: 189, volumeBaseMes: { A: 14, B: 14 } },
-    { id: 'q02', pesoPecaKg: 0.5, complexidade: 'baixa', custoMoldeReais: 35000, vidaUtilMoldeUnidades: 60000, componentesReais: 8, embalagemReais: 20, precoVarejo: 129, volumeBaseMes: { A: 20, B: 20 } },
+    { id: 'q02', pesoPecaKg: 0.5, complexidade: 'baixa', custoMoldeReais: 35000, vidaUtilMoldeUnidades: 60000, componentesReais: 8, embalagemReais: 20, precoVarejo: 129, volumeBaseMes: { A: 20 } },
     { id: 'q03', pesoPecaKg: 0.7, complexidade: 'baixa', custoMoldeReais: 50000, vidaUtilMoldeUnidades: 60000, componentesReais: 10, embalagemReais: 28, precoVarejo: 149, volumeBaseMes: { A: 10, B: 10 } },
     { id: 'q04', pesoPecaKg: 0.6, complexidade: 'media', custoMoldeReais: 60000, vidaUtilMoldeUnidades: 60000, componentesReais: 40, embalagemReais: 22, precoVarejo: 179, volumeBaseMes: { A: 12, B: 12 } },
     { id: 'q05', pesoPecaKg: 3, complexidade: 'alta', custoMoldeReais: 70000, vidaUtilMoldeUnidades: 20000, componentesReais: 20, embalagemReais: 60, precoVarejo: 349, volumeBaseMes: { B: 4 } },
-    { id: 'q06', pesoPecaKg: 0.4, complexidade: 'baixa', custoMoldeReais: 30000, vidaUtilMoldeUnidades: 60000, componentesReais: 60, embalagemReais: 20, precoVarejo: 149, volumeBaseMes: { A: 16, B: 16 } },
+    { id: 'q06', pesoPecaKg: 0.4, complexidade: 'baixa', custoMoldeReais: 30000, vidaUtilMoldeUnidades: 60000, componentesReais: 60, embalagemReais: 20, precoVarejo: 149, volumeBaseMes: { A: 16 } },
     { id: 'q07', pesoPecaKg: 1, complexidade: 'media', custoMoldeReais: 55000, vidaUtilMoldeUnidades: 60000, componentesReais: 90, embalagemReais: 40, precoVarejo: 249, volumeBaseMes: { A: 8, B: 8 } },
     { id: 'q08', pesoPecaKg: 0.6, complexidade: 'baixa', custoMoldeReais: 40000, vidaUtilMoldeUnidades: 60000, componentesReais: 12, embalagemReais: 24, precoVarejo: 139, volumeBaseMes: { A: 12 } },
     { id: 'q09', pesoPecaKg: 1.2, complexidade: 'alta', custoMoldeReais: 65000, vidaUtilMoldeUnidades: 20000, componentesReais: 70, embalagemReais: 45, precoVarejo: 349, volumeBaseMes: { B: 5 } },

@@ -26,6 +26,7 @@ const recortes: RecorteConteudo[] = [
 const produtos: ProdutoConteudo[] = [
   {
     id: 'q01',
+    imagem: '/img/linha-pet/plastico/q01-fonte-agua-eletrica.png',
     nome: 'Fonte de água elétrica',
     categoria: 'Hidratação',
     animal: 'Gato e cão',
@@ -45,6 +46,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q02',
+    imagem: '/img/linha-pet/plastico/q02-caixa-areia-oval.png',
     nome: 'Caixa de areia aberta oval',
     categoria: 'Higiene',
     animal: 'Gato',
@@ -62,6 +64,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q03',
+    imagem: '/img/linha-pet/plastico/q03-caixa-areia-xxl.png',
     nome: 'Caixa de areia XXL com pá',
     categoria: 'Higiene',
     animal: 'Gato',
@@ -77,6 +80,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q04',
+    imagem: '/img/linha-pet/plastico/q04-comedouro-elevado.png',
     nome: 'Comedouro elevado com armazenamento',
     categoria: 'Alimentação',
     animal: 'Gato',
@@ -92,6 +96,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q05',
+    imagem: '/img/linha-pet/plastico/q05-casinha-modular.png',
     nome: 'Casinha modular',
     categoria: 'Abrigo',
     animal: 'Cão',
@@ -108,6 +113,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q06',
+    imagem: '/img/linha-pet/plastico/q06-arranhador-moldura.png',
     nome: 'Arranhador com moldura e miolo substituível',
     categoria: 'Enriquecimento',
     animal: 'Gato',
@@ -124,6 +130,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q07',
+    imagem: '/img/linha-pet/plastico/q07-kit-sistema-caixa.png',
     nome: 'Kit sistema de caixa de areia',
     categoria: 'Higiene',
     animal: 'Gato e cão',
@@ -140,6 +147,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q08',
+    imagem: '/img/linha-pet/plastico/q08-caixa-areia-reciclada.png',
     nome: 'Caixa de areia em plástico reciclado',
     categoria: 'Higiene',
     animal: 'Gato',
@@ -156,6 +164,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q09',
+    imagem: '/img/linha-pet/plastico/q09-mala-transporte.png',
     nome: 'Mala de transporte com visor',
     categoria: 'Mobilidade',
     animal: 'Cão',
@@ -172,6 +181,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q10',
+    imagem: '/img/linha-pet/plastico/q10-banheira-gato.png',
     nome: 'Banheira para gato',
     categoria: 'Higiene',
     animal: 'Gato',
@@ -187,6 +197,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q11',
+    imagem: '/img/linha-pet/plastico/q11-caixa-transporte.png',
     nome: 'Caixa de transporte rígida ventilada',
     categoria: 'Mobilidade',
     animal: 'Cão',
@@ -201,6 +212,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q12',
+    imagem: '/img/linha-pet/plastico/q12-base-arranhador.png',
     nome: 'Base de arranhador com poste substituível',
     categoria: 'Enriquecimento',
     animal: 'Gato e cão',
@@ -216,6 +228,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q13',
+    imagem: '/img/linha-pet/plastico/q13-comedouro-duplo.png',
     nome: 'Comedouro duplo de entrada',
     categoria: 'Alimentação',
     animal: 'Gato e cão',
@@ -231,6 +244,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q14',
+    imagem: '/img/linha-pet/plastico/q14-cama-elevada.png',
     nome: 'Cama elevada tipo rede',
     categoria: 'Descanso',
     animal: 'Cão',
@@ -245,6 +259,7 @@ const produtos: ProdutoConteudo[] = [
   },
   {
     id: 'q15',
+    imagem: '/img/linha-pet/plastico/q15-refil-avulso.png',
     nome: 'Refil avulso',
     categoria: 'Reposição',
     animal: 'Gato e cão',
