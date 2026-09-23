@@ -169,11 +169,11 @@ const produtos: ProdutoConteudo[] = [
     categoria: 'Mobilidade',
     animal: 'Cão',
     papel: 'Ticket alto',
-    resumo: 'Visor panorâmico, ventilação em quatro lados, dentro da regra nova da ANAC.',
+    resumo: 'Visor panorâmico, ventilação em vários lados, desenhada para as regras de cada companhia aérea.',
     problema: 'A referência que a Débora trouxe (mala importada de dropshipping) custa de 8 a 18 vezes o preço de uma mala equivalente já vendida no Brasil, e não informa ventilação.',
-    porQueInox: 'Desenho próprio com ventilação em todos os lados desde o protótipo: exigência simultânea da nova regra da ANAC (em vigor desde 20/10/2025) e da segurança térmica do animal. Nenhum concorrente nacional com esse nível de design foi encontrado na pesquisa.',
+    porQueInox: 'Desenho próprio com ventilação em vários lados desde o protótipo: a ANAC não fixa um padrão único de caixa de transporte, cada companhia aérea define a própria especificação (a Portaria ANAC 17.476/SAS delega isso às empresas). O desenho mira o padrão mais exigente do mercado e a segurança térmica do animal. Nenhum concorrente nacional com esse nível de design foi encontrado na pesquisa.',
     especificacoes: [
-      { rotulo: 'Ventilação', valor: 'Em quatro lados, dentro da regra ANAC' },
+      { rotulo: 'Ventilação', valor: 'Em vários lados, para atender à regra de cada companhia aérea' },
       { rotulo: 'Visor', valor: 'Painel transparente' },
       { rotulo: 'Peso máximo', valor: 'A definir por faixa de animal' },
     ],
@@ -204,10 +204,10 @@ const produtos: ProdutoConteudo[] = [
     papel: 'Diferencial de design',
     resumo: 'Carrier tradicional com porta e ventilação nas laterais, sem o custo do visor panorâmico da mala.',
     problema: 'Nenhum concorrente nacional pesquisado tem diferencial de design nessa categoria, todos vendem sem preço público (modelo B2B) ou sem diferenciação visual.',
-    porQueInox: 'Já nasce dentro da exigência de ventilação da ANAC, com preço mais acessível que a mala com visor.',
+    porQueInox: 'Já nasce ventilado para atender à regra de cada companhia aérea, com preço mais acessível que a mala com visor.',
     especificacoes: [
       { rotulo: 'Porta', valor: 'Grade frontal' },
-      { rotulo: 'Ventilação', valor: 'Lateral, dentro da regra ANAC' },
+      { rotulo: 'Ventilação', valor: 'Lateral, dentro do padrão que as companhias aéreas costumam exigir' },
     ],
   },
   {
@@ -282,7 +282,7 @@ const fontes: Fonte[] = [
   { titulo: 'Quanto custa um molde de injeção plástica, Metalúrgica Ferri', url: 'https://www.metalferri.com.br/blog/quanto-custa-molde-injecao-plastica', data: '22/09/2026' },
   { titulo: 'Rotomoldagem ou injeção, Poliforma', url: 'https://poliforma.ind.br/artigos-blog/rotomoldagem-ou-injecao', data: '22/09/2026' },
   { titulo: 'Preço de resina de polipropileno, MF Rural', url: 'https://www.mfrural.com.br/busca/polipropileno-disponiveis/estado/sao-paulo', data: '22/09/2026' },
-  { titulo: 'Transporte de animais, ANAC', url: 'https://www.gov.br/anac/pt-br/assuntos/passageiros/transporte-de-animais-1', data: 'consultado em 22/09/2026, bloqueado por captcha na leitura automatizada' },
+  { titulo: 'Transporte de animais, ANAC (perguntas frequentes)', url: 'https://www.gov.br/anac/pt-br/assuntos/passageiros/transporte-de-animais-1', data: 'consultado em 23/09/2026: a página confirma que a ANAC não regula tamanho, material nem ventilação da caixa de transporte, cada companhia aérea define a própria regra' },
   { titulo: 'Escopo da Portaria Inmetro 148/2022, item 41', url: 'https://www.gov.br/inmetro/pt-br/acesso-a-informacao/perguntas-frequentes/avaliacao-da-conformidade/aparelhos-eletrodomesticos-e-similares/quais-eletrodomesticos-estao-no-escopo-da-portaria-inmetro-ndeg-148-de-2022', data: '22/09/2026' },
   { titulo: 'Taxas do Mercado Livre em 2026', url: 'https://ecommercenapratica.com/blog/comissao-mercado-livre/', data: '22/09/2026' },
   { titulo: 'Pet shops de bairro seguem líderes nas compras, estudo CVA Petcare 2026', url: 'https://www.araujosanthos.com.br/post/pet-shops-de-bairro-seguem-l%C3%ADderes-nas-compras-mas-grandes-redes-e-e-commerce-ganham-espa%C3%A7o-no-merc', data: 'março de 2026' },
@@ -319,7 +319,7 @@ const linhaPlastico: LinhaPetConteudo = {
       { criterio: 'Preço no mercado nacional', plastico: 'R$30 a R$70, sem diferencial', inox: 'R$100 a R$300, com design e reposição' },
       { criterio: 'Reposição', plastico: 'Produto inteiro descartado quando desgasta', inox: 'Peça de desgaste vendida separada' },
       { criterio: 'Engenharia elétrica (fonte)', plastico: 'Bomba de 12 V já resolvida no mercado, execução fraca (nota 3,5)', inox: 'Mesma engenharia, execução melhor' },
-      { criterio: 'Segurança regulatória (mala)', plastico: 'Sem informação de ventilação na referência', inox: 'Ventilação desde o desenho, dentro da regra ANAC' },
+      { criterio: 'Segurança regulatória (mala)', plastico: 'Sem informação de ventilação na referência', inox: 'Ventilação desde o desenho, para atender à regra de cada companhia aérea' },
       { criterio: 'Molde de peça grande', plastico: 'Concorrentes não informam processo', inox: 'Rotomoldagem cotada por peça, 3 a 4x mais barata que injeção' },
     ],
     comparativoTitulo: 'Plástico genérico e a linha, lado a lado',
@@ -331,7 +331,7 @@ const linhaPlastico: LinhaPetConteudo = {
       { titulo: 'Molde piloto', texto: 'Lote pequeno de validação antes do molde de produção definitivo, reduzindo o risco de gastar tudo num molde só.' },
       { titulo: 'Terceirização possível', texto: 'Existe fabricante nacional que presta serviço de injeção plástica por terceiro, sem exigir compra de máquina própria na fase inicial.' },
       { titulo: 'Componentes de terceiro', texto: 'Bomba de 12 V, filtro de carvão e sisal seguem de fornecedor especializado, mesmo padrão já usado pela concorrência nacional.' },
-      { titulo: 'Controle e certificação', texto: 'Certificação Inmetro a confirmar para a fonte elétrica; ventilação da mala desenhada dentro da regra da ANAC desde o protótipo.' },
+      { titulo: 'Controle e certificação', texto: 'Certificação Inmetro a confirmar para a fonte elétrica; ventilação da mala desenhada desde o protótipo para atender à regra de cada companhia aérea, já que a ANAC não fixa um padrão único.' },
     ],
     notaFabricacao:
       'Diferente do inox, esta linha não usa a competência de tratamento térmico da Dassg: o processo é injeção ou rotomoldagem, fabricado internamente com equipamento novo ou terceirizado. É uma capacidade a desenvolver, não uma extensão direta do que a empresa já faz.',
@@ -394,7 +394,7 @@ const linhaPlastico: LinhaPetConteudo = {
     ],
     cuidadosTecnicos: [
       'Peça grande e oca (casinha, mala) cotada em rotomoldagem, não em injeção, por causa do custo de molde.',
-      'Mala e caixa de transporte desenhadas com ventilação em todos os lados desde o protótipo, dentro da regra da ANAC em vigor desde 20/10/2025.',
+      'Mala e caixa de transporte desenhadas com ventilação em vários lados desde o protótipo. A ANAC não fixa um padrão único de caixa (Portaria 17.476/SAS delega isso a cada companhia aérea): o desenho mira o padrão mais exigente do mercado.',
       'Fonte de água elétrica com checagem de certificação Inmetro antes de vender, item 41 da Portaria 148/2022, aplicação por semelhança de função, ainda não confirmada com certificador.',
     ],
     foraDaLinha: [
