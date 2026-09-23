@@ -117,7 +117,7 @@ export function PlanoPage() {
           Recorte {recorteAtual.titulo.toLowerCase()}, cenário {cs[cenario].rotulo.toLowerCase()}
         </h2>
         <div className="lp-kpis">
-          <div className="lp-kpi"><span className="lp-kpi-valor">{brl(r.quiosque.receita)}</span><span className="lp-kpi-rotulo">faturamento mensal do quiosque</span></div>
+          <div className="lp-kpi"><span className="lp-kpi-valor">{brl(r.quiosque.receita)}</span><span className="lp-kpi-rotulo">faturamento mensal {ehPlastico ? 'do canal' : 'do quiosque'}</span></div>
           <div className="lp-kpi"><span className="lp-kpi-valor">{brl(r.quiosque.lucroMensal)}</span><span className="lp-kpi-rotulo">lucro mensal do operador</span></div>
           <div className="lp-kpi"><span className="lp-kpi-valor">{brlOu(r.quiosque.pontoEquilibrioReceita, 'Não atinge')}</span><span className="lp-kpi-rotulo">faturamento de equilíbrio</span></div>
           <div className="lp-kpi"><span className="lp-kpi-valor">{brl(r.investidor.total)}</span><span className="lp-kpi-rotulo">investimento do operador</span></div>
@@ -225,7 +225,7 @@ export function PlanoPage() {
             <thead>
               <tr>
                 <th scope="col">Produto</th><th scope="col" className="lp-n">{p.custoRotuloPeso ?? 'Inox (kg)'}</th><th scope="col" className="lp-n">Material</th><th scope="col" className="lp-n">Processo</th>
-                <th scope="col" className="lp-n">Custo total</th><th scope="col" className="lp-n">Atacado</th><th scope="col" className="lp-n">Varejo</th><th scope="col" className="lp-n">Markup quiosque</th><th scope="col" className="lp-n">Vendas/mês</th>
+                <th scope="col" className="lp-n">Custo total</th><th scope="col" className="lp-n">Atacado</th><th scope="col" className="lp-n">Varejo</th><th scope="col" className="lp-n">Markup {ehPlastico ? 'canal' : 'quiosque'}</th><th scope="col" className="lp-n">Vendas/mês</th>
               </tr>
             </thead>
             <tbody>
@@ -253,7 +253,7 @@ export function PlanoPage() {
       </section>
 
       <section className="lp-sec lp-wrap">
-        <div className="lp-rotulo">07 · Quiosque</div>
+        <div className="lp-rotulo">{ehPlastico ? '07 · Canal' : '07 · Quiosque'}</div>
         <h2>A conta do operador, nos três cenários</h2>
         <p className="lp-lede lp-lede-curta">{p.quiosqueIntro}</p>
         <div className="lp-tabela-wrap">
@@ -268,7 +268,7 @@ export function PlanoPage() {
                 { rotulo: 'Ticket médio', fn: (t: typeof r) => brl(t.quiosque.ticketMedio) },
                 { rotulo: 'Compra de produtos da Dassg', fn: (t: typeof r) => brl(-t.quiosque.cmv) },
                 { rotulo: 'Cartão e impostos', fn: (t: typeof r) => brl(-t.quiosque.taxas) },
-                { rotulo: 'Custos fixos do ponto', fn: (t: typeof r) => brl(-t.quiosque.custosFixos) },
+                { rotulo: ehPlastico ? 'Custos fixos do canal' : 'Custos fixos do ponto', fn: (t: typeof r) => brl(-t.quiosque.custosFixos) },
                 { rotulo: 'Lucro do operador', fn: (t: typeof r) => brl(t.quiosque.lucroMensal), destaque: true },
                 { rotulo: 'Faturamento de equilíbrio', fn: (t: typeof r) => brlOu(t.quiosque.pontoEquilibrioReceita, 'Não atinge') },
                 { rotulo: 'Investimento inicial', fn: (t: typeof r) => brl(t.investidor.total) },
@@ -292,7 +292,7 @@ export function PlanoPage() {
         <div className="lp-tabela-wrap">
           <table className="lp-tabela lp-tabela-numeros">
             <thead>
-              <tr><th scope="col">Por quiosque, por mês</th>{todos.map(t => <th key={t.cenario} scope="col" className={`lp-n ${t.cenario === cenario ? 'lp-col-ativa' : ''}`}>{cs[t.cenario].rotulo}</th>)}</tr>
+              <tr><th scope="col">{ehPlastico ? 'Por canal, por mês' : 'Por quiosque, por mês'}</th>{todos.map(t => <th key={t.cenario} scope="col" className={`lp-n ${t.cenario === cenario ? 'lp-col-ativa' : ''}`}>{cs[t.cenario].rotulo}</th>)}</tr>
             </thead>
             <tbody>
               {[
@@ -301,7 +301,7 @@ export function PlanoPage() {
                 { rotulo: 'Tributos sobre a venda', fn: (t: typeof r) => brl(-t.fabricante.tributos) },
                 { rotulo: 'Margem da Dassg', fn: (t: typeof r) => brl(t.fabricante.margemContribuicao), destaque: true },
                 { rotulo: 'Investimento em desenvolvimento', fn: (t: typeof r) => brl(t.fabricante.investimento) },
-                { rotulo: 'Retorno com um quiosque', fn: (t: typeof r) => meses(t.fabricante.paybackMeses), destaque: true },
+                { rotulo: ehPlastico ? 'Retorno com um canal' : 'Retorno com um quiosque', fn: (t: typeof r) => meses(t.fabricante.paybackMeses), destaque: true },
               ].map(l => (
                 <tr key={l.rotulo} className={l.destaque ? 'lp-linha-destaque' : ''}>
                   <th scope="row">{l.rotulo}</th>
@@ -311,7 +311,7 @@ export function PlanoPage() {
             </tbody>
           </table>
         </div>
-        <p className="lp-nota">O retorno da Dassg acelera a cada quiosque ou canal adicional, porque o investimento em desenvolvimento é feito uma vez só.</p>
+        <p className="lp-nota">O retorno da Dassg acelera a cada {ehPlastico ? 'canal' : 'quiosque'} adicional, porque o investimento em desenvolvimento é feito uma vez só.</p>
       </section>
 
       <section className="lp-sec lp-wrap">
