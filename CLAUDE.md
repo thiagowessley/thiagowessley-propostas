@@ -115,7 +115,7 @@ thiagowessley-dossies). Opcional por proposta; as outras continuam no molde de s
   fecho). Desde 29/09/2026: `retrato.foco` (enquadramento da imagem) e `retrato.mira` (posição do
   quadro de foco do visor); `videos` é opcional; quadro `presenca` desenha o site da marca e o perfil
   no Instagram com texto vindo de `dossie.presenca`; o quadro `base` mostra só as páginas publicadas
-  (os produtos vão no quadro `produtos`); cada fase aceita `resumo` e cada item `resultado`. `duracao` dá o título da seção do projeto (ex: "em 60 dias"). A abertura não mostra o valor: ele aparece só na seção de investimento. Um quadro
+  (os produtos vão no quadro `produtos`); cada fase aceita `resumo` e cada item `resultado`. `duracao` dá o título da seção do projeto (ex: "em 60 dias"). A abertura não mostra o valor: ele aparece só na seção de investimento. `galeria` põe mais imagens na abertura, trocadas a cada 3 segundos (parado para quem pede menos movimento); `referencias` monta o quadro "Referências e contato" do rodapé, com o QR do WhatsApp; `assinatura` (foto no fecho) é opcional. Um quadro
   por fase, nunca um desenho por item (pedido do Thiago em 29/09/2026). O texto comercial continua nos mesmos campos de sempre (`secoes.cenario`, `fases`, `planos`,
   `prazos`, `contrato`, `pagamento`, `encerramento`). Referência: dassg-linha-pet-marca-e-teste.ts.
 - `PropostaPage.tsx` desvia para `src/components/dossie/PropostaDossie.tsx` só quando estilo = 'dossie'.
