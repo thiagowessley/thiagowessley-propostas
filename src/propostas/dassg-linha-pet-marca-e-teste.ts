@@ -21,8 +21,9 @@ export const dassgLinhaPetMarcaETeste: PropostaData = {
   dossie: {
     retrato: { src: '/img/dossie/dassg/abertura-caixa-areia-inox.webp', alt: 'Gato ao lado da caixa de areia aberta em inox da linha Patas de Aço, em imagem de simulação', largura: 1600, altura: 1195, foco: '40% 50%', mira: ['60%', '62%'] },
     titulo: { fino: 'Linha Pet Dassg:', grosso: 'a resposta do mercado antes de investir em molde e estoque.' },
-    lede: 'Patas de Aço, em inox, e a linha em plástico ganham marca, catálogo, site, Instagram e fotos das amostras reais, e passam por um teste com tutores e parceiros comerciais. No dia 90, cada produto sai com uma decisão: seguir, ajustar ou parar.',
+    lede: 'Patas de Aço, em inox, e a linha em plástico ganham marca, catálogo, site, Instagram e fotos das amostras reais, e passam por um teste com tutores e parceiros comerciais. No dia 60, cada produto sai com uma decisão: seguir, ajustar ou parar.',
     documento: 'Proposta comercial',
+    duracao: 'em 60 dias',
     base: {
       provas: [
         { titulo: 'Catálogo do inox', legenda: 'Publicado', imagem: pagina('catalogo-inox', 'Página do catálogo da linha Patas de Aço, em inox'), url: '/c/patas-de-aco' },
@@ -33,18 +34,18 @@ export const dassgLinhaPetMarcaETeste: PropostaData = {
       produtos: [inox.caixa, plastico.casinha, inox.arranhador, plastico.fonte],
     },
     linha: {
-      titulo: 'Seis marcos, do dia 1 ao dia 90',
-      nota: 'Dias corridos contados a partir da entrada paga. O relógio para enquanto uma decisão ou as amostras não chegam, com no máximo 60 dias de pausa no total.',
-      inicio: 'Entrada paga',
+      titulo: 'Seis marcos, do dia 1 ao dia 60',
+      nota: 'Dias corridos contados a partir do pagamento da entrada. Marca, catálogo, site e perfil podem ser entregues antes de cada marco: o tempo maior é o do teste, que depende do mercado. O relógio para enquanto uma decisão ou as amostras não chegam, com no máximo 30 dias de pausa no total.',
+      inicio: 'Início do projeto',
       fim: 'Decisão da Dassg',
     },
     marcos: [
-      { dia: 'Dia 1', nome: 'Entrada paga' },
-      { dia: 'Até o dia 10', nome: 'Reunião de início' },
-      { dia: 'Até o dia 35', nome: 'Marca entregue' },
-      { dia: 'Até o dia 50', nome: 'Material no ar' },
-      { dia: 'Até o dia 80', nome: 'Teste concluído' },
-      { dia: 'Até o dia 90', nome: 'Relatório e decisão' },
+      { dia: 'Dia 1', nome: 'Início do projeto' },
+      { dia: 'Até o dia 7', nome: 'Reunião de início' },
+      { dia: 'Até o dia 20', nome: 'Marca entregue' },
+      { dia: 'Até o dia 30', nome: 'Material no ar' },
+      { dia: 'Até o dia 55', nome: 'Teste concluído' },
+      { dia: 'Até o dia 60', nome: 'Relatório e decisão' },
     ],
     presenca: {
       site: {
@@ -76,7 +77,7 @@ export const dassgLinhaPetMarcaETeste: PropostaData = {
       { tipo: 'presenca', titulo: 'Como a marca aparece', legenda: 'Desenho do site com o formulário de interesse e do perfil no Instagram. Nome e identidade saem da Fase 02.' },
       { tipo: 'teste', titulo: 'Como o teste mede', legenda: 'Cada contato vira uma linha na planilha, e a planilha vira decisão.' },
     ],
-    fecho: 'Da imagem de simulação à resposta do mercado, em 90 dias.',
+    fecho: 'Da imagem de simulação à resposta do mercado, em 60 dias.',
     depois: 'Com a demanda confirmada, o passo seguinte é a fase de lançamento: fotos finais de catálogo, embalagem técnica, loja virtual e gestão mensal da marca, orçada com os números do teste.',
     assinatura: { src: '/img/dossie/portfolio/thiago-camera.webp', alt: 'Thiago Wessley', largura: 720, altura: 900 },
   },
@@ -94,9 +95,9 @@ export const dassgLinhaPetMarcaETeste: PropostaData = {
 
   secoes: {
     cenario: {
-      problema: 'A Dassg Têmpera tem duas linhas pet estudadas: Patas de Aço, em inox, e a linha em plástico, com o nome Patas Leves ainda em validação. As duas já têm pesquisa, catálogo, plano de negócios e modelo financeiro publicados. Falta a confirmação de quem compra. Só o molde de injeção de uma peça pequena custa a partir de R$ 25 mil, segundo fabricante do setor, e cada peça em plástico pede o seu: antes desse investimento, a Dassg precisa saber quais produtos os tutores e os parceiros comerciais querem, por qual começar e em que condição de compra ou revenda.',
+      problema: 'A Dassg Têmpera tem duas linhas pet estudadas: Patas de Aço, em inox, e a linha em plástico, com o nome Patas Leves ainda em validação. As duas já têm pesquisa, catálogo, plano de negócios e modelo financeiro publicados. Falta a confirmação de quem compra: antes de investir em molde e estoque, a Dassg precisa saber quais produtos os tutores e os parceiros comerciais querem, por qual começar e em que condição de compra ou revenda.',
       publico: 'Na decisão, os sócios da Dassg Têmpera. No teste, dois públicos: tutores de cães e gatos, que compram para usar, e parceiros comerciais, como pet shops, distribuidores, revendas e lojas online, que compram para revender.',
-      desafio: 'Chegar ao dia 90 com a marca pronta para vender e uma resposta medida do mercado para cada produto, antes de comprometer dinheiro com produção.',
+      desafio: 'Chegar ao dia 60 com a marca pronta para vender e uma resposta medida do mercado para cada produto, antes de comprometer dinheiro com produção.',
       entregas: [
         'Nomes pesquisados no INPI e identidade visual das duas linhas, antes de qualquer gasto com registro ou embalagem',
         'Material de venda para os dois públicos: um catálogo para o tutor e outro para o parceiro comercial',
@@ -113,17 +114,17 @@ export const dassgLinhaPetMarcaETeste: PropostaData = {
         periodo: 'JÁ ENTREGUE',
         resumo: 'O projeto parte do estudo já publicado das duas linhas.',
         itens: [
-          { titulo: 'Patas de Aço, em inox', descricao: 'Pesquisa de mercado e de fabricação, 11 produtos com imagem de simulação, modelo financeiro, catálogo e plano de negócios publicados. Na reunião de 23/09, a diretoria definiu o recorte gato e cão e os 4 produtos-ícone da linha.', resultado: 'O inox entra no projeto com a direção já aprovada, e o teste começa pelos 4 produtos-ícone.' },
+          { titulo: 'Patas de Aço, em inox', descricao: 'Pesquisa de mercado e de fabricação, 11 produtos com imagem de simulação, modelo financeiro, catálogo e plano de negócios publicados. Na reunião de 23/09, os sócios definiram o recorte gato e cão.', resultado: 'O inox entra no projeto com o recorte já definido pelos sócios, e os produtos do teste são escolhidos na reunião de início.' },
           { titulo: 'Linha em plástico', descricao: 'Pesquisa em cinco frentes (concorrência, fabricação, canais de venda, exigências legais e produtos extras), 15 produtos com imagem de simulação, modelo financeiro com três cenários e dois canais de venda, catálogo e plano de negócios publicados.', resultado: 'Os produtos em plástico que entram no teste saem desse estudo, escolhidos na reunião de início.' },
         ],
       },
       {
         numero: '02',
         titulo: 'Abertura e Marca',
-        periodo: 'ATÉ O DIA 35',
+        periodo: 'ATÉ O DIA 20',
         resumo: 'Ao fim da fase, a linha pet tem nomes checados, marca aprovada e as regras do teste combinadas.',
         itens: [
-          { titulo: 'Reunião de início', descricao: 'Primeira reunião com os sócios. Define quem responde pela Dassg, quem assina, quais produtos entram no teste, a meta de interesse de cada público e o orçamento para amostras e custos de terceiros.', limite: 'até o dia 10', resultado: 'Uma ficha única com as decisões de partida, aprovada pela pessoa responsável.' },
+          { titulo: 'Reunião de início', descricao: 'Primeira reunião com os sócios. Define quem responde pela Dassg, quem assina, quais produtos entram no teste, a meta de interesse de cada público e o orçamento para amostras e custos de terceiros.', limite: 'até o dia 7', resultado: 'Uma ficha única com as decisões de partida, aprovada pela pessoa responsável.' },
           { titulo: 'Arquitetura de marca', descricao: 'Define como as duas linhas aparecem para o mercado: uma marca-mãe com duas linhas ou duas marcas independentes. Cada caminho é comparado pelo custo de registro, pela clareza para o tutor e pelo espaço para novos produtos.', limite: '1 recomendação', resultado: 'Uma recomendação por escrito, aprovada pelos sócios antes de qualquer desenho de logotipo.' },
           { titulo: 'Busca no INPI', descricao: 'Consulta à base do INPI por marcas iguais ou parecidas já registradas ou em pedido, nas classes de produto em que a linha precisa de proteção.', limite: 'até 3 nomes', resultado: 'O risco de cada nome fica conhecido antes de a Dassg pagar o pedido de registro ou imprimir qualquer material.' },
           { titulo: 'Sistema de marca', descricao: 'Logotipo, cores, tipografia e guia de uso resumido, para as duas linhas ou para a marca-mãe com as duas assinaturas.', limite: 'até 2 logotipos', resultado: 'Uma identidade pronta para o catálogo, o site, o Instagram e, mais adiante, a embalagem.' },
@@ -132,7 +133,7 @@ export const dassgLinhaPetMarcaETeste: PropostaData = {
       {
         numero: '03',
         titulo: 'Material e Presença',
-        periodo: 'ATÉ O DIA 50',
+        periodo: 'ATÉ O DIA 30',
         resumo: 'Ao fim da fase, a marca tem material de venda, site, perfil e imagem real das amostras, prontos para o teste.',
         itens: [
           { titulo: 'Catálogo em duas versões', descricao: 'A versão para o tutor mostra o problema que cada produto resolve, como se usa e o benefício. A versão para o parceiro comercial mostra a linha, os diferenciais e as condições preliminares de revenda, sem preço final nem prazo de entrega prometidos. Em página web, com PDF para enviar por WhatsApp e e-mail.', limite: 'até 8 produtos', resultado: 'A equipe da Dassg chega a cada contato com o material certo para quem está do outro lado.' },
@@ -144,11 +145,11 @@ export const dassgLinhaPetMarcaETeste: PropostaData = {
       {
         numero: '04',
         titulo: 'Teste e Decisão',
-        periodo: 'ATÉ O DIA 90',
+        periodo: 'ATÉ O DIA 60',
         resumo: 'Ao fim da fase, cada produto tem uma resposta do mercado e uma decisão: seguir, ajustar ou parar.',
         itens: [
           { titulo: 'Roteiro do teste', descricao: 'Guia de abordagem para cada público, com as perguntas que a equipe da Dassg faz em cada contato, mais o formulário e a planilha que registram respostas, objeções, produtos preferidos e pedidos de orçamento.', resultado: 'Todo contato segue as mesmas perguntas, e as respostas podem ser comparadas entre si.' },
-          { titulo: 'Teste de mercado', descricao: 'Conduzido pela equipe da Dassg, que registra cada contato na planilha do projeto e responde as mensagens e os comentários do perfil. Acompanhamento semanal, dentro das reuniões previstas.', limite: 'até 30 dias', resultado: 'Interesse medido nos dois públicos, comparado com a meta combinada na reunião de início.' },
+          { titulo: 'Teste de mercado', descricao: 'Conduzido pela equipe da Dassg, que registra cada contato na planilha do projeto e responde as mensagens e os comentários do perfil. Acompanhamento semanal por mensagem, com o resumo da planilha, e reunião nos marcos do projeto.', limite: 'até 25 dias', resultado: 'Interesse medido nos dois públicos, comparado com a meta combinada na reunião de início.' },
           { titulo: 'Relatório de validação', descricao: 'Resultado por produto: interesse de cada público, motivos de rejeição, condições de compra e de revenda pedidas e a recomendação para cada um: seguir, ajustar ou parar.', resultado: 'Os sócios decidem onde investir primeiro com a resposta do mercado em mãos.' },
           { titulo: 'Modelo atualizado', descricao: 'Modelo financeiro refeito com os números da Dassg: custo de produção, capacidade livre do forno, cotações e preço da resina. O que não for enviado aparece como pendente, nunca como suposição.', limite: 'até 8 produtos', resultado: 'Custo, preço e margem de cada produto do teste calculados com dado da própria fábrica.' },
         ],
@@ -157,7 +158,7 @@ export const dassgLinhaPetMarcaETeste: PropostaData = {
     planos: [
       {
         nome: 'Linha Pet: Marca e Validação de Mercado',
-        resumo: 'Das duas linhas estudadas à resposta do mercado, em 90 dias, por menos que o molde de uma única peça',
+        resumo: 'Das duas linhas estudadas à resposta do mercado, em 60 dias',
         itens: [
           'Base do plástico já entregue: pesquisa, 15 produtos com imagem de simulação, modelo financeiro, catálogo e plano',
           'Arquitetura de marca das duas linhas e sistema de marca, até 2 logotipos (2 rodadas de ajuste)',
@@ -166,20 +167,20 @@ export const dassgLinhaPetMarcaETeste: PropostaData = {
           'Site da marca em página única, com os produtos do teste e formulário de interesse',
           'Instagram configurado e espelhado no Facebook, até 8 posts, sendo até 3 Reels',
           'Meia diária de foto e vídeo das amostras, 4 h, até 24 fotos tratadas',
-          'Roteiro, formulário e planilha do teste, com até 30 dias de teste e meta nos dois públicos',
+          'Roteiro, formulário e planilha do teste, com até 25 dias de teste e meta nos dois públicos',
           'Relatório de validação por produto e modelo financeiro atualizado',
           'Até 5 reuniões de acompanhamento, até 1h30 cada',
         ],
         valor: 10000,
         periodo: 'entrada de R$ 2.000 e 8 x R$ 1.000',
-        rodape: 'Projeto fechado, 90 dias',
+        rodape: 'Projeto fechado, 60 dias',
         colunasItens: 2,
       },
     ],
     prazos: [
-      { texto: '90 dias corridos, contados a partir do pagamento da entrada. O sócio que assina e a pessoa responsável pela resposta são indicados até a reunião de início.', bold: '90 dias corridos' },
-      { texto: 'O prazo para enquanto a Dassg não consolida uma decisão ou não entrega as amostras. Dado do modelo financeiro que não chegar até o dia 80 entra como pendente no relatório, sem parar o prazo.', bold: 'O prazo para' },
-      { texto: 'As pausas somam no máximo 60 dias. Passado esse limite, a entrega que faltar sai do escopo e, se a Dassg quiser retomar, é orçada como fase nova. As parcelas seguem o calendário original.', bold: 'no máximo 60 dias' },
+      { texto: '60 dias corridos, contados a partir do pagamento da entrada. As entregas de criação podem sair antes dos marcos, conforme as respostas da Dassg. O sócio que assina e a pessoa responsável pela resposta são indicados até a reunião de início.', bold: '60 dias corridos' },
+      { texto: 'O prazo para enquanto a Dassg não consolida uma decisão ou não entrega as amostras. Dado do modelo financeiro que não chegar até o dia 50 entra como pendente no relatório, sem parar o prazo.', bold: 'O prazo para' },
+      { texto: 'As pausas somam no máximo 30 dias. Passado esse limite, a entrega que faltar sai do escopo e, se a Dassg quiser retomar, é orçada como fase nova. As parcelas seguem o calendário original.', bold: 'no máximo 30 dias' },
       { texto: 'A meia diária de foto e vídeo acontece com as amostras prontas. Produto sem amostra física entra no teste com a imagem de simulação, identificada como tal.', bold: 'amostras prontas' },
       { texto: 'Cada entrega principal (sistema de marca, catálogo, site, conjunto de posts e relatório) tem 2 rodadas de ajuste. Vale como retorno a mensagem única da pessoa responsável indicada pela Dassg, em até 5 dias úteis.', bold: '2 rodadas de ajuste' },
       { texto: 'Mudança de direção depois da aprovação é etapa nova, orçada antes. Erro de conteúdo apontado em até 7 dias da entrega é corrigido sem custo.', bold: '7 dias' },
@@ -188,7 +189,7 @@ export const dassgLinhaPetMarcaETeste: PropostaData = {
       {
         titulo: 'Escopo e Limite',
         itens: [
-          'Esta proposta substitui as propostas anteriores da linha pet. O valor cobre as entregas descritas, dentro dos tetos indicados, e o escopo termina no dia 90, somadas as pausas previstas nos prazos.',
+          'Esta proposta substitui as propostas anteriores da linha pet. O valor cobre as entregas descritas, dentro dos tetos indicados, e o escopo termina no dia 60, somadas as pausas previstas nos prazos.',
           'Novo produto, nome, canal, material ou recorte fora dos tetos é fase nova, com escopo e valor próprios, orçada antes de começar.',
           'Desenho de embalagem, preço definitivo, loja virtual, anúncio pago, contato com parceiros comerciais, fabricação, pedido de registro no INPI e certificação não estão inclusos.',
           'A busca no INPI aponta o risco de conflito com marcas existentes, sem garantir o registro, que depende da análise do próprio INPI. O pedido e o acompanhamento ficam com a Dassg ou com o despachante dela.',
@@ -209,7 +210,7 @@ export const dassgLinhaPetMarcaETeste: PropostaData = {
         titulo: 'Uso e Quitação',
         itens: [
           'As 8 parcelas são o parcelamento do valor fechado do projeto e seguem devidas até a quitação, qualquer que seja a recomendação do relatório ou um encerramento antecipado pela Dassg.',
-          'Até a quitação, a Dassg tem licença de uso de todo o material, inclusive depois do dia 90. Os arquivos editáveis de marca e catálogo são entregues com a quitação integral.',
+          'Até a quitação, a Dassg tem licença de uso de todo o material, inclusive depois do dia 60. Os arquivos editáveis de marca e catálogo são entregues com a quitação integral.',
         ],
       },
     ],
@@ -224,7 +225,7 @@ export const dassgLinhaPetMarcaETeste: PropostaData = {
       ],
     },
     confidencialidade: 'Validade de 7 dias corridos a partir da data de envio. Preços sujeitos a atualização após o vencimento.',
-    encerramento: 'Escopo, prazo e investimento estão definidos. Com a assinatura e a entrada até 06/10, a reunião de início acontece até 15/10, e a decisão sobre a linha pet sai com a resposta do mercado, antes de qualquer compra de molde.',
+    encerramento: 'Escopo, prazo e investimento estão definidos. Com a assinatura e a entrada até 06/10, a reunião de início acontece até 12/10, e a decisão sobre a linha pet sai com a resposta do mercado, antes de qualquer compra de molde.',
   },
   utm_copy: {
     whatsapp: 'Segue a proposta do projeto da linha pet.',

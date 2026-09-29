@@ -292,7 +292,6 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
             </dl>
             <ul className="dz-glance">
               <li><a href="#projeto"><strong>O projeto <svg className="dz-i" aria-hidden="true"><use href="#dz-i-go" /></svg></strong><span>{s.cenario.desafio}</span></a></li>
-              <li><a href="#investimento"><strong>Investimento <svg className="dz-i" aria-hidden="true"><use href="#dz-i-go" /></svg></strong><span>{formatarReais(proposta.valor.principal)}{plano?.periodo ? `, ${plano.periodo}` : ''}. {plano?.rodape}</span></a></li>
               <li><a href="#regras"><strong>Prazos e regras <svg className="dz-i" aria-hidden="true"><use href="#dz-i-go" /></svg></strong><span>O que está incluso, o que cabe a cada lado e quando cada etapa acontece.</span></a></li>
             </ul>
           </div>
@@ -309,7 +308,7 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
           </dl>
         </Secao>
 
-        <Secao id="projeto" num="02" fino="O projeto" grosso="em 90 dias" larga>
+        <Secao id="projeto" num="02" fino="O projeto" grosso={d.duracao} larga>
           <div className="dz-spectrum dz-rv" ref={linha90}>
             <p className="dz-spec-title">{d.linha.titulo}</p>
             <p className="dz-spec-note">{d.linha.nota}</p>

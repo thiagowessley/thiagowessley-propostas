@@ -147,6 +147,7 @@ export interface ExtrasDossie {
   titulo: { fino: string; grosso: string }
   lede: string                          // linha de abertura abaixo do título
   documento: string                     // ex: "Proposta comercial"
+  duracao: string                       // título da seção do projeto, ex: "em 60 dias"
   base: { provas: DossieProva[]; produtos: DossieImagem[] }   // o que já foi entregue
   linha: { titulo: string; nota: string; inicio: string; fim: string }  // cabeçalho da linha do tempo do projeto
   marcos: { dia: string; nome: string }[]   // pontos da linha do tempo

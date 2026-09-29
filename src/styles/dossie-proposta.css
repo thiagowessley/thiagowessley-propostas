@@ -144,7 +144,7 @@ html:has(> body.dz-body) { scroll-padding-top: 104px; }
 .dz-meta > div { padding-block: var(--s4); }
 .dz-meta dt { margin-bottom: 4px; font: 600 0.7rem/1.4 var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .dz-meta dd { margin: 0; font-weight: 500; color: var(--title); }
-.dz-glance { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--border-strong); border-bottom: 1px solid var(--border-strong); position: relative; z-index: 2; background: var(--bg); }
+.dz-glance { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--border-strong); border-bottom: 1px solid var(--border-strong); position: relative; z-index: 2; background: var(--bg); }
 .dz-glance li + li { border-left: 1px solid var(--border); }
 .dz-glance a { display: block; height: 100%; padding: 26px 28px 28px; text-decoration: none; }
 .dz-glance li:first-child a { padding-left: 0; }
