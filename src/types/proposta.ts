@@ -10,6 +10,7 @@ export interface ItemEscopo {
   titulo: string
   descricao: string
   limite?: string  // ex: "ate 12 posts/mes"
+  resultado?: string  // molde dossiê: o que o cliente tem na mão depois da entrega
 }
 
 export interface FaseEscopo {
@@ -17,6 +18,7 @@ export interface FaseEscopo {
   titulo: string
   itens: ItemEscopo[]
   periodo?: string  // ex: "MAR/2026" badge no rodape do card
+  resumo?: string   // molde dossiê: uma frase com o estado ao fim da fase
 }
 
 export interface Referencia {
@@ -121,18 +123,38 @@ export interface DossieVideo {
   poster: string    // quadro vertical 9:16 em /public
 }
 
+// Desenho do site e do Instagram da marca (quadro 'presenca'): todo texto vem da proposta
+export interface DossiePresenca {
+  site: {
+    endereco: string                    // ex: "marca.com.br"
+    marca: string
+    chamada: string
+    menu: string[]
+    produtos: DossieImagem[]            // vitrine, legenda = alt
+    formulario: { titulo: string; opcoes: string[]; campos: string[]; botao: string; aviso: string }
+  }
+  instagram: {
+    perfil: string                      // ex: "@marca"
+    nome: string
+    destaques: string[]
+    posts: DossieImagem[]               // grade de até 6
+    reels: number[]                     // índices dos posts que levam o ícone de vídeo
+  }
+}
+
 export interface ExtrasDossie {
-  retrato: DossieImagem                 // imagem da abertura, dentro do visor de câmera
+  retrato: DossieImagem & { foco?: string; mira?: [string, string] }   // imagem da abertura no visor de câmera (foco = object-position, mira = x e y do quadro de foco)
   titulo: { fino: string; grosso: string }
   lede: string                          // linha de abertura abaixo do título
   documento: string                     // ex: "Proposta comercial"
   base: { provas: DossieProva[]; produtos: DossieImagem[] }   // o que já foi entregue
   linha: { titulo: string; nota: string; inicio: string; fim: string }  // cabeçalho da linha do tempo do projeto
   marcos: { dia: string; nome: string }[]   // pontos da linha do tempo
-  videos: DossieVideo[]                 // prova do padrão de foto e vídeo
+  videos?: DossieVideo[]                // prova do padrão de foto e vídeo (quadro 'videos')
+  presenca?: DossiePresenca             // desenho do site e do Instagram (quadro 'presenca')
   teste: { etapa: string; nome: string }[]  // desenho do teste de mercado
   // quadro ao lado de cada fase, na mesma ordem de secoes.fases (null = fase sem quadro)
-  paineis: ({ tipo: 'base' | 'produtos' | 'videos' | 'teste'; titulo: string; legenda: string } | null)[]
+  paineis: ({ tipo: 'base' | 'produtos' | 'videos' | 'presenca' | 'teste'; titulo: string; legenda: string } | null)[]
   fecho: string                         // frase grande do encerramento
   depois?: string                       // próximo serviço, dito uma vez, abaixo do botão de ação
   assinatura: DossieImagem

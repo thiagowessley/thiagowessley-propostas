@@ -1,5 +1,5 @@
-import { Fragment, useMemo, useRef, useState, type ReactNode } from 'react'
-import type { DossieImagem, DossieVideo, ExtrasDossie, PropostaData } from '../../types/proposta'
+import { Fragment, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react'
+import type { DossieImagem, DossiePresenca, DossieVideo, ExtrasDossie, PropostaData } from '../../types/proposta'
 import { calcularDiasRestantes, formatarData, formatarReais } from '../../lib/tempo'
 import { DossieNav } from './DossieNav'
 import { useBodyDossie, useDesenhar, useFaseAtual, useFraseAcende, useMedia, useRevelar, useTimecode, type Capitulo } from './hooks'
@@ -41,9 +41,9 @@ function Timecode() {
   return <span className="dz-tcode">{tc}</span>
 }
 
-function Img({ img, className, prioridade }: { img: DossieImagem; className?: string; prioridade?: boolean }) {
+function Img({ img, className, prioridade, style }: { img: DossieImagem; className?: string; prioridade?: boolean; style?: CSSProperties }) {
   return (
-    <img className={className} src={img.src} alt={img.alt} width={img.largura} height={img.altura}
+    <img className={className} src={img.src} alt={img.alt} width={img.largura} height={img.altura} style={style}
       loading={prioridade ? 'eager' : 'lazy'} decoding="async" {...(prioridade ? { fetchPriority: 'high' as const } : {})} />
   )
 }
@@ -98,6 +98,47 @@ function Player({ videos }: { videos: DossieVideo[] }) {
         ))}
       </ul>
       <p className="dz-player-cap"><b>{v.titulo}</b></p>
+    </div>
+  )
+}
+
+/** Desenho do site da marca (navegador) e do perfil no Instagram (celular), com os produtos da linha. */
+function Presenca({ p }: { p: DossiePresenca }) {
+  const { site, instagram: ig } = p
+  return (
+    <div className="dz-pres" role="img" aria-label={`Desenho do site ${site.endereco} com a vitrine e o formulário de interesse, e do perfil ${ig.perfil} no Instagram`}>
+      <div className="dz-mk-browser">
+        <div className="dz-mk-bar"><span className="dz-mk-chrome"><i /><i /><i /></span><span className="dz-mk-url">{site.endereco}</span></div>
+        <div className="dz-mk-site">
+          <div className="dz-mk-site-nav"><b>{site.marca}</b>{site.menu.map(t => <span key={t}>{t}</span>)}</div>
+          <p className="dz-mk-site-h">{site.chamada}</p>
+          <div className="dz-mk-site-corpo">
+            <ul className="dz-mk-vitrine">{site.produtos.map(img => <li key={img.src}><Img img={img} /><span>{img.alt}</span></li>)}</ul>
+            <div className="dz-mk-form">
+              <b>{site.formulario.titulo}</b>
+              <span className="dz-mk-seg">{site.formulario.opcoes.map((t, i) => <i key={t} className={i === 0 ? 'dz-on' : undefined}>{t}</i>)}</span>
+              {site.formulario.campos.map(t => <span key={t} className="dz-mk-campo">{t}</span>)}
+              <span className="dz-mk-btn">{site.formulario.botao}</span>
+              <small>{site.formulario.aviso}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="dz-mk-phone">
+        <div className="dz-mk-ig">
+          <p className="dz-mk-ig-top">{ig.perfil}</p>
+          <div className="dz-mk-ig-head">
+            <span className="dz-mk-ig-av">{ig.posts[0] && <Img img={ig.posts[0]} />}</span>
+            <span className="dz-mk-ig-bio"><b>{ig.nome}</b><i /><i /></span>
+          </div>
+          <ul className="dz-mk-ig-hl">{ig.destaques.map(t => <li key={t}><i />{t}</li>)}</ul>
+          <ul className="dz-mk-ig-grid">
+            {ig.posts.slice(0, 6).map((img, i) => (
+              <li key={img.src + i}><Img img={img} />{ig.reels.includes(i) && <svg aria-hidden="true"><use href="#dz-i-play" /></svg>}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   )
 }
@@ -165,9 +206,6 @@ function Painel({ tipo, d, titulo, legenda, fig }: { tipo: string; d: ExtrasDoss
             </li>
           ))}
         </ul>
-        <ul className="dz-prods">
-          {d.base.produtos.slice(0, 4).map(img => <li key={img.src}><Img img={img} /></li>)}
-        </ul>
       </>
     )
   }
@@ -176,12 +214,13 @@ function Painel({ tipo, d, titulo, legenda, fig }: { tipo: string; d: ExtrasDoss
       <>
         {cabeca}
         <ul className="dz-prods dz-prods--2">
-          {d.base.produtos.slice(4, 8).map(img => <li key={img.src}><figure><Img img={img} /><figcaption>{img.alt}</figcaption></figure></li>)}
+          {d.base.produtos.slice(0, 4).map(img => <li key={img.src}><figure><Img img={img} /><figcaption>{img.alt}</figcaption></figure></li>)}
         </ul>
       </>
     )
   }
-  if (tipo === 'videos') return <>{cabeca}<Player videos={d.videos} /></>
+  if (tipo === 'videos') return <>{cabeca}<Player videos={d.videos ?? []} /></>
+  if (tipo === 'presenca') return d.presenca ? <>{cabeca}<Presenca p={d.presenca} /></> : null
   if (tipo === 'teste') {
     return (
       <>
@@ -224,8 +263,8 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
         <section className="dz-hero" id="topo" aria-labelledby="dz-titulo">
           <div className="dz-hero-body">
             <figure className="dz-hero-media">
-              <Img img={d.retrato} prioridade />
-              <div className="dz-hud" aria-hidden="true">
+              <Img img={d.retrato} prioridade style={d.retrato.foco ? { objectPosition: d.retrato.foco } : undefined} />
+              <div className="dz-hud" aria-hidden="true" style={d.retrato.mira ? { ['--fx' as string]: d.retrato.mira[0], ['--fy' as string]: d.retrato.mira[1] } : undefined}>
                 <span className="dz-thirds" />
                 <i className="dz-tl" /><i className="dz-tr" /><i className="dz-bl" /><i className="dz-br" />
                 <span className="dz-focus" />
@@ -288,11 +327,13 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
                   <article key={key} className={`dz-row${palco && faseAtual === key ? ' dz-is-current' : ''}`} data-key={key}>
                     <h3>{f.titulo}</h3>
                     <span className="dz-flag">Fase {f.numero}{f.periodo ? ` · ${f.periodo}` : ''}</span>
+                    {f.resumo && <p className="dz-fase-resumo">{f.resumo}</p>}
                     <ul className="dz-itens">
                       {f.itens.map(it => (
                         <li key={it.titulo}>
                           <b>{it.titulo}{it.limite && <span className="dz-lim">{it.limite}</span>}</b>
                           <p>{it.descricao}</p>
+                          {it.resultado && <p className="dz-resultado"><em>Resultado</em>{it.resultado}</p>}
                         </li>
                       ))}
                     </ul>
