@@ -1,4 +1,4 @@
-import { Fragment, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react'
+import { Fragment, useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react'
 import type { DossieImagem, DossiePresenca, DossieVideo, ExtrasDossie, PropostaData } from '../../types/proposta'
 import { calcularDiasRestantes, formatarData, formatarReais } from '../../lib/tempo'
 import { DossieNav } from './DossieNav'
@@ -45,6 +45,25 @@ function Img({ img, className, prioridade, style }: { img: DossieImagem; classNa
   return (
     <img className={className} src={img.src} alt={img.alt} width={img.largura} height={img.altura} style={style}
       loading={prioridade ? 'eager' : 'lazy'} decoding="async" {...(prioridade ? { fetchPriority: 'high' as const } : {})} />
+  )
+}
+
+/** Imagens da abertura: a primeira entra com o visor e as outras se revezam a cada 3 segundos.
+ *  Quem pede menos movimento no aparelho fica só com a primeira. */
+function Abertura({ imagens }: { imagens: (DossieImagem & { foco?: string })[] }) {
+  const [atual, setAtual] = useState(0)
+  useEffect(() => {
+    if (imagens.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const t = window.setInterval(() => setAtual(i => (i + 1) % imagens.length), 3000)
+    return () => window.clearInterval(t)
+  }, [imagens.length])
+  return (
+    <>
+      {imagens.map((img, i) => (
+        <Img key={img.src} img={i === 0 ? img : { ...img, alt: '' }} prioridade={i === 0} className={`dz-slide${i === atual ? ' dz-on' : ''}`}
+          style={img.foco ? { objectPosition: img.foco } : undefined} />
+      ))}
+    </>
   )
 }
 
@@ -263,7 +282,7 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
         <section className="dz-hero" id="topo" aria-labelledby="dz-titulo">
           <div className="dz-hero-body">
             <figure className="dz-hero-media">
-              <Img img={d.retrato} prioridade style={d.retrato.foco ? { objectPosition: d.retrato.foco } : undefined} />
+              <Abertura imagens={[d.retrato, ...(d.galeria ?? [])]} />
               <div className="dz-hud" aria-hidden="true" style={d.retrato.mira ? { ['--fx' as string]: d.retrato.mira[0], ['--fy' as string]: d.retrato.mira[1] } : undefined}>
                 <span className="dz-thirds" />
                 <i className="dz-tl" /><i className="dz-tr" /><i className="dz-bl" /><i className="dz-br" />
@@ -416,7 +435,21 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
                 {proposta.contato.instagram && <a href={`https://instagram.com/${proposta.contato.instagram.replace('@', '')}`} target="_blank" rel="noopener">{proposta.contato.instagram}</a>}
               </p>
             </div>
-            <figure className="dz-sig"><Img img={d.assinatura} /></figure>
+            <div className="dz-contato">
+              <h2>Referências e contato</h2>
+              {d.referencias && (
+                <ul className="dz-chips">
+                  {d.referencias.map(r => (
+                    <li key={r.url}><a className="dz-chip" href={r.url} target="_blank" rel="noopener">{r.rotulo} <svg className="dz-i" aria-hidden="true"><use href="#dz-i-go" /></svg></a></li>
+                  ))}
+                </ul>
+              )}
+              <figure className="dz-qr">
+                <img src={proposta.contato.qr ?? '/img/qr-whatsapp.png'} alt="QR code para falar no WhatsApp" width={112} height={112} loading="lazy" decoding="async" />
+                <figcaption>Aponte a câmera do celular para abrir a conversa no WhatsApp</figcaption>
+              </figure>
+            </div>
+            {d.assinatura && <figure className="dz-sig"><Img img={d.assinatura} /></figure>}
           </div>
         </div>
       </footer>

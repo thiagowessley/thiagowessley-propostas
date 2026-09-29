@@ -569,3 +569,20 @@ button.dz-chip { background: none; cursor: pointer; }
 .dz-mk-ig-grid svg { position: absolute; top: 0.5em; right: 0.5em; width: 1.2em; height: 1.2em; color: #FFFFFF; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5)); }
 @media print { .dz-mk-browser, .dz-mk-phone { box-shadow: 0 0 0 1px #C9C6BB; } }
 @container (max-width: 400px) { .dz-mk-seg i { padding-inline: 0.15em; font-size: 0.66em; } }
+
+/* Abertura com revezamento de imagens e rodapé com referências (29/09/2026) */
+.dz-hero-media .dz-slide { opacity: 0; transition: opacity 1.2s var(--ease); }
+.dz-hero-media .dz-slide.dz-on { opacity: 1; }
+.dz-foot--fecho .dz-foot-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 380px); }
+.dz-contato { justify-self: end; width: 100%; padding: var(--s5); border-radius: var(--r); background: var(--bg); box-shadow: 0 0 0 1px var(--border-strong); }
+.dz-contato .dz-chips { margin-top: var(--s4); }
+.dz-qr { display: flex; align-items: center; gap: var(--s4); margin-top: var(--s5); padding-top: var(--s5); border-top: 1px solid var(--border); }
+.dz-qr img { flex: none; width: 112px; height: 112px; border-radius: 8px; box-shadow: 0 0 0 1px var(--border-strong); }
+.dz-qr figcaption { color: var(--muted); font-size: 0.86rem; line-height: 1.45; }
+@media (max-width: 700px) { .dz-foot--fecho .dz-foot-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .dz-hero-media .dz-slide { transition: none; } }
+@media print {
+  .dz-hero-media .dz-slide { opacity: 1; }
+  .dz-hero-media .dz-slide:not(:first-child) { display: none; }
+  .dz-qr img { box-shadow: 0 0 0 1px #C9C6BB; }
+}

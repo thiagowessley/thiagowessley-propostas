@@ -144,6 +144,7 @@ export interface DossiePresenca {
 
 export interface ExtrasDossie {
   retrato: DossieImagem & { foco?: string; mira?: [string, string] }   // imagem da abertura no visor de câmera (foco = object-position, mira = x e y do quadro de foco)
+  galeria?: (DossieImagem & { foco?: string })[]   // outras imagens da abertura, trocadas a cada 3 segundos depois do retrato
   titulo: { fino: string; grosso: string }
   lede: string                          // linha de abertura abaixo do título
   documento: string                     // ex: "Proposta comercial"
@@ -158,7 +159,8 @@ export interface ExtrasDossie {
   paineis: ({ tipo: 'base' | 'produtos' | 'videos' | 'presenca' | 'teste'; titulo: string; legenda: string } | null)[]
   fecho: string                         // frase grande do encerramento
   depois?: string                       // próximo serviço, dito uma vez, abaixo do botão de ação
-  assinatura: DossieImagem
+  assinatura?: DossieImagem             // foto ao lado do fecho (opcional)
+  referencias?: { rotulo: string; url: string }[]  // links do rodapé: portfólio e trabalhos entregues
 }
 
 export interface PropostaData {
