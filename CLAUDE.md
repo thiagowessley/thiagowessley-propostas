@@ -112,7 +112,11 @@ thiagowessley-dossies). Opcional por proposta; as outras continuam no molde de s
 - Ligar: no arquivo da proposta, `estilo: 'dossie'` e o bloco `dossie` (tipo `ExtrasDossie` em
   src/types/proposta.ts: retrato, título em duas linhas, base entregue com provas e produtos, linha do
   tempo com marcos, vídeos do portfólio, desenho do teste, um quadro por fase em `paineis`, frase de
-  fecho). O texto comercial continua nos mesmos campos de sempre (`secoes.cenario`, `fases`, `planos`,
+  fecho). Desde 29/09/2026: `retrato.foco` (enquadramento da imagem) e `retrato.mira` (posição do
+  quadro de foco do visor); `videos` é opcional; quadro `presenca` desenha o site da marca e o perfil
+  no Instagram com texto vindo de `dossie.presenca`; o quadro `base` mostra só as páginas publicadas
+  (os produtos vão no quadro `produtos`); cada fase aceita `resumo` e cada item `resultado`. Um quadro
+  por fase, nunca um desenho por item (pedido do Thiago em 29/09/2026). O texto comercial continua nos mesmos campos de sempre (`secoes.cenario`, `fases`, `planos`,
   `prazos`, `contrato`, `pagamento`, `encerramento`). Referência: dassg-linha-pet-marca-e-teste.ts.
 - `PropostaPage.tsx` desvia para `src/components/dossie/PropostaDossie.tsx` só quando estilo = 'dossie'.
 - Estilo em src/styles/dossie-proposta.css, TODO escopado: tokens na classe `.dz`, toda classe com
