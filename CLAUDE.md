@@ -100,5 +100,37 @@ abaixo.
   skill licoes-tecnicas). Mesmo padrão serve pra gerar PDF de qualquer linha, trocando as URLs.
 - URLs: propostas.thiagowessley.com.br/c/patas-de-aco, /n/patas-de-aco (inox) e /c/linha-plastico,
   /n/linha-plastico (plástico).
-- O check-copy acusa "aço" no nome da marca "Patas de Aço": esperado, é decisão do Thiago
-  (11/09/2026). Fora do nome, usar "inox" (nunca "aço" nem "metal" soltos referindo o material).
+- Desde 28/09/2026 o check-copy aceita o nome da marca "Patas de Aço" (decisão do Thiago,
+  11/09/2026) e continua barrando "aço" solto. Fora do nome, usar "inox" (nunca "aço" nem "metal"
+  soltos referindo o material).
+
+## Molde dossiê das propostas (campo estilo: 'dossie', 28/09/2026)
+
+Segundo visual de proposta, porte do dossiê de dossie.thiagowessley.com.br/mentoria (repo
+thiagowessley-dossies). Opcional por proposta; as outras continuam no molde de sempre, sem mudança.
+
+- Ligar: no arquivo da proposta, `estilo: 'dossie'` e o bloco `dossie` (tipo `ExtrasDossie` em
+  src/types/proposta.ts: retrato, título em duas linhas, base entregue com provas e produtos, linha do
+  tempo com marcos, vídeos do portfólio, desenho do teste, um quadro por fase em `paineis`, frase de
+  fecho). O texto comercial continua nos mesmos campos de sempre (`secoes.cenario`, `fases`, `planos`,
+  `prazos`, `contrato`, `pagamento`, `encerramento`). Referência: dassg-linha-pet-marca-e-teste.ts.
+- `PropostaPage.tsx` desvia para `src/components/dossie/PropostaDossie.tsx` só quando estilo = 'dossie'.
+- Estilo em src/styles/dossie-proposta.css, TODO escopado: tokens na classe `.dz`, toda classe com
+  prefixo `dz-` (o globals.css já usa .sec-title, .thin e .bold, que vazariam para dentro). Seletor
+  novo sem `.dz` ou `body.dz-body` na frente é proibido: ele muda as outras propostas. Tema claro
+  automático pelo aparelho; impressão sempre clara.
+- Imagens do molde em public/img/dossie/ (WebP leve). Converter PNG pesado e fotografar páginas com
+  `scripts/dossie-ferramentas.mjs` (modos fotos, comparar, webp, tela; rodar no Git Bash com
+  `MSYS_NO_PATHCONV=1`, senão "/p/..." vira caminho do Windows).
+- Prova de que as outras propostas não mudaram: `fotos` antes e depois (duas rodadas, a primeira só
+  aquece o cache) e `comparar` pixel a pixel. Feito em 28/09/2026 com valens, dassg-consultoria,
+  dg-ativos e /c/linha-plastico: iguais.
+
+## Cartão de compartilhamento (middleware.ts, 28/09/2026)
+
+`middleware.ts` na raiz (Routing Middleware da Vercel, pacote @vercel/functions) responde só aos
+robôs de prévia de link (WhatsApp, Facebook, LinkedIn, Telegram etc.) em /p/:slug com um HTML curto
+de metas og (título "serviço | cliente", descrição, e `og:image` quando a proposta define `ogImagem`,
+1200x630 em public/og/). Pessoa comum segue direto (`next()`). Não roda no `npm run dev`; testar
+carregando o arquivo com `vite.createServer().ssrLoadModule('/middleware.ts')` e simulando o
+user-agent. A imagem do cartão não leva data (a data de envio muda).

@@ -15,6 +15,7 @@ import { ServicoAdicional } from '../components/sections/ServicoAdicional'
 import { Referencias } from '../components/sections/Referencias'
 import { Encerramento } from '../components/sections/Encerramento'
 import { PopupSaida } from '../components/ui/PopupSaida'
+import { PropostaDossie } from '../components/dossie/PropostaDossie'
 import { registrarVisita } from '../lib/analytics'
 import { calcularTempoLeitura } from '../lib/tempo'
 
@@ -68,6 +69,16 @@ export function PropostaPage() {
   }
 
   const s = proposta.secoes
+
+  // Molde dossiê: visual do dossie.thiagowessley.com.br, só para proposta que pede estilo 'dossie'
+  if (proposta.estilo === 'dossie' && proposta.dossie) {
+    return (
+      <>
+        <PropostaDossie proposta={proposta} />
+        <PopupSaida whatsapp={proposta.contato.whatsapp} />
+      </>
+    )
+  }
 
   return (
     <>

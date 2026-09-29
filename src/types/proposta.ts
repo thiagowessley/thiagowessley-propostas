@@ -99,8 +99,50 @@ export interface ServicoAdicional {
   imagem: string
 }
 
+// --- Molde dossiê (28/09/2026): visual do dossie.thiagowessley.com.br, opcional por proposta ---
+
+export interface DossieImagem {
+  src: string       // caminho em /public, ex: "/img/dossie/dassg/q05.webp"
+  alt: string
+  largura: number
+  altura: number
+}
+
+export interface DossieProva {
+  titulo: string
+  legenda: string
+  imagem: DossieImagem
+  url?: string      // link para abrir o material entregue
+}
+
+export interface DossieVideo {
+  youtubeId: string
+  titulo: string
+  poster: string    // quadro vertical 9:16 em /public
+}
+
+export interface ExtrasDossie {
+  retrato: DossieImagem                 // imagem da abertura, dentro do visor de câmera
+  titulo: { fino: string; grosso: string }
+  lede: string                          // linha de abertura abaixo do título
+  documento: string                     // ex: "Proposta comercial"
+  base: { provas: DossieProva[]; produtos: DossieImagem[] }   // o que já foi entregue
+  linha: { titulo: string; nota: string; inicio: string; fim: string }  // cabeçalho da linha do tempo do projeto
+  marcos: { dia: string; nome: string }[]   // pontos da linha do tempo
+  videos: DossieVideo[]                 // prova do padrão de foto e vídeo
+  teste: { etapa: string; nome: string }[]  // desenho do teste de mercado
+  // quadro ao lado de cada fase, na mesma ordem de secoes.fases (null = fase sem quadro)
+  paineis: ({ tipo: 'base' | 'produtos' | 'videos' | 'teste'; titulo: string; legenda: string } | null)[]
+  fecho: string                         // frase grande do encerramento
+  depois?: string                       // próximo serviço, dito uma vez, abaixo do botão de ação
+  assinatura: DossieImagem
+}
+
 export interface PropostaData {
   slug: string              // ex: "instituto-site"
+  estilo?: 'padrao' | 'dossie'  // molde visual. default: 'padrao' (o de sempre)
+  dossie?: ExtrasDossie     // obrigatório quando estilo = 'dossie'
+  ogImagem?: string         // imagem do cartão de compartilhamento (1200x630), caminho em /public
   cliente: string
   segmento: string
   servico: string
