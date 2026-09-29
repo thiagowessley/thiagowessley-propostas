@@ -15,7 +15,7 @@ const plastico = {
 const pagina = (arquivo: string, alt: string): DossieImagem => ({ src: `/img/dossie/dassg/${arquivo}.webp`, alt, largura: 1280, altura: 800 })
 
 export const dassgLinhaPetMarcaETeste: PropostaData = {
-  slug: 'dassg-linha-pet-marca-e-teste',
+  slug: 'dassg-linha-pet-marca',
   estilo: 'dossie',
   ogImagem: '/og/dassg-linha-pet.jpg',
   dossie: {
