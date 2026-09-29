@@ -160,7 +160,6 @@ export interface ExtrasDossie {
   fecho: string                         // frase grande do encerramento
   depois?: string                       // próximo serviço, dito uma vez, abaixo do botão de ação
   assinatura?: DossieImagem             // foto ao lado do fecho (opcional)
-  referencias?: { rotulo: string; url: string }[]  // links do rodapé: portfólio e trabalhos entregues
 }
 
 export interface PropostaData {
@@ -218,6 +217,9 @@ export interface PropostaData {
     whatsapp: string       // numero com DDI: "5547992358161"
     email: string
     instagram?: string     // ex: "@thiagowessley"
+    portfolio?: string     // molde dossiê: endereço do portfólio no rodapé, ex: "https://thiagowessley.com.br"
+    linkedin?: string      // molde dossiê: endereço do LinkedIn no rodapé
+    endereco?: string      // molde dossiê: endereço comercial no rodapé
     qr?: string            // caminho do QR code local (default: /img/qr-whatsapp.png)
   }
 }

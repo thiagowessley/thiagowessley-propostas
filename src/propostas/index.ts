@@ -13,7 +13,6 @@ import { thaisDiariaEsportiva } from './thais-diaria-esportiva'
 import { thaisEdicaoVideo } from './thais-edicao-video'
 import { tassianaBniAftermovie } from './tassiana-bni-aftermovie'
 import { rafaelBniAftermovie } from './rafael-bni-aftermovie'
-import { dassgConsultoriaLinhaPlastico } from './dassg-consultoria-linha-plastico'
 import { dassgLinhaPetMarcaETeste } from './dassg-linha-pet-marca-e-teste'
 
 export const propostas: Record<string, PropostaData> = {
@@ -31,7 +30,6 @@ export const propostas: Record<string, PropostaData> = {
   thaisEdicaoVideo,
   tassianaBniAftermovie,
   rafaelBniAftermovie,
-  dassgConsultoriaLinhaPlastico,
   dassgLinhaPetMarcaETeste,
 }
 

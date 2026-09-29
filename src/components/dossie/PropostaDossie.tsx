@@ -12,11 +12,18 @@ const CAPITULOS: Capitulo[] = [
   { id: 'regras', rotulo: '04 Regras' },
   { id: 'pagamento', rotulo: '05 Pagamento' },
 ]
+// capítulo extra, só quando a proposta traz dúvidas frequentes
+const CAPITULO_DUVIDAS: Capitulo = { id: 'duvidas', rotulo: '06 Dúvidas' }
 
 function Icones() {
   return (
     <svg className="dz-sprite" width="0" height="0" aria-hidden="true">
       <symbol id="dz-i-go" viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></symbol>
+      <symbol id="dz-i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" strokeWidth="1.7" /><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.7" /><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" /></symbol>
+      <symbol id="dz-i-in" viewBox="0 0 24 24"><path d="M5.5 9.5v9M5.5 5.6v.1M10 18.5v-9M10 13.2c0-2.2 1.4-3.7 3.4-3.7s3.1 1.3 3.1 3.6v5.4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></symbol>
+      <symbol id="dz-i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2" fill="none" stroke="currentColor" strokeWidth="1.7" /><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" /></symbol>
+      <symbol id="dz-i-tel" viewBox="0 0 24 24"><path d="M6.6 3.8h2.6l1.4 3.9-1.8 1.2a11 11 0 0 0 6.3 6.3l1.2-1.8 3.9 1.4v2.6a1.9 1.9 0 0 1-2 1.9A15.6 15.6 0 0 1 4.7 5.8a1.9 1.9 0 0 1 1.9-2Z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" /></symbol>
+      <symbol id="dz-i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21Z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" /><circle cx="12" cy="9.8" r="2.3" fill="none" stroke="currentColor" strokeWidth="1.7" /></symbol>
       <symbol id="dz-i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z" fill="currentColor" /></symbol>
       <symbol id="dz-i-wa" viewBox="0 0 24 24"><path d="M12 3.2a8.7 8.7 0 0 0-7.5 13.2L3.3 20.8l4.5-1.2A8.7 8.7 0 1 0 12 3.2Z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" /><path d="M9 8.3c.2-.5.6-.5.9-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c.4.8 1.3 1.7 2.1 2.1l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .7-.5.9-.6.3-1.7.4-3.3-.5a9.3 9.3 0 0 1-3.2-3.2c-.9-1.6-.8-2.7-.5-3.3Z" fill="currentColor" /></symbol>
     </svg>
@@ -49,17 +56,20 @@ function Img({ img, className, prioridade, style }: { img: DossieImagem; classNa
 }
 
 /** Imagens da abertura: a primeira entra com o visor e as outras se revezam a cada 3 segundos.
+ *  Cada imagem só entra na página pouco antes da vez dela, para não pesar no celular.
  *  Quem pede menos movimento no aparelho fica só com a primeira. */
 function Abertura({ imagens }: { imagens: (DossieImagem & { foco?: string })[] }) {
   const [atual, setAtual] = useState(0)
+  const [montadas, setMontadas] = useState(Math.min(2, imagens.length))
   useEffect(() => {
     if (imagens.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const t = window.setInterval(() => setAtual(i => (i + 1) % imagens.length), 3000)
     return () => window.clearInterval(t)
   }, [imagens.length])
+  useEffect(() => { setMontadas(m => Math.max(m, Math.min(imagens.length, atual + 2))) }, [atual, imagens.length])
   return (
     <>
-      {imagens.map((img, i) => (
+      {imagens.slice(0, montadas).map((img, i) => (
         <Img key={img.src} img={i === 0 ? img : { ...img, alt: '' }} prioridade={i === 0} className={`dz-slide${i === atual ? ' dz-on' : ''}`}
           style={img.foco ? { objectPosition: img.foco } : undefined} />
       ))}
@@ -268,14 +278,17 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
   const plano = s.planos?.[0]
   const dias = calcularDiasRestantes(proposta.validade)
   const linkWhats = `https://wa.me/${proposta.contato.whatsapp}?text=${encodeURIComponent('Olá, vi a proposta e quero avançar.')}`
-  const zap = proposta.contato.whatsapp.replace(/^55(\d{2})(\d)(\d{4})(\d{4})$/, '($1) $2 $3-$4')
+  const zap = proposta.contato.whatsapp.replace(/^(\d{2})(\d{2})(\d{5})(\d{4})$/, '+$1 $2 $3-$4')
+  const capitulos = useMemo(() => (s.faq?.length ? [...CAPITULOS, CAPITULO_DUVIDAS] : CAPITULOS), [s.faq])
+  const instagramUrl = proposta.contato.instagram ? `https://instagram.com/${proposta.contato.instagram.replace('@', '')}` : null
+  const ano = new Date().getFullYear()
   const paineis = useMemo(() => s.fases.map((f, i) => ({ key: `f${f.numero}`, p: d.paineis[i] ?? null })), [s.fases, d.paineis])
 
   return (
     <div className="dz dz-js" ref={raiz}>
       <Icones />
       <a className="dz-skip" href="#dz-conteudo">Ir para o conteúdo</a>
-      <DossieNav capitulos={CAPITULOS} raiz={raiz} acao={{ rotulo: 'Aprovar', href: '#fecho' }} />
+      <DossieNav capitulos={capitulos} raiz={raiz} acao={{ rotulo: 'Aprovar', href: '#fecho' }} />
 
       <main className="dz-main" id="dz-conteudo">
         {/* Abertura: visor de câmera */}
@@ -416,9 +429,21 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
             </ul>
           </Secao>
         )}
+        {s.faq && s.faq.length > 0 && (
+          <Secao id="duvidas" num="06" fino="Dúvidas" grosso="frequentes">
+            <div className="dz-faq">
+              {s.faq.map(f => (
+                <details key={f.pergunta} className="dz-faq-item">
+                  <summary>{f.pergunta}<i aria-hidden="true" /></summary>
+                  <p>{f.resposta}</p>
+                </details>
+              ))}
+            </div>
+          </Secao>
+        )}
       </main>
 
-      <footer className="dz-foot dz-foot--fecho" id="fecho">
+      <section className="dz-foot dz-foot--fecho" id="fecho" aria-label="Próximo passo">
         <div className="dz-wrap">
           <div className="dz-foot-grid">
             <div>
@@ -427,29 +452,50 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
               <a className="dz-cta" href={linkWhats} target="_blank" rel="noopener">
                 <svg aria-hidden="true"><use href="#dz-i-wa" /></svg>{proposta.ctaWhatsapp ?? 'Falar no WhatsApp'}
               </a>
-              <p className="dz-validade">Válida até <b>{formatarData(proposta.validade)}</b>{dias > 0 ? `, ${dias} ${dias === 1 ? 'dia' : 'dias'} restantes` : ''}.</p>
+              <p className="dz-validade">{dias > 0 ? <>Válida até <b>{formatarData(proposta.validade)}</b>, {dias} {dias === 1 ? 'dia' : 'dias'} restantes.</> : 'Proposta vencida.'}</p>
               {d.depois && <p className="dz-depois">{d.depois}</p>}
-              <p className="dz-foot-line">
-                <a href={linkWhats} target="_blank" rel="noopener">{zap}</a>
-                <a href={`mailto:${proposta.contato.email}`}>{proposta.contato.email}</a>
-                {proposta.contato.instagram && <a href={`https://instagram.com/${proposta.contato.instagram.replace('@', '')}`} target="_blank" rel="noopener">{proposta.contato.instagram}</a>}
-              </p>
             </div>
-            <div className="dz-contato">
-              <h2>Referências e contato</h2>
-              {d.referencias && (
-                <ul className="dz-chips">
-                  {d.referencias.map(r => (
-                    <li key={r.url}><a className="dz-chip" href={r.url} target="_blank" rel="noopener">{r.rotulo} <svg className="dz-i" aria-hidden="true"><use href="#dz-i-go" /></svg></a></li>
-                  ))}
-                </ul>
-              )}
-              <figure className="dz-qr">
-                <img src={proposta.contato.qr ?? '/img/qr-whatsapp.png'} alt="QR code para falar no WhatsApp" width={112} height={112} loading="lazy" decoding="async" />
-                <figcaption>Aponte a câmera do celular para abrir a conversa no WhatsApp</figcaption>
-              </figure>
+            <figure className="dz-qr">
+              <img src={proposta.contato.qr ?? '/img/qr-whatsapp.png'} alt="QR code para falar no WhatsApp" width={112} height={112} loading="lazy" decoding="async" />
+              <figcaption>Aponte a câmera do celular para abrir a conversa no WhatsApp</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      {/* Rodapé no formato do site thiagowessley.com.br */}
+      <footer className="dz-site-foot">
+        <div className="dz-wrap">
+          <div className="dz-site-grid">
+            <div>
+              <a className="dz-site-logo" href={proposta.contato.portfolio ?? '#topo'} target={proposta.contato.portfolio ? '_blank' : undefined} rel="noopener">THIAGO<span>WESSLEY</span></a>
+              <ul className="dz-site-redes">
+                {instagramUrl && <li><a href={instagramUrl} target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#dz-i-ig" /></svg></a></li>}
+                {proposta.contato.linkedin && <li><a href={proposta.contato.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true"><use href="#dz-i-in" /></svg></a></li>}
+                <li><a href={`mailto:${proposta.contato.email}`} aria-label="E-mail"><svg aria-hidden="true"><use href="#dz-i-mail" /></svg></a></li>
+              </ul>
             </div>
-            {d.assinatura && <figure className="dz-sig"><Img img={d.assinatura} /></figure>}
+            <div className="dz-site-col">
+              <h2>Contato</h2>
+              <ul>
+                <li><a href={linkWhats} target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#dz-i-tel" /></svg>{zap}</a></li>
+                <li><a href={`mailto:${proposta.contato.email}`}><svg aria-hidden="true"><use href="#dz-i-mail" /></svg>{proposta.contato.email}</a></li>
+                {instagramUrl && <li><a href={instagramUrl} target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#dz-i-ig" /></svg>{proposta.contato.instagram}</a></li>}
+                {proposta.contato.linkedin && <li><a href={proposta.contato.linkedin} target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#dz-i-in" /></svg>LinkedIn</a></li>}
+                {proposta.contato.portfolio && <li><a href={proposta.contato.portfolio} target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#dz-i-go" /></svg>Portfólio</a></li>}
+              </ul>
+            </div>
+            {proposta.contato.endereco && (
+              <div className="dz-site-col">
+                <h2>Endereço</h2>
+                <ul><li><span><svg aria-hidden="true"><use href="#dz-i-pin" /></svg>{proposta.contato.endereco}</span></li></ul>
+              </div>
+            )}
+          </div>
+          <div className="dz-site-base">
+            <span>© {ano} Thiago Wessley, Estrategista criativo</span>
+            <a className="dz-selo" href="https://thiagowessley.com.br" target="_blank" rel="noopener">Website by <b>THIAGO<span>WESSLEY</span></b></a>
+            <a className="dz-topo" href="#topo">▲ Voltar ao topo</a>
           </div>
         </div>
       </footer>
