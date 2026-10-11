@@ -1,6 +1,19 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://thiagowessley.com.br",
+      "permanent": false
+    }
+  ],
   "rewrites": [
-    { "source": "/p/:slug", "destination": "/index.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/p/:slug",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
