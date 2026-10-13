@@ -440,6 +440,7 @@ html:has(> body.dz-body) { scroll-padding-top: 104px; }
 .dz-plano-nome { margin: 0 0 4px; font: 800 1.15rem/1.3 var(--font-display); color: var(--title); }
 .dz-plano-resumo { margin: 0 0 var(--s5); color: var(--muted); }
 .dz-invest .dz-dots { gap: 10px; }
+.dz .dz-invest + .dz-invest { margin-top: var(--s7); }
 
 /* Botão único de ação, no fecho */
 .dz-cta { display: inline-flex; align-items: center; gap: 12px; margin-top: var(--s6); padding: 18px 28px; border-radius: 999px; background: var(--gold); color: #0D0D0D; text-decoration: none; font: 800 0.9rem/1 var(--font-display); letter-spacing: 0.08em; text-transform: uppercase; transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease); }

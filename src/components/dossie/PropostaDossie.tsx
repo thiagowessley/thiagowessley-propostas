@@ -387,18 +387,21 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
 
         {plano && (
           <Secao id="investimento" num="03" fino="O investimento" grosso="e o que ele cobre">
-            <div className="dz-invest dz-rv">
-              <div>
-                <p className="dz-valor"><ValorComMoeda valor={plano.valor} /></p>
-                {plano.periodo && <p className="dz-valor-sub">{plano.periodo.charAt(0).toUpperCase() + plano.periodo.slice(1)}</p>}
-                {plano.rodape && <p className="dz-valor-note">{plano.rodape}. {s.confidencialidade}</p>}
+            {/* Um bloco por plano. Com um plano só, o resultado é o mesmo de sempre. */}
+            {(s.planos ?? []).map((pl, i, todos) => (
+              <div className="dz-invest dz-rv" key={pl.nome}>
+                <div>
+                  <p className="dz-valor"><ValorComMoeda valor={pl.valor} /></p>
+                  {pl.periodo && <p className="dz-valor-sub">{pl.periodo.charAt(0).toUpperCase() + pl.periodo.slice(1)}</p>}
+                  {pl.rodape && <p className="dz-valor-note">{pl.rodape}.{i === todos.length - 1 ? ` ${s.confidencialidade}` : ''}</p>}
+                </div>
+                <div>
+                  <p className="dz-plano-nome">{pl.nome}</p>
+                  <p className="dz-plano-resumo">{pl.resumo}</p>
+                  <ul className="dz-dots">{pl.itens.map(it => <li key={it}>{it}</li>)}</ul>
+                </div>
               </div>
-              <div>
-                <p className="dz-plano-nome">{plano.nome}</p>
-                <p className="dz-plano-resumo">{plano.resumo}</p>
-                <ul className="dz-dots">{plano.itens.map(it => <li key={it}>{it}</li>)}</ul>
-              </div>
-            </div>
+            ))}
           </Secao>
         )}
 

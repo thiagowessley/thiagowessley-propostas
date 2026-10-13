@@ -8,6 +8,7 @@ import { radioParatiProducao } from './radio-parati-producao'
 import { eduardaDiariaConteudo } from './eduarda-diaria-conteudo'
 import { eduardaAdrianaDiariaCompartilhada } from './eduarda-adriana-diaria-compartilhada'
 import { valensProducaoConteudo } from './valens-producao-conteudo'
+import { valensEdicaoVideo } from './valens-edicao-video'
 import { dgAtivosSite } from './dg-ativos-site'
 import { thaisDiariaEsportiva } from './thais-diaria-esportiva'
 import { thaisEdicaoVideo } from './thais-edicao-video'
@@ -25,6 +26,7 @@ export const propostas: Record<string, PropostaData> = {
   eduardaDiariaConteudo,
   eduardaAdrianaDiariaCompartilhada,
   valensProducaoConteudo,
+  valensEdicaoVideo,
   dgAtivosSite,
   thaisDiariaEsportiva,
   thaisEdicaoVideo,

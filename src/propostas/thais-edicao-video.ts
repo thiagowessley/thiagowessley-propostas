@@ -3,13 +3,55 @@ import { SOBRE_PADRAO, encerramentoPadrao } from '../lib/copy-padrao'
 
 export const thaisEdicaoVideo: PropostaData = {
   slug: 'thais-edicao-video',
+  estilo: 'dossie',
+  ogImagem: '/og/thais-edicao.jpg',
+  dossie: {
+    retrato: { src: '/img/portfolio/p9.jpg', alt: 'Depoimento em vídeo editado, com legenda e identificação', largura: 1200, altura: 617, foco: '58% 40%', mira: ['57%', '34%'] },
+    galeria: [
+      { src: '/img/portfolio/p7.webp', alt: 'Aftermovie institucional editado', largura: 441, altura: 765, foco: '50% 38%' },
+      { src: '/img/portfolio/p1.webp', alt: 'Bastidores de uma captação em vídeo', largura: 573, altura: 981, foco: '50% 42%' },
+    ],
+    titulo: { fino: 'Edição de vídeo para a sua agência:', grosso: 'o material dos seus clientes, pronto pra postar em até 7 dias úteis.' },
+    lede: 'Dois pacotes mensais de até 10 vídeos, com corte, ritmo, legenda e trilha licenciada. Você envia o bruto, eu edito, e cada lote volta organizado por link. A cobertura completa, com diária de captação, é um serviço à parte.',
+    documento: 'Proposta comercial',
+    duracao: 'a cada ciclo',
+    base: { provas: [], produtos: [] },
+    linha: {
+      titulo: 'Do material bruto ao vídeo no ar, em até 7 dias úteis',
+      nota: 'O prazo corre a partir do recebimento do material bruto, por lote de até 10 vídeos. Os primeiros vídeos chegam na primeira semana, enquanto o restante do lote segue em edição.',
+      inicio: 'Envio do material',
+      fim: 'Lote entregue',
+    },
+    marcos: [
+      { dia: 'Dia 1', nome: 'Material enviado' },
+      { dia: 'Primeira semana', nome: 'Primeiros vídeos' },
+      { dia: 'Até 7 dias úteis', nome: 'Lote entregue' },
+      { dia: 'Após a entrega', nome: 'Rodadas de ajuste' },
+    ],
+    teste: [
+      { etapa: 'Envio', nome: 'Material bruto por Drive ou WeTransfer' },
+      { etapa: 'Briefing', nome: 'Música, tom e referência de corte' },
+      { etapa: 'Edição', nome: 'Corte, ritmo, legenda e cor' },
+      { etapa: 'Entrega', nome: 'MP4 por link, por lote' },
+      { etapa: 'Ajuste', nome: 'Rodadas de corte de fala e legenda' },
+    ],
+    videos: [
+      { youtubeId: 'JNHSNxgJT1s', titulo: 'Exemplo de edição avançada: Camila Oliveira', poster: '/img/portfolio/camila-oliveira.jpg' },
+    ],
+    paineis: [
+      { tipo: 'teste', titulo: 'Como cada lote roda', legenda: 'Do material bruto ao vídeo pronto pra postar.' },
+      { tipo: 'videos', titulo: 'Padrão de edição', legenda: 'Exemplo de vídeo editado no formato Reels.' },
+      null,
+    ],
+    fecho: 'O material dos seus clientes, editado e no ar em até 7 dias úteis.',
+  },
   cliente: 'Thais Joris',
   segmento: 'Agência de marketing, edição de vídeo para clientes finais, Joinville/SC',
   servico: 'Edição de Vídeo',
   responsavel: 'Thais Joris',
-  validade: '2026-09-09',
-  envio: '2026-09-02',
-  intro_capa: 'Esta proposta apresenta os dois pacotes de edição de vídeo pros Reels dos clientes da sua agência, com escopo, processo, prazos, condições e investimento de cada um.',
+  validade: '2026-10-20',
+  envio: '2026-10-13',
+  intro_capa: 'Esta proposta apresenta os dois pacotes de edição de vídeo pros Reels dos clientes da sua agência, com escopo, processo, prazos, condições e investimento de cada um. A cobertura completa, com diária de captação, é um serviço à parte, com proposta própria.',
   valor: {
     principal: 247,
     moeda: 'BRL',

@@ -3,13 +3,55 @@ import { SOBRE_PADRAO, encerramentoPadrao } from '../lib/copy-padrao'
 
 export const thaisDiariaEsportiva: PropostaData = {
   slug: 'thais-diaria-esportiva',
+  estilo: 'dossie',
+  ogImagem: '/og/thais-diaria.jpg',
+  dossie: {
+    retrato: { src: '/img/portfolio/p9.jpg', alt: 'Depoimento em vídeo captado em diária de conteúdo', largura: 1200, altura: 617, foco: '58% 40%', mira: ['57%', '34%'] },
+    galeria: [
+      { src: '/img/portfolio/p1.webp', alt: 'Bastidores de uma captação em vídeo', largura: 573, altura: 981, foco: '50% 42%' },
+      { src: '/img/portfolio/p4.webp', alt: 'Cobertura de evento corporativo', largura: 604, altura: 972, foco: '50% 45%' },
+    ],
+    titulo: { fino: 'Diária de conteúdo:', grosso: 'torneios e patrocinadores sempre no ar, com captação e edição todo mês.' },
+    lede: 'Uma diária de captação por mês e a edição completa de cada vídeo, para manter anúncio de torneio e vídeo de patrocinador publicados no ritmo do calendário esportivo.',
+    documento: 'Proposta comercial',
+    duracao: 'a cada mês',
+    base: { provas: [], produtos: [] },
+    linha: {
+      titulo: 'Quatro semanas, do calendário ao mês coberto',
+      nota: 'O ciclo se repete todo mês. A diária é agendada com pelo menos 5 dias úteis de antecedência, sempre em Joinville, e os primeiros vídeos chegam na primeira semana depois da captação.',
+      inicio: 'Calendário do mês',
+      fim: 'Mês coberto',
+    },
+    marcos: [
+      { dia: 'Semana 1', nome: 'Calendário e agenda' },
+      { dia: 'Semana 2', nome: 'Diária de captação' },
+      { dia: 'Semana 3', nome: 'Primeiros vídeos' },
+      { dia: 'Semana 4', nome: 'Mês coberto' },
+    ],
+    teste: [
+      { etapa: 'Pauta', nome: 'Torneios e patrocinadores do mês' },
+      { etapa: 'Diária', nome: 'Visita única e contínua' },
+      { etapa: 'Edição', nome: 'Corte, ritmo e legenda' },
+      { etapa: 'Entrega', nome: 'Por link, em MP4, por patrocinador' },
+      { etapa: 'Publicação', nome: 'No ritmo do calendário' },
+    ],
+    videos: [
+      { youtubeId: 'JNHSNxgJT1s', titulo: 'Exemplo de edição: Camila Oliveira', poster: '/img/portfolio/camila-oliveira.jpg' },
+    ],
+    paineis: [
+      { tipo: 'teste', titulo: 'Como cada mês roda', legenda: 'Do calendário de torneios ao vídeo pronto pra postar.' },
+      null,
+      { tipo: 'videos', titulo: 'Padrão de edição', legenda: 'Exemplo de vídeo editado no formato Reels.' },
+    ],
+    fecho: 'Vídeo de patrocinador e de torneio no ar todo mês.',
+  },
   cliente: 'Thais Joris',
   segmento: 'Produção de conteúdo em vídeo para o segmento esportivo, Joinville/SC',
-  servico: 'Diária de Conteúdo em Vídeo',
+  servico: 'Cobertura Completa de Conteúdo em Vídeo',
   responsavel: 'Thais Joris',
-  validade: '2026-08-29',
-  envio: '2026-08-22',
-  intro_capa: 'Esta proposta apresenta os dois modelos de diária de conteúdo em vídeo (captação e edição) pra manter torneios e patrocinadores sempre no ar, com escopo, processo, prazos, condições e investimento de cada um.',
+  validade: '2026-10-20',
+  envio: '2026-10-13',
+  intro_capa: 'Esta proposta apresenta a cobertura completa de conteúdo em vídeo (captação e edição) pra manter torneios e patrocinadores sempre no ar, com escopo, processo, prazos, condições e investimento. A edição de material já gravado é um serviço à parte, com proposta própria.',
   valor: {
     principal: 797,
     moeda: 'BRL',
@@ -46,7 +88,7 @@ export const thaisDiariaEsportiva: PropostaData = {
       desafio: 'Sustentar conteúdo de vídeo mensal pra patrocinador e torneio, em volume constante, sem montar equipe própria de captação e edição.',
       entregas: [
         'Vídeo de patrocinador e anúncio de torneio sempre no ar, sem fila parada',
-        'Captação e edição terceirizadas, sem contratar equipe própria de conteúdo',
+        'Captação e edição no mesmo fluxo: uma diária por mês e cada vídeo pronto pra postar',
         'Uma diária por mês resolve o volume padrão, reforço extra só quando o calendário de torneios pedir',
         'Primeiros vídeos no ar já na 1ª semana após a diária',
       ],

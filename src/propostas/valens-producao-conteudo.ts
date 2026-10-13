@@ -1,21 +1,65 @@
 import type { PropostaData } from '../types/proposta'
 import { SOBRE_PADRAO, encerramentoPadrao } from '../lib/copy-padrao'
 
+// Cobertura completa de conteúdo (captação + edição). A edição de material já gravado
+// é outro serviço, com proposta própria: valens-edicao-video.
 export const valensProducaoConteudo: PropostaData = {
   slug: 'valens-producao-conteudo',
+  estilo: 'dossie',
+  ogImagem: '/og/valens-cobertura.jpg',
+  dossie: {
+    retrato: { src: '/img/portfolio/p9.jpg', alt: 'Depoimento em vídeo captado em diária de conteúdo', largura: 1200, altura: 617, foco: '58% 40%', mira: ['57%', '34%'] },
+    galeria: [
+      { src: '/img/portfolio/p1.webp', alt: 'Bastidores de uma captação em vídeo', largura: 573, altura: 981, foco: '50% 42%' },
+      { src: '/img/portfolio/p7.webp', alt: 'Aftermovie institucional', largura: 441, altura: 765, foco: '50% 38%' },
+    ],
+    titulo: { fino: 'Valens Academy:', grosso: 'captação e edição de vídeo todo mês, com o Método Pulsar sempre no ar.' },
+    lede: 'Uma diária de captação por mês e a edição completa de cada vídeo, para a Valens sustentar vídeo educativo no Instagram sem desviar o time da operação de eventos, mentoria e coworking.',
+    documento: 'Proposta comercial',
+    duracao: 'a cada mês',
+    base: { provas: [], produtos: [] },
+    linha: {
+      titulo: 'Quatro semanas, da pauta ao mês coberto',
+      nota: 'O ciclo se repete todo mês. A diária é agendada com pelo menos 5 dias úteis de antecedência, e os primeiros vídeos chegam na primeira semana depois da captação.',
+      inicio: 'Pauta do mês',
+      fim: 'Mês coberto',
+    },
+    marcos: [
+      { dia: 'Semana 1', nome: 'Pauta e agenda' },
+      { dia: 'Semana 2', nome: 'Diária de captação' },
+      { dia: 'Semana 3', nome: 'Primeiros vídeos' },
+      { dia: 'Semana 4', nome: 'Mês coberto' },
+    ],
+    teste: [
+      { etapa: 'Pauta', nome: 'Temas e roteiro, da Valens' },
+      { etapa: 'Diária', nome: 'Visita única e contínua' },
+      { etapa: 'Edição', nome: 'Corte, ritmo e legenda' },
+      { etapa: 'Entrega', nome: 'Por link, em MP4, por semana' },
+      { etapa: 'Publicação', nome: 'No ritmo que a Valens escolher' },
+    ],
+    videos: [
+      { youtubeId: 'JNHSNxgJT1s', titulo: 'Exemplo de edição: Camila Oliveira', poster: '/img/portfolio/camila-oliveira.jpg' },
+    ],
+    paineis: [
+      { tipo: 'teste', titulo: 'Como cada mês roda', legenda: 'Do roteiro da Valens ao vídeo pronto para postar.' },
+      null,
+      { tipo: 'videos', titulo: 'Padrão de edição', legenda: 'Exemplo de vídeo editado no formato Reels.' },
+    ],
+    fecho: 'Vídeo educativo no ar todo mês, sem tirar o time da operação.',
+  },
   cliente: 'Valens Academy',
   segmento: 'Aceleradora de negócios femininos, Joinville/SC',
-  servico: 'Produção de Conteúdo em Vídeo',
+  servico: 'Cobertura Completa de Conteúdo em Vídeo',
   responsavel: 'Tamyres Petry',
-  validade: '2026-08-24',
-  envio: '2026-08-17',
-  intro_capa: 'Esta proposta apresenta os dois modelos de produção de conteúdo em vídeo pro Instagram da Valens Academy: diária completa (captação e edição) e pacote só de edição, com escopo, processo, prazos, condições e investimento de cada um.',
+  validade: '2026-10-20',
+  envio: '2026-10-13',
+  intro_capa: 'Esta proposta apresenta a cobertura completa de conteúdo em vídeo pro Instagram da Valens Academy: uma diária de captação por mês e a edição de cada vídeo, com escopo, processo, prazos, condições e investimento. A edição de material que a Valens já grava é um serviço à parte, com proposta própria.',
   valor: {
     principal: 797,
     moeda: 'BRL',
   },
   mostrarPortfolio: true,
-  ctaWhatsapp: 'Fechar a produção de conteúdo',
+  ctaWhatsapp: 'Agendar a diária de conteúdo',
 
   foto_profissional: '/img/thiago-vertical.jpg',
   foto_secundaria: '/img/thiago-horizontal.jpg',
@@ -26,7 +70,7 @@ export const valensProducaoConteudo: PropostaData = {
     intro: [
       'Nos últimos anos participei de coberturas de evento, vídeos institucionais e produções audiovisuais em diferentes formatos.',
       'Cada um deles somou um repertório: fala direta pra câmera, cobertura de evento corporativo e edição pensada pra quem assiste rápido, no feed.',
-      'É esse padrão que entra em cada vídeo captado ou editado pro Instagram da Valens.',
+      'É esse padrão que entra em cada vídeo captado pro Instagram da Valens.',
     ],
     link: { label: 'Ver portfólio completo', url: 'https://thiagowessley.com.br/' },
     itens: [
@@ -46,9 +90,9 @@ export const valensProducaoConteudo: PropostaData = {
       desafio: 'Sustentar presença em vídeo educativo o mês inteiro sem tirar o time da operação de eventos, mentoria e coworking pra virar produtora de conteúdo em paralelo.',
       entregas: [
         'Vídeos em volume, com o Método Pulsar e os bastidores da Valens sempre no ar',
-        'Captação e edição terceirizadas, sem contratar equipe própria de conteúdo',
-        'Modelo flexível: diária completa quando precisar gravar, ou só edição quando o material já existe',
-        'Primeiros vídeos no ar já na 1ª semana, sem fila parada esperando agenda',
+        'Captação e edição no mesmo fluxo: uma diária por mês e cada vídeo pronto pra postar',
+        'Diária extra quando um evento, uma imersão ou o lançamento do Clube VAL$ pedir mais material',
+        'Primeiros vídeos no ar já na 1ª semana depois da diária',
       ],
     },
     fases: [
@@ -56,6 +100,7 @@ export const valensProducaoConteudo: PropostaData = {
         numero: '01',
         titulo: 'Planejamento e Pauta',
         periodo: 'ANTES DA DIÁRIA',
+        resumo: 'Ao fim da fase, a pauta do mês está fechada e a diária tem data.',
         itens: [
           { titulo: 'Repasse de pauta e roteiro', descricao: 'A Valens chega com os temas e o roteiro prontos: o Método Pulsar e o conteúdo técnico são todos de vocês.' },
           { titulo: 'Apoio pontual de estrutura', descricao: 'Oriento o que ajuda o vídeo a performar: gancho, tom de voz, gestos e expressão. O conteúdo continua todo de vocês.' },
@@ -66,6 +111,7 @@ export const valensProducaoConteudo: PropostaData = {
         numero: '02',
         titulo: 'Diária de Captação',
         periodo: 'DIA COMBINADO',
+        resumo: 'Ao fim da fase, o material do mês está gravado.',
         itens: [
           { titulo: 'Captação em vídeo', descricao: 'Uma visita só, no espaço que combinarmos, com a câmera rodando o dia inteiro.', limite: 'visita única e contínua' },
           { titulo: 'Fala direta pra câmera', descricao: 'Conduzo cada gravação pra sair natural e direto ao ponto, sem repetir tomada atrás de tomada.' },
@@ -76,6 +122,7 @@ export const valensProducaoConteudo: PropostaData = {
         numero: '03',
         titulo: 'Edição e Entrega',
         periodo: 'APÓS A DIÁRIA',
+        resumo: 'Ao fim da fase, cada vídeo está pronto pra postar, organizado por semana.',
         itens: [
           { titulo: 'Edição completa', descricao: 'Corte, ritmo e legenda: cada vídeo pronto pra ir direto pro ar.' },
           { titulo: 'Organização por semana', descricao: 'Tudo entregue já separado pro mês, sem vocês gastarem tempo planejando a ordem.' },
@@ -127,51 +174,22 @@ export const valensProducaoConteudo: PropostaData = {
         periodo: 'diária extra',
         rodape: 'Prioridade na agenda por já ser cliente do plano mensal ou anual',
       },
-      {
-        nome: 'Edição Simples',
-        resumo: 'Vocês gravam, eu edito',
-        itens: [
-          'Corte, ritmo, legenda, correção de cor e transição',
-          'Pacote de até 10 vídeos por mês',
-          'Entrega em MP4, pronta pra postar',
-          '1 rodada de ajuste por vídeo (corte de fala e legenda)',
-          'Sem diária de captação: o material bruto é enviado por vocês',
-        ],
-        valor: 247,
-        periodo: '/mês (pacote de 10 vídeos)',
-        rodape: 'Vídeo avulso fora do pacote: R$ 30 cada',
-      },
-      {
-        nome: 'Edição Avançada',
-        resumo: 'Vocês gravam, eu edito',
-        itens: [
-          'Tudo da edição simples, mais efeitos sonoros, animação e b-roll',
-          'Pacote de até 10 vídeos por mês',
-          'Entrega em MP4, pronta pra postar',
-          '1 rodada de ajuste por vídeo (corte de fala e legenda)',
-          'Sem diária de captação: o material bruto é enviado por vocês',
-        ],
-        valor: 697,
-        periodo: '/mês (pacote de 10 vídeos)',
-        rodape: 'Vídeo avulso fora do pacote: R$ 79 cada',
-      },
     ],
     prazos: [
       { texto: 'No contrato anual, a permanência é de 12 meses, contada a partir da primeira diária.', bold: 'permanência é de 12 meses' },
       { texto: 'A diária mensal é agendada com antecedência mínima de 5 dias úteis, conforme disponibilidade.', bold: 'antecedência mínima de 5 dias úteis' },
       { texto: 'Os primeiros vídeos são entregues já na primeira semana após a diária; o restante segue em edição e chega ao longo do mês.', bold: 'já na primeira semana' },
       { texto: 'Na diária extra, a entrega é acelerada: todos os vídeos prontos em até 7 dias úteis, sem esperar o restante do mês.', bold: 'entrega é acelerada' },
-      { texto: 'No pacote de edição, o prazo é de até 7 dias úteis por lote de até 10 vídeos, contado a partir do recebimento do material bruto.', bold: 'até 7 dias úteis' },
     ],
     contrato: [
       {
         titulo: 'Contrato e Entrega',
         itens: [
-          'O pagamento é cobrado no início de cada ciclo, para reserva da agenda ou da vaga de edição.',
-          'A entrega dos vídeos é feita por link, organizada por semana ou por lote.',
+          'O pagamento é cobrado no início de cada ciclo, para reserva da agenda.',
+          'A entrega dos vídeos é feita por link, organizada por semana.',
           'No contrato anual, a permanência é de 12 meses.',
           'Cancelamento antecipado no contrato anual gera multa de 50% sobre as mensalidades restantes até completar o contrato.',
-          'No plano mês a mês e no pacote de edição, não há permanência contratada nem multa de cancelamento.',
+          'No plano mês a mês, não há permanência contratada nem multa de cancelamento.',
         ],
       },
       {
@@ -181,7 +199,6 @@ export const valensProducaoConteudo: PropostaData = {
           'Diária fora de Joinville e região: valor ajustado conforme deslocamento, combinado à parte.',
           'A trilha sonora usada nas edições é licenciada, sem risco de direito autoral. Uma vez aprovada, não pode ser trocada sem orçamento novo.',
           'O roteiro e o conteúdo técnico de cada vídeo (Método Pulsar, metodologia, pautas) são de responsabilidade da Valens.',
-          'No pacote de edição, a qualidade de áudio e imagem do material bruto enviado é de responsabilidade da Valens.',
           'Cada vídeo tem direito a 1 rodada de ajuste, limitada a corte de fala já gravada e ajuste de legenda. Nova captação, nova cena ou troca de trilha são orçadas à parte.',
         ],
       },
@@ -190,8 +207,6 @@ export const valensProducaoConteudo: PropostaData = {
       blocos: [
         { titulo: 'Mensalidade Diária', descricao: 'Cobrada no início de cada ciclo, via Pix ou transferência. Inclui 1 diária por mês.' },
         { titulo: 'Diária Extra', descricao: 'R$ 1.497 por diária avulsa além da já incluída no mês, cobrada na data da captação.' },
-        { titulo: 'Pacote de Edição', descricao: 'Cobrado no início de cada ciclo, conforme o pacote escolhido (simples ou avançada). Sem diária de captação inclusa.' },
-        { titulo: 'Vídeo Avulso', descricao: 'Fora do pacote de edição: R$ 30 (simples) ou R$ 79 (avançada), cobrado por vídeo entregue.' },
       ],
       meios: [
         { nome: 'Pix', detalhe: 'Transferência instantânea' },
@@ -212,8 +227,8 @@ export const valensProducaoConteudo: PropostaData = {
     ],
     faq: [
       {
-        pergunta: 'Qual a diferença entre a diária completa e o pacote só edição?',
-        resposta: 'Na diária completa eu capto e edito no mesmo dia: o valor mensal já inclui 1 diária, visita única. No pacote só edição, vocês já gravam o material (evento, imersão, bastidor) e me enviam bruto: eu só edito, cobrado por pacote mensal de até 10 vídeos ou por vídeo avulso.',
+        pergunta: 'E se a Valens já grava o material e só precisa de edição?',
+        resposta: 'A edição de material já gravado é um serviço à parte, com proposta própria, sem diária de captação. Os dois serviços se complementam, mas cada um é contratado separadamente.',
       },
       {
         pergunta: 'Quantos vídeos vocês recebem por diária?',
@@ -237,7 +252,7 @@ export const valensProducaoConteudo: PropostaData = {
       },
       {
         pergunta: 'Existe fidelidade no contrato?',
-        resposta: 'Depende do plano. No mês a mês e no pacote de edição não há permanência contratada. No contrato anual da diária existe permanência de 12 meses, com multa de 50% sobre as mensalidades restantes em caso de cancelamento antecipado.',
+        resposta: 'Depende do plano. No mês a mês não há permanência contratada. No contrato anual existe permanência de 12 meses, com multa de 50% sobre as mensalidades restantes em caso de cancelamento antecipado.',
       },
     ],
     primeiros_30_dias: [
@@ -250,7 +265,7 @@ export const valensProducaoConteudo: PropostaData = {
     encerramento: encerramentoPadrao('o escopo, o processo e o investimento'),
   },
   utm_copy: {
-    whatsapp: 'Segue a proposta de produção de conteúdo em vídeo pra Valens Academy.',
+    whatsapp: 'Segue a proposta de cobertura completa de conteúdo em vídeo pra Valens Academy.',
     default: '',
   },
   contato: {
