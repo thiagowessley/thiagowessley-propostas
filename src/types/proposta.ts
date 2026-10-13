@@ -159,6 +159,7 @@ export interface ExtrasDossie {
   paineis: ({ tipo: 'base' | 'produtos' | 'videos' | 'presenca' | 'teste'; titulo: string; legenda: string } | null)[]
   fecho: string                         // frase grande do encerramento
   depois?: string                       // próximo serviço, dito uma vez, abaixo do botão de ação
+  secoesExtras?: ('sobre' | 'referencias')[]   // seções que vêm do molde de sempre e entram no fim da página, opt-in por proposta
   assinatura?: DossieImagem             // foto ao lado do fecho (opcional)
 }
 

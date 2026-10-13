@@ -45,6 +45,7 @@ export const valensEdicaoVideo: PropostaData = {
       { tipo: 'videos', titulo: 'Padrão de edição', legenda: 'Exemplo de vídeo editado no formato Reels.' },
       null,
     ],
+    secoesExtras: ['sobre', 'referencias'],
     fecho: 'O que a Valens já grava, editado e no ar em até 7 dias úteis.',
   },
   cliente: 'Valens Academy',
@@ -198,6 +199,18 @@ export const valensEdicaoVideo: PropostaData = {
         { nome: 'Transferência', detalhe: 'Depósito em conta corrente' },
       ],
     },
+    referencias: [
+      {
+        nome: 'Camila Farani (Brasil)',
+        url: 'https://www.instagram.com/camilafarani/',
+        tecnica: '1,1 milhão de seguidores construídos em cima de uma escola de negócios própria (Farani Escola de Negócios) e presença constante como investidora do Shark Tank Brasil, com funil de diagnóstico de crescimento levando direto ao produto. Aplicação: o mesmo formato, conteúdo educativo em vídeo sustentando a autoridade de uma escola de negócios, é o padrão que entra no conteúdo do Método Pulsar e do Clube VAL$.',
+      },
+      {
+        nome: 'Nathalia Arcuri (Brasil)',
+        url: 'https://www.instagram.com/nathaliaarcuri/',
+        tecnica: '3,5 milhões de seguidores construídos em educação financeira pra mulheres, com volume constante de vídeo em torno do mesmo tema técnico. Aplicação: mesmo em nicho técnico como estrutura e maturidade empresarial, volume consistente de vídeo educativo é o que constrói audiência e autoridade ao longo do tempo.',
+      },
+    ],
     faq: [
       {
         pergunta: 'Qual a diferença entre a edição básica e a avançada?',

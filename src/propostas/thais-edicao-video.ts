@@ -43,6 +43,7 @@ export const thaisEdicaoVideo: PropostaData = {
       { tipo: 'videos', titulo: 'Padrão de edição', legenda: 'Exemplo de vídeo editado no formato Reels.' },
       null,
     ],
+    secoesExtras: ['sobre'],
     fecho: 'O material dos seus clientes, editado e no ar em até 7 dias úteis.',
   },
   cliente: 'Thais Joris',

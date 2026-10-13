@@ -45,6 +45,7 @@ export const valensProducaoConteudo: PropostaData = {
       null,
       { tipo: 'videos', titulo: 'Padrão de edição', legenda: 'Exemplo de vídeo editado no formato Reels.' },
     ],
+    secoesExtras: ['sobre', 'referencias'],
     fecho: 'Vídeo educativo no ar todo mês, sem tirar o time da operação.',
   },
   cliente: 'Valens Academy',

@@ -281,7 +281,18 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
   const dias = calcularDiasRestantes(proposta.validade)
   const linkWhats = `https://wa.me/${proposta.contato.whatsapp}?text=${encodeURIComponent('Olá, vi a proposta e quero avançar.')}`
   const zap = proposta.contato.whatsapp.replace(/^(\d{2})(\d{2})(\d{5})(\d{4})$/, '+$1 $2 $3-$4')
-  const capitulos = useMemo(() => (s.faq?.length ? [...CAPITULOS, CAPITULO_DUVIDAS] : CAPITULOS), [s.faq])
+  const extras = d.secoesExtras ?? []
+  const temSobre = extras.includes('sobre') && !!proposta.sobre
+  const temRefs = extras.includes('referencias') && !!s.referencias?.length
+  const numDuvidas = s.faq?.length ? 1 : 0
+  const numSobre = String(CAPITULOS.length + numDuvidas).padStart(2, '0')
+  const numRefs = String(CAPITULOS.length + numDuvidas + (temSobre ? 1 : 0)).padStart(2, '0')
+  const capitulos = useMemo(() => [
+    ...CAPITULOS,
+    ...(s.faq?.length ? [CAPITULO_DUVIDAS] : []),
+    ...(temSobre ? [{ id: 'sobre', rotulo: `${numSobre} Quem entrega` }] : []),
+    ...(temRefs ? [{ id: 'referencias', rotulo: `${numRefs} Referências` }] : []),
+  ], [s.faq, temSobre, temRefs, numSobre, numRefs])
   const instagramUrl = proposta.contato.instagram ? `https://instagram.com/${proposta.contato.instagram.replace('@', '')}` : null
   const ano = new Date().getFullYear()
   const paineis = useMemo(() => s.fases.map((f, i) => ({ key: `f${f.numero}`, p: d.paineis[i] ?? null })), [s.fases, d.paineis])
@@ -468,6 +479,33 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
                   <summary>{f.pergunta}<i aria-hidden="true" /></summary>
                   <p>{f.resposta}</p>
                 </details>
+              ))}
+            </div>
+          </Secao>
+        )}
+        {temSobre && proposta.sobre && (
+          <Secao id="sobre" num={numSobre} fino="Quem" grosso="entrega" larga>
+            <div className="dz-sobre dz-rv">
+              {proposta.foto_profissional && (
+                <figure><img src={proposta.foto_profissional} alt="Thiago Wessley" width={843} height={1264} loading="lazy" decoding="async" /></figure>
+              )}
+              <div>
+                {proposta.sobre.paragrafos.map(p => <p key={p}>{p}</p>)}
+                {proposta.sobre.atuacao && (
+                  <ul className="dz-comp">{proposta.sobre.atuacao.map(a => <li key={a.nome}>{a.nome}</li>)}</ul>
+                )}
+              </div>
+            </div>
+          </Secao>
+        )}
+        {temRefs && s.referencias && (
+          <Secao id="referencias" num={numRefs} fino="Referências" grosso="e o que se aplica" larga>
+            <div className="dz-refs dz-rv">
+              {s.referencias.map(r => (
+                <article key={r.nome}>
+                  <h3><a href={r.url} target="_blank" rel="noopener noreferrer">{r.nome}</a></h3>
+                  <p>{r.tecnica}</p>
+                </article>
               ))}
             </div>
           </Secao>

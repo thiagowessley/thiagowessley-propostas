@@ -43,6 +43,7 @@ export const thaisDiariaEsportiva: PropostaData = {
       null,
       { tipo: 'videos', titulo: 'Padrão de edição', legenda: 'Exemplo de vídeo editado no formato Reels.' },
     ],
+    secoesExtras: ['sobre'],
     fecho: 'Vídeo de patrocinador e de torneio no ar todo mês.',
   },
   cliente: 'Thais Joris',
