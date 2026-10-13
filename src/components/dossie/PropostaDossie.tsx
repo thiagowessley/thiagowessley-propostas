@@ -276,6 +276,8 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
   const d = proposta.dossie as ExtrasDossie
   const s = proposta.secoes
   const plano = s.planos?.[0]
+  const planos = s.planos ?? []
+  const varios = planos.length > 1
   const dias = calcularDiasRestantes(proposta.validade)
   const linkWhats = `https://wa.me/${proposta.contato.whatsapp}?text=${encodeURIComponent('Olá, vi a proposta e quero avançar.')}`
   const zap = proposta.contato.whatsapp.replace(/^(\d{2})(\d{2})(\d{5})(\d{4})$/, '+$1 $2 $3-$4')
@@ -386,22 +388,48 @@ export function PropostaDossie({ proposta }: { proposta: PropostaData }) {
         </Secao>
 
         {plano && (
-          <Secao id="investimento" num="03" fino="O investimento" grosso="e o que ele cobre">
-            {/* Um bloco por plano. Com um plano só, o resultado é o mesmo de sempre. */}
-            {(s.planos ?? []).map((pl, i, todos) => (
-              <div className="dz-invest dz-rv" key={pl.nome}>
+          <Secao id="investimento" num="03" fino="O investimento" grosso="e o que ele cobre" larga={varios}>
+            {varios ? (
+              <>
+                {/* Vários planos: cartões lado a lado, com o vídeo de exemplo embaixo de cada um */}
+                <div className="dz-planos dz-rv" style={{ ['--np' as string]: String(planos.length) }}>
+                  {planos.map(pl => (
+                    <article className={`dz-plano${pl.destaque ? ' dz-plano--on' : ''}`} key={pl.nome}>
+                      {pl.destaque && <span className="dz-plano-badge">Mais escolhido</span>}
+                      <p className="dz-plano-nome">{pl.nome}</p>
+                      <p className="dz-plano-resumo">{pl.resumo}</p>
+                      <p className="dz-valor dz-valor--card"><ValorComMoeda valor={pl.valor} /></p>
+                      {pl.periodo && <p className="dz-valor-sub">{pl.periodo.charAt(0).toUpperCase() + pl.periodo.slice(1)}</p>}
+                      <ul className="dz-dots">{pl.itens.map(it => <li key={it}>{it}</li>)}</ul>
+                      {pl.rodape && <p className="dz-valor-note">{pl.rodape}</p>}
+                      {pl.video && (
+                        <figure className="dz-plano-video">
+                          <div>
+                            <iframe src={`https://www.youtube-nocookie.com/embed/${pl.video.youtubeId}?rel=0&playsinline=1`} title={pl.video.label ?? pl.nome}
+                              loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
+                          </div>
+                          {pl.video.label && <figcaption>{pl.video.label}</figcaption>}
+                        </figure>
+                      )}
+                    </article>
+                  ))}
+                </div>
+                {s.confidencialidade && <p className="dz-valor-note dz-conf">{s.confidencialidade}</p>}
+              </>
+            ) : (
+              <div className="dz-invest dz-rv">
                 <div>
-                  <p className="dz-valor"><ValorComMoeda valor={pl.valor} /></p>
-                  {pl.periodo && <p className="dz-valor-sub">{pl.periodo.charAt(0).toUpperCase() + pl.periodo.slice(1)}</p>}
-                  {pl.rodape && <p className="dz-valor-note">{pl.rodape}.{i === todos.length - 1 ? ` ${s.confidencialidade}` : ''}</p>}
+                  <p className="dz-valor"><ValorComMoeda valor={plano.valor} /></p>
+                  {plano.periodo && <p className="dz-valor-sub">{plano.periodo.charAt(0).toUpperCase() + plano.periodo.slice(1)}</p>}
+                  {plano.rodape && <p className="dz-valor-note">{plano.rodape}. {s.confidencialidade}</p>}
                 </div>
                 <div>
-                  <p className="dz-plano-nome">{pl.nome}</p>
-                  <p className="dz-plano-resumo">{pl.resumo}</p>
-                  <ul className="dz-dots">{pl.itens.map(it => <li key={it}>{it}</li>)}</ul>
+                  <p className="dz-plano-nome">{plano.nome}</p>
+                  <p className="dz-plano-resumo">{plano.resumo}</p>
+                  <ul className="dz-dots">{plano.itens.map(it => <li key={it}>{it}</li>)}</ul>
                 </div>
               </div>
-            ))}
+            )}
           </Secao>
         )}
 

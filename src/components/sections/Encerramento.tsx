@@ -13,7 +13,7 @@ interface Props {
 export function Encerramento({ proposta }: Props) {
   const linkWhats = `https://wa.me/${proposta.contato.whatsapp}?text=${encodeURIComponent('Olá, vi a proposta e quero avançar.')}`
   const qrUrl = proposta.contato.qr ?? '/img/qr-whatsapp.png'
-  const texto = proposta.secoes.encerramento ?? 'Quando terminar de ler, me chama no WhatsApp e a gente fecha os próximos passos.'
+  const texto = proposta.secoes.encerramento ?? 'Para seguir, abra a conversa no WhatsApp: a gente confirma os próximos passos.'
 
   return (
     <AnimatedSection id="encerramento">

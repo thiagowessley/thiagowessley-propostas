@@ -72,12 +72,7 @@ export function PropostaPage() {
 
   // Molde dossiê: visual do dossie.thiagowessley.com.br, só para proposta que pede estilo 'dossie'
   if (proposta.estilo === 'dossie' && proposta.dossie) {
-    return (
-      <>
-        <PropostaDossie proposta={proposta} />
-        <PopupSaida whatsapp={proposta.contato.whatsapp} />
-      </>
-    )
+    return <PropostaDossie proposta={proposta} />
   }
 
   return (

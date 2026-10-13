@@ -40,9 +40,9 @@ export function condicaoAprovacaoPublicacao(destino?: string) {
   }
 }
 
-/** Frase de encerramento padrao, tom confiante (nunca "com o ok"). */
+/** Frase de encerramento padrao, tom declarativo (sem pedir permissão nem implorar para fechar). */
 export function encerramentoPadrao(oQueJaSabe: string) {
-  return `Você chegou até aqui, então já sabe ${oQueJaSabe}. Me chama no WhatsApp pra fechar ou tirar as dúvidas que ficaram, e a gente alinha os próximos passos.`
+  return `Você já viu ${oQueJaSabe}. Para seguir, é só abrir a conversa no WhatsApp: a gente confirma a data e começa.`
 }
 
 /** Entrega padrao de cobertura de eventos (CLAUDE.md secao 06). */

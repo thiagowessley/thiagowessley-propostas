@@ -8,10 +8,10 @@ export const valensEdicaoVideo: PropostaData = {
   estilo: 'dossie',
   ogImagem: '/og/valens-edicao.jpg',
   dossie: {
-    retrato: { src: '/img/portfolio/p9.jpg', alt: 'Depoimento em vídeo editado, com legenda e identificação', largura: 1200, altura: 617, foco: '58% 40%', mira: ['57%', '34%'] },
+    retrato: { src: '/img/portfolio/natalia-merheb.jpg', alt: 'Empresária em Reels educativo, com legenda e destaque no texto', largura: 720, altura: 1280, foco: '50% 24%', mira: ['50%', '31%'] },
     galeria: [
-      { src: '/img/portfolio/p7.webp', alt: 'Aftermovie institucional editado', largura: 441, altura: 765, foco: '50% 38%' },
-      { src: '/img/portfolio/p1.webp', alt: 'Bastidores de uma captação em vídeo', largura: 573, altura: 981, foco: '50% 42%' },
+      { src: '/img/portfolio/camila-oliveira.jpg', alt: 'Reels editado, com legenda embutida', largura: 405, altura: 720, foco: '50% 26%' },
+      { src: '/img/portfolio/patricia-gurgel.jpg', alt: 'Reels editado, com destaque no texto', largura: 405, altura: 720, foco: '50% 30%' },
     ],
     titulo: { fino: 'Edição de vídeo para a Valens:', grosso: 'o material que vocês já gravam, pronto pra postar em até 7 dias úteis.' },
     lede: 'Dois pacotes mensais de até 10 vídeos, com corte, ritmo, legenda e trilha licenciada. Vocês gravam, eu edito, e cada lote volta organizado por link. A cobertura completa, com diária de captação, é um serviço à parte.',
@@ -144,6 +144,7 @@ export const valensEdicaoVideo: PropostaData = {
         valor: 247,
         periodo: '/mês (pacote de 10 vídeos)',
         rodape: 'Vídeo avulso fora do pacote: R$ 47 cada',
+        video: { youtubeId: 'V5lMb2SksPs', label: 'Exemplo de edição básica: Maria Eduarda' },
       },
       {
         nome: 'Edição Avançada',
@@ -159,6 +160,7 @@ export const valensEdicaoVideo: PropostaData = {
         valor: 697,
         periodo: '/mês (pacote de 10 vídeos)',
         rodape: 'Vídeo avulso fora do pacote: R$ 97 cada',
+        video: { youtubeId: 'JNHSNxgJT1s', label: 'Exemplo de edição avançada: Camila Oliveira' },
       },
     ],
     prazos: [

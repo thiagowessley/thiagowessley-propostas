@@ -6,13 +6,13 @@ export const thaisDiariaEsportiva: PropostaData = {
   estilo: 'dossie',
   ogImagem: '/og/thais-diaria.jpg',
   dossie: {
-    retrato: { src: '/img/portfolio/p9.jpg', alt: 'Depoimento em vídeo captado em diária de conteúdo', largura: 1200, altura: 617, foco: '58% 40%', mira: ['57%', '34%'] },
+    retrato: { src: '/img/portfolio/natalia-merheb.jpg', alt: 'Empresária falando direto pra câmera em Reels educativo', largura: 720, altura: 1280, foco: '50% 24%', mira: ['50%', '31%'] },
     galeria: [
-      { src: '/img/portfolio/p1.webp', alt: 'Bastidores de uma captação em vídeo', largura: 573, altura: 981, foco: '50% 42%' },
-      { src: '/img/portfolio/p4.webp', alt: 'Cobertura de evento corporativo', largura: 604, altura: 972, foco: '50% 45%' },
+      { src: '/img/portfolio/camila-oliveira.jpg', alt: 'Empresária em vídeo de depoimento', largura: 405, altura: 720, foco: '50% 26%' },
+      { src: '/img/portfolio/patricia-gurgel.jpg', alt: 'Especialista em vídeo educativo sobre saúde', largura: 405, altura: 720, foco: '50% 30%' },
     ],
     titulo: { fino: 'Diária de conteúdo:', grosso: 'torneios e patrocinadores sempre no ar, com captação e edição todo mês.' },
-    lede: 'Uma diária de captação por mês e a edição completa de cada vídeo, para manter anúncio de torneio e vídeo de patrocinador publicados no ritmo do calendário esportivo.',
+    lede: 'Uma diária de captação de até 4 horas por mês e a edição completa de cada vídeo, para manter anúncio de torneio e vídeo de patrocinador publicados no ritmo do calendário esportivo.',
     documento: 'Proposta comercial',
     duracao: 'a cada mês',
     base: { provas: [], produtos: [] },
@@ -109,7 +109,7 @@ export const thaisDiariaEsportiva: PropostaData = {
         titulo: 'Diária de Captação',
         periodo: 'DIA COMBINADO',
         itens: [
-          { titulo: 'Captação em vídeo', descricao: 'Uma visita só, com a câmera rodando o dia inteiro, pra cobrir patrocinadores e anúncios de torneio.', limite: 'visita única e contínua' },
+          { titulo: 'Captação em vídeo', descricao: 'Uma visita só, com a câmera rodando por até 4 horas, pra cobrir patrocinadores e anúncios de torneio.', limite: 'visita única, até 4 horas' },
           { titulo: 'Fala direta pra câmera', descricao: 'Conduzo cada gravação pra sair natural e direto ao ponto, sem repetir tomada atrás de tomada.' },
           { titulo: 'Em torno de 5 vídeos', descricao: 'Esse é o volume típico dentro do tempo da diária.', limite: 'até 10 vídeos por diária' },
         ],
@@ -130,7 +130,7 @@ export const thaisDiariaEsportiva: PropostaData = {
         nome: 'Diária Mês a Mês',
         resumo: 'Captação + edição, sem prazo fixo',
         itens: [
-          '1 diária de captação por mês, visita única, sempre em Joinville',
+          '1 diária de captação por mês, visita única de até 4 horas, sempre em Joinville',
           'Em torno de 5 vídeos por diária, até 10 no máximo',
           'Edição completa de cada vídeo (corte, ritmo, legenda)',
           'Primeiros vídeos já na 1ª semana, restante ao longo do mês',
@@ -145,7 +145,7 @@ export const thaisDiariaEsportiva: PropostaData = {
         destaque: true,
         resumo: 'Captação + edição, plano anual',
         itens: [
-          '1 diária de captação por mês, visita única, sempre em Joinville',
+          '1 diária de captação por mês, visita única de até 4 horas, sempre em Joinville',
           'Em torno de 5 vídeos por diária, até 10 no máximo',
           'Edição completa de cada vídeo (corte, ritmo, legenda)',
           'Primeiros vídeos já na 1ª semana, restante ao longo do mês',
@@ -159,7 +159,7 @@ export const thaisDiariaEsportiva: PropostaData = {
         nome: 'Diária Extra',
         resumo: 'Reforço dentro do mesmo mês',
         itens: [
-          'Mesma diária completa de captação e edição',
+          'Mesma diária de captação (até 4 horas) e edição',
           'Soma ao plano contratado quando o calendário de torneios pedir mais de uma visita no mês',
           'Ideal pra gravar com patrocinador direto na loja, fora do dia principal',
           'Sem urgência de fim de semana: entra no fluxo normal de edição',
@@ -189,7 +189,7 @@ export const thaisDiariaEsportiva: PropostaData = {
       {
         titulo: 'Condições Gerais',
         itens: [
-          'A diária é uma visita única e contínua, sem fracionamento em mais de um encontro no mesmo dia. Encerrar antes do tempo não gera crédito nem horas a compensar em outra data.',
+          'A diária é uma visita única e contínua de até 4 horas, sem fracionamento em mais de um encontro no mesmo dia. Encerrar antes do tempo não gera crédito nem horas a compensar em outra data.',
           'Diária fora de Joinville e região: valor ajustado conforme deslocamento, combinado à parte.',
           'A trilha sonora usada nas edições é licenciada, sem risco de direito autoral. Uma vez aprovada, não pode ser trocada sem orçamento novo.',
           'O roteiro e a mensagem de cada patrocinador são de responsabilidade de quem contrata.',
@@ -214,7 +214,7 @@ export const thaisDiariaEsportiva: PropostaData = {
       },
       {
         pergunta: 'Quantos vídeos saem de cada diária?',
-        resposta: 'Em torno de 5, com teto de até 10 por diária. A diária é uma visita única de captação, mas fica limitada a esse teto pra manter o prazo de edição previsível.',
+        resposta: 'Em torno de 5, com teto de até 10 por diária. A diária é uma visita única de captação de até 4 horas, e fica limitada a esse teto pra manter o prazo de edição previsível.',
       },
       {
         pergunta: 'A diária pode ser dividida em mais de um encontro no mesmo dia?',
