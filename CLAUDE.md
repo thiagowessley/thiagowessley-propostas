@@ -118,6 +118,11 @@ thiagowessley-dossies). Opcional por proposta; as outras continuam no molde de s
   (os produtos vão no quadro `produtos`); cada fase aceita `resumo` e cada item `resultado`. `duracao` dá o título da seção do projeto (ex: "em 60 dias"). A abertura não mostra o valor: ele aparece só na seção de investimento. `galeria` põe mais imagens na abertura, trocadas a cada 3 segundos (parado para quem pede menos movimento); `referencias` monta o quadro "Referências e contato" do rodapé, com o QR do WhatsApp; `assinatura` (foto no fecho) é opcional. Um quadro
   por fase, nunca um desenho por item (pedido do Thiago em 29/09/2026). O texto comercial continua nos mesmos campos de sempre (`secoes.cenario`, `fases`, `planos`,
   `prazos`, `contrato`, `pagamento`, `encerramento`). Referência: dassg-linha-pet-marca-e-teste.ts.
+- Vários planos (13/10/2026): a seção de investimento mostra um cartão por item de `secoes.planos`, lado a lado,
+  em largura cheia (`destaque` vira o selo "Mais escolhido" e `video` vira o vídeo do YouTube embaixo do cartão).
+  Com um plano só o resultado é o de sempre. O pop-up de saída não existe no molde dossiê. Proposta de serviço sem
+  catálogo ou páginas publicadas usa `base: { provas: [], produtos: [] }` e `null` nas fases sem quadro. Edição e
+  cobertura completa são sempre propostas separadas, nunca cards do mesmo grid (Valens e Thais, 13/10/2026).
 - `PropostaPage.tsx` desvia para `src/components/dossie/PropostaDossie.tsx` só quando estilo = 'dossie'.
 - Estilo em src/styles/dossie-proposta.css, TODO escopado: tokens na classe `.dz`, toda classe com
   prefixo `dz-` (o globals.css já usa .sec-title, .thin e .bold, que vazariam para dentro). Seletor
