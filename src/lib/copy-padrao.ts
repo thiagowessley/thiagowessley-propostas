@@ -48,3 +48,11 @@ export function encerramentoPadrao(oQueJaSabe: string) {
 /** Entrega padrao de cobertura de eventos (CLAUDE.md secao 06). */
 export const ENTREGA_COBERTURA_PADRAO =
   'A entrega padrão inclui até 20 fotos editadas, um aftermovie de até 1:00 min, cortes para redes e arquivo no Flickr institucional.'
+
+/**
+ * Prazo de devolucao da rodada de ajuste em edicao de video (CLAUDE.md secao 06,
+ * definido 16/10/2026). Usar em toda proposta de edicao de video e diaria de conteudo,
+ * para o cliente nao precisar perguntar o prazo de alteracao depois.
+ */
+export const PRAZO_AJUSTE_EDICAO =
+  'Cada vídeo tem 2 rodadas de ajuste (corte de fala e legenda), com retorno em até 2 dias úteis por rodada.'

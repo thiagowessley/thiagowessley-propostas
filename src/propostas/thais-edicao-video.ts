@@ -1,5 +1,5 @@
 import type { PropostaData } from '../types/proposta'
-import { SOBRE_PADRAO, encerramentoPadrao } from '../lib/copy-padrao'
+import { SOBRE_PADRAO, encerramentoPadrao, PRAZO_AJUSTE_EDICAO } from '../lib/copy-padrao'
 
 export const thaisEdicaoVideo: PropostaData = {
   slug: 'thais-edicao-video',
@@ -163,6 +163,7 @@ export const thaisEdicaoVideo: PropostaData = {
       { texto: 'O prazo de entrega é de até 7 dias úteis por lote de até 10 vídeos, contado a partir do recebimento do material bruto.', bold: 'até 7 dias úteis' },
       { texto: 'Os primeiros vídeos do lote são entregues já na primeira semana; o restante segue em edição e chega ao longo do ciclo.', bold: 'já na primeira semana' },
       { texto: 'Vídeo avulso fora do pacote mensal segue o mesmo prazo de até 7 dias úteis, contado a partir do envio individual.', bold: 'até 7 dias úteis' },
+      { texto: PRAZO_AJUSTE_EDICAO, bold: 'até 2 dias úteis' },
     ],
     contrato: [
       {
@@ -217,7 +218,7 @@ export const thaisEdicaoVideo: PropostaData = {
       },
       {
         pergunta: 'Dá pra pedir alteração depois de pronto?',
-        resposta: 'Cada vídeo tem direito a 2 rodadas de ajuste, limitadas a corte de fala já gravada e ajuste de legenda. Nova cena, nova captação ou troca de trilha são orçadas à parte.',
+        resposta: 'Cada vídeo tem direito a 2 rodadas de ajuste, limitadas a corte de fala já gravada e ajuste de legenda, com retorno em até 2 dias úteis por rodada. Nova cena, nova captação ou troca de trilha são orçadas à parte.',
       },
     ],
     primeiros_30_dias: [
